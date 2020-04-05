@@ -1,3 +1,4 @@
+///////// salih ençevik ////////
 create table UserType
 (
 	Id int identity primary key,
@@ -37,3 +38,4 @@ create table [User]
 	Constraint FK_UserId_TownId foreign key (TownId) references Town(Id),
 	Constraint FK_UserId_UserTypeId foreign key (UserTypeId) references UserType(Id)
 )
+///////// salih ençevik son ////////////
