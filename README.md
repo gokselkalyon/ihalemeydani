@@ -6,6 +6,7 @@ t
 ffff
 ///deneme t commit asdlgfasdjlşkfj
 ///deneme t commit sefil salih
+if()
 
 ##commit alamıyorum
 #yardıma ihtiyacım var
