@@ -4,9 +4,7 @@ Projenin Konusu: Kullanıcıların ihale yapabileceği ,açık arttırma yapabil
 //deneme commit
 t
 ffff
-///deneme t commit asdlgfasdjlşkfj
-///deneme t commit sefil salih
-if()
+///deneme t commit
 
 ##commit alamıyorum
 #yardıma ihtiyacım var
