@@ -8,3 +8,5 @@ ffff
 
 ##commit alamıyorum
 #yardıma ihtiyacım var
+//deneme commit ilşlasdas
+t
