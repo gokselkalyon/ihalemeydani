@@ -53,6 +53,7 @@ create table [User]
 	Password nvarchar(20),
 	IdentityNo nvarchar(11),
 	Phone nvarchar(11),
+	IsDeleted bit,
 	TownId int,
 	UserTypeId int,
 	Constraint FK_UserId_TownId foreign key (TownId) references Town(Id),
@@ -67,8 +68,7 @@ create table UserRole
 	Constraint FK_UserRoleId_RoleId foreign key (RoleId) references Role(Id),
 	Constraint FK_UserRoleId_UserId foreign key (UserId) references [User](Id)
 )
-----////////////////// salih ençevik son ////////////
-///////// salih ençevik son ////////////
+----////////////////// salih ençevik son //////////// 
 
 
 --------------///Furkan Veritabanı [Araç Özellikleri] \\\-----------------
