@@ -426,3 +426,45 @@ GO
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 ////////muhammed goksel kalyon son//////
+
+////////////Taha Topaç ///////////////////
+create table title
+(
+title_id int primary key identity,
+title_name nvarchar(50),
+)
+go
+
+create table tag
+(
+tag_id int primary key identity,
+tag_name nvarchar(50)
+)
+go
+
+create table submit
+(
+submit_id int primary key identity,
+submit_images nvarchar(50),
+submit_article nvarchar(50),
+)
+go
+create table Post
+(
+Post_id int primary key identity,
+submit_id int,
+content_id int,
+users_id int ,
+Post_date data default getdate()
+)
+go
+
+create table tag_post
+(
+tag_post_id int primary key identity,
+Post_id int,
+tag_id int
+)
+go
+
+////////////Taha Topaç ///////////////////
