@@ -14,19 +14,10 @@ namespace IM.DataLayer
     
     public partial class country
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public country()
-        {
-            this.companies = new HashSet<company>();
-        }
-    
         public int Id { get; set; }
         public string country_plate_sign { get; set; }
         public string country_name { get; set; }
         public string Country_name_EN { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<company> companies { get; set; }
     }
 }

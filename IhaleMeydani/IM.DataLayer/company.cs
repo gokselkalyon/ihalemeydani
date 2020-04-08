@@ -15,23 +15,17 @@ namespace IM.DataLayer
     public partial class company
     {
         public int Id { get; set; }
-        public Nullable<int> company_type { get; set; }
+        public Nullable<int> company_type_id { get; set; }
         public string company_name { get; set; }
-        public Nullable<int> city { get; set; }
-        public Nullable<int> Tax_Administration { get; set; }
-        public Nullable<int> county { get; set; }
-        public Nullable<int> country { get; set; }
+        public Nullable<int> city_id { get; set; }
+        public Nullable<int> Tax_Administration_id { get; set; }
+        public Nullable<int> county_id { get; set; }
+        public Nullable<int> country_id { get; set; }
         public string Tax_number { get; set; }
         public string company_address { get; set; }
         public string tel { get; set; }
         public string ticaret_sicil_no { get; set; }
         public string mersis_no { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
-    
-        public virtual city city1 { get; set; }
-        public virtual company_type company_type1 { get; set; }
-        public virtual country country1 { get; set; }
-        public virtual county county1 { get; set; }
-        public virtual Tax_Administration Tax_Administration1 { get; set; }
     }
 }

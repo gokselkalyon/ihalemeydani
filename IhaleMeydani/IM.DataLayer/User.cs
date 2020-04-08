@@ -21,6 +21,7 @@ namespace IM.DataLayer
         public string CompanyName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public Nullable<System.DateTime> Dateofbird { get; set; }
         public string IdentityNo { get; set; }
         public string Phone { get; set; }
         public Nullable<bool> IsDeleted { get; set; }

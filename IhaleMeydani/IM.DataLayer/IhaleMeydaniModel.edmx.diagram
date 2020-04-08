@@ -4,59 +4,51 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5a2d6f9c261f44bf815881ea2480568e" Name="Diagram1">
-        <EntityTypeShape EntityType="IHALEDBModel.AMOUNT_OF_INCREASE" Width="1.5" PointX="7.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.auction" Width="1.5" PointX="9.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.bank" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CarBrand" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CarDetail" Width="1.5" PointX="9.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CarHardwareDetail" Width="1.5" PointX="11.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CarMake" Width="1.5" PointX="11.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CarTechnicalDetail" Width="1.5" PointX="11.75" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.city" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Claim" Width="1.5" PointX="12.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Color" Width="1.5" PointX="5.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.company" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.company_type" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.country" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.county" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CURRENCY" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.discountcart" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.E_INVOICE" Width="1.5" PointX="7.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.E_invoice_type" Width="1.5" PointX="13.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.employee_position" Width="1.5" PointX="13.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.employee" Width="1.5" PointX="13.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.GearType" Width="1.5" PointX="13.75" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.log" Width="1.5" PointX="14.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.medium" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.natification" Width="1.5" PointX="2.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.odeme_yontemi" Width="1.5" PointX="15.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.payment_plan" Width="1.5" PointX="10.25" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Post" Width="1.5" PointX="4.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.PRICEBOT" Width="1.5" PointX="15.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Role" Width="1.5" PointX="15.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.RoleClaim" Width="1.5" PointX="9.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Segment" Width="1.5" PointX="15.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.senaryo" Width="1.5" PointX="15.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.SOLD_PRODUCT" Width="1.5" PointX="16.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.submit" Width="1.5" PointX="11.75" PointY="17" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.tag" Width="1.5" PointX="17.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.tag_post" Width="1.5" PointX="17.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Tax_Administration" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.title" Width="1.5" PointX="17.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.User" Width="1.5" PointX="17.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.UserRole" Width="1.5" PointX="17.75" PointY="18" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.UserType" Width="1.5" PointX="18.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.FuelType" Width="1.5" PointX="0.75" PointY="19" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.Image" Width="1.5" PointX="2.75" PointY="19" IsExpanded="true" />
-        <AssociationConnector Association="IHALEDBModel.FK__company__city__70DDC3D8" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__Tax_Admini__city__6C190EBB" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__company__company__6FE99F9F" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__company__country__73BA3083" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__company__county__72C60C4A" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__company__Tax_Adm__71D1E811" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__discountc__curre__7E37BEF6" ManuallyRouted="false" />
-        <AssociationConnector Association="IHALEDBModel.FK__payment_p__disco__02084FDA" ManuallyRouted="false" />
+      <Diagram DiagramId="fb9113cc90a5409883922d035348e970" Name="Diagram1" ZoomLevel="37">
+        <EntityTypeShape EntityType="IHALEDBModel.AMOUNT_OF_INCREASE" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.auction" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.bank" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CarBrand" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CarDetail" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CarHardwareDetail" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CarMake" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CarTechnicalDetail" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.city" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Claim" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Color" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.company" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.company_type" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.country" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.county" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CURRENCY" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.discountcart" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.E_INVOICE" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.E_invoice_type" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.employee_position" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.employee" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.GearType" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.log" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.medium" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.natification" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.odeme_yontemi" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.payment_plan" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Post" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.PRICEBOT" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Role" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.RoleClaim" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Segment" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.senaryo" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.SOLD_PRODUCT" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.submit" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.tag" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.tag_post" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Tax_Administration" Width="1.5" PointX="6.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.title" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.User" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.UserRole" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.UserType" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.FuelType" Width="1.5" PointX="8.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.Image" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -14,16 +14,7 @@ namespace IM.DataLayer
     
     public partial class CURRENCY
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CURRENCY()
-        {
-            this.discountcarts = new HashSet<discountcart>();
-        }
-    
         public int ID { get; set; }
         public string NAME { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<discountcart> discountcarts { get; set; }
     }
 }

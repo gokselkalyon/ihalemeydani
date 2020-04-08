@@ -14,17 +14,8 @@ namespace IM.DataLayer
     
     public partial class company_type
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public company_type()
-        {
-            this.companies = new HashSet<company>();
-        }
-    
         public int Id { get; set; }
         public string type_name { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<company> companies { get; set; }
     }
 }

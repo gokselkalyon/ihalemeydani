@@ -200,32 +200,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="IhaleMeydaniModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>IhaleMeydaniModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="IhaleMeydaniModel.edmx.diagram">
       <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="IhaleMeydaniModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IhaleMeydaniModel.Context.cs</LastGenOutput>
       <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
+      <LastGenOutput>IhaleMeydaniModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="IhaleMeydaniModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
       <LastGenOutput>IhaleMeydaniModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

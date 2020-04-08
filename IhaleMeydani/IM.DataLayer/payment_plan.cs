@@ -17,11 +17,9 @@ namespace IM.DataLayer
         public int Id { get; set; }
         public Nullable<int> code { get; set; }
         public string explanation { get; set; }
-        public Nullable<int> discount { get; set; }
+        public Nullable<int> discount_id { get; set; }
         public Nullable<bool> statu { get; set; }
         public Nullable<int> Ekleyen_Kullanici { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
-    
-        public virtual discountcart discountcart { get; set; }
     }
 }

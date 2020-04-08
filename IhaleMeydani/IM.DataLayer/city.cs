@@ -14,20 +14,8 @@ namespace IM.DataLayer
     
     public partial class city
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public city()
-        {
-            this.companies = new HashSet<company>();
-            this.Tax_Administration = new HashSet<Tax_Administration>();
-        }
-    
         public int plate_code { get; set; }
         public string city_name { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<company> companies { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tax_Administration> Tax_Administration { get; set; }
     }
 }
