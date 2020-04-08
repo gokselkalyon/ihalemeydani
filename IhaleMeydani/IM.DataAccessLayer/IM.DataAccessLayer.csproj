@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69A38E8E-C773-42E1-9288-10217542516B}</ProjectGuid>
+    <ProjectGuid>{86333051-9227-4EBC-BD7C-D366FAD1EC2D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IM.BusinessLayer</RootNamespace>
-    <AssemblyName>IM.BusinessLayer</AssemblyName>
+    <RootNamespace>IM.DataAccessLayer</RootNamespace>
+    <AssemblyName>IM.DataAccessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -40,9 +40,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -54,23 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IDataBusinessService.cs" />
-    <Compile Include="Concrete\LogManager.cs" />
+    <Compile Include="Abstract\IDataAccessDal.cs" />
+    <Compile Include="Concrete\EFConcrete\LogConcrete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IM.DataAccessLayer\IM.DataAccessLayer.csproj">
-      <Project>{86333051-9227-4EBC-BD7C-D366FAD1EC2D}</Project>
-      <Name>IM.DataAccessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IM.DataLayer\IM.DataLayer.csproj">
-      <Project>{e7632f51-9b6c-404b-8d2c-f5ea94df23eb}</Project>
-      <Name>IM.DataLayer</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\IM.DataLayer\IM.DataLayer.csproj">
+      <Project>{e7632f51-9b6c-404b-8d2c-f5ea94df23eb}</Project>
+      <Name>IM.DataLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
