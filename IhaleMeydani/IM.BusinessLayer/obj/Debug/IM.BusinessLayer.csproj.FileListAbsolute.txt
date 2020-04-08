@@ -1,0 +1,6 @@
+C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.BusinessLayer.dll
+C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.BusinessLayer.pdb
+C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.csprojAssemblyReference.cache
+C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.dll
+C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.pdb
