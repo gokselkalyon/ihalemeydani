@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +50,182 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AMOUNT_OF_INCREASE.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="auction.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bank.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarBrand.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarDetail.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarHardwareDetail.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarMake.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarTechnicalDetail.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="city.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Claim.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Color.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="company.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="company_type.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="country.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="county.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CURRENCY.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="discountcart.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="employee.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="employee_position.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="E_INVOICE.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="E_invoice_type.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuelType.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GearType.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IhaleMeydaniModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IhaleMeydaniModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IhaleMeydaniModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IhaleMeydaniModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Image.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="log.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="medium.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="natification.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="odeme_yontemi.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="payment_plan.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRICEBOT.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleClaim.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Segment.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="senaryo.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SOLD_PRODUCT.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="submit.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tag.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tag_post.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tax_Administration.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="title.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserType.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="IhaleMeydaniModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IhaleMeydaniModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="IhaleMeydaniModel.edmx.diagram">
+      <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IhaleMeydaniModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IhaleMeydaniModel.Context.cs</LastGenOutput>
+      <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="IhaleMeydaniModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IhaleMeydaniModel.edmx</DependentUpon>
+      <LastGenOutput>IhaleMeydaniModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

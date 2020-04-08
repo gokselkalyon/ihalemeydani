@@ -1,0 +1,1749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IHALEDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AMOUNT_OF_INCREASE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CURRENCY_ID" Type="int" />
+          <Property Name="MAX_PRICE" Type="money" />
+          <Property Name="MIN_PRICE" Type="money" />
+          <Property Name="INCREASE_PRICE" Type="money" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+          <Property Name="UPDATED_PERSON_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="auction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRODUCT_ID" Type="int" />
+          <Property Name="ACUTION_DATE" Type="date" />
+          <Property Name="USER_ID" Type="int" />
+          <Property Name="ACUTION_SALES_TIME" Type="int" />
+          <Property Name="AMOUNT_OF_INCREASE_ID" Type="int" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+          <Property Name="UPDATED_PERSON_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bank_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="explanation" Type="nvarchar" MaxLength="100" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="CarBrand">
+          <Key>
+            <PropertyRef Name="CarBrandId" />
+          </Key>
+          <Property Name="CarBrandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarBrandName" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CarDetail">
+          <Key>
+            <PropertyRef Name="CarDetailId" />
+          </Key>
+          <Property Name="CarDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarTechnicalId" Type="int" />
+          <Property Name="CarHardwareId" Type="int" />
+        </EntityType>
+        <EntityType Name="CarHardwareDetails">
+          <Key>
+            <PropertyRef Name="CarHardwareDetailsId" />
+          </Key>
+          <Property Name="CarHardwareDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HardwareDetail" Type="nvarchar" MaxLength="50" />
+          <Property Name="CarDetailId" Type="int" />
+        </EntityType>
+        <EntityType Name="CarMake">
+          <Key>
+            <PropertyRef Name="CarMakeId" />
+          </Key>
+          <Property Name="CarMakeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarMakeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CarBrandId" Type="int" />
+        </EntityType>
+        <EntityType Name="CarTechnicalDetails">
+          <Key>
+            <PropertyRef Name="CarTechnicalDetailId" />
+          </Key>
+          <Property Name="CarTechnicalDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarMakeId" Type="int" />
+          <Property Name="GearTypeId" Type="int" />
+          <Property Name="EngineDisplacement" Type="int" />
+          <Property Name="Mileage" Type="int" />
+          <Property Name="LicancePlate" Type="nvarchar" MaxLength="8" />
+          <Property Name="FuelTypeId" Type="int" />
+          <Property Name="HP" Type="int" />
+          <Property Name="registrationDate" Type="date" />
+          <Property Name="CarVersion" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorId" Type="int" />
+          <Property Name="VIN" Type="nvarchar" MaxLength="17" />
+          <Property Name="SegmentId" Type="int" />
+        </EntityType>
+        <EntityType Name="city">
+          <Key>
+            <PropertyRef Name="plate_code" />
+          </Key>
+          <Property Name="plate_code" Type="int" Nullable="false" />
+          <Property Name="city_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="Claim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="ColorId" />
+          </Key>
+          <Property Name="ColorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ColorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorValue" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="company_type" Type="int" />
+          <Property Name="company_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="city" Type="int" />
+          <Property Name="Tax Administration" Type="int" />
+          <Property Name="county" Type="int" />
+          <Property Name="country" Type="int" />
+          <Property Name="Tax_number" Type="nvarchar" MaxLength="55" />
+          <Property Name="company_address" Type="nvarchar" MaxLength="200" />
+          <Property Name="tel" Type="nvarchar" MaxLength="11" />
+          <Property Name="ticaret_sicil_no" Type="nvarchar" MaxLength="15" />
+          <Property Name="mersis_no" Type="nvarchar" MaxLength="15" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="company_type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="country plate sign" Type="nvarchar" MaxLength="10" />
+          <Property Name="country_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country_name_EN" Type="nvarchar" MaxLength="100" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="county">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="city_id" Type="int" />
+          <Property Name="county_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="CURRENCY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="discountcart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type_name" Type="nvarchar" MaxLength="15" />
+          <Property Name="code" Type="nvarchar" MaxLength="11" />
+          <Property Name="statu" Type="bit" />
+          <Property Name="figure" Type="nvarchar" MaxLength="55" />
+          <Property Name="currency" Type="int" />
+          <Property Name="value" Type="int" />
+          <Property Name="Formula" Type="int" />
+          <Property Name="Ekleyen_Kullanici" Type="int" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="E_INVOICE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="senaryo_id" Type="int" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="E_invoice_type_id" Type="int" />
+          <Property Name="odeme_yontemi_id" Type="int" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="INVOICE_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="INVOICE_DATE" Type="date" />
+          <Property Name="SATISKANALI" Type="nvarchar" MaxLength="50" />
+          <Property Name="CarDetail_ID" Type="int" />
+          <Property Name="MIKTAR" Type="int" />
+          <Property Name="BIRIM_FIYATI" Type="money" />
+          <Property Name="KDV" Type="int" />
+          <Property Name="TOPLAM" Type="money" />
+          <Property Name="FATURA_TOPLAM" Type="money" />
+          <Property Name="TOPLAM_ISKONTO" Type="money" />
+          <Property Name="TOPLAM_KDV" Type="money" />
+          <Property Name="KDV_DAHIL_TOPLAM_TUTAR" Type="money" />
+          <Property Name="ODENECEK_TUTAR" Type="money" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="E_invoice_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="E_invoice_type_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="employee_position">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="position" Type="nvarchar" MaxLength="100" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="employees">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="employee_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="employee_lastname" Type="nvarchar" MaxLength="100" />
+          <Property Name="employee_TC" Type="nvarchar" MaxLength="11" />
+          <Property Name="salary" Type="money" />
+          <Property Name="employee_position" Type="int" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IHALEDB.dbo.FuelType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FuelType">
+          <Key>
+            <PropertyRef Name="FuelTypeId" />
+          </Key>
+          <Property Name="FuelTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FuelTypeName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GearType">
+          <Key>
+            <PropertyRef Name="GearTypeId" />
+          </Key>
+          <Property Name="GearTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GearTypeName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IHALEDB.dbo.Images' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="İmagesId" />
+          </Key>
+          <Property Name="İmagesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarId" Type="int" />
+          <Property Name="İmage" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="action_table" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="action_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="date_of" Type="date" />
+        </EntityType>
+        <EntityType Name="media">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="image_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="image_subtitle" Type="nvarchar" MaxLength="100" />
+          <Property Name="image_title" Type="nvarchar" MaxLength="50" />
+          <Property Name="image_path" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="natification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="explanation" Type="nvarchar" MaxLength="250" />
+          <Property Name="zaman" Type="date" />
+          <Property Name="ekleyenkullanici_id" Type="int" />
+        </EntityType>
+        <EntityType Name="odeme_yontemi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="yontem" Type="nvarchar" MaxLength="15" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="payment_plan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code" Type="int" />
+          <Property Name="explanation" Type="nvarchar" MaxLength="100" />
+          <Property Name="discount" Type="int" />
+          <Property Name="statu" Type="bit" />
+          <Property Name="Ekleyen_Kullanici" Type="int" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="Post_id" />
+          </Key>
+          <Property Name="Post_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="submit_id" Type="int" />
+          <Property Name="content_id" Type="int" />
+          <Property Name="users_id" Type="int" />
+          <Property Name="Post_date" Type="date" />
+        </EntityType>
+        <EntityType Name="PRICEBOT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarDetail_ID" Type="int" />
+          <Property Name="ORT_FIYAT" Type="money" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RoleClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="ClaimId" Type="int" />
+        </EntityType>
+        <EntityType Name="Segment">
+          <Key>
+            <PropertyRef Name="SegmentId" />
+          </Key>
+          <Property Name="SegmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SegmentName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="senaryo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="senaryo" Type="nvarchar" MaxLength="20" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="SOLD_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarDetail_ID" Type="int" />
+          <Property Name="E_INVOICE_ID" Type="int" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="submit">
+          <Key>
+            <PropertyRef Name="submit_id" />
+          </Key>
+          <Property Name="submit_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="media_id" Type="int" />
+          <Property Name="submit_article" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="tag">
+          <Key>
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="tag_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tag_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tag_post">
+          <Key>
+            <PropertyRef Name="tag_post_id" />
+          </Key>
+          <Property Name="tag_post_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Post_id" Type="int" />
+          <Property Name="tag_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Tax Administration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tax_Administration_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="city" Type="int" />
+          <Property Name="Tax_Administration_code" Type="nvarchar" MaxLength="55" />
+          <Property Name="DATE_OF_UPDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="title">
+          <Key>
+            <PropertyRef Name="title_id" />
+          </Key>
+          <Property Name="title_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="200" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="IdentityNo" Type="nvarchar" MaxLength="11" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="city_id" Type="int" />
+          <Property Name="UserType_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_Id" Type="int" />
+          <Property Name="Role_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <Association Name="FK__company__city__70DDC3D8">
+          <End Role="city" Type="Self.city" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="plate_code" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="city" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__company__6FE99F9F">
+          <End Role="company_type" Type="Self.company_type" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="company_type">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="company_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__country__73BA3083">
+          <End Role="country" Type="Self.country" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="country" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__county__72C60C4A">
+          <End Role="county" Type="Self.county" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="county">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="county" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__Tax Adm__71D1E811">
+          <End Role="Tax Administration" Type="Self.Tax Administration" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tax Administration">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="Tax Administration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__discountc__curre__7E37BEF6">
+          <End Role="CURRENCY" Type="Self.CURRENCY" Multiplicity="0..1" />
+          <End Role="discountcart" Type="Self.discountcart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURRENCY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="discountcart">
+              <PropertyRef Name="currency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__payment_p__disco__02084FDA">
+          <End Role="discountcart" Type="Self.discountcart" Multiplicity="0..1" />
+          <End Role="payment_plan" Type="Self.payment_plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="discountcart">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="payment_plan">
+              <PropertyRef Name="discount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tax Admini__city__6C190EBB">
+          <End Role="city" Type="Self.city" Multiplicity="0..1" />
+          <End Role="Tax Administration" Type="Self.Tax Administration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="plate_code" />
+            </Principal>
+            <Dependent Role="Tax Administration">
+              <PropertyRef Name="city" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IHALEDBModelStoreContainer">
+          <EntitySet Name="AMOUNT_OF_INCREASE" EntityType="Self.AMOUNT_OF_INCREASE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="auction" EntityType="Self.auction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bank" EntityType="Self.bank" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarBrand" EntityType="Self.CarBrand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarDetail" EntityType="Self.CarDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarHardwareDetails" EntityType="Self.CarHardwareDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarMake" EntityType="Self.CarMake" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarTechnicalDetails" EntityType="Self.CarTechnicalDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Claim" EntityType="Self.Claim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="company_type" EntityType="Self.company_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="county" EntityType="Self.county" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CURRENCY" EntityType="Self.CURRENCY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="discountcart" EntityType="Self.discountcart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="E_INVOICE" EntityType="Self.E_INVOICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="E_invoice_type" EntityType="Self.E_invoice_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="employee_position" EntityType="Self.employee_position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="employees" EntityType="Self.employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GearType" EntityType="Self.GearType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="log" EntityType="Self.log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="media" EntityType="Self.media" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="natification" EntityType="Self.natification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="odeme_yontemi" EntityType="Self.odeme_yontemi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="payment_plan" EntityType="Self.payment_plan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRICEBOT" EntityType="Self.PRICEBOT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleClaim" EntityType="Self.RoleClaim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Segment" EntityType="Self.Segment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="senaryo" EntityType="Self.senaryo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SOLD_PRODUCT" EntityType="Self.SOLD_PRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="submit" EntityType="Self.submit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tag" EntityType="Self.tag" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tag_post" EntityType="Self.tag_post" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tax Administration" EntityType="Self.Tax Administration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="title" EntityType="Self.title" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FuelType" EntityType="Self.FuelType" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FuelType].[FuelTypeId] AS [FuelTypeId], 
+    [FuelType].[FuelTypeName] AS [FuelTypeName]
+    FROM [dbo].[FuelType] AS [FuelType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Images" EntityType="Self.Images" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Images].[İmagesId] AS [İmagesId], 
+    [Images].[CarId] AS [CarId], 
+    [Images].[İmage] AS [İmage]
+    FROM [dbo].[Images] AS [Images]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__company__city__70DDC3D8" Association="Self.FK__company__city__70DDC3D8">
+            <End Role="city" EntitySet="city" />
+            <End Role="company" EntitySet="company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__company__6FE99F9F" Association="Self.FK__company__company__6FE99F9F">
+            <End Role="company_type" EntitySet="company_type" />
+            <End Role="company" EntitySet="company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__country__73BA3083" Association="Self.FK__company__country__73BA3083">
+            <End Role="country" EntitySet="country" />
+            <End Role="company" EntitySet="company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__county__72C60C4A" Association="Self.FK__company__county__72C60C4A">
+            <End Role="county" EntitySet="county" />
+            <End Role="company" EntitySet="company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__Tax Adm__71D1E811" Association="Self.FK__company__Tax Adm__71D1E811">
+            <End Role="Tax Administration" EntitySet="Tax Administration" />
+            <End Role="company" EntitySet="company" />
+          </AssociationSet>
+          <AssociationSet Name="FK__discountc__curre__7E37BEF6" Association="Self.FK__discountc__curre__7E37BEF6">
+            <End Role="CURRENCY" EntitySet="CURRENCY" />
+            <End Role="discountcart" EntitySet="discountcart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__payment_p__disco__02084FDA" Association="Self.FK__payment_p__disco__02084FDA">
+            <End Role="discountcart" EntitySet="discountcart" />
+            <End Role="payment_plan" EntitySet="payment_plan" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tax Admini__city__6C190EBB" Association="Self.FK__Tax Admini__city__6C190EBB">
+            <End Role="city" EntitySet="city" />
+            <End Role="Tax Administration" EntitySet="Tax Administration" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IHALEDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AMOUNT_OF_INCREASE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CURRENCY_ID" Type="Int32" />
+          <Property Name="MAX_PRICE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MIN_PRICE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="INCREASE_PRICE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <Property Name="UPDATED_PERSON_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="auction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRODUCT_ID" Type="Int32" />
+          <Property Name="ACUTION_DATE" Type="DateTime" Precision="0" />
+          <Property Name="USER_ID" Type="Int32" />
+          <Property Name="ACUTION_SALES_TIME" Type="Int32" />
+          <Property Name="AMOUNT_OF_INCREASE_ID" Type="Int32" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <Property Name="UPDATED_PERSON_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bank_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="explanation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="CarBrand">
+          <Key>
+            <PropertyRef Name="CarBrandId" />
+          </Key>
+          <Property Name="CarBrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarBrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CarDetail">
+          <Key>
+            <PropertyRef Name="CarDetailId" />
+          </Key>
+          <Property Name="CarDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarTechnicalId" Type="Int32" />
+          <Property Name="CarHardwareId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CarHardwareDetail">
+          <Key>
+            <PropertyRef Name="CarHardwareDetailsId" />
+          </Key>
+          <Property Name="CarHardwareDetailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HardwareDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CarDetailId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CarMake">
+          <Key>
+            <PropertyRef Name="CarMakeId" />
+          </Key>
+          <Property Name="CarMakeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarMakeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CarBrandId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CarTechnicalDetail">
+          <Key>
+            <PropertyRef Name="CarTechnicalDetailId" />
+          </Key>
+          <Property Name="CarTechnicalDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarMakeId" Type="Int32" />
+          <Property Name="GearTypeId" Type="Int32" />
+          <Property Name="EngineDisplacement" Type="Int32" />
+          <Property Name="Mileage" Type="Int32" />
+          <Property Name="LicancePlate" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="FuelTypeId" Type="Int32" />
+          <Property Name="HP" Type="Int32" />
+          <Property Name="registrationDate" Type="DateTime" Precision="0" />
+          <Property Name="CarVersion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorId" Type="Int32" />
+          <Property Name="VIN" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+          <Property Name="SegmentId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="city">
+          <Key>
+            <PropertyRef Name="plate_code" />
+          </Key>
+          <Property Name="plate_code" Type="Int32" Nullable="false" />
+          <Property Name="city_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="companies" Relationship="Self.FK__company__city__70DDC3D8" FromRole="city" ToRole="company" />
+          <NavigationProperty Name="Tax_Administration" Relationship="Self.FK__Tax_Admini__city__6C190EBB" FromRole="city" ToRole="Tax_Administration" />
+        </EntityType>
+        <EntityType Name="Claim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="ColorId" />
+          </Key>
+          <Property Name="ColorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ColorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorValue" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="company_type" Type="Int32" />
+          <Property Name="company_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="Int32" />
+          <Property Name="Tax_Administration" Type="Int32" />
+          <Property Name="county" Type="Int32" />
+          <Property Name="country" Type="Int32" />
+          <Property Name="Tax_number" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="company_address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ticaret_sicil_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="mersis_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="city1" Relationship="Self.FK__company__city__70DDC3D8" FromRole="company" ToRole="city" />
+          <NavigationProperty Name="company_type1" Relationship="Self.FK__company__company__6FE99F9F" FromRole="company" ToRole="company_type" />
+          <NavigationProperty Name="country1" Relationship="Self.FK__company__country__73BA3083" FromRole="company" ToRole="country" />
+          <NavigationProperty Name="county1" Relationship="Self.FK__company__county__72C60C4A" FromRole="company" ToRole="county" />
+          <NavigationProperty Name="Tax_Administration1" Relationship="Self.FK__company__Tax_Adm__71D1E811" FromRole="company" ToRole="Tax_Administration" />
+        </EntityType>
+        <EntityType Name="company_type">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="companies" Relationship="Self.FK__company__company__6FE99F9F" FromRole="company_type" ToRole="company" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="country_plate_sign" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="country_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country_name_EN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="companies" Relationship="Self.FK__company__country__73BA3083" FromRole="country" ToRole="company" />
+        </EntityType>
+        <EntityType Name="county">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="city_id" Type="Int32" />
+          <Property Name="county_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="companies" Relationship="Self.FK__company__county__72C60C4A" FromRole="county" ToRole="company" />
+        </EntityType>
+        <EntityType Name="CURRENCY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="discountcarts" Relationship="Self.FK__discountc__curre__7E37BEF6" FromRole="CURRENCY" ToRole="discountcart" />
+        </EntityType>
+        <EntityType Name="discountcart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type_name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="code" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="statu" Type="Boolean" />
+          <Property Name="figure" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="currency" Type="Int32" />
+          <Property Name="value" Type="Int32" />
+          <Property Name="Formula" Type="Int32" />
+          <Property Name="Ekleyen_Kullanici" Type="Int32" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="CURRENCY1" Relationship="Self.FK__discountc__curre__7E37BEF6" FromRole="discountcart" ToRole="CURRENCY" />
+          <NavigationProperty Name="payment_plan" Relationship="Self.FK__payment_p__disco__02084FDA" FromRole="discountcart" ToRole="payment_plan" />
+        </EntityType>
+        <EntityType Name="E_INVOICE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="senaryo_id" Type="Int32" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="E_invoice_type_id" Type="Int32" />
+          <Property Name="odeme_yontemi_id" Type="Int32" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="INVOICE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INVOICE_DATE" Type="DateTime" Precision="0" />
+          <Property Name="SATISKANALI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CarDetail_ID" Type="Int32" />
+          <Property Name="MIKTAR" Type="Int32" />
+          <Property Name="BIRIM_FIYATI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="KDV" Type="Int32" />
+          <Property Name="TOPLAM" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FATURA_TOPLAM" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TOPLAM_ISKONTO" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TOPLAM_KDV" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="KDV_DAHIL_TOPLAM_TUTAR" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ODENECEK_TUTAR" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="E_invoice_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="E_invoice_type_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="employee_position">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="employee_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="employee_lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="employee_TC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="salary" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="employee_position" Type="Int32" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="GearType">
+          <Key>
+            <PropertyRef Name="GearTypeId" />
+          </Key>
+          <Property Name="GearTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GearTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="action_table" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="action_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="date_of" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="medium">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="image_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image_subtitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="image_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image_path" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="natification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="explanation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="zaman" Type="DateTime" Precision="0" />
+          <Property Name="ekleyenkullanici_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="odeme_yontemi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="yontem" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="payment_plan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="Int32" />
+          <Property Name="explanation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="discount" Type="Int32" />
+          <Property Name="statu" Type="Boolean" />
+          <Property Name="Ekleyen_Kullanici" Type="Int32" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="discountcart" Relationship="Self.FK__payment_p__disco__02084FDA" FromRole="payment_plan" ToRole="discountcart" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="Post_id" />
+          </Key>
+          <Property Name="Post_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="submit_id" Type="Int32" />
+          <Property Name="content_id" Type="Int32" />
+          <Property Name="users_id" Type="Int32" />
+          <Property Name="Post_date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="PRICEBOT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarDetail_ID" Type="Int32" />
+          <Property Name="ORT_FIYAT" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RoleClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="ClaimId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Segment">
+          <Key>
+            <PropertyRef Name="SegmentId" />
+          </Key>
+          <Property Name="SegmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SegmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="senaryo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="senaryo1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="SOLD_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarDetail_ID" Type="Int32" />
+          <Property Name="E_INVOICE_ID" Type="Int32" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="submit">
+          <Key>
+            <PropertyRef Name="submit_id" />
+          </Key>
+          <Property Name="submit_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="media_id" Type="Int32" />
+          <Property Name="submit_article" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tag">
+          <Key>
+            <PropertyRef Name="tag_id" />
+          </Key>
+          <Property Name="tag_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tag_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tag_post">
+          <Key>
+            <PropertyRef Name="tag_post_id" />
+          </Key>
+          <Property Name="tag_post_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Post_id" Type="Int32" />
+          <Property Name="tag_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Tax_Administration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tax_Administration_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="Int32" />
+          <Property Name="Tax_Administration_code" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="city1" Relationship="Self.FK__Tax_Admini__city__6C190EBB" FromRole="Tax_Administration" ToRole="city" />
+          <NavigationProperty Name="companies" Relationship="Self.FK__company__Tax_Adm__71D1E811" FromRole="Tax_Administration" ToRole="company" />
+        </EntityType>
+        <EntityType Name="title">
+          <Key>
+            <PropertyRef Name="title_id" />
+          </Key>
+          <Property Name="title_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="city_id" Type="Int32" />
+          <Property Name="UserType_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_Id" Type="Int32" />
+          <Property Name="Role_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="FuelType">
+          <Key>
+            <PropertyRef Name="FuelTypeId" />
+          </Key>
+          <Property Name="FuelTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FuelTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="İmagesId" />
+          </Key>
+          <Property Name="İmagesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarId" Type="Int32" />
+          <Property Name="İmage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__company__city__70DDC3D8">
+          <End Role="city" Type="Self.city" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="plate_code" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="city" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tax_Admini__city__6C190EBB">
+          <End Role="city" Type="Self.city" Multiplicity="0..1" />
+          <End Role="Tax_Administration" Type="Self.Tax_Administration" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="plate_code" />
+            </Principal>
+            <Dependent Role="Tax_Administration">
+              <PropertyRef Name="city" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__company__6FE99F9F">
+          <End Role="company_type" Type="Self.company_type" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="company_type">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="company_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__country__73BA3083">
+          <End Role="country" Type="Self.country" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="country" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__county__72C60C4A">
+          <End Role="county" Type="Self.county" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="county">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="county" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__company__Tax_Adm__71D1E811">
+          <End Role="Tax_Administration" Type="Self.Tax_Administration" Multiplicity="0..1" />
+          <End Role="company" Type="Self.company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tax_Administration">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="company">
+              <PropertyRef Name="Tax_Administration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__discountc__curre__7E37BEF6">
+          <End Role="CURRENCY" Type="Self.CURRENCY" Multiplicity="0..1" />
+          <End Role="discountcart" Type="Self.discountcart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURRENCY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="discountcart">
+              <PropertyRef Name="currency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__payment_p__disco__02084FDA">
+          <End Role="discountcart" Type="Self.discountcart" Multiplicity="0..1" />
+          <End Role="payment_plan" Type="Self.payment_plan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="discountcart">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="payment_plan">
+              <PropertyRef Name="discount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IHALEDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AMOUNT_OF_INCREASE" EntityType="Self.AMOUNT_OF_INCREASE" />
+          <EntitySet Name="auctions" EntityType="Self.auction" />
+          <EntitySet Name="banks" EntityType="Self.bank" />
+          <EntitySet Name="CarBrands" EntityType="Self.CarBrand" />
+          <EntitySet Name="CarDetails" EntityType="Self.CarDetail" />
+          <EntitySet Name="CarHardwareDetails" EntityType="Self.CarHardwareDetail" />
+          <EntitySet Name="CarMakes" EntityType="Self.CarMake" />
+          <EntitySet Name="CarTechnicalDetails" EntityType="Self.CarTechnicalDetail" />
+          <EntitySet Name="cities" EntityType="Self.city" />
+          <EntitySet Name="Claims" EntityType="Self.Claim" />
+          <EntitySet Name="Colors" EntityType="Self.Color" />
+          <EntitySet Name="companies" EntityType="Self.company" />
+          <EntitySet Name="company_type" EntityType="Self.company_type" />
+          <EntitySet Name="countries" EntityType="Self.country" />
+          <EntitySet Name="counties" EntityType="Self.county" />
+          <EntitySet Name="CURRENCies" EntityType="Self.CURRENCY" />
+          <EntitySet Name="discountcarts" EntityType="Self.discountcart" />
+          <EntitySet Name="E_INVOICE" EntityType="Self.E_INVOICE" />
+          <EntitySet Name="E_invoice_type" EntityType="Self.E_invoice_type" />
+          <EntitySet Name="employee_position" EntityType="Self.employee_position" />
+          <EntitySet Name="employees" EntityType="Self.employee" />
+          <EntitySet Name="GearTypes" EntityType="Self.GearType" />
+          <EntitySet Name="logs" EntityType="Self.log" />
+          <EntitySet Name="media" EntityType="Self.medium" />
+          <EntitySet Name="natifications" EntityType="Self.natification" />
+          <EntitySet Name="odeme_yontemi" EntityType="Self.odeme_yontemi" />
+          <EntitySet Name="payment_plan" EntityType="Self.payment_plan" />
+          <EntitySet Name="Posts" EntityType="Self.Post" />
+          <EntitySet Name="PRICEBOTs" EntityType="Self.PRICEBOT" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="RoleClaims" EntityType="Self.RoleClaim" />
+          <EntitySet Name="Segments" EntityType="Self.Segment" />
+          <EntitySet Name="senaryoes" EntityType="Self.senaryo" />
+          <EntitySet Name="SOLD_PRODUCT" EntityType="Self.SOLD_PRODUCT" />
+          <EntitySet Name="submits" EntityType="Self.submit" />
+          <EntitySet Name="tags" EntityType="Self.tag" />
+          <EntitySet Name="tag_post" EntityType="Self.tag_post" />
+          <EntitySet Name="Tax_Administrations" EntityType="Self.Tax_Administration" />
+          <EntitySet Name="titles" EntityType="Self.title" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+          <EntitySet Name="FuelTypes" EntityType="Self.FuelType" />
+          <EntitySet Name="Images" EntityType="Self.Image" />
+          <AssociationSet Name="FK__company__city__70DDC3D8" Association="Self.FK__company__city__70DDC3D8">
+            <End Role="city" EntitySet="cities" />
+            <End Role="company" EntitySet="companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tax_Admini__city__6C190EBB" Association="Self.FK__Tax_Admini__city__6C190EBB">
+            <End Role="city" EntitySet="cities" />
+            <End Role="Tax_Administration" EntitySet="Tax_Administrations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__company__6FE99F9F" Association="Self.FK__company__company__6FE99F9F">
+            <End Role="company_type" EntitySet="company_type" />
+            <End Role="company" EntitySet="companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__country__73BA3083" Association="Self.FK__company__country__73BA3083">
+            <End Role="country" EntitySet="countries" />
+            <End Role="company" EntitySet="companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__county__72C60C4A" Association="Self.FK__company__county__72C60C4A">
+            <End Role="county" EntitySet="counties" />
+            <End Role="company" EntitySet="companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__company__Tax_Adm__71D1E811" Association="Self.FK__company__Tax_Adm__71D1E811">
+            <End Role="Tax_Administration" EntitySet="Tax_Administrations" />
+            <End Role="company" EntitySet="companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__discountc__curre__7E37BEF6" Association="Self.FK__discountc__curre__7E37BEF6">
+            <End Role="CURRENCY" EntitySet="CURRENCies" />
+            <End Role="discountcart" EntitySet="discountcarts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__payment_p__disco__02084FDA" Association="Self.FK__payment_p__disco__02084FDA">
+            <End Role="discountcart" EntitySet="discountcarts" />
+            <End Role="payment_plan" EntitySet="payment_plan" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IHALEDBModelStoreContainer" CdmEntityContainer="IHALEDBEntities">
+          <EntitySetMapping Name="AMOUNT_OF_INCREASE">
+            <EntityTypeMapping TypeName="IHALEDBModel.AMOUNT_OF_INCREASE">
+              <MappingFragment StoreEntitySet="AMOUNT_OF_INCREASE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CURRENCY_ID" ColumnName="CURRENCY_ID" />
+                <ScalarProperty Name="MAX_PRICE" ColumnName="MAX_PRICE" />
+                <ScalarProperty Name="MIN_PRICE" ColumnName="MIN_PRICE" />
+                <ScalarProperty Name="INCREASE_PRICE" ColumnName="INCREASE_PRICE" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+                <ScalarProperty Name="UPDATED_PERSON_ID" ColumnName="UPDATED_PERSON_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="auctions">
+            <EntityTypeMapping TypeName="IHALEDBModel.auction">
+              <MappingFragment StoreEntitySet="auction">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+                <ScalarProperty Name="ACUTION_DATE" ColumnName="ACUTION_DATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="ACUTION_SALES_TIME" ColumnName="ACUTION_SALES_TIME" />
+                <ScalarProperty Name="AMOUNT_OF_INCREASE_ID" ColumnName="AMOUNT_OF_INCREASE_ID" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+                <ScalarProperty Name="UPDATED_PERSON_ID" ColumnName="UPDATED_PERSON_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="banks">
+            <EntityTypeMapping TypeName="IHALEDBModel.bank">
+              <MappingFragment StoreEntitySet="bank">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+                <ScalarProperty Name="explanation" ColumnName="explanation" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarBrands">
+            <EntityTypeMapping TypeName="IHALEDBModel.CarBrand">
+              <MappingFragment StoreEntitySet="CarBrand">
+                <ScalarProperty Name="CarBrandId" ColumnName="CarBrandId" />
+                <ScalarProperty Name="CarBrandName" ColumnName="CarBrandName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarDetails">
+            <EntityTypeMapping TypeName="IHALEDBModel.CarDetail">
+              <MappingFragment StoreEntitySet="CarDetail">
+                <ScalarProperty Name="CarDetailId" ColumnName="CarDetailId" />
+                <ScalarProperty Name="CarTechnicalId" ColumnName="CarTechnicalId" />
+                <ScalarProperty Name="CarHardwareId" ColumnName="CarHardwareId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarHardwareDetails">
+            <EntityTypeMapping TypeName="IHALEDBModel.CarHardwareDetail">
+              <MappingFragment StoreEntitySet="CarHardwareDetails">
+                <ScalarProperty Name="CarHardwareDetailsId" ColumnName="CarHardwareDetailsId" />
+                <ScalarProperty Name="HardwareDetail" ColumnName="HardwareDetail" />
+                <ScalarProperty Name="CarDetailId" ColumnName="CarDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarMakes">
+            <EntityTypeMapping TypeName="IHALEDBModel.CarMake">
+              <MappingFragment StoreEntitySet="CarMake">
+                <ScalarProperty Name="CarMakeId" ColumnName="CarMakeId" />
+                <ScalarProperty Name="CarMakeName" ColumnName="CarMakeName" />
+                <ScalarProperty Name="CarBrandId" ColumnName="CarBrandId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarTechnicalDetails">
+            <EntityTypeMapping TypeName="IHALEDBModel.CarTechnicalDetail">
+              <MappingFragment StoreEntitySet="CarTechnicalDetails">
+                <ScalarProperty Name="CarTechnicalDetailId" ColumnName="CarTechnicalDetailId" />
+                <ScalarProperty Name="CarMakeId" ColumnName="CarMakeId" />
+                <ScalarProperty Name="GearTypeId" ColumnName="GearTypeId" />
+                <ScalarProperty Name="EngineDisplacement" ColumnName="EngineDisplacement" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="LicancePlate" ColumnName="LicancePlate" />
+                <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+                <ScalarProperty Name="HP" ColumnName="HP" />
+                <ScalarProperty Name="registrationDate" ColumnName="registrationDate" />
+                <ScalarProperty Name="CarVersion" ColumnName="CarVersion" />
+                <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="SegmentId" ColumnName="SegmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cities">
+            <EntityTypeMapping TypeName="IHALEDBModel.city">
+              <MappingFragment StoreEntitySet="city">
+                <ScalarProperty Name="plate_code" ColumnName="plate_code" />
+                <ScalarProperty Name="city_name" ColumnName="city_name" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Claims">
+            <EntityTypeMapping TypeName="IHALEDBModel.Claim">
+              <MappingFragment StoreEntitySet="Claim">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Colors">
+            <EntityTypeMapping TypeName="IHALEDBModel.Color">
+              <MappingFragment StoreEntitySet="Color">
+                <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+                <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+                <ScalarProperty Name="ColorValue" ColumnName="ColorValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="companies">
+            <EntityTypeMapping TypeName="IHALEDBModel.company">
+              <MappingFragment StoreEntitySet="company">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="company_type" ColumnName="company_type" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="Tax_Administration" ColumnName="Tax Administration" />
+                <ScalarProperty Name="county" ColumnName="county" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="Tax_number" ColumnName="Tax_number" />
+                <ScalarProperty Name="company_address" ColumnName="company_address" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="ticaret_sicil_no" ColumnName="ticaret_sicil_no" />
+                <ScalarProperty Name="mersis_no" ColumnName="mersis_no" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="company_type">
+            <EntityTypeMapping TypeName="IHALEDBModel.company_type">
+              <MappingFragment StoreEntitySet="company_type">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="type_name" ColumnName="type_name" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="countries">
+            <EntityTypeMapping TypeName="IHALEDBModel.country">
+              <MappingFragment StoreEntitySet="country">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="country_plate_sign" ColumnName="country plate sign" />
+                <ScalarProperty Name="country_name" ColumnName="country_name" />
+                <ScalarProperty Name="Country_name_EN" ColumnName="Country_name_EN" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="counties">
+            <EntityTypeMapping TypeName="IHALEDBModel.county">
+              <MappingFragment StoreEntitySet="county">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+                <ScalarProperty Name="county_name" ColumnName="county_name" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CURRENCies">
+            <EntityTypeMapping TypeName="IHALEDBModel.CURRENCY">
+              <MappingFragment StoreEntitySet="CURRENCY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="discountcarts">
+            <EntityTypeMapping TypeName="IHALEDBModel.discountcart">
+              <MappingFragment StoreEntitySet="discountcart">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="type_name" ColumnName="type_name" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="statu" ColumnName="statu" />
+                <ScalarProperty Name="figure" ColumnName="figure" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="Formula" ColumnName="Formula" />
+                <ScalarProperty Name="Ekleyen_Kullanici" ColumnName="Ekleyen_Kullanici" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="E_INVOICE">
+            <EntityTypeMapping TypeName="IHALEDBModel.E_INVOICE">
+              <MappingFragment StoreEntitySet="E_INVOICE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="senaryo_id" ColumnName="senaryo_id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="E_invoice_type_id" ColumnName="E_invoice_type_id" />
+                <ScalarProperty Name="odeme_yontemi_id" ColumnName="odeme_yontemi_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="INVOICE_NO" ColumnName="INVOICE_NO" />
+                <ScalarProperty Name="INVOICE_DATE" ColumnName="INVOICE_DATE" />
+                <ScalarProperty Name="SATISKANALI" ColumnName="SATISKANALI" />
+                <ScalarProperty Name="CarDetail_ID" ColumnName="CarDetail_ID" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="BIRIM_FIYATI" ColumnName="BIRIM_FIYATI" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="TOPLAM" ColumnName="TOPLAM" />
+                <ScalarProperty Name="FATURA_TOPLAM" ColumnName="FATURA_TOPLAM" />
+                <ScalarProperty Name="TOPLAM_ISKONTO" ColumnName="TOPLAM_ISKONTO" />
+                <ScalarProperty Name="TOPLAM_KDV" ColumnName="TOPLAM_KDV" />
+                <ScalarProperty Name="KDV_DAHIL_TOPLAM_TUTAR" ColumnName="KDV_DAHIL_TOPLAM_TUTAR" />
+                <ScalarProperty Name="ODENECEK_TUTAR" ColumnName="ODENECEK_TUTAR" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="E_invoice_type">
+            <EntityTypeMapping TypeName="IHALEDBModel.E_invoice_type">
+              <MappingFragment StoreEntitySet="E_invoice_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="E_invoice_type_name" ColumnName="E_invoice_type_name" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employee_position">
+            <EntityTypeMapping TypeName="IHALEDBModel.employee_position">
+              <MappingFragment StoreEntitySet="employee_position">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employees">
+            <EntityTypeMapping TypeName="IHALEDBModel.employee">
+              <MappingFragment StoreEntitySet="employees">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="employee_name" ColumnName="employee_name" />
+                <ScalarProperty Name="employee_lastname" ColumnName="employee_lastname" />
+                <ScalarProperty Name="employee_TC" ColumnName="employee_TC" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="employee_position" ColumnName="employee_position" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GearTypes">
+            <EntityTypeMapping TypeName="IHALEDBModel.GearType">
+              <MappingFragment StoreEntitySet="GearType">
+                <ScalarProperty Name="GearTypeId" ColumnName="GearTypeId" />
+                <ScalarProperty Name="GearTypeName" ColumnName="GearTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logs">
+            <EntityTypeMapping TypeName="IHALEDBModel.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="action_table" ColumnName="action_table" />
+                <ScalarProperty Name="action_name" ColumnName="action_name" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="date_of" ColumnName="date_of" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media">
+            <EntityTypeMapping TypeName="IHALEDBModel.medium">
+              <MappingFragment StoreEntitySet="media">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="image_name" ColumnName="image_name" />
+                <ScalarProperty Name="image_subtitle" ColumnName="image_subtitle" />
+                <ScalarProperty Name="image_title" ColumnName="image_title" />
+                <ScalarProperty Name="image_path" ColumnName="image_path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="natifications">
+            <EntityTypeMapping TypeName="IHALEDBModel.natification">
+              <MappingFragment StoreEntitySet="natification">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="explanation" ColumnName="explanation" />
+                <ScalarProperty Name="zaman" ColumnName="zaman" />
+                <ScalarProperty Name="ekleyenkullanici_id" ColumnName="ekleyenkullanici_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="odeme_yontemi">
+            <EntityTypeMapping TypeName="IHALEDBModel.odeme_yontemi">
+              <MappingFragment StoreEntitySet="odeme_yontemi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="yontem" ColumnName="yontem" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="payment_plan">
+            <EntityTypeMapping TypeName="IHALEDBModel.payment_plan">
+              <MappingFragment StoreEntitySet="payment_plan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="explanation" ColumnName="explanation" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="statu" ColumnName="statu" />
+                <ScalarProperty Name="Ekleyen_Kullanici" ColumnName="Ekleyen_Kullanici" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="IHALEDBModel.Post">
+              <MappingFragment StoreEntitySet="Post">
+                <ScalarProperty Name="Post_id" ColumnName="Post_id" />
+                <ScalarProperty Name="submit_id" ColumnName="submit_id" />
+                <ScalarProperty Name="content_id" ColumnName="content_id" />
+                <ScalarProperty Name="users_id" ColumnName="users_id" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRICEBOTs">
+            <EntityTypeMapping TypeName="IHALEDBModel.PRICEBOT">
+              <MappingFragment StoreEntitySet="PRICEBOT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CarDetail_ID" ColumnName="CarDetail_ID" />
+                <ScalarProperty Name="ORT_FIYAT" ColumnName="ORT_FIYAT" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="IHALEDBModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleClaims">
+            <EntityTypeMapping TypeName="IHALEDBModel.RoleClaim">
+              <MappingFragment StoreEntitySet="RoleClaim">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="ClaimId" ColumnName="ClaimId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Segments">
+            <EntityTypeMapping TypeName="IHALEDBModel.Segment">
+              <MappingFragment StoreEntitySet="Segment">
+                <ScalarProperty Name="SegmentId" ColumnName="SegmentId" />
+                <ScalarProperty Name="SegmentName" ColumnName="SegmentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="senaryoes">
+            <EntityTypeMapping TypeName="IHALEDBModel.senaryo">
+              <MappingFragment StoreEntitySet="senaryo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="senaryo1" ColumnName="senaryo" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SOLD_PRODUCT">
+            <EntityTypeMapping TypeName="IHALEDBModel.SOLD_PRODUCT">
+              <MappingFragment StoreEntitySet="SOLD_PRODUCT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CarDetail_ID" ColumnName="CarDetail_ID" />
+                <ScalarProperty Name="E_INVOICE_ID" ColumnName="E_INVOICE_ID" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="submits">
+            <EntityTypeMapping TypeName="IHALEDBModel.submit">
+              <MappingFragment StoreEntitySet="submit">
+                <ScalarProperty Name="submit_id" ColumnName="submit_id" />
+                <ScalarProperty Name="media_id" ColumnName="media_id" />
+                <ScalarProperty Name="submit_article" ColumnName="submit_article" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tags">
+            <EntityTypeMapping TypeName="IHALEDBModel.tag">
+              <MappingFragment StoreEntitySet="tag">
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+                <ScalarProperty Name="tag_name" ColumnName="tag_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tag_post">
+            <EntityTypeMapping TypeName="IHALEDBModel.tag_post">
+              <MappingFragment StoreEntitySet="tag_post">
+                <ScalarProperty Name="tag_post_id" ColumnName="tag_post_id" />
+                <ScalarProperty Name="Post_id" ColumnName="Post_id" />
+                <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tax_Administrations">
+            <EntityTypeMapping TypeName="IHALEDBModel.Tax_Administration">
+              <MappingFragment StoreEntitySet="Tax Administration">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tax_Administration_name" ColumnName="Tax_Administration_name" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="Tax_Administration_code" ColumnName="Tax_Administration_code" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="titles">
+            <EntityTypeMapping TypeName="IHALEDBModel.title">
+              <MappingFragment StoreEntitySet="title">
+                <ScalarProperty Name="title_id" ColumnName="title_id" />
+                <ScalarProperty Name="title_name" ColumnName="title_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="IHALEDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+                <ScalarProperty Name="UserType_Id" ColumnName="UserType_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="IHALEDBModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="IHALEDBModel.UserType">
+              <MappingFragment StoreEntitySet="UserType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuelTypes">
+            <EntityTypeMapping TypeName="IHALEDBModel.FuelType">
+              <MappingFragment StoreEntitySet="FuelType">
+                <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+                <ScalarProperty Name="FuelTypeName" ColumnName="FuelTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="IHALEDBModel.Image">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="İmagesId" ColumnName="İmagesId" />
+                <ScalarProperty Name="CarId" ColumnName="CarId" />
+                <ScalarProperty Name="İmage" ColumnName="İmage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
