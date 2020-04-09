@@ -449,5 +449,39 @@ GO
     	[user_id] INT,
     	date_of DATE DEFAULT GETDATE(),
     )
-
+GO
+Create Table Icon
+(
+	Id int identity primary key,
+	[Name] varchar(75)
+)
+Go
+Create Table Menu
+(
+	Id int identity primary key,
+	[Name] varchar(75),
+	IconId int,
+	[Description] text null,
+	MenuId int Default 0
+	Constraint FK_MenuIcon Foreign Key (IconId) References Icon(Id)  
+)
+Go
+Create Table SocialMedya
+(
+	Id int identity primary key,
+	[Name] varchar(75),
+	IconId int,
+	Constraint FK_SocialIcon Foreign Key (IconId) References Icon(Id)  
+)
+Go
+Create Table GeneralDesign
+(
+	Id int identity primary key,
+	Header text,
+	Nav text,
+	Article text,
+	Section text,
+	Aside text,
+	Footer text
+)
 
