@@ -18,24 +18,13 @@ namespace IM.ServiceLayer
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>();
+        
         public List<log> GetData()
         {
-            
-            return _db.GetAll();
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
+            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
             {
-                throw new ArgumentNullException("composite");
+                return _db.GetAll();
             }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
         }
     }
 }

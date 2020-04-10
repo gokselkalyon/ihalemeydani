@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IDataAccessDal.cs" />
     <Compile Include="Concrete\EFConcrete\LogConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\UserConcrete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

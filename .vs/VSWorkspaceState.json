@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\IhaleMeydani",
+    "\\IhaleMeydani\\IM.DataAccessLayer",
     "\\IhaleMeydani\\IM.ServiceLayer"
   ],
-  "SelectedNode": "\\IhaleMeydani\\IM.ServiceLayer\\Web.config",
+  "SelectedNode": "\\IhaleMeydani\\IM.DataAccessLayer\\App.config",
   "PreviewInSolutionExplorer": false
 }
