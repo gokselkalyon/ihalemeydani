@@ -1,4 +1,6 @@
-﻿using IM.BusinessLayer.Abstract;
+﻿using AutoMapper;
+using IM.BusinessLayer.Abstract;
+using IM.BusinessLayer.helper;
 using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
 using System;
@@ -13,9 +15,12 @@ namespace IM.BusinessLayer.Concrete
     public class LogManager : IDataBusinessService<log>
     {
         private IDataAccessDal<log> _dataAccessDal;
-        public LogManager(IDataAccessDal<log> dataAccessDal)
+        private readonly IMapper _mapper;
+
+        public LogManager(IDataAccessDal<log> dataAccessDal,IMapper mapper)
         {
             _dataAccessDal = dataAccessDal;
+            _mapper = mapper;
         }
         public void Add(log entity)
         {
@@ -29,7 +34,9 @@ namespace IM.BusinessLayer.Concrete
 
         public List<log> GetAll()
         {
-            return _dataAccessDal.GetAll();
+            var _log = _mapper.Map<List<log>>(_dataAccessDal.GetAll());
+            //var _log = AutoMapperHelper.MapToSameTypeList(_dataAccessDal.GetAll());
+            return _log;
         }
 
         public IEnumerable<log> GetFilter(Expression<Func<log, bool>> expression)

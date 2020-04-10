@@ -119,6 +119,12 @@
     <Compile Include="GearType.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="GeneralDesign.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Icon.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="IhaleMeydaniModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +147,9 @@
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="medium.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="natification.cs">
@@ -171,10 +180,16 @@
     <Compile Include="senaryo.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SocialMedya.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SOLD_PRODUCT.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="submit.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tag.cs">

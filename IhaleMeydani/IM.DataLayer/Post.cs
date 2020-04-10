@@ -15,7 +15,6 @@ namespace IM.DataLayer
     public partial class Post
     {
         public int Post_id { get; set; }
-        public Nullable<int> submit_id { get; set; }
         public Nullable<int> content_id { get; set; }
         public Nullable<int> users_id { get; set; }
         public Nullable<System.DateTime> Post_date { get; set; }

@@ -15,12 +15,11 @@ namespace IM.DataLayer
     public partial class company
     {
         public int Id { get; set; }
-        public Nullable<int> company_type_id { get; set; }
+        public Nullable<int> company_type { get; set; }
         public string company_name { get; set; }
         public Nullable<int> city_id { get; set; }
-        public Nullable<int> Tax_Administration_id { get; set; }
+        public Nullable<int> Tax_Administration { get; set; }
         public Nullable<int> county_id { get; set; }
-        public Nullable<int> country_id { get; set; }
         public string Tax_number { get; set; }
         public string company_address { get; set; }
         public string tel { get; set; }

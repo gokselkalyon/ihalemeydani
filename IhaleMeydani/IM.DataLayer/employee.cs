@@ -19,7 +19,7 @@ namespace IM.DataLayer
         public string employee_lastname { get; set; }
         public string employee_TC { get; set; }
         public Nullable<decimal> salary { get; set; }
-        public Nullable<int> employee_position { get; set; }
+        public Nullable<int> employee_position_id { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
     }
 }

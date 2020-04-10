@@ -46,9 +46,14 @@ namespace IM.DataLayer
         public virtual DbSet<E_invoice_type> E_invoice_type { get; set; }
         public virtual DbSet<employee_position> employee_position { get; set; }
         public virtual DbSet<employee> employees { get; set; }
+        public virtual DbSet<FuelType> FuelTypes { get; set; }
         public virtual DbSet<GearType> GearTypes { get; set; }
+        public virtual DbSet<GeneralDesign> GeneralDesigns { get; set; }
+        public virtual DbSet<Icon> Icons { get; set; }
+        public virtual DbSet<Image> Images { get; set; }
         public virtual DbSet<log> logs { get; set; }
         public virtual DbSet<medium> media { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<natification> natifications { get; set; }
         public virtual DbSet<odeme_yontemi> odeme_yontemi { get; set; }
         public virtual DbSet<payment_plan> payment_plan { get; set; }
@@ -58,16 +63,16 @@ namespace IM.DataLayer
         public virtual DbSet<RoleClaim> RoleClaims { get; set; }
         public virtual DbSet<Segment> Segments { get; set; }
         public virtual DbSet<senaryo> senaryoes { get; set; }
+        public virtual DbSet<SocialMedya> SocialMedyas { get; set; }
         public virtual DbSet<SOLD_PRODUCT> SOLD_PRODUCT { get; set; }
         public virtual DbSet<submit> submits { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<tag> tags { get; set; }
         public virtual DbSet<tag_post> tag_post { get; set; }
-        public virtual DbSet<Tax_Administration> Tax_Administrations { get; set; }
+        public virtual DbSet<Tax_Administration> Tax_Administration { get; set; }
         public virtual DbSet<title> titles { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
-        public virtual DbSet<FuelType> FuelTypes { get; set; }
-        public virtual DbSet<Image> Images { get; set; }
     }
 }
