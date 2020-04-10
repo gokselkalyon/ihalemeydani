@@ -1,0 +1,15 @@
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll.config
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll.config
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb

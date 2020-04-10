@@ -16,6 +16,7 @@ namespace IM.DataLayer
     {
         public int plate_code { get; set; }
         public string city_name { get; set; }
+        public Nullable<int> country_id { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
     }
 }

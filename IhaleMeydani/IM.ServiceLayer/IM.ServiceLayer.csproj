@@ -51,7 +51,18 @@
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Wcf, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Wcf.3.2.2.0\lib\net45-full\Ninject.Extensions.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -97,6 +108,10 @@
     <ProjectReference Include="..\IM.BusinessLayer\IM.BusinessLayer.csproj">
       <Project>{69a38e8e-c773-42e1-9288-10217542516b}</Project>
       <Name>IM.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IM.DataAccessLayer\IM.DataAccessLayer.csproj">
+      <Project>{86333051-9227-4EBC-BD7C-D366FAD1EC2D}</Project>
+      <Name>IM.DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\IM.DataLayer\IM.DataLayer.csproj">
       <Project>{e7632f51-9b6c-404b-8d2c-f5ea94df23eb}</Project>

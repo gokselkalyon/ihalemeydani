@@ -1,4 +1,10 @@
-﻿using System;
+﻿using IM.BusinessLayer.Abstract;
+using IM.BusinessLayer.Concrete;
+using IM.BusinessLayer.DependencyResolver;
+using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.EFConcrete;
+using IM.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,10 +18,11 @@ namespace IM.ServiceLayer
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-
-        public string GetData(int value)
+        IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>();
+        public List<log> GetData()
         {
-            return string.Format("You entered: {0}", value);
+            
+            return _db.GetAll();
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

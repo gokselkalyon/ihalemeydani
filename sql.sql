@@ -2,10 +2,21 @@ CREATE DATABASE IHALEDB
 GO
 USE IHALEDB
 GO
+	IF OBJECT_ID('country','u') is not null DROP TABLE country
+	CREATE TABLE country
+	(
+		Id INT IDENTITY PRIMARY KEY,
+		[country plate sign] NVARCHAR(10),
+		[country_name] NVARCHAR(100),
+		Country_name_EN NVARCHAR(100),
+		DATE_OF_UPDATE DATE DEFAULT GETDATE()
+	)
+GO
 	CREATE TABLE city
 	(
 		plate_code INT PRIMARY KEY,
 		city_name NVARCHAR(50),
+        country_id INT FOREIGN KEY REFERENCES country(Id),
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 GO
@@ -14,19 +25,8 @@ GO
 	CREATE TABLE county
 	(
 		Id INT IDENTITY PRIMARY KEY,
-		city_id INT,
+		city_id INT FOREIGN KEY REFERENCES city(plate_code),
 		county_name NVARCHAR(50),
-		DATE_OF_UPDATE DATE DEFAULT GETDATE()
-	)
-GO
-	IF OBJECT_ID('country','u') is not null DROP TABLE country
-GO
-	CREATE TABLE country
-	(
-		Id INT IDENTITY PRIMARY KEY,
-		[country plate sign] NVARCHAR(10),
-		[country_name] NVARCHAR(100),
-		Country_name_EN NVARCHAR(100),
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 GO
@@ -64,11 +64,11 @@ GO
     	Adress NVARCHAR(200),
     	CompanyName NVARCHAR(50),
     	Email NVARCHAR(100),
-    	Password NVARCHAR(20),
+    	[Password] NVARCHAR(20),
     	IdentityNo NVARCHAR(11),
     	Phone NVARCHAR(11),
     	IsDeleted bit,
-    	city_id INT,
+    	city_id INT FOREIGN KEY REFERENCES city(plate_code),
     	UserType_Id INT,
     )
 GO
@@ -89,7 +89,6 @@ GO
 Go
 /*Aracların Modelleri olacak*/
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='CarMake')
-GO
     CREATE TABLE CarMake
     (
     	CarMakeId INT IDENTITY PRIMARY KEY,
@@ -99,7 +98,6 @@ GO
 GO
 /*Burada vites tiplerini tutacağım*/
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='GearType')
-GO
     CREATE TABLE GearType
     (
     	GearTypeId INT IDENTITY PRIMARY KEY,
@@ -108,7 +106,6 @@ GO
 GO
 /*Burada yakıt tiplerini tutacağım*/
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='FuelType')
-GO
     CREATE TABLE FuelType
     (
     	FuelTypeId INT IDENTITY PRIMARY KEY,
@@ -117,7 +114,6 @@ GO
 GO
 /*Burada araba renklerini tutacağım*/
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='Color')
-GO
     CREATE TABLE Color
     (
     	ColorId INT IDENTITY PRIMARY KEY,
@@ -129,7 +125,6 @@ GO
 /*Burada araba segmentlerini tutacağım*/
 
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='Segment')
-GO
     CREATE TABLE Segment
     (
     	SegmentId INT IDENTITY PRIMARY KEY,
@@ -140,7 +135,6 @@ GO
 /*Burada aracın teknik özelliklerini tutacağım marka model motor hacmi vs*/
 
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='CarTechnicalDetails')
-GO
     CREATE TABLE CarTechnicalDetails
     (
     	CarTechnicalDetailId INT IDENTITY PRIMARY KEY,
@@ -149,32 +143,18 @@ GO
     	EngineDisplacement INT,
     	Mileage INT,
     	LicancePlate NVARCHAR(8),
-    	FuelTypeId INT,
+    	FuelTypeId INT FOREIGN KEY REFERENCES FuelType(FuelTypeId),
     	HP INT,
     	registrationDate Date,
     	CarVersion NVARCHAR(50),
-    	ColorId INT,
+    	ColorId INT FOREIGN KEY REFERENCES Color(ColorId),
     	VIN NVARCHAR(17), /*VIN:Şasİ No 17 Karakterden oluşur.*/
-    	SegmentId INT
+    	SegmentId INT FOREIGN KEY REFERENCES Segment(SegmentId)
     )
 GO
-
-/*Burada aracın teknik ve donanimsal tablolarını bağlyıcağım ve fotoğraflarını burada tutacağım.*/
-
-    If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='CarDetail')
-GO
-    CREATE TABLE CarDetail
-    (
-    	CarDetailId INT IDENTITY PRIMARY KEY,
-    	CarTechnicalId INT,
-    	CarHardwareId INT
-    )
-GO
-
 /*Burada aracın donanımsal çzelliklerini tutacağım abs 4x4 vs.*/
 
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='CarHardwareDetails')
-GO
     CREATE TABLE CarHardwareDetails
     (
     	CarHardwareDetailsId INT IDENTITY PRIMARY KEY,
@@ -182,15 +162,24 @@ GO
     	CarDetailId INT
     )
 GO
+/*Burada aracın teknik ve donanimsal tablolarını bağlyıcağım ve fotoğraflarını burada tutacağım.*/
+
+    If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='CarDetail')
+    CREATE TABLE CarDetail
+    (
+    	CarDetailId INT IDENTITY PRIMARY KEY,
+    	CarTechnicalId INT FOREIGN KEY REFERENCES CarTechnicalDetails(CarTechnicalDetailId),
+    	CarHardwareId INT  FOREIGN KEY REFERENCES CarHardwareDetails(CarHardwareDetailsId)
+    )
+GO
 
 /*Burada araçların fotoğraf yollarını tutacağım.*/
 
     If Not Exists (Select * from INFORMATION_SCHEMA.TABLES Where TABLE_NAME='Images')
-GO
     CREATE TABLE Images
     (
     	İmagesId INT IDENTITY PRIMARY KEY,
-    	CarId INT,
+    	CarId INT FOREIGN KEY REFERENCES CarDetail(CarDetailId),
     	İmage NVARCHAR(100)
     )
 GO
@@ -203,30 +192,30 @@ GO
     CREATE TABLE AMOUNT_OF_INCREASE
     (
         ID INT IDENTITY PRIMARY KEY,
-        CURRENCY_ID INT,
+        CURRENCY_ID INT FOREIGN KEY REFERENCES CURRENCY(ID),
         MAX_PRICE MONEY,
         MIN_PRICE MONEY,
         INCREASE_PRICE MONEY,
         DATE_OF_UPDATE DATE DEFAULT GETDATE(),
-        UPDATED_PERSON_ID INT
+        UPDATED_PERSON_ID INT FOREIGN KEY REFERENCES [User](Id)
     )
 GO
     CREATE TABLE auction
     (
         ID INT IDENTITY PRIMARY KEY,
-        PRODUCT_ID INT,--///acık artırmaya eklenecek ürün
+        PRODUCT_ID INT FOREIGN KEY REFERENCES CarDetail(CarDetailId),--///acık artırmaya eklenecek ürün
         ACUTION_DATE DATE DEFAULT GETDATE(),--/// ACIK ARTIRMA TARIHI
-        USER_ID INT,-- //ACIK ARTIRMAYI YAPACAK OLAN 
+        [USER_ID] INT FOREIGN KEY REFERENCES [User](Id),-- //ACIK ARTIRMAYI YAPACAK OLAN 
         ACUTION_SALES_TIME INT,--///SANIYE CINSINSEN YAPILAN SON TEKLIFTEN SONRA BAŞKA TEKLİF GELMEZ İSE BİTME SÜRESİ
-        AMOUNT_OF_INCREASE_ID INT,
+        AMOUNT_OF_INCREASE_ID INT FOREIGN KEY REFERENCES AMOUNT_OF_INCREASE(ID),
         DATE_OF_UPDATE DATE DEFAULT GETDATE(),
-        UPDATED_PERSON_ID INT
+        UPDATED_PERSON_ID INT FOREIGN KEY REFERENCES [User](Id)
     )
 GO
     CREATE TABLE PRICEBOT
     (
         ID INT IDENTITY PRIMARY KEY,
-        CarDetail_ID INT,
+        CarDetail_ID INT FOREIGN KEY REFERENCES CarDetail(CarDetailId),
         ORT_FIYAT MONEY,
         DATE_OF_UPDATE DATE DEFAULT GETDATE()
     )
@@ -240,13 +229,13 @@ GO
     	DATE_OF_UPDATE DATE DEFAULT GETDATE()
     )
 GO
-	IF OBJECT_ID('[Tax Administration]','u') is not null drop TABLE [Tax Administration]
+	IF OBJECT_ID('[Tax_Administration]','u') is not null drop TABLE [Tax_Administration]
 GO
-	CREATE TABLE [Tax Administration]
+	CREATE TABLE [Tax_Administration]
 	(
 		Id INT IDENTITY PRIMARY KEY,
 		[Tax_Administration_name] NVARCHAR(150),
-		city INT foreign key references city(plate_code),
+		city_id INT FOREIGN KEY REFERENCES city(plate_code),
 		[Tax_Administration_code] NVARCHAR(55),
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
@@ -258,10 +247,10 @@ GO
 		Id INT IDENTITY PRIMARY KEY,
 		company_type INT foreign key references company_type(Id),
 		company_name NVARCHAR(200),
-		city INT foreign key references city(plate_code),
-		[Tax Administration] INT foreign key references [Tax Administration](Id),
-		county INT foreign key references county(Id),
-		country INT foreign key references country(Id),
+		city_id INT foreign key references city(plate_code),
+		[Tax_Administration] INT foreign key references [Tax Administration](Id),
+		county_id INT foreign key references county(Id),
+		country_id INT foreign key references country(Id),
 		Tax_number NVARCHAR(55),--tckn vkn no
 		company_address NVARCHAR(200),
 		tel NVARCHAR(11),
@@ -288,7 +277,7 @@ GO
 		employee_lastname NVARCHAR(100),
 		employee_TC NVARCHAR(11),
 		salary money,--maaþý
-		employee_position INT,-- çalýþanýn pozisyonu 
+		employee_position_id INT FOREIGN KEY REFERENCES employee_position(id),-- çalýþanýn pozisyonu 
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 GO
@@ -301,10 +290,10 @@ GO
 		code NVARCHAR(11),
 		statu bit default 1,
 		figure NVARCHAR(55),
-		currency INT foreign key references currency(Id),
+		currency_id INT foreign key references currency(Id),
 		[value] INT,
 		Formula INT,
-		Ekleyen_Kullanici INT,
+		Ekleyen_Kullanici INT FOREIGN KEY REFERENCES [User](Id),
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 GO
@@ -315,9 +304,9 @@ GO
 		Id INT IDENTITY PRIMARY KEY,
 		code INT,
 		explanation NVARCHAR(100),
-		discount INT foreign key references discountcart(Id),
+		discount_id INT foreign key references discountcart(Id),
 		statu bit default 1,
-		Ekleyen_Kullanici INT,
+		Ekleyen_Kullanici INT FOREIGN KEY REFERENCES [User](Id),
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 GO
@@ -361,21 +350,21 @@ GO
 		id INT IDENTITY PRIMARY KEY,
 		explanation NVARCHAR(250),
 		zaman date default getdate(),
-		ekleyenkullanici_id int
+		ekleyenkullanici_id INT FOREIGN KEY REFERENCES [User](Id)
 	)
 GO
 	CREATE TABLE E_INVOICE
 	(
 		ID INT IDENTITY PRIMARY KEY,
-		senaryo_id INT,
-		company_id INT,
-		E_invoice_type_id INT,
-		odeme_yontemi_id INT,
-		[user_id] INT,
+		senaryo_id INT FOREIGN KEY REFERENCES senaryo(Id),
+		company_id INT FOREIGN KEY REFERENCES company(Id),
+		E_invoice_type_id INT FOREIGN KEY REFERENCES E_invoice_type(id),
+		odeme_yontemi_id INT FOREIGN KEY REFERENCES odeme_yontemi(id),
+		[user_id] INT FOREIGN KEY REFERENCES [User](Id),
 		INVOICE_NO NVARCHAR(50),
 		INVOICE_DATE DATE DEFAULT GETDATE(),
 		SATISKANALI NVARCHAR(50),--SİTENİN ADI N11,HEPSIBURADA,...
-		CarDetail_ID INT,
+		CarDetail_ID INT FOREIGN KEY REFERENCES CarDetail(CarDetailId),
 		MIKTAR INT,
 		BIRIM_FIYATI MONEY,
 		KDV INT,
@@ -391,8 +380,8 @@ GO
 	CREATE TABLE SOLD_PRODUCT
 	(
 		ID INT IDENTITY PRIMARY KEY,
-		CarDetail_ID INT,
-		E_INVOICE_ID INT,
+		CarDetail_ID INT FOREIGN KEY REFERENCES CarDetail(CarDetailId),
+		E_INVOICE_ID INT FOREIGN KEY REFERENCES E_INVOICE(ID),
 		DATE_OF_UPDATE DATE DEFAULT GETDATE()
 	)
 GO
@@ -420,16 +409,15 @@ GO
     CREATE TABLE submit
     (
         submit_id INT primary key identity,
-        media_id INT,
+        media_id INT FOREIGN KEY REFERENCES media(id),
         submit_article NVARCHAR(1000),
     )
 GO
     CREATE TABLE Post
     (
         Post_id INT primary key identity,
-        submit_id INT,
-        content_id INT,
-        users_id INT ,
+        content_id INT FOREIGN KEY REFERENCES submit(submit_id),
+        users_id INT FOREIGN KEY REFERENCES [User](Id),
         Post_date date default getdate()
     )
 GO
@@ -437,8 +425,8 @@ GO
     CREATE TABLE tag_post
     (
         tag_post_id INT primary key identity,
-        Post_id INT,
-        tag_id INT
+        Post_id INT FOREIGN KEY REFERENCES Post(Post_id),
+        tag_id INT FOREIGN KEY REFERENCES tag(tag_id)
     )
 GO
     CREATE TABLE [log]
@@ -446,7 +434,7 @@ GO
     	Id INT IDENTITY PRIMARY KEY,
     	[action_table] NVARCHAR(100) NOT NULL,--DEĞİŞİKLİLİK YAPILAN TABLO
     	[action_name] NVARCHAR(20) NOT NULL,--YAPILAN EYLEMİN ADI UPDATE,..
-    	[user_id] INT,
+    	[user_id] INT FOREIGN KEY REFERENCES [User](Id),
     	date_of DATE DEFAULT GETDATE(),
     )
 GO

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IM.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -14,7 +15,7 @@ namespace IM.ServiceLayer
 	{
 
 		[OperationContract]
-		string GetData(int value);
+		List<log> GetData();
 
 		[OperationContract]
 		CompositeType GetDataUsingDataContract(CompositeType composite);

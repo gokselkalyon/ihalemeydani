@@ -20,7 +20,7 @@ namespace IM.DataLayer
         public Nullable<int> EngineDisplacement { get; set; }
         public Nullable<int> Mileage { get; set; }
         public string LicancePlate { get; set; }
-        public Nullable<int> FuelTypeId { get; set; }
+        public Nullable<int> FuelType_Id { get; set; }
         public Nullable<int> HP { get; set; }
         public Nullable<System.DateTime> registrationDate { get; set; }
         public string CarVersion { get; set; }
