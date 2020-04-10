@@ -1,0 +1,14 @@
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.BusinessLayer.Tests.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.BusinessLayer.Tests.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.csprojAssemblyReference.cache
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.csproj.CoreCompileInputs.cache
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.csproj.CopyComplete
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.pdb
