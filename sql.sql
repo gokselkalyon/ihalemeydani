@@ -6,7 +6,7 @@ GO
 	(
 		plate_code INT PRIMARY KEY,
 		city_name NVARCHAR(50),
-		DATE_OF_UPDATE DATE DEFAULT GETDATE()
+		DATE_OF_UPDATE DATE DEFAULT GETDATE(),
 	)
 GO
 	IF OBJECT_ID('county','u') is not null DROP TABLE county
