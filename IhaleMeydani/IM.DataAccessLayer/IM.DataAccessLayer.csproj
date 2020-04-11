@@ -52,8 +52,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDataAccessDal.cs" />
+    <Compile Include="Concrete\EFConcrete\Amount_Of_IncreaseConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\AuctionConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\BankConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CarBrandConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CarDetailConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CarHardwareDetailConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CarMakeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CarTechnicalDetailConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CityConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\ClaimConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\ColorConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CompanyConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Company_TypeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CountryConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CountyConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\CurrencyConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\DiscountcartConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\EmployeeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Employee_PositionConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\E_invoiceConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\E_Invoice_TypeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\FuelTypeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\GearTypeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\GeneralDesignConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\IconConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\ImageConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\LogConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\MediumConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\MenuConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\NatificationConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Odeme_YontemiConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Payment_PlanConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\PostConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\PricebotConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\RoleClaimConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\RoleConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\SegmentConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\SenaryoConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\SocialMedyaConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Sold_ProductConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\SubmitConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\SysdiagramConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\TagConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Tag_PostConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\Tax_AdministrationConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\TitleConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\UserConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\UserRoleConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\UserTypeConcrete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
