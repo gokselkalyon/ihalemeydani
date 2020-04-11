@@ -26,5 +26,10 @@ namespace IM.ServiceLayer
                 return _db.GetAll();
             }
         }
+
+        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
