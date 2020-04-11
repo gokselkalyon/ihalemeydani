@@ -10,3 +10,15 @@ C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\bin\Debug\En
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csprojAssemblyReference.cache
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.pdb
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.dll.config
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.pdb
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
