@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IM.BusinessLayer.Abstract
 {
-    public interface IDataBusinessService<T> where T : class
+    public interface IDataBusinessService<T>:IDisposable where T : class
     {
         void Add(T entity);
         T Get(int id);

@@ -19,6 +19,7 @@ namespace IM.BusinessLayer.DependencyResolver
         {
             Bind<IDataBusinessService<log>>().To<LogManager>().InSingletonScope();
             Bind<IDataAccessDal<log>>().To<LogConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<User>>().To<UserConcrete>().InSingletonScope();
             Bind<ITCService>().To<TCServiceAdapter>().InSingletonScope();
         }
     }

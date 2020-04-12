@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IhaleMeydani"
+    "\\IhaleMeydani",
+    "\\IhaleMeydani\\IM.DataAccessLayer",
+    "\\IhaleMeydani\\IM.ServiceLayer"
   ],
-  "SelectedNode": "\\IhaleMeydani\\IM.BusinessLayer",
   "PreviewInSolutionExplorer": false
 }
