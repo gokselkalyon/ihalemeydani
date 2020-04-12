@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IhaleMeydani",
-    "\\IhaleMeydani\\IM.ServiceLayer"
+    "\\IhaleMeydani"
   ],
-  "SelectedNode": "\\IhaleMeydani\\IM.ServiceLayer\\Web.config",
+  "SelectedNode": "\\IhaleMeydani\\IM.BusinessLayer",
   "PreviewInSolutionExplorer": false
 }
