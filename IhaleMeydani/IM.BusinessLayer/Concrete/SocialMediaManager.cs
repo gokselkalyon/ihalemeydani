@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public  class SocialMediaManager : IDataBusinessService<SocialMedya>
+    public class SocialMediaManager : IDataBusinessService<SocialMedya>
     {
         private IDataAccessDal<SocialMedya> _dataAccessDal;
         private readonly IMapper _mapper;
@@ -57,6 +57,11 @@ namespace IM.BusinessLayer.Concrete
         public void Update(SocialMedya t)
         {
             _dataAccessDal.Update(t);
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

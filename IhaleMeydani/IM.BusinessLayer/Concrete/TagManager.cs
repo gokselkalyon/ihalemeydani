@@ -55,5 +55,10 @@ namespace IM.BusinessLayer.Concrete
         {
             _dataAccessDal.Update(t);
         }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
