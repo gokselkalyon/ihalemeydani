@@ -12,6 +12,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
     public class LogConcrete : IDataAccessDal<log>
     {
         IHALEDBEntities DB = new IHALEDBEntities();
+        
         public void Add(log entity)
         {
             DB.logs.Add(entity);
