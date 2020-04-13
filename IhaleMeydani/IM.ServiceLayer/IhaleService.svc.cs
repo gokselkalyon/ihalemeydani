@@ -21,7 +21,6 @@ namespace IM.ServiceLayer
             using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
             {
                 _db.Add(entity);
-                _db.
             }
         }
 
