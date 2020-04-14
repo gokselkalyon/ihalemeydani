@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    class Amount_Of_IncreaseConcrete:IDataAccessDal<AMOUNT_OF_INCREASE>
+    public class Amount_Of_IncreaseConcrete:IDataAccessDal<AMOUNT_OF_INCREASE>
     {
         IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(AMOUNT_OF_INCREASE entity)

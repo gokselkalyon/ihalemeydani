@@ -84,6 +84,7 @@
     <Compile Include="Concrete\FuelTypeManager.cs" />
     <Compile Include="Concrete\GearTyPeManager.cs" />
     <Compile Include="Concrete\GeneralDesignManager.cs" />
+    <Compile Include="Concrete\IconManager.cs" />
     <Compile Include="Concrete\ImageManager.cs" />
     <Compile Include="Concrete\LogManager.cs" />
     <Compile Include="Concrete\MediumManager.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Concrete\NatificationManager.cs" />
     <Compile Include="Concrete\OdemeYontemiManager.cs" />
     <Compile Include="Concrete\PaymentPlanManager.cs" />
+    <Compile Include="Concrete\PostManager.cs" />
     <Compile Include="Concrete\PriceBotManager.cs" />
     <Compile Include="Concrete\RoleClaimManager.cs" />
     <Compile Include="Concrete\RoleManager.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Concrete\SeneryoManager.cs" />
     <Compile Include="Concrete\SocialMediaManager.cs" />
     <Compile Include="Concrete\SoldProductManager.cs" />
+    <Compile Include="Concrete\SubmitManager.cs" />
     <Compile Include="Concrete\TagManager.cs" />
     <Compile Include="Concrete\TagPostManager.cs" />
     <Compile Include="Concrete\TaxAdminstrationManager.cs" />
