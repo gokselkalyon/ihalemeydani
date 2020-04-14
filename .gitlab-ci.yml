@@ -1,33 +1,22 @@
-stages:
-  - test
-  - build
-  - deploy
+image: microsoft/dotnet:latest
 
-test:
-  stage: test
-  script: echo "Running tests"
+stages:
+    - build
+    - test
+
+variables:
+    test: "Exemple.Test"
+
+before_script:
+    - "dotnet restore"
 
 build:
-  stage: build
-  script: echo "Building the app"
+    stage: build
+    script:
+        - "dotnet build"
 
-deploy_staging:
-  stage: deploy
-  script:
-    - echo "Deploy to staging server"
-  environment:
-    name: staging
-    url: https://staging.example.com
-  only:
-  - master
-
-deploy_prod:
-  stage: deploy
-  script:
-    - echo "Deploy to production server"
-  environment:
-    name: production
-    url: https://example.com
-  when: manual
-  only:
-  - master
+test:    
+    stage: test   
+    script: 
+       -"cd $test" 
+       -"dotnet test"
