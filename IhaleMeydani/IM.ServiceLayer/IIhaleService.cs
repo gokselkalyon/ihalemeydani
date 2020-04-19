@@ -201,7 +201,7 @@ namespace IM.ServiceLayer
 
         #region Color
         [OperationContract]
-        List<Color> GetColor();
+        List<Color> GetAllColor();
 
         [OperationContract]
         Color GetColor(int Id);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92e2c012-f86c-4875-a3c2-cd1e2adf0e11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62786/IhaleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IhaleService.disco" MetadataType="Disco" ID="a2cf98f0-5c0d-4421-8ba0-af083548267a" SourceId="1" SourceUrl="http://localhost:62786/IhaleService.svc?disco" />
+    <MetadataFile FileName="IhaleService.wsdl" MetadataType="Wsdl" ID="869df7b9-2f6d-423d-bac0-62230a767d52" SourceId="1" SourceUrl="http://localhost:62786/IhaleService.svc?wsdl" />
+    <MetadataFile FileName="IhaleService.xsd" MetadataType="Schema" ID="fb6773a7-5f15-4b6a-a1e9-dded3e85620d" SourceId="1" SourceUrl="http://localhost:62786/IhaleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="IhaleService1.xsd" MetadataType="Schema" ID="43872d80-6aef-4e6b-b5e6-1054ca0d1494" SourceId="1" SourceUrl="http://localhost:62786/IhaleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="IhaleService2.xsd" MetadataType="Schema" ID="68e038f5-0467-4f9b-af9c-d6d295a7b345" SourceId="1" SourceUrl="http://localhost:62786/IhaleService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

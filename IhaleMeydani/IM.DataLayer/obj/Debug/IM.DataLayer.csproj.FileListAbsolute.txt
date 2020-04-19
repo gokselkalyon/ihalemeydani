@@ -1,6 +1,5 @@
 C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.dll
 C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.pdb
-C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csprojAssemblyReference.cache
 C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CoreCompileInputs.cache
 C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
 C:\Users\gokse\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.pdb
@@ -33,3 +32,4 @@ C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csprojAssemblyReference.cache

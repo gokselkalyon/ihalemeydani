@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="~/SignalR/Hubs"></script>
+
+    <style>
+        .deneme {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(function () {
+            var chat = $.connection.signalHub;
+            var $username = $('#txtUsername');
+            var $message = $('#txtMessage');
+            var $messages = $('#messages');
+            $message.focus();
+            chat.client.sendMessage = function (name, message) {
+                $messages.append('<li><strong>' + name + '</strong>: ' + message + '</li>');
+            };
+            $.connection.hub.start().done(function () {
+                $('#btnSendMessage').click(function () {
+
+                    chat.server.send($username.val(), $message.val());
+
+                    $message.val('').focus();
+                });
+            });
+        });
+    </script>
+</head>
+<body style="padding:0px;">
+    <div>
+        <label for="txtUserName">Kullanıcı: </label> @Html.TextBox("txtUsername")
+        <br />
+        <label for="txtMessage">Mesaj: </label> @Html.TextBox("txtMessage") <button id="btnSendMessage">Mesaj Yolla</button>
+    </div>
+    dd<div class="text-white" id="messages"></div><br /><br /><br /><br /><br /><br />
+    <div class=" deneme" style="background:#24282e;">
+        <div class="container-fluid">
+            <!-- header begin -->
+            <div class="row">
+                <div class="col-12 bg-warning" style="height: 100px;"> &nbsp;</div>
+            </div>
+            <!-- header end-->
+            @RenderBody()
+            <!-- footer begin-->
+            <div class="row">
+                <div class="col-12" style="height: 250px;background:#1c1f24;"> &nbsp;</div>
+            </div>
+            <!-- footer end-->
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#bars li .bar").each(function (key, bar) {
+                var percentage = $(this).data('percentage');
+                var percentage2 = $("#numbers li span").data('percentage');
+                percentage = percentage / (percentage2 / 100);
+                $(this).animate({
+                    'height': percentage + '%'
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

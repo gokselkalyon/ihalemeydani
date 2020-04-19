@@ -108,7 +108,7 @@ namespace IM.ServiceLayer
             }
         }
 
-        auction IIhaleService.GetAuction(int Id)
+        public auction GetAuction(int Id)
         {
             using (IDataBusinessService<auction> _db = InstanceFactory.GetInstance<IDataBusinessService<auction>>())
             {
@@ -486,7 +486,7 @@ namespace IM.ServiceLayer
         #endregion
 
         #region Color
-        public List<Color> GetColor()
+        public List<Color> GetAllColor()
         {
             using (IDataBusinessService<Color> _db = InstanceFactory.GetInstance<IDataBusinessService<Color>>())
             {
