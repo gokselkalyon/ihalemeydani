@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="IHALEDBModel.CarDetail" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IHALEDBModel.CarHardwareDetail" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IHALEDBModel.CarMake" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IHALEDBModel.CarTechnicalDetail" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IHALEDBModel.CarTechnicalDetail" Width="2" PointX="6.625" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IHALEDBModel.city" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IHALEDBModel.Claim" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IHALEDBModel.Color" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />

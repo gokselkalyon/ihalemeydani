@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    class SocialMedyaConcrete:IDataAccessDal<SocialMedya>
+    public class SocialMedyaConcrete:IDataAccessDal<SocialMedya>
     {
         IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(SocialMedya entity)

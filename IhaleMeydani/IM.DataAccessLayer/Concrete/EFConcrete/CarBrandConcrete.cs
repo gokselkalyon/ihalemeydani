@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    class CarBrandConcrete:IDataAccessDal<CarBrand>
+    public class CarBrandConcrete:IDataAccessDal<CarBrand>
     {
         IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(CarBrand entity)

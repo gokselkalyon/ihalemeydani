@@ -10,11 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IM.BusinessLayer</RootNamespace>
     <AssemblyName>IM.BusinessLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,7 +61,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDataBusinessService.cs" />
+    <Compile Include="Concrete\AmountOfIncreaseManager.cs" />
+    <Compile Include="Concrete\AuctionManager.cs" />
+    <Compile Include="Concrete\BankManager.cs" />
+    <Compile Include="Concrete\CarBrandManager.cs" />
+    <Compile Include="Concrete\CarDetailManager.cs" />
+    <Compile Include="Concrete\CarHardwareDetailsManager.cs" />
+    <Compile Include="Concrete\CarMakeManager.cs" />
+    <Compile Include="Concrete\CarTechnicalDetailManager.cs" />
+    <Compile Include="Concrete\CityManager.cs" />
+    <Compile Include="Concrete\ClaimManager.cs" />
+    <Compile Include="Concrete\ColorManager.cs" />
+    <Compile Include="Concrete\CompanyManager.cs" />
+    <Compile Include="Concrete\CompanyTypeManager.cs" />
+    <Compile Include="Concrete\CountryManager.cs" />
+    <Compile Include="Concrete\CountyManager.cs" />
+    <Compile Include="Concrete\CurrencyManager.cs" />
+    <Compile Include="Concrete\DiscountCartManager.cs" />
+    <Compile Include="Concrete\EInvoiceTypeManager.cs" />
+    <Compile Include="Concrete\EmployeeManager.cs" />
+    <Compile Include="Concrete\EmployeePositionManager.cs" />
+    <Compile Include="Concrete\E_InvoiceManager.cs" />
+    <Compile Include="Concrete\FuelTypeManager.cs" />
+    <Compile Include="Concrete\GearTyPeManager.cs" />
+    <Compile Include="Concrete\GeneralDesignManager.cs" />
+    <Compile Include="Concrete\IconManager.cs" />
+    <Compile Include="Concrete\ImageManager.cs" />
     <Compile Include="Concrete\LogManager.cs" />
+    <Compile Include="Concrete\MediumManager.cs" />
+    <Compile Include="Concrete\MenuManager.cs" />
+    <Compile Include="Concrete\NatificationManager.cs" />
+    <Compile Include="Concrete\OdemeYontemiManager.cs" />
+    <Compile Include="Concrete\PaymentPlanManager.cs" />
+    <Compile Include="Concrete\PostManager.cs" />
+    <Compile Include="Concrete\PriceBotManager.cs" />
+    <Compile Include="Concrete\RoleClaimManager.cs" />
+    <Compile Include="Concrete\RoleManager.cs" />
+    <Compile Include="Concrete\SegmentManager.cs" />
+    <Compile Include="Concrete\SeneryoManager.cs" />
+    <Compile Include="Concrete\SocialMediaManager.cs" />
+    <Compile Include="Concrete\SoldProductManager.cs" />
+    <Compile Include="Concrete\SubmitManager.cs" />
+    <Compile Include="Concrete\TagManager.cs" />
+    <Compile Include="Concrete\TagPostManager.cs" />
+    <Compile Include="Concrete\TaxAdminstrationManager.cs" />
+    <Compile Include="Concrete\TitleManager.cs" />
+    <Compile Include="Concrete\UserManager.cs" />
+    <Compile Include="Concrete\UserRoleManager.cs" />
+    <Compile Include="Concrete\UserTypeManager.cs" />
     <Compile Include="Connected Services\TCServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
