@@ -14,6 +14,10 @@ namespace IM.ServiceLayer
     // NOTE: In order to launch WCF Test Client for testing this service, please select IhaleService.svc or IhaleService.svc.cs at the Solution Explorer and start debugging.
     public class IhaleService : IIhaleService
     {
+        public string toplama(int x,int y)
+        {
+            return string.Format("sonuc {0}",x+y);
+        }
 
         #region log
         public void AddLog(log entity)

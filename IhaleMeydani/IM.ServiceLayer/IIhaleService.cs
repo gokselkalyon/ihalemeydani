@@ -12,6 +12,9 @@ namespace IM.ServiceLayer
     [ServiceContract]
     public interface IIhaleService
     {
+        [OperationContract]
+        string toplama(int x ,int y);
+
         #region log
         [OperationContract]
         List<log> GetLogs();

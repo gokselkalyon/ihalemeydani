@@ -11,7 +11,9 @@ namespace IM.DataLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract]
     public partial class log
     {
         public int Id { get; set; }
