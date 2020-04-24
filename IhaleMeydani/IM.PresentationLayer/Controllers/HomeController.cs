@@ -8,6 +8,7 @@ namespace IM.PresentationLayer.Controllers
 {
     public class HomeController : Controller
     {
+         [Route("Anasayfa")]
         public ActionResult Index()
         {
             return View();
