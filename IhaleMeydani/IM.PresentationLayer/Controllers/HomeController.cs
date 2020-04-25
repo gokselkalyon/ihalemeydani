@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
          [Route("Anasayfa")]
         public ActionResult Index()

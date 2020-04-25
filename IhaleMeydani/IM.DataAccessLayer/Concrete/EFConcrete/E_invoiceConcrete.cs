@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class E_invoiceConcrete:IDataAccessDal<E_INVOICE>
+    public class E_invoiceConcrete : BaseConcrete, IDataAccessDal<E_INVOICE>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(E_INVOICE entity)
         {
             DB.E_INVOICE.Add(entity);

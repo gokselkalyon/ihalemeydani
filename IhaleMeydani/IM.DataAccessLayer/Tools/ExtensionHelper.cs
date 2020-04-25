@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IM.BusinessLayer.Tools
+namespace IM.DataAccessLayer.Tools
 {
     public static class ExtensionHelper
     {

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDataAccessDal.cs" />
+    <Compile Include="Concrete\Basic\BaseConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\Amount_Of_IncreaseConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\AuctionConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\BankConcrete.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="Concrete\EFConcrete\UserRoleConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\UserTypeConcrete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\DatabaseSingleton.cs" />
+    <Compile Include="Tools\ExtensionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

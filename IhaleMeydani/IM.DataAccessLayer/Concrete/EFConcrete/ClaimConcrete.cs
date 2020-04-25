@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class ClaimConcrete:IDataAccessDal<Claim>
+    public class ClaimConcrete : BaseConcrete, IDataAccessDal<Claim>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(Claim entity)
         {
             DB.Claims.Add(entity);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IM.BusinessLayer.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,6 @@ namespace IM.PresentationLayer.Controllers
 {
     public class BaseController : Controller
     {
-        // GET: Base
-        public ActionResult Index()
-        {
-            return View();
-        }
+       
     }
 }

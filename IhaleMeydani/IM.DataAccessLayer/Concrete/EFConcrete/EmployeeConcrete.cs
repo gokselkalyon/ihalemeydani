@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class EmployeeConcrete:IDataAccessDal<employee>
+    public class EmployeeConcrete : BaseConcrete, IDataAccessDal<employee>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(employee entity)
         {
             DB.employees.Add(entity);

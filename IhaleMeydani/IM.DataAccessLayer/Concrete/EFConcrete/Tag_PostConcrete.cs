@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class Tag_PostConcrete:IDataAccessDal<tag_post>
+    public class Tag_PostConcrete : BaseConcrete, IDataAccessDal<tag_post>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(tag_post entity)
         {
             DB.tag_post.Add(entity);

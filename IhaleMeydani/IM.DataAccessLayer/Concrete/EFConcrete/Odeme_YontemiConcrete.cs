@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class Odeme_YontemiConcrete:IDataAccessDal<odeme_yontemi>
+    public class Odeme_YontemiConcrete : BaseConcrete, IDataAccessDal<odeme_yontemi>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(odeme_yontemi entity)
         {
             DB.odeme_yontemi.Add(entity);
