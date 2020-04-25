@@ -29,7 +29,6 @@
     <link href="~/Content/Template/autoshop/assets/css/external.css" rel="stylesheet">
     <link href="~/Content/Template/autoshop/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/Template/autoshop/assets/css/style.css" rel="stylesheet">
-    <link href="~/Content/Template/autoshop/assets/css/custom.css" rel="stylesheet">
         @RenderSection("css",false)
     </head>
     <body>
@@ -90,7 +89,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="logo" href="index.html">
+                <a class="logo" href="/Anasayfa">
                     <img src="~/Content/Template/autoshop/assets/images/logo/logo-light.png" alt="Autoshop">
                 </a>
             </div>
@@ -251,11 +250,9 @@
     </nav>
     </header>
 
-    <section id="shopgrid" class="shop shop-grid">
-        <div class="container">
+   
             @RenderBody()
-        </div>
-    </section>
+   
 
     <footer id="footer" class="footer footer-1">
         <!-- Footer Info
@@ -486,7 +483,7 @@
     </div>
     <!-- Footer Scripts
     ============================================= -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="https://demo.zytheme.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="~/Content/Template/autoshop/assets/js/jquery-2.2.4.min.js"></script>
     <script src="~/Content/Template/autoshop/assets/js/plugins.js"></script>
     <script src="~/Content/Template/autoshop/assets/js/functions.js"></script>
