@@ -347,3 +347,19 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.BusinessLayer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Firebase.Storage.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Ninject.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataAccessLayer.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\EntityFramework.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.BusinessLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.BusinessLayer.dll.config
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.dll.config
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Ninject.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataAccessLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataAccessLayer.dll.config
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\EntityFramework.xml

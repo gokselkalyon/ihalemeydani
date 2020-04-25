@@ -113,3 +113,9 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.ServiceLayer\obj\D
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.ServiceLayer\bin\Firebase.Storage.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.ServiceLayer\bin\System.Net.Http.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.xml
