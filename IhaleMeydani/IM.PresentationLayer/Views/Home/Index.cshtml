@@ -1,31 +1,945 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!-- Hero #1 Slider
+============================================= -->
+<section id="hero" class="hero">
+    <div id="hero-slider" class="hero-slider">
+        <!-- Slide #1 -->
+        <div class="slide bg-overlay">
+            <div class="bg-section">
+                <img src="~/Content/Template/autoshop/assets/images/sliders/1.jpg" alt="Background">
+            </div>
+            <div class="container vertical-center">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="icon icon-Settings"></i>
+                            </div>
+                            <div class="slide-heading"> Başlık 1 </div>
+                            <div class="slide-title">
+                                <h2>Başlık 2 <span class="color-theme">Araba Dükkanı !</span></h2>
+                            </div>
+                            <div class="slide-desc">Araba Dükkanı bir iş teması. Auto Mechanic, Oto Tamir Dükkanları, Oto Yıkama, Garajlar, Otomobil Mekanikleri, Mekanik Atölyeleri, Oto Boyama, Oto Merkezleri için mükemmel uygundur. </div>
+                            <div class="slide-action">
+                                <a class="btn btn-primary" href="#">Şimdi Kontrol Et</a>
+                                <a class="btn btn-primary btn-white" href="#">Şimdi Satın Al</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .col-md-12 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </div>
+        <!-- .slide end -->
+        <!-- Slide #2 -->
+        <div class="slide bg-overlay">
+            <div class="bg-section">
+                <img src="~/Content/Template/autoshop/assets/images/sliders/8.jpg" alt="Background">
+            </div>
+            <div class="container vertical-center">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                        <div class="slide-content">
+                            <div class="slide-heading"> Piyasadaki en iyi ürün </div>
+                            <div class="slide-title">
+                                <h2>İhtiyaç duyduğunuz her şeyi kolayca alın</h2>
+                            </div>
+                            <div class="slide-desc"> Araba Dükkanı bir iş teması. Auto Mechanic, Oto Tamir Dükkanları, Oto Yıkama, Garajlar, Otomobil Mekanikleri, Mekanik Atölyeleri, Oto Boyama, Oto Merkezleri için mükemmel uygundur. </div>
+                            <div class="slide-action">
+                                <a class="btn btn-primary" href="#">Şimdi kontrol et</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .col-md-12 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </div>
+        <!-- .slide end -->
+        <!-- Slide #3 -->
+        <div class="slide bg-overlay">
+            <div class="bg-section">
+                <img src="~/Content/Template/autoshop/assets/images/sliders/6.jpg" alt="Background">
+            </div>
+            <div class="container vertical-center">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                        <div class="slide-content">
+                            <div class="slide-heading"> Ürün başlangıç ​​fiyatı 40 TL </div>
+                            <div class="slide-title">
+                                <h2>en büyüğü almak<span class="color-theme">Markalar</span></h2>
+                            </div>
+                            <div class="slide-desc"> Araba Dükkanı bir iş teması. Auto Mechanic, Oto Tamir Dükkanları, Oto Yıkama, Garajlar, Otomobil Mekanikleri, Mekanik Atölyeleri, Oto Boyama, Oto Merkezleri için mükemmel uygundur. </div>
+                        </div>
+                    </div>
+                    <!-- .col-md-12 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </div>
+        <!-- .slide end -->
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <!-- #hero-slider end -->
+</section>
+<!-- #hero -->
+<!-- Featured Items
+============================================= -->
+<section id="featuredItems" class="shop">
+    <div class="container">
+        <div class="row product-boxes">
+            <!-- Product Box #1 -->
+            <div class="col-xs-12 col-sm-4 col-md-4 product-box">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="~/Content/Template/autoshop/assets/images/shop/small/1.jpg" alt="Product">
+                        <div class="product-hover">
+                            <div class="product-link">
+                                <h3>
+                                    Araba Tekerlekleri
+                                </h3>
+                                <p>En iyi metal</p>
+                            </div>
+                        </div>
+                        <!-- .product-overlay end -->
+                    </div>
+                    <!-- .product-img end -->
+                </a>
+            </div>
+            <!-- .product-box end -->
+            <!-- Product Box #2 -->
+            <div class="col-xs-12 col-sm-4 col-md-4 product-box">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="~/Content/Template/autoshop/assets/images/shop/small/3.jpg" alt="Product">
+                        <div class="product-hover">
+                            <div class="product-link">
+                                <h3>Araba motorları</h3>
+                                <p>En iyi Fiyatlar</p>
+                            </div>
+                        </div>
+                        <!-- .product-overlay end -->
+                    </div>
+                    <!-- .product-img end -->
+                </a>
+            </div>
+            <!-- .product-box end -->
+            <!-- Product Box #3 -->
+            <div class="col-xs-12 col-sm-4 col-md-4 product-box">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="~/Content/Template/autoshop/assets/images/shop/small/3.jpg" alt="Product">
+                        <div class="product-hover">
+                            <div class="product-link">
+                                <h3>Araba Aküleri</h3>
+                                <p>En iyi kalite</p>
+                            </div>
+                        </div>
+                        <!-- .product-overlay end -->
+                    </div>
+                    <!-- .product-img end -->
+                </a>
+            </div>
+            <!-- .product-box end -->
+
+        </div>
+        <!-- .row end -->
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <!-- .container end -->
+    <div class="container heading">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="subheading">Alın</p>
+                <h2>Yeni Öğeler</h2>
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+
     </div>
-</div>
+    <!-- .container end -->
+    <div class="container">
+        <div class="row product-carousel text-center">
+            <!-- Product #1 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/4.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Bmw</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Ön Aydınlatma</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>28.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #2 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/3.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Kemer Araba Motoru</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>180.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #3 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/1.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Fren Diskleri</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>68.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #4 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/2.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Subaru</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Yağ filtresi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>40.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #5 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/5.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Audi</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Termal Fan</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>240.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #6 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/6.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Toyota</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Soğuk Hava Sistemi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>68.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #7 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/1.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Fren Diskleri</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>68.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #8 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/2.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Subaru</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Yağ filtresi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>40.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #featuredItems end -->
+<!-- Clients
+============================================= -->
+<section id="clients" class="clients bg-gray">
+    <div class="container heading">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="subheading">Harika</p>
+                <h2>Markalarımız</h2>
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+
+        <div class="row heading-desc">
+            <div class="col-xs-12 col-sm-12 col-md-10">
+                <p>Araba Dükkanı bir iş teması. Auto Mechanic, Oto Tamir Dükkanları, Oto Yıkama, Garajlar, Otomobil Mekanikleri, Mekanik Atölyeleri, Oto Boyama, Oto Merkezleri için mükemmel uygundur.</p>
+            </div>
+            <!-- .col-md-10 end -->
+            <div class="col-xs-12 col-sm-12 col-md-2">
+                <a class="btn btn-primary btn-block" href="#">Tüm Markaları Kontrol Et</a>
+            </div>
+            <!-- .client end -->
+        </div>
+        <!-- .row end -->
+
+    </div>
+    <!-- .container end -->
+    <div class="container">
+        <div class="clients-bg">
+            <div class="row">
+                <div class="col-xs-12 colsm-12 col-md-12 client-carousel">
+                    <!-- Client #1 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/1.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #2 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/2.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #3 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/3.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #4 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/4.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #5 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/5.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #6 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/6.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #4 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/4.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #5 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/5.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                    <!-- Client #6 -->
+                    <div class="client">
+                        <img src="~/Content/Template/autoshop/assets/images/clients/6.png" alt="client">
+                    </div>
+                    <!-- .client end -->
+                </div>
+            </div>
+            <!-- .row end -->
+        </div>
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #clients end -->
+<!-- New Items
+============================================= -->
+<section id="newItems" class="shop">
+    <div class="container heading">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="subheading">Alın</p>
+                <h2>Yeni öğeler</h2>
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+
+    </div>
+    <!-- .container end -->
+    <div class="container">
+        <div class="row product-carousel text-center">
+            <!-- Product #1 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/1.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Fren Diskleri</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span>68.00</span><span class="symbole">TL</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #2 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/2.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Subaru</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Yağ filtresi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>40.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #3 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/3.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Kemer Araba Butonu</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>180.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #4 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/4.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Bmw</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Ön Aydınlatma</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>28.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #5 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/5.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Audi</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Termal Fan</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>240.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #6 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/6.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Toyota</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Soğuk Hava Sistemi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>68.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #7 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/1.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Fren Diskleri</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>68.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #8 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/2.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Subaru</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Yağ filtresi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>40.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #9 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/3.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Opel</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Kemer Araba Motoru</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>180.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #10 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/4.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Bmw</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Ön Aydınlatma</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>28.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #11 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/5.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Audi</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Termal Fan</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>240.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+            <!-- Product #12 -->
+            <div class="product">
+                <div class="product-img">
+                    <img src="~/Content/Template/autoshop/assets/images/shop/grid/6.jpg" alt="Product">
+                    <div class="product-hover">
+                        <div class="product-action">
+                            <a class="btn btn-primary" href="#">Sepete Ekle</a>
+                            <a class="btn btn-primary" href="#">Ürün Detayları</a>
+                        </div>
+                    </div>
+                    <!-- .product-overlay end -->
+                </div>
+                <!-- .product-img end -->
+                <div class="product-bio">
+                    <div class="prodcut-cat">
+                        <a href="#">Toyota</a>
+                    </div>
+                    <!-- .product-cat end -->
+                    <div class="prodcut-title">
+                        <h3>
+                            <a href="#">Soğuk Hava Sistemi</a>
+                        </h3>
+                    </div>
+                    <!-- .product-title end -->
+                    <div class="product-price">
+                        <span class="symbole">$</span><span>68.00</span>
+                    </div>
+                    <!-- .product-price end -->
+
+                </div>
+                <!-- .product-bio end -->
+            </div>
+            <!-- .product end -->
+
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #newItems end -->

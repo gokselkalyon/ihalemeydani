@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class CountyConcrete:IDataAccessDal<county>
+    public class CountyConcrete: BaseConcrete,IDataAccessDal<county>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(county entity)
         {
             DB.counties.Add(entity);

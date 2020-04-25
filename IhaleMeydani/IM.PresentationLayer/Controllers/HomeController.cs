@@ -1,30 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+         [Route("Anasayfa")]
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //Örnek firebase kodları
 
-            return View();
+        [HttpPost]
+        public async Task ImageConvertByte(HttpPostedFileBase file2)
+        {
+            if (file2 != null && file2.ContentLength > 0)
+            {
+                var _stream = file2.InputStream;
+                var _name = Guid.NewGuid() + file2.FileName;
+                Session["Image"] = _name;
+                await firebaseStorageHelper.UploadFile(_stream, _name);
+            }
         }
-
-        public ActionResult Contact()
+        [HttpPost]
+        public async Task<JsonResult> GetFile()
         {
-            ViewBag.Message = "Your contact page.";
+            var _value = (string)Session["Image"];
 
-            return View();
+            return Json(await firebaseStorageHelper.GetFile(_value), JsonRequestBehavior.AllowGet);
         }
     }
 }

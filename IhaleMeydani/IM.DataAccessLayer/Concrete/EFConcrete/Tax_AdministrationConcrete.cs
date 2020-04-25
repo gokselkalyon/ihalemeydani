@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class Tax_AdministrationConcrete:IDataAccessDal<Tax_Administration>
+    public class Tax_AdministrationConcrete : BaseConcrete, IDataAccessDal<Tax_Administration>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(Tax_Administration entity)
         {
             DB.Tax_Administration.Add(entity);
