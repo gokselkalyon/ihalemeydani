@@ -534,6 +534,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\IhaleWCFService\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IM.BusinessLayer\IM.BusinessLayer.csproj">
+      <Project>{69A38E8E-C773-42E1-9288-10217542516B}</Project>
+      <Name>IM.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

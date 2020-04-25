@@ -1,4 +1,4 @@
-﻿using IM.BusinessLayer.Tools;
+﻿using IM.BusinessLayer.Firebase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace IM.PresentationLayer.Controllers
 {
     public class BaseController : Controller
     {
-       
+        public FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper("ihale-meydan.appspot.com");
     }
 }
