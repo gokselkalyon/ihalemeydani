@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_UpdateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetRoleClaims_InputMessage">
     <wsdl:part name="parameters" element="tns:GetRoleClaims" />
   </wsdl:message>
@@ -426,6 +432,12 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCurrencyResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetDiscountcarts_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDiscountcarts" />
@@ -931,11 +943,11 @@
   <wsdl:message name="IIhaleService_RemoveRole_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveRoleResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  <wsdl:message name="IIhaleService_toplama_InputMessage">
+    <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  <wsdl:message name="IIhaleService_toplama_OutputMessage">
+    <wsdl:part name="parameters" element="tns:toplamaResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetLogs_InputMessage">
     <wsdl:part name="parameters" element="tns:GetLogs" />
@@ -1441,13 +1453,11 @@
   <wsdl:message name="IIhaleService_RemoveCurrency_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveCurrencyResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCurrency_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCurrency" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCurrency_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCurrencyResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateRole" message="tns:IIhaleService_UpdateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateRoleResponse" message="tns:IIhaleService_UpdateRole_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetRoleClaims">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetRoleClaims" message="tns:IIhaleService_GetRoleClaims_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetRoleClaimsResponse" message="tns:IIhaleService_GetRoleClaims_OutputMessage" />
@@ -1727,6 +1737,10 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCurrency" message="tns:IIhaleService_UpdateCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCurrencyResponse" message="tns:IIhaleService_UpdateCurrency_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDiscountcarts">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetDiscountcarts" message="tns:IIhaleService_GetDiscountcarts_InputMessage" />
@@ -2064,9 +2078,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveRole" message="tns:IIhaleService_RemoveRole_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveRoleResponse" message="tns:IIhaleService_RemoveRole_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateRole" message="tns:IIhaleService_UpdateRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateRoleResponse" message="tns:IIhaleService_UpdateRole_OutputMessage" />
+    <wsdl:operation name="toplama">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetLogs">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetLogs" message="tns:IIhaleService_GetLogs_InputMessage" />
@@ -2404,13 +2418,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCurrency" message="tns:IIhaleService_RemoveCurrency_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCurrencyResponse" message="tns:IIhaleService_RemoveCurrency_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateCurrency">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCurrency" message="tns:IIhaleService_UpdateCurrency_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCurrencyResponse" message="tns:IIhaleService_UpdateCurrency_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetRoleClaims">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetRoleClaims" style="document" />
       <wsdl:input>
@@ -3034,6 +3053,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCurrency">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCurrency" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3797,8 +3825,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateRole" style="document" />
+    <wsdl:operation name="toplama">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4555,15 +4583,6 @@
     </wsdl:operation>
     <wsdl:operation name="RemoveCurrency">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCurrency" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCurrency">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCurrency" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

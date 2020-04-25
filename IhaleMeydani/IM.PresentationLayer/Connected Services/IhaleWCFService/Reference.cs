@@ -15,6 +15,67 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
+    [System.SerializableAttribute()]
+    public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoleClaim", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
     public partial class RoleClaim : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1269,6 +1330,67 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CURRENCY", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
+    [System.SerializableAttribute()]
+    public partial class CURRENCY : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NAMEField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NAME {
+            get {
+                return this.NAMEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NAMEField, value) != true)) {
+                    this.NAMEField = value;
+                    this.RaisePropertyChanged("NAME");
                 }
             }
         }
@@ -3157,67 +3279,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
-    [System.SerializableAttribute()]
-    public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="log", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
     public partial class log : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -3225,21 +3286,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string action_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string action_tableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> date_ofField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> user_idField;
-        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -3247,71 +3293,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string action_name {
-            get {
-                return this.action_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.action_nameField, value) != true)) {
-                    this.action_nameField = value;
-                    this.RaisePropertyChanged("action_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string action_table {
-            get {
-                return this.action_tableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.action_tableField, value) != true)) {
-                    this.action_tableField = value;
-                    this.RaisePropertyChanged("action_table");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> date_of {
-            get {
-                return this.date_ofField;
-            }
-            set {
-                if ((this.date_ofField.Equals(value) != true)) {
-                    this.date_ofField = value;
-                    this.RaisePropertyChanged("date_of");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> user_id {
-            get {
-                return this.user_idField;
-            }
-            set {
-                if ((this.user_idField.Equals(value) != true)) {
-                    this.user_idField = value;
-                    this.RaisePropertyChanged("user_id");
-                }
             }
         }
         
@@ -4976,70 +4957,15 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CURRENCY", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
-    [System.SerializableAttribute()]
-    public partial class CURRENCY : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NAMEField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NAME {
-            get {
-                return this.NAMEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NAMEField, value) != true)) {
-                    this.NAMEField = value;
-                    this.RaisePropertyChanged("NAME");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IhaleWCFService.IIhaleService")]
     public interface IIhaleService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateRole", ReplyAction="http://tempuri.org/IIhaleService/UpdateRoleResponse")]
+        void UpdateRole(IM.PresentationLayer.IhaleWCFService.Role entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateRole", ReplyAction="http://tempuri.org/IIhaleService/UpdateRoleResponse")]
+        System.Threading.Tasks.Task UpdateRoleAsync(IM.PresentationLayer.IhaleWCFService.Role entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetRoleClaims", ReplyAction="http://tempuri.org/IIhaleService/GetRoleClaimsResponse")]
         IM.PresentationLayer.IhaleWCFService.RoleClaim[] GetRoleClaims();
@@ -5460,6 +5386,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateUserType", ReplyAction="http://tempuri.org/IIhaleService/UpdateUserTypeResponse")]
         System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateCurrency", ReplyAction="http://tempuri.org/IIhaleService/UpdateCurrencyResponse")]
+        void UpdateCurrency(IM.PresentationLayer.IhaleWCFService.CURRENCY entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateCurrency", ReplyAction="http://tempuri.org/IIhaleService/UpdateCurrencyResponse")]
+        System.Threading.Tasks.Task UpdateCurrencyAsync(IM.PresentationLayer.IhaleWCFService.CURRENCY entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetDiscountcarts", ReplyAction="http://tempuri.org/IIhaleService/GetDiscountcartsResponse")]
         IM.PresentationLayer.IhaleWCFService.discountcart[] GetDiscountcarts();
@@ -5965,11 +5897,11 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveRole", ReplyAction="http://tempuri.org/IIhaleService/RemoveRoleResponse")]
         System.Threading.Tasks.Task RemoveRoleAsync(int Id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateRole", ReplyAction="http://tempuri.org/IIhaleService/UpdateRoleResponse")]
-        void UpdateRole(IM.PresentationLayer.IhaleWCFService.Role entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/toplama", ReplyAction="http://tempuri.org/IIhaleService/toplamaResponse")]
+        string toplama(int x, int y);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateRole", ReplyAction="http://tempuri.org/IIhaleService/UpdateRoleResponse")]
-        System.Threading.Tasks.Task UpdateRoleAsync(IM.PresentationLayer.IhaleWCFService.Role entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/toplama", ReplyAction="http://tempuri.org/IIhaleService/toplamaResponse")]
+        System.Threading.Tasks.Task<string> toplamaAsync(int x, int y);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetLogs", ReplyAction="http://tempuri.org/IIhaleService/GetLogsResponse")]
         IM.PresentationLayer.IhaleWCFService.log[] GetLogs();
@@ -6474,12 +6406,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveCurrency", ReplyAction="http://tempuri.org/IIhaleService/RemoveCurrencyResponse")]
         System.Threading.Tasks.Task RemoveCurrencyAsync(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateCurrency", ReplyAction="http://tempuri.org/IIhaleService/UpdateCurrencyResponse")]
-        void UpdateCurrency(IM.PresentationLayer.IhaleWCFService.CURRENCY entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateCurrency", ReplyAction="http://tempuri.org/IIhaleService/UpdateCurrencyResponse")]
-        System.Threading.Tasks.Task UpdateCurrencyAsync(IM.PresentationLayer.IhaleWCFService.CURRENCY entity);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -6507,6 +6433,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public IhaleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void UpdateRole(IM.PresentationLayer.IhaleWCFService.Role entity) {
+            base.Channel.UpdateRole(entity);
+        }
+        
+        public System.Threading.Tasks.Task UpdateRoleAsync(IM.PresentationLayer.IhaleWCFService.Role entity) {
+            return base.Channel.UpdateRoleAsync(entity);
         }
         
         public IM.PresentationLayer.IhaleWCFService.RoleClaim[] GetRoleClaims() {
@@ -7067,6 +7001,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity) {
             return base.Channel.UpdateUserTypeAsync(entity);
+        }
+        
+        public void UpdateCurrency(IM.PresentationLayer.IhaleWCFService.CURRENCY entity) {
+            base.Channel.UpdateCurrency(entity);
+        }
+        
+        public System.Threading.Tasks.Task UpdateCurrencyAsync(IM.PresentationLayer.IhaleWCFService.CURRENCY entity) {
+            return base.Channel.UpdateCurrencyAsync(entity);
         }
         
         public IM.PresentationLayer.IhaleWCFService.discountcart[] GetDiscountcarts() {
@@ -7741,12 +7683,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.RemoveRoleAsync(Id);
         }
         
-        public void UpdateRole(IM.PresentationLayer.IhaleWCFService.Role entity) {
-            base.Channel.UpdateRole(entity);
+        public string toplama(int x, int y) {
+            return base.Channel.toplama(x, y);
         }
         
-        public System.Threading.Tasks.Task UpdateRoleAsync(IM.PresentationLayer.IhaleWCFService.Role entity) {
-            return base.Channel.UpdateRoleAsync(entity);
+        public System.Threading.Tasks.Task<string> toplamaAsync(int x, int y) {
+            return base.Channel.toplamaAsync(x, y);
         }
         
         public IM.PresentationLayer.IhaleWCFService.log[] GetLogs() {
@@ -8419,14 +8361,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task RemoveCurrencyAsync(int Id) {
             return base.Channel.RemoveCurrencyAsync(Id);
-        }
-        
-        public void UpdateCurrency(IM.PresentationLayer.IhaleWCFService.CURRENCY entity) {
-            base.Channel.UpdateCurrency(entity);
-        }
-        
-        public System.Threading.Tasks.Task UpdateCurrencyAsync(IM.PresentationLayer.IhaleWCFService.CURRENCY entity) {
-            return base.Channel.UpdateCurrencyAsync(entity);
         }
     }
 }

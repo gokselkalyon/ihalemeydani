@@ -4,8 +4,6 @@
     Layout = "~/Views/Shared/_AuctionLayout.cshtml";
 }
 
-
-ds
 <!-- ürün içerik alanı begin-->
 <div class="row mt-4 d-flex justify-content-center">
     <div class="col-12">
@@ -66,7 +64,6 @@ ds
                             <br />
                             <span class="font-weight-bolder text-white">&nbsp; 801113678 </span>
                         </div>
-                        <input type="type" name="name" ng-model="goksel" value="" />
                     </div>
                 </div>
             </div>
@@ -101,10 +98,10 @@ ds
             <div class="col-lg-7 col-md-12 ">
                 <div class="form-row">
                     <div class="col-7">
-                        <input type="text" name="price" placeholder="99₺" class="form-control " value="" />
+                        <input type="text" name="price" placeholder="99₺" class="form-control " ng-model="add_tag.tag_name" value="" />
                     </div>
                     <div class="col">
-                        <input type="submit" class="btn form-control text-white font-weight-bolder" style="background:#be8a59;" name="name" value="Teklif Ver" />
+                        <input type="submit" class="btn form-control text-white font-weight-bolder" ng-click="addTag()" style="background:#be8a59;" name="name" value="Teklif Ver" />
                     </div>
                 </div>
             </div>
@@ -120,7 +117,7 @@ ds
     <div class="col-12" style="height:450px">
         <div id="chart">
             <ul id="numbers">
-                <li><span data-percentage="1000">1000₺</span></li><!-- bunlar fiyata göre değiş kenlik gösterecekler örnek en son teklif 1990 ₺ ise 100% yerine 2000 falan yacazak gene orantıya göre büyüklükleri olacak  -->
+                <li><span data-percentage="100">1000₺</span></li><!-- bunlar fiyata göre değiş kenlik gösterecekler örnek en son teklif 1990 ₺ ise 100% yerine 2000 falan yacazak gene orantıya göre büyüklükleri olacak  -->
                 <li><span>900₺</span></li>
                 <li><span>800₺</span></li>
                 <li><span>700₺</span></li>
@@ -133,15 +130,14 @@ ds
                 <li><span>0₺</span></li>
             </ul>
 
-            <ul id="bars" class="d-flex justify-content-center">
-                <li><div data-percentage="800" class="bar"></div><span>göksel k.</span></li>
-                <li><div data-percentage="33" class="bar"></div><span>furkan ö.</span></li>
-                <li><div data-percentage="54" class="bar"></div><span>salih e.</span></li>
-                <li><div data-percentage="94" class="bar"></div><span>taha t.</span></li>
-                <li><div data-percentage="44" class="bar"></div><span>mesut s.</span></li>
-                <li><div data-percentage="10" class="bar"></div><span>göksel k.</span></li>
-                <li><div data-percentage="33" class="bar"></div><span>furkan ö.</span></li>
-            </ul>
+            <div>
+                <ul id="bars" class="d-flex justify-content-center" >
+                    <li ng-repeat="tag in tags">
+                        <div data-percentage="80" class="bar" >
+                        </div><span>{{ tag.tag_name }} </span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

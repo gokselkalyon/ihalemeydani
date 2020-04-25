@@ -4,10 +4,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
 
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.5.0.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
     <script src="~/SignalR/Hubs"></script>
 
@@ -18,36 +20,56 @@
             padding: 10px;
         }
     </style>
+
     <script>
-        $(function () {
-            var chat = $.connection.signalHub;
-            var $username = $('#txtUsername');
-            var $message = $('#txtMessage');
-            var $messages = $('#messages');
-            $message.focus();
-            chat.client.sendMessage = function (name, message) {
-                $messages.append('<li><strong>' + name + '</strong>: ' + message + '</li>');
-            };
-            $.connection.hub.start().done(function () {
-                $('#btnSendMessage').click(function () {
+        var myApp = angular.module('spicyApp1', []);
 
-                    chat.server.send($username.val(), $message.val());
+        myApp.controller('SpicyController', ['$scope', function ($scope) {
 
-                    $message.val('').focus();
+            var loghub = $.connection.signalHub;
+
+            $scope.addTag = function () {
+                loghub.server.addTag($scope.add_tag);
+            }
+
+            loghub.client.GetAllLog = function (tags) {
+                $scope.tags = tags;
+                $scope.$apply();
+
+                $("#bars li .bar").each(function (key, bar) {
+                    var percentage = $(this).data('percentage');
+                    var percentage2 = $("#numbers li span").data('percentage');
+                    percentage = percentage / (percentage2 / 100);
+                    $(this).animate({
+                        'height': percentage + '%'
+                    }, 1000);
                 });
-            });
-        });
+            }
+
+            loghub.client.addTag = function (tag) {
+                $scope.tags.push(tag);
+                $scope.$apply();
+
+                $("#bars li .bar").each(function (key, bar) {
+                    var percentage = $(this).data('percentage');
+                    var percentage2 = $("#numbers li span").data('percentage');
+                    percentage = percentage / (percentage2 / 100);
+                    $(this).animate({
+                        'height': percentage + '%'
+                    }, 1000);
+                });
+
+            }
+            $.connection.hub.start()
+
+        }]);
     </script>
+
 </head>
-<body style="padding:0px;">
-    <div>
-        <label for="txtUserName">Kullanıcı: </label> @Html.TextBox("txtUsername")
-        <br />
-        <label for="txtMessage">Mesaj: </label> @Html.TextBox("txtMessage") <button id="btnSendMessage">Mesaj Yolla</button>
-    </div>
-    dd<div class="text-white" id="messages"></div><br /><br /><br /><br /><br /><br />
+<body style="padding:0px;" ng-app="spicyApp1">
+
     <div class=" deneme" style="background:#24282e;">
-        <div class="container-fluid">
+        <div class="container-fluid" ng-controller="SpicyController">
             <!-- header begin -->
             <div class="row">
                 <div class="col-12 bg-warning" style="height: 100px;"> &nbsp;</div>
@@ -73,5 +95,29 @@
             });
         });
     </script>
+    <script>
+        
+
+
+        //(function (angular) {
+        //    'use strict';
+        //    var myApp = angular.module('spicyApp1', []);
+
+        //    myApp.controller('SpicyController', ['$scope', function ($scope) {
+
+        //        var loghub = $.connection.signalHub;
+        //        loghub.client.GetAllLog = function (tags) {
+
+        //            $scope.tags = tags;
+        //            $scope.$apply();
+        //        }
+
+        //        $.connection.hub.start()
+
+        //    }]);
+        //})(window.angular);
+
+    </script>
+
 </body>
 </html>

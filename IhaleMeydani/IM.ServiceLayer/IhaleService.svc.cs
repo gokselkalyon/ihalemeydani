@@ -38,10 +38,9 @@ namespace IM.ServiceLayer
 
         public List<log> GetLogs()
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
-            {
-                return _db.GetAll();
-            }
+            IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>();
+            var result = _db.GetAll();
+            return result;
         }
 
         public void RemoveLog(int Id)

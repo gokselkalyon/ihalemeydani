@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using IM.PresentationLayer.IhaleWCFService;
 using Microsoft.AspNet.SignalR;
 
 namespace IM.PresentationLayer.signalr
@@ -13,10 +14,18 @@ namespace IM.PresentationLayer.signalr
         //{
         //    Clients.All.sendMessage(username, message);
         //}
+        IhaleServiceClient ihaleService = new IhaleServiceClient();
+        //log d = new log();
 
-        public override Task OnConnected()
+        public override async Task OnConnected()
         {
-            return base.OnConnected();  
+            var tags = ihaleService.GetTagsAsync().Result;
+            await Clients.Caller.GetAllLog(tags);
+        }
+        public void addTag(tag tag)
+        {
+            ihaleService.AddTag(tag);
+            Clients.All.addTag(tag);
         }
     }
 }
