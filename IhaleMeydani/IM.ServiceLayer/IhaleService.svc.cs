@@ -14,6 +14,10 @@ namespace IM.ServiceLayer
     // NOTE: In order to launch WCF Test Client for testing this service, please select IhaleService.svc or IhaleService.svc.cs at the Solution Explorer and start debugging.
     public class IhaleService : IIhaleService
     {
+        public string toplama(int x,int y)
+        {
+            return string.Format("sonuc {0}",x+y);
+        }
 
         #region log
         public void AddLog(log entity)
@@ -108,7 +112,7 @@ namespace IM.ServiceLayer
             }
         }
 
-        auction IIhaleService.GetAuction(int Id)
+        public auction GetAuction(int Id)
         {
             using (IDataBusinessService<auction> _db = InstanceFactory.GetInstance<IDataBusinessService<auction>>())
             {
@@ -486,7 +490,7 @@ namespace IM.ServiceLayer
         #endregion
 
         #region Color
-        public List<Color> GetColor()
+        public List<Color> GetAllColor()
         {
             using (IDataBusinessService<Color> _db = InstanceFactory.GetInstance<IDataBusinessService<Color>>())
             {

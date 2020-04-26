@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class PricebotConcrete:IDataAccessDal<PRICEBOT>
+    public class PricebotConcrete : BaseConcrete, IDataAccessDal<PRICEBOT>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(PRICEBOT entity)
         {
             DB.PRICEBOTs.Add(entity);

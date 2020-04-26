@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class Amount_Of_IncreaseConcrete:IDataAccessDal<AMOUNT_OF_INCREASE>
+    public class Amount_Of_IncreaseConcrete:BaseConcrete,IDataAccessDal<AMOUNT_OF_INCREASE>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(AMOUNT_OF_INCREASE entity)
         {
             DB.AMOUNT_OF_INCREASE.Add(entity);

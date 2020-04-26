@@ -12,6 +12,9 @@ namespace IM.ServiceLayer
     [ServiceContract]
     public interface IIhaleService
     {
+        [OperationContract]
+        string toplama(int x ,int y);
+
         #region log
         [OperationContract]
         List<log> GetLogs();
@@ -201,7 +204,7 @@ namespace IM.ServiceLayer
 
         #region Color
         [OperationContract]
-        List<Color> GetColor();
+        List<Color> GetAllColor();
 
         [OperationContract]
         Color GetColor(int Id);

@@ -1,0 +1,147 @@
+﻿@model IM.PresentationLayer.Models.AuctionModelView
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AuctionLayout.cshtml";
+}
+
+
+<!-- ürün içerik alanı begin-->
+<div class="row mt-4 d-flex justify-content-center">
+    <div class="col-12">
+        <div class="row p-1">
+            <div class="col-4 p-1">
+                <img src="https://source.unsplash.com/1000x1000/?car" class="img-fluid" alt="Alternate Text" />
+            </div>
+            <div class="col-8 p-1">
+                <div class="container">
+                    <div class="row p-2 pl-4 pt-0" style="background:#3e4248;">
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Araç Model</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp;</span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Vites tipi</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; Yarı Otomatik </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Yakıt Tipi</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; Benzin </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Araba Rengi</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; Beyaz </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Araba Segment</span>
+                            <br />
+                            <span class="font-weight-bolder text-white text-uppercase">&nbsp; a </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Kilometre</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; 97.000 </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Plaka</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; 34 ABT 579 </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Kayıt Tarihi</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; 14 Nisan 2020 </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Araba Sürümü</span>
+                            <br />
+                            <span class=" font-weight-bolder text-white">&nbsp; 5 Serisi </span>
+                        </div>
+                        <div class="col-6 p-2">
+                            <span class="text-white-50">Şasi No</span>
+                            <br />
+                            <span class="font-weight-bolder text-white">&nbsp; 801113678 </span>
+                        </div>
+                        <input type="type" name="name" ng-model="goksel" value="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ürün içerik alanı end-->
+<!-- ürün auction bitime kalan süre begin -->
+<div class="row mb-3 mt-3">
+    <div class="col-12 p-2 text-center">
+        <h2 class="text-white-50">Kalan Süre : 1:23:23 </h2>
+        <div class="progress">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div>
+    </div>
+</div>
+<!-- ürün auction bitime kalan süre end-->
+<!-- teklif verme begin-->
+<div class="row d-flex justify-content-center p-1">
+    <div class="col-lg-9 col-md-12">
+        <div class="row p-1">
+            <div class="col-lg-5 col-md-12" style="background:#90b061;">
+                <div class="row">
+                    <div class="col-4">
+                        <span class="font-weight-bold text-white" style="font-size:18pt;">#12</span>
+                    </div>
+                    <div class="col">
+                        <span class="font-weight-bold text-white" style="font-size:18pt;"> 100₺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12 ">
+                <div class="form-row">
+                    <div class="col-7">
+                        <input type="text" name="price" placeholder="99₺" class="form-control " value="" />
+                    </div>
+                    <div class="col">
+                        <input type="submit" class="btn form-control text-white font-weight-bolder" style="background:#be8a59;" name="name" value="Teklif Ver" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-12 p-1 text-center">
+        <button class="btn btn-block text-white font-weight-bolder text-uppercase" style="background:#c16266;">Otomatik Teklif Ver</button>
+    </div>
+</div>
+<!-- teklif verme end-->
+<!-- zamana göre teklif grafiği begin -->
+<div class="row mb-5">
+    <div class="col-12" style="height:450px">
+        <div id="chart">
+            <ul id="numbers">
+                <li><span data-percentage="1000">1000₺</span></li><!-- bunlar fiyata göre değiş kenlik gösterecekler örnek en son teklif 1990 ₺ ise 100% yerine 2000 falan yacazak gene orantıya göre büyüklükleri olacak  -->
+                <li><span>900₺</span></li>
+                <li><span>800₺</span></li>
+                <li><span>700₺</span></li>
+                <li><span>600₺</span></li>
+                <li><span>500₺</span></li>
+                <li><span>400₺</span></li><!-- buradaki sayılarıda ortala  -->
+                <li><span>300₺</span></li>
+                <li><span>200₺</span></li>
+                <li><span>100₺</span></li>
+                <li><span>0₺</span></li>
+            </ul>
+
+            <ul id="bars" class="d-flex justify-content-center">
+                <li><div data-percentage="800" class="bar"></div><span>göksel k.</span></li>
+                <li><div data-percentage="33" class="bar"></div><span>furkan ö.</span></li>
+                <li><div data-percentage="54" class="bar"></div><span>salih e.</span></li>
+                <li><div data-percentage="94" class="bar"></div><span>taha t.</span></li>
+                <li><div data-percentage="44" class="bar"></div><span>mesut s.</span></li>
+                <li><div data-percentage="10" class="bar"></div><span>göksel k.</span></li>
+                <li><div data-percentage="33" class="bar"></div><span>furkan ö.</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- zamana göre teklif grefiği end-->

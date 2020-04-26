@@ -1,4 +1,5 @@
 ﻿using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class AuctionConcrete: IDataAccessDal<auction>
+    public class AuctionConcrete : BaseConcrete, IDataAccessDal<auction>
     {
-        IHALEDBEntities DB = new IHALEDBEntities();
         public void Add(auction entity)
         {
             DB.auctions.Add(entity);

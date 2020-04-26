@@ -3,12 +3,15 @@ using IM.BusinessLayer.Abstract;
 using IM.BusinessLayer.helper;
 using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
+using Microsoft.Win32.SafeHandles;
+using System.Runtime.InteropServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace IM.BusinessLayer.Concrete
 {
     public  class UserTypeManager : IDataBusinessService<UserType>
@@ -57,9 +60,26 @@ namespace IM.BusinessLayer.Concrete
             _dataAccessDal.Update(t);
         }
 
+        bool disposed = false;
+        SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
+
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed)
+                return;
+
+            if (disposing)
+            {
+                handle.Dispose();
+            }
+
+            disposed = true;
         }
     }
 }

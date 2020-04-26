@@ -49,10 +49,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Configuration.ConfigurationBuilders.UserSecrets, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,127 +151,359 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\IhaleWCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AuctionController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AuctionModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signalr\SignalHub.cs" />
+    <Compile Include="signalr\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
+    <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
+    <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.AMOUNT_OF_INCREASE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.auction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.bank.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarBrand.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarHardwareDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarMake.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarTechnicalDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.city.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Claim.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Color.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.company_type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.county.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CURRENCY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.discountcart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.E_INVOICE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.E_invoice_type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.FuelType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.GearType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.GeneralDesign.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Icon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Image.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.log.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.medium.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Menu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.natification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.odeme_yontemi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.payment_plan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PRICEBOT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.RoleClaim.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Segment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.senaryo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.SocialMedya.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.SOLD_PRODUCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.submit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.sysdiagram.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.tag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.tag_post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Tax_Administration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.title.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\Template\autoshop\404.html" />
+    <Content Include="Content\Template\autoshop\about.html" />
+    <Content Include="Content\Template\autoshop\assets\css\bootstrap.min.css" />
+    <Content Include="Content\Template\autoshop\assets\css\external.css" />
+    <Content Include="Content\Template\autoshop\assets\css\style.css" />
+    <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont-1.txt" />
+    <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont-2.txt" />
+    <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont.txt" />
+    <Content Include="Content\Template\autoshop\assets\images\background\bg-1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\author\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\author\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\author\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\10.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\11.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\12.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\5.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\7.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\8.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\grid\9.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\standard\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\standard\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\standard\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\blog\standard\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\clients\1.png" />
+    <Content Include="Content\Template\autoshop\assets\images\clients\2.png" />
+    <Content Include="Content\Template\autoshop\assets\images\clients\3.png" />
+    <Content Include="Content\Template\autoshop\assets\images\clients\4.png" />
+    <Content Include="Content\Template\autoshop\assets\images\clients\5.png" />
+    <Content Include="Content\Template\autoshop\assets\images\clients\6.png" />
+    <Content Include="Content\Template\autoshop\assets\images\cta\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\favicon\favicon.ico" />
+    <Content Include="Content\Template\autoshop\assets\images\footer\american-express.png" />
+    <Content Include="Content\Template\autoshop\assets\images\footer\cirrus.png" />
+    <Content Include="Content\Template\autoshop\assets\images\footer\delta.png" />
+    <Content Include="Content\Template\autoshop\assets\images\footer\mastercard.png" />
+    <Content Include="Content\Template\autoshop\assets\images\footer\paypal.png" />
+    <Content Include="Content\Template\autoshop\assets\images\footer\visa.png" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\10.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\11.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\12.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\5.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\7.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\8.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\intro\9.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\logo\logo-light.png" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\5.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\7.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\8.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\5.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\7.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\full\thumb\8.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\grid\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\grid\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\grid\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\grid\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\grid\5.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\grid\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\small\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\small\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\standard\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\5.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\7.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\8.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shop\thumb\9.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shortcode\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\shortcode\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sidebar\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sidebar\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sidebar\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sliders\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sliders\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sliders\6.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sliders\7.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\sliders\8.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\team\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\team\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\team\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\team\4.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\testimonials\1.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\testimonials\2.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\testimonials\3.jpg" />
+    <Content Include="Content\Template\autoshop\assets\images\testimonials\arrow.png" />
+    <Content Include="Content\Template\autoshop\assets\js\functions.js" />
+    <Content Include="Content\Template\autoshop\assets\js\jquery-2.2.4.min.js" />
+    <Content Include="Content\Template\autoshop\assets\js\plugins.js" />
+    <Content Include="Content\Template\autoshop\assets\js\plugins\jquery.gmap.min.js" />
+    <Content Include="Content\Template\autoshop\blog-grid.html" />
+    <Content Include="Content\Template\autoshop\blog-single.html" />
+    <Content Include="Content\Template\autoshop\blog-standard.html" />
+    <Content Include="Content\Template\autoshop\contact-1.html" />
+    <Content Include="Content\Template\autoshop\contact-2.html" />
+    <Content Include="Content\Template\autoshop\element-cta.html" />
+    <Content Include="Content\Template\autoshop\element-video.html" />
+    <Content Include="Content\Template\autoshop\elements-blockquotes.html" />
+    <Content Include="Content\Template\autoshop\elements-blog.html" />
+    <Content Include="Content\Template\autoshop\elements-clients.html" />
+    <Content Include="Content\Template\autoshop\elements-columns-grids.html" />
+    <Content Include="Content\Template\autoshop\elements-featured.html" />
+    <Content Include="Content\Template\autoshop\elements-icon-list.html" />
+    <Content Include="Content\Template\autoshop\elements-pricing.html" />
+    <Content Include="Content\Template\autoshop\elements-skills.html" />
+    <Content Include="Content\Template\autoshop\elements-team.html" />
+    <Content Include="Content\Template\autoshop\elements-testimonials.html" />
+    <Content Include="Content\Template\autoshop\elements-typography.html" />
+    <Content Include="Content\Template\autoshop\faqs.html" />
+    <Content Include="Content\Template\autoshop\footer-1.html" />
+    <Content Include="Content\Template\autoshop\footer-2.html" />
+    <Content Include="Content\Template\autoshop\footer-3.html" />
+    <Content Include="Content\Template\autoshop\footer-4.html" />
+    <Content Include="Content\Template\autoshop\footer-5.html" />
+    <Content Include="Content\Template\autoshop\footer-6.html" />
+    <Content Include="Content\Template\autoshop\footer-7.html" />
+    <Content Include="Content\Template\autoshop\header-1.html" />
+    <Content Include="Content\Template\autoshop\header-2.html" />
+    <Content Include="Content\Template\autoshop\header-3.html" />
+    <Content Include="Content\Template\autoshop\header-4.html" />
+    <Content Include="Content\Template\autoshop\header-5.html" />
+    <Content Include="Content\Template\autoshop\header-6.html" />
+    <Content Include="Content\Template\autoshop\header-7.html" />
+    <Content Include="Content\Template\autoshop\home-1.html" />
+    <Content Include="Content\Template\autoshop\home-2.html" />
+    <Content Include="Content\Template\autoshop\home-3.html" />
+    <Content Include="Content\Template\autoshop\index.html" />
+    <Content Include="Content\Template\autoshop\login.html" />
+    <Content Include="Content\Template\autoshop\maintenance.html" />
+    <Content Include="Content\Template\autoshop\pricing.html" />
+    <Content Include="Content\Template\autoshop\register.html" />
+    <Content Include="Content\Template\autoshop\shop-cart.html" />
+    <Content Include="Content\Template\autoshop\shop-category-left-sidebar.html" />
+    <Content Include="Content\Template\autoshop\shop-category-right-sidebar.html" />
+    <Content Include="Content\Template\autoshop\shop-product-grid-fullwidth.html" />
+    <Content Include="Content\Template\autoshop\shop-product-grid-left-sidebar.html" />
+    <Content Include="Content\Template\autoshop\shop-product-grid-right-sidebar.html" />
+    <Content Include="Content\Template\autoshop\shop-single-fullwidth.html" />
+    <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
+    <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
+    <Content Include="Content\Template\autoshop\soon.html" />
+    <Content Include="Content\Template\css\Blog.css" />
+    <Content Include="Content\Template\css\boostrap.css" />
+    <Content Include="Content\Template\js\boostrap.js" />
+    <Content Include="Content\Template\js\jquery.js" />
+    <Content Include="Content\Template\js\popper.js" />
+    <Content Include="Content\Template\js\sweetalert2.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\esm\popper-utils.js" />
-    <Content Include="Scripts\esm\popper-utils.min.js" />
-    <Content Include="Scripts\esm\popper.js" />
-    <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\index.js.flow" />
-    <Content Include="Scripts\esm\popper.min.js.map" />
-    <Content Include="Scripts\esm\popper.js.map" />
-    <Content Include="Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
-    <Content Include="Scripts\src\index.js" />
-    <Content Include="Scripts\src\methods\defaults.js" />
-    <Content Include="Scripts\src\methods\destroy.js" />
-    <Content Include="Scripts\src\methods\disableEventListeners.js" />
-    <Content Include="Scripts\src\methods\enableEventListeners.js" />
-    <Content Include="Scripts\src\methods\placements.js" />
-    <Content Include="Scripts\src\methods\update.js" />
-    <Content Include="Scripts\src\modifiers\applyStyle.js" />
-    <Content Include="Scripts\src\modifiers\arrow.js" />
-    <Content Include="Scripts\src\modifiers\computeStyle.js" />
-    <Content Include="Scripts\src\modifiers\flip.js" />
-    <Content Include="Scripts\src\modifiers\hide.js" />
-    <Content Include="Scripts\src\modifiers\index.js" />
-    <Content Include="Scripts\src\modifiers\inner.js" />
-    <Content Include="Scripts\src\modifiers\keepTogether.js" />
-    <Content Include="Scripts\src\modifiers\offset.js" />
-    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
-    <Content Include="Scripts\src\modifiers\shift.js" />
-    <Content Include="Scripts\src\utils\clockwise.js" />
-    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
-    <Content Include="Scripts\src\utils\debounce.js" />
-    <Content Include="Scripts\src\utils\find.js" />
-    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
-    <Content Include="Scripts\src\utils\findIndex.js" />
-    <Content Include="Scripts\src\utils\getBordersSize.js" />
-    <Content Include="Scripts\src\utils\getBoundaries.js" />
-    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
-    <Content Include="Scripts\src\utils\getClientRect.js" />
-    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
-    <Content Include="Scripts\src\utils\getOffsetParent.js" />
-    <Content Include="Scripts\src\utils\getOffsetRect.js" />
-    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
-    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
-    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
-    <Content Include="Scripts\src\utils\getOuterSizes.js" />
-    <Content Include="Scripts\src\utils\getParentNode.js" />
-    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
-    <Content Include="Scripts\src\utils\getReferenceNode.js" />
-    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
-    <Content Include="Scripts\src\utils\getRoot.js" />
-    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
-    <Content Include="Scripts\src\utils\getScroll.js" />
-    <Content Include="Scripts\src\utils\getScrollParent.js" />
-    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
-    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
-    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
-    <Content Include="Scripts\src\utils\getWindow.js" />
-    <Content Include="Scripts\src\utils\getWindowSizes.js" />
-    <Content Include="Scripts\src\utils\includeScroll.js" />
-    <Content Include="Scripts\src\utils\index.js" />
-    <Content Include="Scripts\src\utils\isBrowser.js" />
-    <Content Include="Scripts\src\utils\isFixed.js" />
-    <Content Include="Scripts\src\utils\isFunction.js" />
-    <Content Include="Scripts\src\utils\isIE.js" />
-    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
-    <Content Include="Scripts\src\utils\isModifierRequired.js" />
-    <Content Include="Scripts\src\utils\isNumeric.js" />
-    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
-    <Content Include="Scripts\src\utils\removeEventListeners.js" />
-    <Content Include="Scripts\src\utils\runModifiers.js" />
-    <Content Include="Scripts\src\utils\setAttributes.js" />
-    <Content Include="Scripts\src\utils\setStyles.js" />
-    <Content Include="Scripts\src\utils\setupEventListeners.js" />
-    <Content Include="Scripts\umd\popper-utils.js" />
-    <Content Include="Scripts\umd\popper-utils.min.js" />
-    <Content Include="Scripts\umd\popper.js" />
-    <Content Include="Scripts\umd\popper.min.js" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService.wsdl" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont-1.eot" />
+    <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Template\js\jquery.signalR-2.4.1.js" />
+    <Content Include="Content\Template\js\jquery.validate.js" />
+    <Content Include="Content\Template\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\Template\js\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -253,37 +512,35 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_AuctionLayout.cshtml" />
+    <Content Include="Views\Auction\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\umd\popper.min.js.map" />
-    <Content Include="Scripts\umd\popper.js.map" />
-    <Content Include="Scripts\umd\popper.js.flow" />
-    <Content Include="Scripts\umd\popper-utils.min.js.map" />
-    <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
-    <Content Include="Scripts\popper.min.js.map" />
-    <Content Include="Scripts\popper.js.map" />
-    <Content Include="Scripts\popper-utils.min.js.map" />
-    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Blog\BlogPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\IhaleWCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IM.BusinessLayer\IM.BusinessLayer.csproj">
+      <Project>{69A38E8E-C773-42E1-9288-10217542516B}</Project>
+      <Name>IM.BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

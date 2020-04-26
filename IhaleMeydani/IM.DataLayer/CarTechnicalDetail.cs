@@ -12,6 +12,7 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
+
     public partial class CarTechnicalDetail
     {
         public int CarTechnicalDetailId { get; set; }
