@@ -74,5 +74,7 @@ namespace IM.DataLayer
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
+        public virtual DbSet<actionuser> actionusers { get; set; }
+        public virtual DbSet<private_auction> private_auction { get; set; }
     }
 }

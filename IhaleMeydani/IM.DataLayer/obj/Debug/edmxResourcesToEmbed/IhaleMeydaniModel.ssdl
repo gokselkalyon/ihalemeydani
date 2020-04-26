@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="IHALEDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="actionuser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_ID" Type="int" />
+    <Property Name="auction_id" Type="int" />
+    <Property Name="DATE_OF_UPDATE" Type="date" />
+    <Property Name="bid" Type="money" />
+  </EntityType>
   <EntityType Name="AMOUNT_OF_INCREASE">
     <Key>
       <PropertyRef Name="ID" />
@@ -296,6 +306,7 @@
     <Property Name="IconId" Type="int" />
     <Property Name="Description" Type="text" />
     <Property Name="MenuId" Type="int" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="natification">
     <Key>
@@ -344,6 +355,15 @@
     <Property Name="ORT_FIYAT" Type="money" />
     <Property Name="DATE_OF_UPDATE" Type="date" />
   </EntityType>
+  <EntityType Name="private_auction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_ID" Type="int" />
+    <Property Name="auction_id" Type="int" />
+    <Property Name="DATE_OF_UPDATE" Type="date" />
+  </EntityType>
   <EntityType Name="Role">
     <Key>
       <PropertyRef Name="Id" />
@@ -379,6 +399,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MediaTypeId" Type="int" />
     <Property Name="Name" Type="varchar" MaxLength="75" />
     <Property Name="IconId" Type="int" />
   </EntityType>
@@ -476,6 +497,7 @@
     <Property Name="IsDeleted" Type="bit" />
   </EntityType>
   <EntityContainer Name="IHALEDBModelStoreContainer">
+    <EntitySet Name="actionuser" EntityType="Self.actionuser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AMOUNT_OF_INCREASE" EntityType="Self.AMOUNT_OF_INCREASE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="auction" EntityType="Self.auction" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="bank" EntityType="Self.bank" Schema="dbo" store:Type="Tables" />
@@ -510,6 +532,7 @@
     <EntitySet Name="payment_plan" EntityType="Self.payment_plan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRICEBOT" EntityType="Self.PRICEBOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="private_auction" EntityType="Self.private_auction" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RoleClaim" EntityType="Self.RoleClaim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Segment" EntityType="Self.Segment" Schema="dbo" store:Type="Tables" />

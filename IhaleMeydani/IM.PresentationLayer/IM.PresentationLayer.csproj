@@ -315,6 +315,12 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.private_auction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -480,8 +486,8 @@
     <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
-    <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\boostrap.css" />
+    <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\popper.js" />
@@ -504,6 +510,9 @@
     <Content Include="Content\Template\js\jquery.validate.js" />
     <Content Include="Content\Template\js\jquery.validate.unobtrusive.js" />
     <Content Include="Content\Template\js\modernizr-2.8.3.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -518,7 +527,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Blog\BlogPage.cshtml" />
+    <Content Include="Scripts\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

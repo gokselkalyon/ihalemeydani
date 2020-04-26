@@ -38,10 +38,9 @@ namespace IM.ServiceLayer
 
         public List<log> GetLogs()
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
-            {
-                return _db.GetAll();
-            }
+            IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>();
+            var result = _db.GetAll();
+            return result;
         }
 
         public void RemoveLog(int Id)
@@ -2152,8 +2151,89 @@ namespace IM.ServiceLayer
                 _db.Update(entity);
             }
         }
-
         #endregion
+
+        public List<actionuser> Getactionusers()
+        {
+            using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
+            {
+                return _db.GetAll();
+            }
+        }
+
+        public actionuser Getactionuser(int Id)
+        {
+            using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
+            {
+                return _db.Get(Id);
+            }
+        }
+
+        public void Addactionuser(actionuser entity)
+        {
+            using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
+            {
+                _db.Add(entity);
+            }
+        }
+
+        public void Removeactionuser(int Id)
+        {
+            using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
+            {
+                _db.Remove(Id);
+            }
+        }
+
+        public void Updateactionuser(actionuser entity)
+        {
+            using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
+            {
+                _db.Update(entity);
+            }
+        }
+
+        public List<private_auction> Getprivateauctions()
+        {
+            using (IDataBusinessService<private_auction> _db = InstanceFactory.GetInstance<IDataBusinessService<private_auction>>())
+            {
+                return _db.GetAll();
+            }
+        }
+
+        public private_auction Getprivateauction(int Id)
+        {
+            using (IDataBusinessService<private_auction> _db = InstanceFactory.GetInstance<IDataBusinessService<private_auction>>())
+            {
+                return _db.Get(Id);
+            }
+        }
+
+        public void Addprivateauction(private_auction entity)
+        {
+            using (IDataBusinessService<private_auction> _db = InstanceFactory.GetInstance<IDataBusinessService<private_auction>>())
+            {
+                _db.Add(entity);
+            }
+        }
+
+        public void Removeprivateauction(int Id)
+        {
+            using (IDataBusinessService<private_auction> _db = InstanceFactory.GetInstance<IDataBusinessService<private_auction>>())
+            {
+                _db.Remove(Id);
+            }
+        }
+
+        public void Updateprivateauction(private_auction entity)
+        {
+            using (IDataBusinessService<private_auction> _db = InstanceFactory.GetInstance<IDataBusinessService<private_auction>>())
+            {
+                _db.Update(entity);
+            }
+        }
+
+        
     }
 
 }

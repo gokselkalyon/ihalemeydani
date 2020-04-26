@@ -19,5 +19,6 @@ namespace IM.DataLayer
         public Nullable<int> IconId { get; set; }
         public string Description { get; set; }
         public Nullable<int> MenuId { get; set; }
+        public string Url { get; set; }
     }
 }

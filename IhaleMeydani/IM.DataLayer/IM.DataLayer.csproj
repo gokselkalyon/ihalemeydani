@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actionuser.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AMOUNT_OF_INCREASE.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
@@ -166,6 +169,9 @@
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PRICEBOT.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="private_auction.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

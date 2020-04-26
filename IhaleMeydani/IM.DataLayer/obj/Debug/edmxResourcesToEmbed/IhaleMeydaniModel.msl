@@ -319,6 +319,7 @@
     <EntitySetMapping Name="Menus">
       <EntityTypeMapping TypeName="IHALEDBModel.Menu">
         <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="Url" ColumnName="Url" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IconId" ColumnName="IconId" />
@@ -416,6 +417,7 @@
     <EntitySetMapping Name="SocialMedyas">
       <EntityTypeMapping TypeName="IHALEDBModel.SocialMedya">
         <MappingFragment StoreEntitySet="SocialMedya">
+          <ScalarProperty Name="MediaTypeId" ColumnName="MediaTypeId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IconId" ColumnName="IconId" />
@@ -522,6 +524,27 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actionusers">
+      <EntityTypeMapping TypeName="IHALEDBModel.actionuser">
+        <MappingFragment StoreEntitySet="actionuser">
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+          <ScalarProperty Name="auction_id" ColumnName="auction_id" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="private_auction">
+      <EntityTypeMapping TypeName="IHALEDBModel.private_auction">
+        <MappingFragment StoreEntitySet="private_auction">
+          <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+          <ScalarProperty Name="auction_id" ColumnName="auction_id" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

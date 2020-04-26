@@ -1,1796 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" />
-  <xs:element name="GetRoleClaims">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRoleClaimsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimsResult" nillable="true" type="q1:ArrayOfRoleClaim" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRoleClaim">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRoleClaimResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimResult" nillable="true" type="q2:RoleClaim" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddRoleClaim">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q3:RoleClaim" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddRoleClaimResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveRoleClaim">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveRoleClaimResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateRoleClaim">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q4:RoleClaim" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateRoleClaimResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSegments">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSegmentsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentsResult" nillable="true" type="q5:ArrayOfSegment" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSegment">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSegmentResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentResult" nillable="true" type="q6:Segment" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSegment">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q7:Segment" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSegmentResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSegment">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSegmentResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSegment">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q8:Segment" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSegmentResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSenarios">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSenariosResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenariosResult" nillable="true" type="q9:ArrayOfsenaryo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSenario">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSenarioResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenarioResult" nillable="true" type="q10:senaryo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSenario">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q11:senaryo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSenarioResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSenario">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSenarioResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSenario">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q12:senaryo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSenarioResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSocialMedias">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSocialMediasResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediasResult" nillable="true" type="q13:ArrayOfSocialMedya" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSocialMedia">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSocialMediaResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediaResult" nillable="true" type="q14:SocialMedya" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSocialMedia">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q15:SocialMedya" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSocialMediaResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSocialMedia">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSocialMediaResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSocialMedia">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q16:SocialMedya" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSocialMediaResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSoldProducts">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSoldProductsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductsResult" nillable="true" type="q17:ArrayOfSOLD_PRODUCT" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSoldProduct">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSoldProductResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductResult" nillable="true" type="q18:SOLD_PRODUCT" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSoldProduct">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q19:SOLD_PRODUCT" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSoldProductResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSoldProduct">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSoldProductResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSoldProduct">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q20:SOLD_PRODUCT" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSoldProductResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSubmits">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSubmitsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitsResult" nillable="true" type="q21:ArrayOfsubmit" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSubmit">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSubmitResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitResult" nillable="true" type="q22:submit" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSubmit">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q23:submit" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSubmitResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSubmit">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSubmitResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSubmit">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q24:submit" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSubmitResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSysdiagrams">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSysdiagramsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramsResult" nillable="true" type="q25:ArrayOfsysdiagram" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSysdiagram">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetSysdiagramResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramResult" nillable="true" type="q26:sysdiagram" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSysdiagram">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q27:sysdiagram" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddSysdiagramResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSysdiagram">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveSysdiagramResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSysdiagram">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q28:sysdiagram" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateSysdiagramResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTags">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTagsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagsResult" nillable="true" type="q29:ArrayOftag" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTag">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTagResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagResult" nillable="true" type="q30:tag" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTag">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q31:tag" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTagResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTag">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTagResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTag">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q32:tag" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTagResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTagPosts">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTagPostsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostsResult" nillable="true" type="q33:ArrayOftag_post" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTagPost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTagPostResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostResult" nillable="true" type="q34:tag_post" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTagPost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q35:tag_post" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTagPostResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTagPost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTagPostResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTagPost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q36:tag_post" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTagPostResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTax_Administrations">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTax_AdministrationsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationsResult" nillable="true" type="q37:ArrayOfTax_Administration" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTax_Administration">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTax_AdministrationResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationResult" nillable="true" type="q38:Tax_Administration" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTax_Administration">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q39:Tax_Administration" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTax_AdministrationResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTax_Administration">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTax_AdministrationResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTax_Administration">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q40:Tax_Administration" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTax_AdministrationResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTitles">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTitlesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitlesResult" nillable="true" type="q41:ArrayOftitle" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTitle">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetTitleResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitleResult" nillable="true" type="q42:title" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTitle">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q43:title" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddTitleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTitle">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveTitleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTitle">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q44:title" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTitleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUsers">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUsersResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUsersResult" nillable="true" type="q45:ArrayOfUser" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserResult" nillable="true" type="q46:User" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q47:User" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUserResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveUserResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q48:User" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserRoles">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserRolesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRolesResult" nillable="true" type="q49:ArrayOfUserRole" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserRole">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserRoleResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRoleResult" nillable="true" type="q50:UserRole" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUserRole">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q51:UserRole" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUserRoleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveUserRole">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveUserRoleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserRole">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q52:UserRole" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserRoleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserTypes">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserTypesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypesResult" nillable="true" type="q53:ArrayOfUserType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserTypeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypeResult" nillable="true" type="q54:UserType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUserType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q55:UserType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUserTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveUserType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveUserTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q56:UserType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDiscountcarts">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDiscountcartsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartsResult" nillable="true" type="q57:ArrayOfdiscountcart" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDiscountcart">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetDiscountcartResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartResult" nillable="true" type="q58:discountcart" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddDiscountcart">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q59:discountcart" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddDiscountcartResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveDiscountcart">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveDiscountcartResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateDiscountcart">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q60:discountcart" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateDiscountcartResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_Invoices">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_InvoicesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoicesResult" nillable="true" type="q61:ArrayOfE_INVOICE" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_Invoice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_InvoiceResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoiceResult" nillable="true" type="q62:E_INVOICE" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddE_Invoice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q63:E_INVOICE" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddE_InvoiceResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveE_Invoice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveE_InvoiceResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateE_Invoice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q64:E_INVOICE" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateE_InvoiceResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_invoice_types">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_invoice_typesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typesResult" nillable="true" type="q65:ArrayOfE_invoice_type" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_invoice_type">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetE_invoice_typeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typeResult" nillable="true" type="q66:E_invoice_type" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddE_invoice_type">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q67:E_invoice_type" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddE_invoice_typeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveE_invoice_type">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveE_invoice_typeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateE_invoice_type">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q68:E_invoice_type" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateE_invoice_typeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEmployees">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEmployeesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q69:ArrayOfemployee" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEmployee">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEmployeeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeeResult" nillable="true" type="q70:employee" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddEmployee">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q71:employee" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddEmployeeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveEmployee">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveEmployeeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateEmployee">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q72:employee" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateEmployeeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetFuelTypes">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetFuelTypesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypesResult" nillable="true" type="q73:ArrayOfFuelType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetFuelType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetFuelTypeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypeResult" nillable="true" type="q74:FuelType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddFuelType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q75:FuelType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddFuelTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveFuelType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveFuelTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateFuelType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q76:FuelType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateFuelTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGearTypes">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGearTypesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypesResult" nillable="true" type="q77:ArrayOfGearType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGearType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGearTypeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypeResult" nillable="true" type="q78:GearType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddGearType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q79:GearType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddGearTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveGearType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveGearTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateGearType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q80:GearType" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateGearTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGeneralDesignes">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGeneralDesignesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignesResult" nillable="true" type="q81:ArrayOfGeneralDesign" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGeneralDesign">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetGeneralDesignResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignResult" nillable="true" type="q82:GeneralDesign" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddGeneralDesign">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q83:GeneralDesign" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddGeneralDesignResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveGeneralDesign">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveGeneralDesignResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateGeneralDesign">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q84:GeneralDesign" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateGeneralDesignResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetIcons">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetIconsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconsResult" nillable="true" type="q85:ArrayOfIcon" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetIcon">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetIconResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconResult" nillable="true" type="q86:Icon" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddIcon">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q87:Icon" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddIconResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveIcon">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveIconResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateIcon">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q88:Icon" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateIconResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetImages">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetImagesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImagesResult" nillable="true" type="q89:ArrayOfImage" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetImage">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetImageResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImageResult" nillable="true" type="q90:Image" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddImage">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q91:Image" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddImageResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveImage">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveImageResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateImage">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q92:Image" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateImageResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMediums">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMediumsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumsResult" nillable="true" type="q93:ArrayOfmedium" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMedium">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMediumResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumResult" nillable="true" type="q94:medium" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddMedium">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q95:medium" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddMediumResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveMedium">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveMediumResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateMedium">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q96:medium" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateMediumResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMenus">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMenusResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenusResult" nillable="true" type="q97:ArrayOfMenu" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMenu">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMenuResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenuResult" nillable="true" type="q98:Menu" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddMenu">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q99:Menu" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddMenuResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveMenu">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveMenuResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateMenu">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q100:Menu" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateMenuResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatifications">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatificationsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationsResult" nillable="true" type="q101:ArrayOfnatification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatification">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatificationResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationResult" nillable="true" type="q102:natification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddNatification">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q103:natification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddNatificationResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveNatification">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveNatificationResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateNatification">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q104:natification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateNatificationResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Getodeme_yontemleri">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Getodeme_yontemleriResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="Getodeme_yontemleriResult" nillable="true" type="q105:ArrayOfodeme_yontemi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetOdemeYontemi">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetOdemeYontemiResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetOdemeYontemiResult" nillable="true" type="q106:odeme_yontemi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddOdemeYontemi">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q107:odeme_yontemi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddOdemeYontemiResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveOdemeYontemi">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveOdemeYontemiResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateOdemeYontemi">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q108:odeme_yontemi" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateOdemeYontemiResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPaymentPlans">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPaymentPlansResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlansResult" nillable="true" type="q109:ArrayOfpayment_plan" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPaymentPlan">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPaymentPlanResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlanResult" nillable="true" type="q110:payment_plan" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddPaymentPlan">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q111:payment_plan" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddPaymentPlanResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemovePaymentPlan">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemovePaymentPlanResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdatePaymentPlan">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q112:payment_plan" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdatePaymentPlanResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPosts">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPostsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostsResult" nillable="true" type="q113:ArrayOfPost" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPostResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostResult" nillable="true" type="q114:Post" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddPost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q115:Post" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddPostResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemovePost">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemovePostResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="UpdatePost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q116:Post" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q1:Post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1807,7 +21,7 @@
   <xs:element name="GetPricebotsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotsResult" nillable="true" type="q117:ArrayOfPRICEBOT" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotsResult" nillable="true" type="q2:ArrayOfPRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1821,14 +35,14 @@
   <xs:element name="GetPricebotResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotResult" nillable="true" type="q118:PRICEBOT" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotResult" nillable="true" type="q3:PRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddPricebot">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q119:PRICEBOT" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q4:PRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1852,7 +66,7 @@
   <xs:element name="UpdatePricebot">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q120:PRICEBOT" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q5:PRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1869,7 +83,7 @@
   <xs:element name="GetRolesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRolesResult" nillable="true" type="q121:ArrayOfRole" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRolesResult" nillable="true" type="q6:ArrayOfRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1883,14 +97,14 @@
   <xs:element name="GetRoleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleResult" nillable="true" type="q122:Role" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleResult" nillable="true" type="q7:Role" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q123:Role" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q8:Role" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1914,7 +128,7 @@
   <xs:element name="UpdateRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q124:Role" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q9:Role" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1923,920 +137,870 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetLogs">
+  <xs:element name="GetRoleClaims">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetLogsResponse">
+  <xs:element name="GetRoleClaimsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogsResult" nillable="true" type="q125:ArrayOflog" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimsResult" nillable="true" type="q10:ArrayOfRoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetLog">
+  <xs:element name="GetRoleClaim">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetLogResponse">
+  <xs:element name="GetRoleClaimResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogResult" nillable="true" type="q126:log" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimResult" nillable="true" type="q11:RoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddLog">
+  <xs:element name="AddRoleClaim">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q127:log" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q12:RoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddLogResponse">
+  <xs:element name="AddRoleClaimResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveLog">
+  <xs:element name="RemoveRoleClaim">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveLogResponse">
+  <xs:element name="RemoveRoleClaimResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateLog">
+  <xs:element name="UpdateRoleClaim">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q128:log" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q13:RoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateLogResponse">
+  <xs:element name="UpdateRoleClaimResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetsAmountofIncrease">
+  <xs:element name="GetSegments">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetsAmountofIncreaseResponse">
+  <xs:element name="GetSegmentsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetsAmountofIncreaseResult" nillable="true" type="q129:ArrayOfAMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentsResult" nillable="true" type="q14:ArrayOfSegment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAmountofIncrease">
+  <xs:element name="GetSegment">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAmountofIncreaseResponse">
+  <xs:element name="GetSegmentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAmountofIncreaseResult" nillable="true" type="q130:AMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentResult" nillable="true" type="q15:Segment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddAmountofIncrease">
+  <xs:element name="AddSegment">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q131:AMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q16:Segment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddAmountofIncreaseResponse">
+  <xs:element name="AddSegmentResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveAmountofIncrease">
+  <xs:element name="RemoveSegment">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveAmountofIncreaseResponse">
+  <xs:element name="RemoveSegmentResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateAmountofIncrease">
+  <xs:element name="UpdateSegment">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q132:AMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q17:Segment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateAmountofIncreaseResponse">
+  <xs:element name="UpdateSegmentResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAuctions">
+  <xs:element name="GetSenarios">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAuctionsResponse">
+  <xs:element name="GetSenariosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionsResult" nillable="true" type="q133:ArrayOfauction" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenariosResult" nillable="true" type="q18:ArrayOfsenaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAuction">
+  <xs:element name="GetSenario">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAuctionResponse">
+  <xs:element name="GetSenarioResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionResult" nillable="true" type="q134:auction" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenarioResult" nillable="true" type="q19:senaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddAuction">
+  <xs:element name="AddSenario">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q135:auction" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q20:senaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddAuctionResponse">
+  <xs:element name="AddSenarioResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveAuction">
+  <xs:element name="RemoveSenario">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveAuctionResponse">
+  <xs:element name="RemoveSenarioResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateAuction">
+  <xs:element name="UpdateSenario">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q136:auction" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q21:senaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateAuctionResponse">
+  <xs:element name="UpdateSenarioResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetBanks">
+  <xs:element name="GetSocialMedias">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetBanksResponse">
+  <xs:element name="GetSocialMediasResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBanksResult" nillable="true" type="q137:ArrayOfbank" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediasResult" nillable="true" type="q22:ArrayOfSocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetBank">
+  <xs:element name="GetSocialMedia">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetBankResponse">
+  <xs:element name="GetSocialMediaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBankResult" nillable="true" type="q138:bank" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediaResult" nillable="true" type="q23:SocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddBank">
+  <xs:element name="AddSocialMedia">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q139:bank" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q24:SocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddBankResponse">
+  <xs:element name="AddSocialMediaResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveBank">
+  <xs:element name="RemoveSocialMedia">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveBankResponse">
+  <xs:element name="RemoveSocialMediaResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateBank">
+  <xs:element name="UpdateSocialMedia">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q140:bank" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q25:SocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateBankResponse">
+  <xs:element name="UpdateSocialMediaResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarBrands">
+  <xs:element name="GetSoldProducts">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarBrandsResponse">
+  <xs:element name="GetSoldProductsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandsResult" nillable="true" type="q141:ArrayOfCarBrand" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductsResult" nillable="true" type="q26:ArrayOfSOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarBrand">
+  <xs:element name="GetSoldProduct">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarBrandResponse">
+  <xs:element name="GetSoldProductResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandResult" nillable="true" type="q142:CarBrand" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductResult" nillable="true" type="q27:SOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarBrand">
+  <xs:element name="AddSoldProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q143:CarBrand" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q28:SOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarBrandResponse">
+  <xs:element name="AddSoldProductResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarBrand">
+  <xs:element name="RemoveSoldProduct">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarBrandResponse">
+  <xs:element name="RemoveSoldProductResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarBrand">
+  <xs:element name="UpdateSoldProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q144:CarBrand" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q29:SOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarBrandResponse">
+  <xs:element name="UpdateSoldProductResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarDetails">
+  <xs:element name="GetSubmits">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarDetailsResponse">
+  <xs:element name="GetSubmitsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailsResult" nillable="true" type="q145:ArrayOfCarDetail" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitsResult" nillable="true" type="q30:ArrayOfsubmit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarDetail">
+  <xs:element name="GetSubmit">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarDetailResponse">
+  <xs:element name="GetSubmitResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailResult" nillable="true" type="q146:CarDetail" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitResult" nillable="true" type="q31:submit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarDetail">
+  <xs:element name="AddSubmit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q147:CarDetail" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q32:submit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarDetailResponse">
+  <xs:element name="AddSubmitResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarDetail">
+  <xs:element name="RemoveSubmit">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarDetailResponse">
+  <xs:element name="RemoveSubmitResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarDetail">
+  <xs:element name="UpdateSubmit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q148:CarDetail" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q33:submit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarDetailResponse">
+  <xs:element name="UpdateSubmitResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarHardwareDetails">
+  <xs:element name="GetSysdiagrams">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarHardwareDetailsResponse">
+  <xs:element name="GetSysdiagramsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailsResult" nillable="true" type="q149:ArrayOfCarHardwareDetail" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramsResult" nillable="true" type="q34:ArrayOfsysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarHardwareDetail">
+  <xs:element name="GetSysdiagram">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarHardwareDetailResponse">
+  <xs:element name="GetSysdiagramResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailResult" nillable="true" type="q150:CarHardwareDetail" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramResult" nillable="true" type="q35:sysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarHardwareDetail">
+  <xs:element name="AddSysdiagram">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q151:CarHardwareDetail" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q36:sysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarHardwareDetailResponse">
+  <xs:element name="AddSysdiagramResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarHardwareDetail">
+  <xs:element name="RemoveSysdiagram">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarHardwareDetailResponse">
+  <xs:element name="RemoveSysdiagramResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarHardwareDetail">
+  <xs:element name="UpdateSysdiagram">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q152:CarHardwareDetail" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q37:sysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarHardwareDetailResponse">
+  <xs:element name="UpdateSysdiagramResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarMakes">
+  <xs:element name="GetTags">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarMakesResponse">
+  <xs:element name="GetTagsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakesResult" nillable="true" type="q153:ArrayOfCarMake" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagsResult" nillable="true" type="q38:ArrayOftag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarMake">
+  <xs:element name="GetTag">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarMakeResponse">
+  <xs:element name="GetTagResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakeResult" nillable="true" type="q154:CarMake" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagResult" nillable="true" type="q39:tag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarMake">
+  <xs:element name="AddTag">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q155:CarMake" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q40:tag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarMakeResponse">
+  <xs:element name="AddTagResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarMake">
+  <xs:element name="RemoveTag">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarMakeResponse">
+  <xs:element name="RemoveTagResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarMake">
+  <xs:element name="UpdateTag">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q156:CarMake" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q41:tag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarMakeResponse">
+  <xs:element name="UpdateTagResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarTechnicalDetails">
+  <xs:element name="GetTagPosts">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarTechnicalDetailsResponse">
+  <xs:element name="GetTagPostsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailsResult" nillable="true" type="q157:ArrayOfCarTechnicalDetail" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostsResult" nillable="true" type="q42:ArrayOftag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarTechnicalDetail">
+  <xs:element name="GetTagPost">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCarTechnicalDetailResponse">
+  <xs:element name="GetTagPostResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailResult" nillable="true" type="q158:CarTechnicalDetail" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostResult" nillable="true" type="q43:tag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarTechnicalDetail">
+  <xs:element name="AddTagPost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q159:CarTechnicalDetail" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q44:tag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCarTechnicalDetailResponse">
+  <xs:element name="AddTagPostResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarTechnicalDetail">
+  <xs:element name="RemoveTagPost">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCarTechnicalDetailResponse">
+  <xs:element name="RemoveTagPostResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarTechnicalDetail">
+  <xs:element name="UpdateTagPost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q160:CarTechnicalDetail" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q45:tag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCarTechnicalDetailResponse">
+  <xs:element name="UpdateTagPostResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCities">
+  <xs:element name="GetTax_Administrations">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCitiesResponse">
+  <xs:element name="GetTax_AdministrationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCitiesResult" nillable="true" type="q161:ArrayOfcity" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationsResult" nillable="true" type="q46:ArrayOfTax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCity">
+  <xs:element name="GetTax_Administration">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCityResponse">
+  <xs:element name="GetTax_AdministrationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCityResult" nillable="true" type="q162:city" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationResult" nillable="true" type="q47:Tax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCity">
+  <xs:element name="AddTax_Administration">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q163:city" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q48:Tax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCityResponse">
+  <xs:element name="AddTax_AdministrationResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCity">
+  <xs:element name="RemoveTax_Administration">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCityResponse">
+  <xs:element name="RemoveTax_AdministrationResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCity">
+  <xs:element name="UpdateTax_Administration">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q164:city" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q49:Tax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCityResponse">
+  <xs:element name="UpdateTax_AdministrationResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClaims">
+  <xs:element name="GetTitles">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClaimsResponse">
+  <xs:element name="GetTitlesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimsResult" nillable="true" type="q165:ArrayOfClaim" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitlesResult" nillable="true" type="q50:ArrayOftitle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClaim">
+  <xs:element name="GetTitle">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClaimResponse">
+  <xs:element name="GetTitleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimResult" nillable="true" type="q166:Claim" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitleResult" nillable="true" type="q51:title" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddClaim">
+  <xs:element name="AddTitle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q167:Claim" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q52:title" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddClaimResponse">
+  <xs:element name="AddTitleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveClaim">
+  <xs:element name="RemoveTitle">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveClaimResponse">
+  <xs:element name="RemoveTitleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateClaim">
+  <xs:element name="UpdateTitle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q168:Claim" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q53:title" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateClaimResponse">
+  <xs:element name="UpdateTitleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllColor">
+  <xs:element name="GetUsers">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllColorResponse">
+  <xs:element name="GetUsersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAllColorResult" nillable="true" type="q169:ArrayOfColor" />
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUsersResult" nillable="true" type="q54:ArrayOfUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetColor">
+  <xs:element name="GetUser">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetColorResponse">
+  <xs:element name="GetUserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetColorResult" nillable="true" type="q170:Color" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserResult" nillable="true" type="q55:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddColor">
+  <xs:element name="AddUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q171:Color" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q56:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddColorResponse">
+  <xs:element name="AddUserResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveColor">
+  <xs:element name="RemoveUser">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveColorResponse">
+  <xs:element name="RemoveUserResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateColor">
+  <xs:element name="UpdateUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q172:Color" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q57:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateColorResponse">
+  <xs:element name="UpdateUserResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompanies">
+  <xs:element name="GetUserRoles">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompaniesResponse">
+  <xs:element name="GetUserRolesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompaniesResult" nillable="true" type="q173:ArrayOfcompany" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRolesResult" nillable="true" type="q58:ArrayOfUserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompany">
+  <xs:element name="GetUserRole">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompanyResponse">
+  <xs:element name="GetUserRoleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyResult" nillable="true" type="q174:company" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRoleResult" nillable="true" type="q59:UserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCompany">
+  <xs:element name="AddUserRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q175:company" />
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q60:UserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCompanyResponse">
+  <xs:element name="AddUserRoleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCompany">
+  <xs:element name="RemoveUserRole">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCompanyResponse">
+  <xs:element name="RemoveUserRoleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCompany">
+  <xs:element name="UpdateUserRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q176:company" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q61:UserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCompanyResponse">
+  <xs:element name="UpdateUserRoleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompanyTypies">
+  <xs:element name="GetUserTypes">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompanyTypiesResponse">
+  <xs:element name="GetUserTypesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypiesResult" nillable="true" type="q177:ArrayOfcompany_type" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypesResult" nillable="true" type="q62:ArrayOfUserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompanyType">
+  <xs:element name="GetUserType">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetCompanyTypeResponse">
+  <xs:element name="GetUserTypeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypeResult" nillable="true" type="q178:company_type" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypeResult" nillable="true" type="q63:UserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCompanyType">
+  <xs:element name="AddUserType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q179:company_type" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q64:UserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AddCompanyTypeResponse">
+  <xs:element name="AddUserTypeResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCompanyType">
+  <xs:element name="RemoveUserType">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoveCompanyTypeResponse">
+  <xs:element name="RemoveUserTypeResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCompanyType">
+  <xs:element name="UpdateUserType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q180:company_type" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q65:UserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateCompanyTypeResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetCountries">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetCountriesResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountriesResult" nillable="true" type="q181:ArrayOfcountry" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetCountry">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetCountryResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountryResult" nillable="true" type="q182:country" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddCountry">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q183:country" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddCountryResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveCountry">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveCountryResponse">
+  <xs:element name="UpdateUserTypeResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -2844,7 +1008,7 @@
   <xs:element name="UpdateCountry">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q184:country" />
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q66:country" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2861,7 +1025,7 @@
   <xs:element name="GetCountiesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountiesResult" nillable="true" type="q185:ArrayOfcounty" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountiesResult" nillable="true" type="q67:ArrayOfcounty" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2875,14 +1039,14 @@
   <xs:element name="GetCountyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountyResult" nillable="true" type="q186:county" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountyResult" nillable="true" type="q68:county" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCounty">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q187:county" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q69:county" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2906,7 +1070,7 @@
   <xs:element name="UpdateCounty">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q188:county" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q70:county" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2923,7 +1087,7 @@
   <xs:element name="GetCurrenciesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrenciesResult" nillable="true" type="q189:ArrayOfCURRENCY" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrenciesResult" nillable="true" type="q71:ArrayOfCURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2937,14 +1101,14 @@
   <xs:element name="GetCurrencyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrencyResult" nillable="true" type="q190:CURRENCY" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrencyResult" nillable="true" type="q72:CURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCurrency">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q191:CURRENCY" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q73:CURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2968,11 +1132,1986 @@
   <xs:element name="UpdateCurrency">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q192:CURRENCY" />
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q74:CURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateCurrencyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountcarts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountcartsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartsResult" nillable="true" type="q75:ArrayOfdiscountcart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountcart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountcartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartResult" nillable="true" type="q76:discountcart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDiscountcart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q77:discountcart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDiscountcartResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveDiscountcart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveDiscountcartResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDiscountcart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q78:discountcart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDiscountcartResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_Invoices">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_InvoicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoicesResult" nillable="true" type="q79:ArrayOfE_INVOICE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_Invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_InvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoiceResult" nillable="true" type="q80:E_INVOICE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddE_Invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q81:E_INVOICE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddE_InvoiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveE_Invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveE_InvoiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateE_Invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q82:E_INVOICE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateE_InvoiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_invoice_types">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_invoice_typesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typesResult" nillable="true" type="q83:ArrayOfE_invoice_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_invoice_type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetE_invoice_typeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typeResult" nillable="true" type="q84:E_invoice_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddE_invoice_type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q85:E_invoice_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddE_invoice_typeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveE_invoice_type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveE_invoice_typeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateE_invoice_type">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q86:E_invoice_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateE_invoice_typeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployees">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q87:ArrayOfemployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeeResult" nillable="true" type="q88:employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q89:employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q90:employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypesResult" nillable="true" type="q91:ArrayOfFuelType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypeResult" nillable="true" type="q92:FuelType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFuelType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q93:FuelType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFuelTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveFuelType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveFuelTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFuelType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q94:FuelType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFuelTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGearTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGearTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypesResult" nillable="true" type="q95:ArrayOfGearType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGearType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGearTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypeResult" nillable="true" type="q96:GearType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGearType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q97:GearType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGearTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGearType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGearTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGearType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q98:GearType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGearTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralDesignes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralDesignesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignesResult" nillable="true" type="q99:ArrayOfGeneralDesign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralDesign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGeneralDesignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignResult" nillable="true" type="q100:GeneralDesign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGeneralDesign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q101:GeneralDesign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGeneralDesignResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGeneralDesign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGeneralDesignResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGeneralDesign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q102:GeneralDesign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGeneralDesignResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIcons">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIconsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconsResult" nillable="true" type="q103:ArrayOfIcon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIcon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIconResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconResult" nillable="true" type="q104:Icon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIcon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q105:Icon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIconResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveIcon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveIconResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIcon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q106:Icon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIconResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImages">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImagesResult" nillable="true" type="q107:ArrayOfImage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImageResult" nillable="true" type="q108:Image" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q109:Image" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q110:Image" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediums">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediumsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumsResult" nillable="true" type="q111:ArrayOfmedium" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedium">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumResult" nillable="true" type="q112:medium" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMedium">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q113:medium" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMediumResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMedium">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMediumResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMedium">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q114:medium" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMediumResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenusResult" nillable="true" type="q115:ArrayOfMenu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenuResult" nillable="true" type="q116:Menu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q117:Menu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMenuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMenuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q118:Menu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMenuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatifications">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatificationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationsResult" nillable="true" type="q119:ArrayOfnatification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationResult" nillable="true" type="q120:natification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNatification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q121:natification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNatificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveNatification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveNatificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNatification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q122:natification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNatificationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getodeme_yontemleri">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getodeme_yontemleriResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="Getodeme_yontemleriResult" nillable="true" type="q123:ArrayOfodeme_yontemi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOdemeYontemi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOdemeYontemiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetOdemeYontemiResult" nillable="true" type="q124:odeme_yontemi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOdemeYontemi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q125:odeme_yontemi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOdemeYontemiResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveOdemeYontemi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveOdemeYontemiResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOdemeYontemi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q126:odeme_yontemi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOdemeYontemiResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentPlans">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentPlansResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlansResult" nillable="true" type="q127:ArrayOfpayment_plan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlanResult" nillable="true" type="q128:payment_plan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPaymentPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q129:payment_plan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPaymentPlanResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePaymentPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePaymentPlanResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q130:payment_plan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentPlanResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPosts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostsResult" nillable="true" type="q131:ArrayOfPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostResult" nillable="true" type="q132:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q133:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPostResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePostResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="toplama">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="x" type="xs:int" />
+        <xs:element minOccurs="0" name="y" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="toplamaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="toplamaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getactionusers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetactionusersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetactionusersResult" nillable="true" type="q134:ArrayOfactionuser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getactionuser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetactionuserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetactionuserResult" nillable="true" type="q135:actionuser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Addactionuser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q136:actionuser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddactionuserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Removeactionuser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveactionuserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Updateactionuser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q137:actionuser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateactionuserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getprivateauctions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetprivateauctionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetprivateauctionsResult" nillable="true" type="q138:ArrayOfprivate_auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getprivateauction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetprivateauctionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetprivateauctionResult" nillable="true" type="q139:private_auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Addprivateauction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q140:private_auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddprivateauctionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Removeprivateauction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveprivateauctionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Updateprivateauction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q141:private_auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateprivateauctionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogsResult" nillable="true" type="q142:ArrayOflog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogResult" nillable="true" type="q143:log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q144:log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLogResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveLogResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q145:log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLogResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetsAmountofIncrease">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetsAmountofIncreaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetsAmountofIncreaseResult" nillable="true" type="q146:ArrayOfAMOUNT_OF_INCREASE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountofIncrease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmountofIncreaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAmountofIncreaseResult" nillable="true" type="q147:AMOUNT_OF_INCREASE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAmountofIncrease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q148:AMOUNT_OF_INCREASE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAmountofIncreaseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAmountofIncrease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAmountofIncreaseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAmountofIncrease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q149:AMOUNT_OF_INCREASE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAmountofIncreaseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuctions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuctionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionsResult" nillable="true" type="q150:ArrayOfauction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuctionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionResult" nillable="true" type="q151:auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAuction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q152:auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAuctionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAuction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAuctionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAuction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q153:auction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAuctionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBanks">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBanksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBanksResult" nillable="true" type="q154:ArrayOfbank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBankResult" nillable="true" type="q155:bank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q156:bank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBankResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveBank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveBankResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q157:bank" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBankResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarBrands">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarBrandsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandsResult" nillable="true" type="q158:ArrayOfCarBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandResult" nillable="true" type="q159:CarBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q160:CarBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarBrandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarBrandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q161:CarBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarBrandResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailsResult" nillable="true" type="q162:ArrayOfCarDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailResult" nillable="true" type="q163:CarDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q164:CarDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q165:CarDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarHardwareDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarHardwareDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailsResult" nillable="true" type="q166:ArrayOfCarHardwareDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarHardwareDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarHardwareDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailResult" nillable="true" type="q167:CarHardwareDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarHardwareDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q168:CarHardwareDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarHardwareDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarHardwareDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarHardwareDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarHardwareDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q169:CarHardwareDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarHardwareDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarMakes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarMakesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakesResult" nillable="true" type="q170:ArrayOfCarMake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarMake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarMakeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakeResult" nillable="true" type="q171:CarMake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarMake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q172:CarMake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarMakeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarMake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarMakeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarMake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q173:CarMake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarMakeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTechnicalDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTechnicalDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailsResult" nillable="true" type="q174:ArrayOfCarTechnicalDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTechnicalDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarTechnicalDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailResult" nillable="true" type="q175:CarTechnicalDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarTechnicalDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q176:CarTechnicalDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCarTechnicalDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarTechnicalDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCarTechnicalDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarTechnicalDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q177:CarTechnicalDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCarTechnicalDetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCitiesResult" nillable="true" type="q178:ArrayOfcity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCityResult" nillable="true" type="q179:city" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q180:city" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q181:city" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaims">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimsResult" nillable="true" type="q182:ArrayOfClaim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimResult" nillable="true" type="q183:Claim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q184:Claim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddClaimResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveClaimResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClaim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q185:Claim" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClaimResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllColor">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllColorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAllColorResult" nillable="true" type="q186:ArrayOfColor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetColorResult" nillable="true" type="q187:Color" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddColor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q188:Color" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddColorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveColor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveColorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateColor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q189:Color" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateColorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompaniesResult" nillable="true" type="q190:ArrayOfcompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyResult" nillable="true" type="q191:company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q192:company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompanyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCompanyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q193:company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompanyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyTypies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyTypiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypiesResult" nillable="true" type="q194:ArrayOfcompany_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypeResult" nillable="true" type="q195:company_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompanyType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q196:company_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCompanyTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCompanyType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCompanyTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompanyType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q197:company_type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompanyTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountries">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountriesResult" nillable="true" type="q198:ArrayOfcountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountryResult" nillable="true" type="q199:country" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q200:country" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCountryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCountryResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

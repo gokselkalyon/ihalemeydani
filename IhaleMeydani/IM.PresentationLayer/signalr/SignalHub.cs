@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using IM.PresentationLayer.IhaleWCFService;
 using Microsoft.AspNet.SignalR;
 
 namespace IM.PresentationLayer.signalr
 {
     public class SignalHub : Hub
     {
-        //public void Send(string username, string message)
-        //{
-        //    Clients.All.sendMessage(username, message);
-        //}
+        
+        IhaleServiceClient ihaleService = new IhaleServiceClient();
 
-        public override Task OnConnected()
+        public override async Task OnConnected()
         {
-            return base.OnConnected();  
+            var actionusers = ihaleService.GetactionusersAsync().Result;
+            await Clients.Caller.GetAllLog(actionusers);
+        }
+        public void addauctionuser(actionuser actionuser)
+        {
+            ihaleService.Addactionuser(actionuser);
+            Clients.All.addauctionuser(actionuser);
         }
     }
 }

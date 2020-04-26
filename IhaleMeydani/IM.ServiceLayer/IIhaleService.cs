@@ -15,6 +15,40 @@ namespace IM.ServiceLayer
         [OperationContract]
         string toplama(int x ,int y);
 
+        #region auctionuser
+        [OperationContract]
+        List<actionuser> Getactionusers();
+
+        [OperationContract]
+        actionuser Getactionuser(int Id);
+
+        [OperationContract]
+        void Addactionuser(actionuser entity);
+
+        [OperationContract]
+        void Removeactionuser(int Id);
+
+        [OperationContract]
+        void Updateactionuser(actionuser entity);
+        #endregion
+
+        #region privateauction
+        [OperationContract]
+        List<private_auction> Getprivateauctions();
+
+        [OperationContract]
+        private_auction Getprivateauction(int Id);
+
+        [OperationContract]
+        void Addprivateauction(private_auction entity);
+
+        [OperationContract]
+        void Removeprivateauction(int Id);
+
+        [OperationContract]
+        void Updateprivateauction(private_auction entity);
+        #endregion
+
         #region log
         [OperationContract]
         List<log> GetLogs();

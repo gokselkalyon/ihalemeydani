@@ -56,6 +56,7 @@
     <Compile Include="Concrete\Basic\BaseConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\Amount_Of_IncreaseConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\AuctionConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\AuctionUserConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\BankConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CarBrandConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CarDetailConcrete.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Concrete\EFConcrete\Payment_PlanConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\PostConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\PricebotConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\PrivateAuctionConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\RoleClaimConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\RoleConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\SegmentConcrete.cs" />

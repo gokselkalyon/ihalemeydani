@@ -65,10 +65,15 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataBusinessService<User>>().To<UserManager>().InSingletonScope();
             Bind<IDataBusinessService<UserRole>>().To<UserRoleManager>().InSingletonScope();
             Bind<IDataBusinessService<UserType>>().To<UserTypeManager>().InSingletonScope();
+            Bind<IDataBusinessService<private_auction>>().To<PrivateAuctionManager>().InSingletonScope();
+            Bind<IDataBusinessService<actionuser>>().To<AuctionUserManager>().InSingletonScope();
+
 
             Bind<IDataAccessDal<log>>().To<LogConcrete>().InSingletonScope();
             Bind<IDataAccessDal<AMOUNT_OF_INCREASE>>().To<Amount_Of_IncreaseConcrete>().InSingletonScope();
             Bind<IDataAccessDal<auction>>().To<AuctionConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<private_auction>>().To<PrivateAuctionConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<actionuser>>().To<AuctionUserConcrete>().InSingletonScope();
             Bind<IDataAccessDal<bank>>().To<BankConcrete>().InSingletonScope();
             Bind<IDataAccessDal<CarBrand>>().To<CarBrandConcrete>().InSingletonScope();
             Bind<IDataAccessDal<CarDetail>>().To<CarDetailConcrete>().InSingletonScope();
