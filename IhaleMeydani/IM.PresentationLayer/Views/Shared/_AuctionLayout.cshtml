@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
 
     <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/Template/css/Style.css" rel="stylesheet" />
 
 
     <script src="~/Content/Template/js/jquery.js"></script>
@@ -29,12 +29,12 @@
 
             var loghub = $.connection.signalHub;
 
-            $scope.addTag = function () {
-                loghub.server.addTag($scope.add_tag);
+            $scope.addauctionuser = function () {
+                loghub.server.addauctionuser($scope.add_auctionuser);
             }
 
-            loghub.client.GetAllLog = function (tags) {
-                $scope.tags = tags;
+            loghub.client.GetAllLog = function (actionusers) {
+                $scope.actionusers = actionusers;
                 $scope.$apply();
 
                 $("#bars li .bar").each(function (key, bar) {
@@ -47,8 +47,8 @@
                 });
             }
 
-            loghub.client.addTag = function (tag) {
-                $scope.tags.push(tag);
+            loghub.client.addauctionuser = function (actionuser) {
+                $scope.actionusers.push(actionuser);
                 $scope.$apply();
 
                 $("#bars li .bar").each(function (key, bar) {

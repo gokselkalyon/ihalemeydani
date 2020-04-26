@@ -7,6 +7,66 @@
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_UpdatePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdatePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPricebots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPricebots" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPricebots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPricebotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPricebot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPricebot" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPricebot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPricebotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPricebot_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPricebot" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPricebot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPricebotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemovePricebot_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePricebot" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemovePricebot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePricebotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdatePricebot_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePricebot" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdatePricebot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePricebotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoles" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRoleResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateRole_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateRole" />
   </wsdl:message>
@@ -432,6 +492,66 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountry" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCounties_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounties" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCounties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCounty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCounty" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCounty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddCounty_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCounty" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddCounty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveCounty_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCounty" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveCounty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCountyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateCounty_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCounty" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateCounty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCurrencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencies" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCurrencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCurrencyResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateCurrency_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateCurrency" />
@@ -883,71 +1003,71 @@
   <wsdl:message name="IIhaleService_RemovePost_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemovePostResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdatePost_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdatePost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePostResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPricebots_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPricebots" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPricebots_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPricebotsResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPricebot_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPricebot" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPricebot_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPricebotResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddPricebot_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddPricebot" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddPricebot_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddPricebotResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemovePricebot_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemovePricebot" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemovePricebot_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemovePricebotResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdatePricebot_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePricebot" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdatePricebot_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePricebotResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetRoles_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetRoles" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetRoles_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetRole" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetRoleResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddRole" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveRole" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveRoleResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_OutputMessage">
     <wsdl:part name="parameters" element="tns:toplamaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getactionusers_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getactionusers" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getactionusers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetactionusersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getactionuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getactionuser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getactionuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetactionuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Addactionuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Addactionuser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Addactionuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddactionuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Removeactionuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Removeactionuser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Removeactionuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveactionuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Updateactionuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updateactionuser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Updateactionuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateactionuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getprivateauctions_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getprivateauctions" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getprivateauctions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetprivateauctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getprivateauction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getprivateauction" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getprivateauction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetprivateauctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Addprivateauction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Addprivateauction" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Addprivateauction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddprivateauctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Removeprivateauction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Removeprivateauction" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Removeprivateauction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveprivateauctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Updateprivateauction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updateprivateauction" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Updateprivateauction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateprivateauctionResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetLogs_InputMessage">
     <wsdl:part name="parameters" element="tns:GetLogs" />
@@ -1393,67 +1513,47 @@
   <wsdl:message name="IIhaleService_RemoveCountry_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveCountryResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCountry_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCountry" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCountry_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCountryResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCounties_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCounties" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCounties_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCountiesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCounty_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCounty" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCounty_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCountyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCounty_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddCounty" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCounty_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddCountyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCounty_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCounty" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCounty_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCountyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCounty_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCounty" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCounty_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCountyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCurrencies_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCurrencies" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCurrencies_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCurrenciesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCurrency_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCurrency" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCurrency_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCurrencyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCurrency_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddCurrency" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCurrency_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddCurrencyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCurrency_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCurrency" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCurrency_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCurrencyResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="UpdatePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePost" message="tns:IIhaleService_UpdatePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePostResponse" message="tns:IIhaleService_UpdatePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPricebots">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPricebots" message="tns:IIhaleService_GetPricebots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPricebotsResponse" message="tns:IIhaleService_GetPricebots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPricebot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPricebot" message="tns:IIhaleService_GetPricebot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPricebotResponse" message="tns:IIhaleService_GetPricebot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPricebot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPricebot" message="tns:IIhaleService_AddPricebot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPricebotResponse" message="tns:IIhaleService_AddPricebot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePricebot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePricebot" message="tns:IIhaleService_RemovePricebot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePricebotResponse" message="tns:IIhaleService_RemovePricebot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePricebot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePricebot" message="tns:IIhaleService_UpdatePricebot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePricebotResponse" message="tns:IIhaleService_UpdatePricebot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetRoles" message="tns:IIhaleService_GetRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetRolesResponse" message="tns:IIhaleService_GetRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetRole" message="tns:IIhaleService_GetRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetRoleResponse" message="tns:IIhaleService_GetRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddRole" message="tns:IIhaleService_AddRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddRoleResponse" message="tns:IIhaleService_AddRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveRole" message="tns:IIhaleService_RemoveRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveRoleResponse" message="tns:IIhaleService_RemoveRole_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateRole">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateRole" message="tns:IIhaleService_UpdateRole_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateRoleResponse" message="tns:IIhaleService_UpdateRole_OutputMessage" />
@@ -1737,6 +1837,46 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountry" message="tns:IIhaleService_UpdateCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountryResponse" message="tns:IIhaleService_UpdateCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCounties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCounties" message="tns:IIhaleService_GetCounties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountiesResponse" message="tns:IIhaleService_GetCounties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCounty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCounty" message="tns:IIhaleService_GetCounty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountyResponse" message="tns:IIhaleService_GetCounty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCounty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCounty" message="tns:IIhaleService_AddCounty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCountyResponse" message="tns:IIhaleService_AddCounty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCounty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCounty" message="tns:IIhaleService_RemoveCounty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountyResponse" message="tns:IIhaleService_RemoveCounty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCounty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCounty" message="tns:IIhaleService_UpdateCounty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountyResponse" message="tns:IIhaleService_UpdateCounty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCurrencies" message="tns:IIhaleService_GetCurrencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCurrenciesResponse" message="tns:IIhaleService_GetCurrencies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCurrency" message="tns:IIhaleService_GetCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCurrencyResponse" message="tns:IIhaleService_GetCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCurrency" message="tns:IIhaleService_AddCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCurrencyResponse" message="tns:IIhaleService_AddCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCurrency" message="tns:IIhaleService_RemoveCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCurrencyResponse" message="tns:IIhaleService_RemoveCurrency_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateCurrency">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCurrency" message="tns:IIhaleService_UpdateCurrency_InputMessage" />
@@ -2038,49 +2178,49 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePost" message="tns:IIhaleService_RemovePost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePostResponse" message="tns:IIhaleService_RemovePost_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdatePost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePost" message="tns:IIhaleService_UpdatePost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePostResponse" message="tns:IIhaleService_UpdatePost_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPricebots">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPricebots" message="tns:IIhaleService_GetPricebots_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPricebotsResponse" message="tns:IIhaleService_GetPricebots_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPricebot">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPricebot" message="tns:IIhaleService_GetPricebot_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPricebotResponse" message="tns:IIhaleService_GetPricebot_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddPricebot">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPricebot" message="tns:IIhaleService_AddPricebot_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPricebotResponse" message="tns:IIhaleService_AddPricebot_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemovePricebot">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePricebot" message="tns:IIhaleService_RemovePricebot_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePricebotResponse" message="tns:IIhaleService_RemovePricebot_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePricebot">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePricebot" message="tns:IIhaleService_UpdatePricebot_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePricebotResponse" message="tns:IIhaleService_UpdatePricebot_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetRoles">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetRoles" message="tns:IIhaleService_GetRoles_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetRolesResponse" message="tns:IIhaleService_GetRoles_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetRole" message="tns:IIhaleService_GetRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetRoleResponse" message="tns:IIhaleService_GetRole_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddRole" message="tns:IIhaleService_AddRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddRoleResponse" message="tns:IIhaleService_AddRole_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveRole" message="tns:IIhaleService_RemoveRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveRoleResponse" message="tns:IIhaleService_RemoveRole_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getactionusers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getactionusers" message="tns:IIhaleService_Getactionusers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetactionusersResponse" message="tns:IIhaleService_Getactionusers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getactionuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getactionuser" message="tns:IIhaleService_Getactionuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetactionuserResponse" message="tns:IIhaleService_Getactionuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Addactionuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Addactionuser" message="tns:IIhaleService_Addactionuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddactionuserResponse" message="tns:IIhaleService_Addactionuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Removeactionuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Removeactionuser" message="tns:IIhaleService_Removeactionuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveactionuserResponse" message="tns:IIhaleService_Removeactionuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updateactionuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Updateactionuser" message="tns:IIhaleService_Updateactionuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateactionuserResponse" message="tns:IIhaleService_Updateactionuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getprivateauctions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getprivateauctions" message="tns:IIhaleService_Getprivateauctions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetprivateauctionsResponse" message="tns:IIhaleService_Getprivateauctions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getprivateauction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getprivateauction" message="tns:IIhaleService_Getprivateauction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetprivateauctionResponse" message="tns:IIhaleService_Getprivateauction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Addprivateauction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Addprivateauction" message="tns:IIhaleService_Addprivateauction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddprivateauctionResponse" message="tns:IIhaleService_Addprivateauction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Removeprivateauction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Removeprivateauction" message="tns:IIhaleService_Removeprivateauction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveprivateauctionResponse" message="tns:IIhaleService_Removeprivateauction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updateprivateauction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Updateprivateauction" message="tns:IIhaleService_Updateprivateauction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateprivateauctionResponse" message="tns:IIhaleService_Updateprivateauction_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetLogs">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetLogs" message="tns:IIhaleService_GetLogs_InputMessage" />
@@ -2378,49 +2518,99 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountry" message="tns:IIhaleService_RemoveCountry_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountryResponse" message="tns:IIhaleService_RemoveCountry_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateCountry">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountry" message="tns:IIhaleService_UpdateCountry_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountryResponse" message="tns:IIhaleService_UpdateCountry_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCounties">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCounties" message="tns:IIhaleService_GetCounties_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountiesResponse" message="tns:IIhaleService_GetCounties_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCounty">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCounty" message="tns:IIhaleService_GetCounty_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountyResponse" message="tns:IIhaleService_GetCounty_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddCounty">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCounty" message="tns:IIhaleService_AddCounty_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCountyResponse" message="tns:IIhaleService_AddCounty_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCounty">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCounty" message="tns:IIhaleService_RemoveCounty_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountyResponse" message="tns:IIhaleService_RemoveCounty_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCounty">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCounty" message="tns:IIhaleService_UpdateCounty_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountyResponse" message="tns:IIhaleService_UpdateCounty_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCurrencies">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCurrencies" message="tns:IIhaleService_GetCurrencies_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCurrenciesResponse" message="tns:IIhaleService_GetCurrencies_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCurrency">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCurrency" message="tns:IIhaleService_GetCurrency_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCurrencyResponse" message="tns:IIhaleService_GetCurrency_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddCurrency">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCurrency" message="tns:IIhaleService_AddCurrency_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCurrencyResponse" message="tns:IIhaleService_AddCurrency_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCurrency">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCurrency" message="tns:IIhaleService_RemoveCurrency_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCurrencyResponse" message="tns:IIhaleService_RemoveCurrency_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdatePost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricebots">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPricebots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricebot">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPricebot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPricebot">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPricebot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePricebot">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemovePricebot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePricebot">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePricebot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateRole">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateRole" style="document" />
       <wsdl:input>
@@ -3053,6 +3243,96 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountry">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounties">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCounties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounty">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCounty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCounty">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCounty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCounty">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCounty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCounty">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCounty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCurrencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrency">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCurrency">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCurrency">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCurrency" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3735,98 +4015,98 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdatePost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPricebots">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPricebots" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPricebot">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPricebot" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddPricebot">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPricebot" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemovePricebot">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemovePricebot" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePricebot">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePricebot" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetRoles">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetRoles" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetRole" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddRole" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveRole" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getactionusers">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getactionusers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getactionuser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getactionuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addactionuser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Addactionuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Removeactionuser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Removeactionuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updateactionuser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Updateactionuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprivateauctions">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getprivateauctions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getprivateauction">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getprivateauction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Addprivateauction">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Addprivateauction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Removeprivateauction">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Removeprivateauction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updateprivateauction">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Updateprivateauction" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4493,96 +4773,6 @@
     </wsdl:operation>
     <wsdl:operation name="RemoveCountry">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCountry" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCountry">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCountry" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCounties">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCounties" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCounty">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCounty" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddCounty">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCounty" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCounty">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCounty" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCounty">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCounty" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCurrencies">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCurrencies" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCurrency">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCurrency" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddCurrency">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCurrency" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCurrency">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCurrency" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

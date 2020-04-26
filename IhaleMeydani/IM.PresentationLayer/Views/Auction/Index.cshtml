@@ -98,10 +98,10 @@
             <div class="col-lg-7 col-md-12 ">
                 <div class="form-row">
                     <div class="col-7">
-                        <input type="text" name="price" placeholder="99₺" class="form-control " ng-model="add_tag.tag_name" value="" />
+                        <input type="text" name="price" placeholder="99₺" class="form-control " ng-model="add_auctionuser.bid" value="" />
                     </div>
                     <div class="col">
-                        <input type="submit" class="btn form-control text-white font-weight-bolder" ng-click="addTag()" style="background:#be8a59;" name="name" value="Teklif Ver" />
+                        <input type="submit" class="btn form-control text-white font-weight-bolder" ng-click="addauctionuser()" style="background:#be8a59;" name="name" value="Teklif Ver" />
                     </div>
                 </div>
             </div>
@@ -132,9 +132,9 @@
 
             <div>
                 <ul id="bars" class="d-flex justify-content-center" >
-                    <li ng-repeat="tag in tags">
-                        <div data-percentage="80" class="bar" >
-                        </div><span>{{ tag.tag_name }} </span>
+                    <li ng-repeat="actionuser in actionusers">
+                        <div data-percentage="{{ actionuser.bid }}" class="bar" >
+                        </div><span>{{ actionuser.USER_ID }} </span>
                     </li>
                 </ul>
             </div>

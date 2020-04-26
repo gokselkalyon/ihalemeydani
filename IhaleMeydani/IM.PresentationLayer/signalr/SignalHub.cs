@@ -10,22 +10,18 @@ namespace IM.PresentationLayer.signalr
 {
     public class SignalHub : Hub
     {
-        //public void Send(string username, string message)
-        //{
-        //    Clients.All.sendMessage(username, message);
-        //}
+        
         IhaleServiceClient ihaleService = new IhaleServiceClient();
-        //log d = new log();
 
         public override async Task OnConnected()
         {
-            var tags = ihaleService.GetTagsAsync().Result;
-            await Clients.Caller.GetAllLog(tags);
+            var actionusers = ihaleService.GetactionusersAsync().Result;
+            await Clients.Caller.GetAllLog(actionusers);
         }
-        public void addTag(tag tag)
+        public void addauctionuser(actionuser actionuser)
         {
-            ihaleService.AddTag(tag);
-            Clients.All.addTag(tag);
+            ihaleService.Addactionuser(actionuser);
+            Clients.All.addauctionuser(actionuser);
         }
     }
 }
