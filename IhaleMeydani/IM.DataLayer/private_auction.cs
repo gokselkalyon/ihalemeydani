@@ -12,13 +12,11 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Menu
+    public partial class private_auction
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> IconId { get; set; }
-        public string Description { get; set; }
-        public Nullable<int> MenuId { get; set; }
-        public string Url { get; set; }
+        public int ID { get; set; }
+        public Nullable<int> USER_ID { get; set; }
+        public Nullable<int> auction_id { get; set; }
+        public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
     }
 }

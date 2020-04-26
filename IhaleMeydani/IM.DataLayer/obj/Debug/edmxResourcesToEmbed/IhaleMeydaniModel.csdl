@@ -296,6 +296,7 @@
     <Property Name="IconId" Type="Int32" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="MenuId" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="natification">
     <Key>
@@ -381,6 +382,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
     <Property Name="IconId" Type="Int32" />
+    <Property Name="MediaTypeId" Type="Int32" />
   </EntityType>
   <EntityType Name="SOLD_PRODUCT">
     <Key>
@@ -525,5 +527,26 @@
     <EntitySet Name="Users" EntityType="Self.User" />
     <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
     <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+    <EntitySet Name="actionusers" EntityType="IHALEDBModel.actionuser" />
+    <EntitySet Name="private_auction" EntityType="IHALEDBModel.private_auction" />
   </EntityContainer>
+  <EntityType Name="actionuser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USER_ID" Type="Int32" />
+    <Property Name="auction_id" Type="Int32" />
+    <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+    <Property Name="bid" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="private_auction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USER_ID" Type="Int32" />
+    <Property Name="auction_id" Type="Int32" />
+    <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+  </EntityType>
 </Schema>
