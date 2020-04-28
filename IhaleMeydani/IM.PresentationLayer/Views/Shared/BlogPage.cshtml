@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="~/Content/Template/css/BlogPage.css" rel="stylesheet" />
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
+    <link href="~/Content/Template/css/Style.css" rel="stylesheet" />
+
+
+    <script src="~/Content/Template/js/jquery.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Content/Template/js/jquery.signalR-2.4.1.js"></script>
+    <script src="~/SignalR/Hubs"></script>
+
+    <style>
+        .deneme {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        var myApp = angular.module('spicyApp1', []);
+
+        myApp.controller('SpicyController', ['$scope', function ($scope) {
+
+            var loghub = $.connection.signalHub;
+
+            $scope.addauctionuser = function () {
+                loghub.server.addauctionuser($scope.add_auctionuser);
+            }
+
+            loghub.client.GetAllLog = function (actionusers) {
+                $scope.actionusers = actionusers;
+                $scope.$apply();
+
+                $("#bars li .bar").each(function (key, bar) {
+                    var percentage = $(this).data('percentage');
+                    var percentage2 = $("#numbers li span").data('percentage');
+                    percentage = percentage / (percentage2 / 100);
+                    $(this).animate({
+                        'height': percentage + '%'
+                    }, 1000);
+                });
+            }
+
+            loghub.client.addauctionuser = function (actionuser) {
+                $scope.actionusers.push(actionuser);
+                $scope.$apply();
+
+                $("#bars li .bar").each(function (key, bar) {
+                    var percentage = $(this).data('percentage');
+                    var percentage2 = $("#numbers li span").data('percentage');
+                    percentage = percentage / (percentage2 / 100);
+                    $(this).animate({
+                        'height': percentage + '%'
+                    }, 1000);
+                });
+
+            }
+            $.connection.hub.start()
+
+        }]);
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div id="blog" class="row">
+            <div class="col-md-10 blogShort">
+                <h1>Sivaslı firma metal tozundan motor parçası üretti Volvo'ya sattı</h1>
+                <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+
+                <em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>
+                <article>
+                    <p>
+                        Sivas'ta faaliyet gösteren firma, metal tozlarından ürettiği küçük motor parçalarını Volvo'ya satıyor - ESTAŞ Genel Müdürü Osman Mavuş: - "İçten yanmalı motorlarda şu anda Volvo grubuna ihracat yapıyoruz. Bu parçaları ilk olarak Volvo grubu kullanmaya başladı"
+                    </p>
+                </article>
+                <a class="btn btn-blog pull-right marginBottom10" href="http://bootsnipp.com/user/snippets/2RoQ">READ MORE</a>
+            </div>
+            <div class="col-md-12 gap10"></div>
+        </div>
+    </div>
+</body>
+</html>

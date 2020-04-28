@@ -486,6 +486,7 @@
     <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
+    <Content Include="Content\Template\css\BlogPage.css" />
     <Content Include="Content\Template\css\boostrap.css" />
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\js\boostrap.js" />
@@ -528,6 +529,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Views\Shared\BlogPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

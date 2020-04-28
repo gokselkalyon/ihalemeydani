@@ -127,3 +127,24 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer\obj\
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.pdb
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\Firebase.Storage.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.AppContext.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Console.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.Compression.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.FileSystem.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Net.Http.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Net.Sockets.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Diagnostics.DiagnosticSource.xml
