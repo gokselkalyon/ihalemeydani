@@ -158,6 +158,7 @@
     </Compile>
     <Compile Include="Controllers\AuctionController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BlogPostController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -529,8 +530,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Views\Shared\BlogPage.cshtml" />
     <Content Include="Views\Shared\BlogPageContent.cshtml" />
+    <Content Include="Views\Shared\_BlogLayoutPage.cshtml" />
+    <Content Include="Views\BlogPost\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
