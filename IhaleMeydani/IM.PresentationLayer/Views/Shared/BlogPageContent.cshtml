@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "BlogPageContent";
+}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+
+        <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
+        <link href="~/Content/Template/css/Style.css" rel="stylesheet" />
+
+
+        <script src="~/Content/Template/js/jquery.js"></script>
+        <script src="~/Scripts/angular.min.js"></script>
+        <script src="~/Content/Template/js/jquery.signalR-2.4.1.js"></script>
+        <script src="~/SignalR/Hubs"></script>
+
+        <style>
+            .deneme {
+                margin: auto;
+                width: 80%;
+                padding: 10px;
+            }
+        </style>
+
+        <script>
+            var myApp = angular.module('spicyApp1', []);
+
+            myApp.controller('SpicyController', ['$scope', function ($scope) {
+
+                var loghub = $.connection.signalHub;
+
+                $scope.addauctionuser = function () {
+                    loghub.server.addauctionuser($scope.add_auctionuser);
+                }
+
+                loghub.client.GetAllLog = function (actionusers) {
+                    $scope.actionusers = actionusers;
+                    $scope.$apply();
+
+                    $("#bars li .bar").each(function (key, bar) {
+                        var percentage = $(this).data('percentage');
+                        var percentage2 = $("#numbers li span").data('percentage');
+                        percentage = percentage / (percentage2 / 100);
+                        $(this).animate({
+                            'height': percentage + '%'
+                        }, 1000);
+                    });
+                }
+
+                loghub.client.addauctionuser = function (actionuser) {
+                    $scope.actionusers.push(actionuser);
+                    $scope.$apply();
+
+                    $("#bars li .bar").each(function (key, bar) {
+                        var percentage = $(this).data('percentage');
+                        var percentage2 = $("#numbers li span").data('percentage');
+                        percentage = percentage / (percentage2 / 100);
+                        $(this).animate({
+                            'height': percentage + '%'
+                        }, 1000);
+                    });
+
+                }
+                $.connection.hub.start()
+
+            }]);
+        </script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="col-md-12">
+                <h1>Başlık</h1>
+                <p>
+                    Buraya bok hakkıda yazı
+                </p>
+                <div>
+                    <span class="badge">Posted 2012-08-02 20:47:04</span><div class="pull-right">
+                        <span class="label label-primary">story</span> <span class="label label-success">blog</span> <span class="label label-info">personal</span>     
+                    </div>
+                </div>                          
+            </div>
+        </div>
+    </body>
+</html>
+
