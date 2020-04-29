@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "BlogPageContent";
+}
+
+<html>
+    <head>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        <link href="~/Content/Template/css/BlogPage.css" rel="stylesheet" />
+        <div class="container">
+            <div id="blog" class="row">
+
+                <div class="col-sm-2 paddingTop20">
+                    <nav class="nav-sidebar">
+                        <ul class="nav">
+                            <br /><br /><br /><br />
+                            <li class="active"><a href="javascript:;"><span class="glyphicon glyphicon-star"></span> Blog</a></li>
+                            <li><a href="javascript:;">Açık Artırma</a></li>
+                            <li><a href="javascript:;">Ana Sayfa</a></li>
+                            <li><a href="javascript:;">Hakkımızda</a></li>
+                            <li class="nav-divider"></li>
+                            <li><a href="javascript:;"><i class="glyphicon glyphicon-off"></i> Çıkış yap </a></li>
+                        </ul>
+                    </nav>
+                    <div><h2 class="add">En Güncel Bilgiler İçin Takipte Kalın</h2></div>
+                </div>
+    </head>
+
+    <body>
+        @RenderBody()
+    </body>
+</html>
+
