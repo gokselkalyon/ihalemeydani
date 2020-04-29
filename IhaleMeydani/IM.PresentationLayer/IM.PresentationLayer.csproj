@@ -327,6 +327,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Content\QuickSellContent\css\bootstrap.min.css" />
+    <Content Include="Content\QuickSellContent\js\bootstrap.min.js" />
+    <Content Include="Content\QuickSellContent\js\modernizr-2.6.2.js" />
     <Content Include="Content\Template\autoshop\404.html" />
     <Content Include="Content\Template\autoshop\about.html" />
     <Content Include="Content\Template\autoshop\assets\css\bootstrap.min.css" />
