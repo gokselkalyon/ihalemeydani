@@ -9,7 +9,7 @@ namespace IM.PresentationLayer.Controllers
 {
     public class HomeController : BaseController
     {
-         [Route("Anasayfa")]
+        [Route("Anasayfa")]
         [Route("~/", Name = "default")]
         public ActionResult Index()
         {

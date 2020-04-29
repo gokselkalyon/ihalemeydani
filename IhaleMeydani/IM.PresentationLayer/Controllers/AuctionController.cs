@@ -11,6 +11,7 @@ namespace IM.PresentationLayer.Controllers
     {
         AuctionModelView mv = new AuctionModelView();
         // GET: Auction
+        [Route("auction/index")]
         public ActionResult Index()
         {
             

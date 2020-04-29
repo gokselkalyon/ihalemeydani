@@ -8,6 +8,6 @@ namespace IM.PresentationLayer.Models
 {
     public class AuctionModelView
     {
-        List<log> _log { get; set; }
+        List<actionuser> actionusers { get; set; }
     }
 }
