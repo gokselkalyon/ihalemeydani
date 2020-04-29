@@ -1,0 +1,58 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+tab-header {
+    height: 300px;
+}
+
+.col {
+    background-color: #ee964b;
+    border: 1px solid #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+    .col:hover {
+        background-color: #fff;
+        border: 1px solid rgba(86,61,124,.2);
+        padding: 1rem;
+        color: #ee964b;
+        text-align: center;
+        text-decoration: none;
+        color: green;
+    }
+
+div > a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
+
+.col:hover a {
+    color: #ee964b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.down-nawbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}

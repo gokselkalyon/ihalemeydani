@@ -490,6 +490,7 @@
     <Content Include="Content\Template\autoshop\soon.html" />
     <Content Include="Content\Template\css\BlogPage.css" />
     <Content Include="Content\Template\css\boostrap.css" />
+    <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\jquery.js" />
@@ -534,11 +535,11 @@
     <Content Include="Views\Shared\BlogPageContent.cshtml" />
     <Content Include="Views\Shared\_BlogLayoutPage.cshtml" />
     <Content Include="Views\BlogPost\Index.cshtml" />
+    <Content Include="Views\QuickSell\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\QuickSell\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
