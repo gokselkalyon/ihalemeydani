@@ -35,6 +35,13 @@ namespace IM.ServiceLayer
                 return _db.Get(Id);
             }
         }
+        public string Getusername(int Id)
+        {
+            using (IDataBusinessService<User> _db = InstanceFactory.GetInstance<IDataBusinessService<User>>())
+            {
+                return _db.GetFilter(x => x.Id == Id).FirstOrDefault().Name.ToString();
+            }
+        }
 
         public List<log> GetLogs()
         {
