@@ -148,3 +148,45 @@ C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Xml.ReaderWriter.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.BusinessLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.BusinessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.BusinessLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\AutoMapper.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\EntityFramework.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\Firebase.Storage.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.DataAccessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.DataLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\Ninject.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.AppContext.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Console.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Globalization.Calendars.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.Compression.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.Compression.ZipFile.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.FileSystem.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Net.Http.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Net.Sockets.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Xml.ReaderWriter.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.DataAccessLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.DataAccessLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.DataLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\IM.DataLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\AutoMapper.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\EntityFramework.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\Ninject.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.csprojAssemblyReference.cache
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.csproj.CopyComplete
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.BusinessLayer\obj\Debug\IM.BusinessLayer.pdb

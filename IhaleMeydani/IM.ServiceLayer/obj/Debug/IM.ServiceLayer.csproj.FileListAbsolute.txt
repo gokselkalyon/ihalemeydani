@@ -131,3 +131,37 @@ C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.ServiceLayer\bin\System.Net.Htt
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.ServiceLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.ServiceLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.ServiceLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.SqlServer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.BusinessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataAccessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Extensions.Wcf.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Web.Common.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\AutoMapper.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Firebase.Storage.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\System.Net.Http.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.BusinessLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.BusinessLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataAccessLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataAccessLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.SqlServer.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Extensions.Wcf.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Web.Common.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\AutoMapper.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csprojAssemblyReference.cache
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csproj.CopyComplete
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.pdb
