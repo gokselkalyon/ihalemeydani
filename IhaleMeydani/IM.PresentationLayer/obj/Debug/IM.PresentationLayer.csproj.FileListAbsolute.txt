@@ -382,8 +382,6 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\IM.BusinessLayer.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
@@ -400,8 +398,6 @@ C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
