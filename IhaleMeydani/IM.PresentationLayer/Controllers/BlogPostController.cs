@@ -13,6 +13,10 @@ namespace IM.PresentationLayer.Controllers
         {
             return View();
         }
-
+        [Route("BlogContent")]
+        public ActionResult BlogIndex()
+        {
+            return View();
+        }
     }
 }

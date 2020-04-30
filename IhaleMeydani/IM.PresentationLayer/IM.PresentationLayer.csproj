@@ -539,6 +539,7 @@
     <Content Include="Views\Shared\_BlogLayoutPage.cshtml" />
     <Content Include="Views\BlogPost\Index.cshtml" />
     <Content Include="Views\QuickSell\Details.cshtml" />
+    <Content Include="Views\BlogPost\BlogIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
