@@ -15,11 +15,11 @@ namespace IM.PresentationLayer
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes.MapRoute(
-            //    name: "Default",
-            //    url: "{controller}/{action}/{id}",
-            //    defaults: new { controller = "", action = "Anasayfa", id = UrlParameter.Optional }
-            //);
+            routes.MapRoute(
+                name: "Error",
+                url: "{controller}/{action}/{error}",
+                defaults: new { controller = "Errors", action = "Error404", error = UrlParameter.Optional }
+            );
         }
     }
 }

@@ -20,6 +20,9 @@ namespace IM.PresentationLayer.signalr
         }
         public void addauctionuser(actionuser actionuser)
         {
+            actionuser.USER_ID = 1;// cookieden alınacak
+
+            actionuser.auction_id = 1;//cookiden alınacak
             ihaleService.Addactionuser(actionuser);
             Clients.All.addauctionuser(actionuser);
         }

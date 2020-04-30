@@ -32,7 +32,7 @@ namespace IM.BusinessLayer.Concrete
         {
             return _dataAccessDal.Get(id);
         }
-
+        
         public List<actionuser> GetAll()
         {
             var auctionuser = _mapper.Map<List<actionuser>>(_dataAccessDal.GetAll());

@@ -3,11 +3,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Error</title>
+    <link href="~/Content/Template/css/ErrorStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <hgroup>
-        <h1>Error.</h1>
-        <h2>An error occurred while processing your request.</h2>
-    </hgroup>
+    <div id="clouds">
+        <div class="cloud x1"></div>
+        <div class="cloud x1_5"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+    </div>
+    
+    @RenderBody()
 </body>
 </html>
