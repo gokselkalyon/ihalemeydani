@@ -327,6 +327,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\QuickSellContent\css\bootstrap.min.css" />
     <Content Include="Content\QuickSellContent\js\bootstrap.min.js" />
     <Content Include="Content\QuickSellContent\js\modernizr-2.6.2.js" />
@@ -495,6 +496,7 @@
     <Content Include="Content\Template\css\boostrap.css" />
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\Style.css" />
+    <Content Include="Content\Template\css\StyleSheet1.css" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\popper.js" />
@@ -540,6 +542,8 @@
     <Content Include="Views\BlogPost\Index.cshtml" />
     <Content Include="Views\QuickSell\Details.cshtml" />
     <Content Include="Views\BlogPost\BlogIndex.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\QuickSell\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
