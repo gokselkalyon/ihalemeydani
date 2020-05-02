@@ -159,12 +159,15 @@
     <Compile Include="Controllers\AuctionController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickSellController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AuctionModelView.cs" />
+    <Compile Include="Models\BlogModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signalr\SignalHub.cs" />
     <Compile Include="signalr\Startup.cs" />
@@ -492,8 +495,11 @@
     <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
+    <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\BlogPage.css" />
     <Content Include="Content\Template\css\boostrap.css" />
+    <Content Include="Content\Template\css\ErrorStyle.css" />
+    <Content Include="Content\Template\css\Login.css" />
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\css\StyleSheet1.css" />
@@ -544,10 +550,22 @@
     <Content Include="Views\BlogPost\BlogIndex.cshtml" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\QuickSell\Index.cshtml" />
+    <Content Include="Views\Shared\LoginPage.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Errors\Error401.cshtml" />
+    <Content Include="Views\Errors\Error403.cshtml" />
+    <Content Include="Views\Errors\Error404.cshtml" />
+    <Content Include="Views\Errors\Error405.cshtml" />
+    <Content Include="Views\Errors\Error406.cshtml" />
+    <Content Include="Views\Errors\Error412.cshtml" />
+    <Content Include="Views\Errors\Error500.cshtml" />
+    <Content Include="Views\Errors\Error501.cshtml" />
+    <Content Include="Views\Errors\Error502.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\LoginPage\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
