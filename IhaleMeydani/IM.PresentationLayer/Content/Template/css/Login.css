@@ -39,15 +39,16 @@ a {
 }
 
 .login-html {
-    width: 75%;
     height: 100%;
     position: absolute;
     padding: 90px 70px 50px 70px;
     background: rgba(0,0,0,0.5);
+    width: 75%;
 }
 
     .login-html .sign-in-htm,
-    .login-html .for-pwd-htm {
+    .login-html .for-pwd-htm 
+    .login-html .register-htm{
         top: 0;
         left: 0;
         right: 0;
@@ -63,6 +64,7 @@ a {
 
     .login-html .sign-in,
     .login-html .for-pwd,
+    .login-html .register,
     .login-form .group .check {
         display: none;
     }
