@@ -282,15 +282,38 @@
           <Property Name="CarId" Type="int" />
           <Property Name="İmage" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <EntityType Name="log">
+        <EntityType Name="Log">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="action_table" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="action_name" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="user_id" Type="int" />
-          <Property Name="date_of" Type="date" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="150" />
+          <Property Name="UrlAccessed" Type="varchar" MaxLength="150" />
+          <Property Name="Data" Type="text" />
+          <Property Name="ExecutionMs" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="LogStatusId" Type="int" />
+        </EntityType>
+        <EntityType Name="LogInfoes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="Controller" Type="varchar" MaxLength="50" />
+          <Property Name="Action" Type="varchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Type" Type="varchar" MaxLength="150" />
+          <Property Name="ExceptionMessage" Type="varchar" MaxLength="500" />
+          <Property Name="LogStatusId" Type="int" />
+        </EntityType>
+        <EntityType Name="LogStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="media">
           <Key>
@@ -560,7 +583,9 @@
           <EntitySet Name="GeneralDesign" EntityType="Self.GeneralDesign" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Icon" EntityType="Self.Icon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="log" EntityType="Self.log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogInfoes" EntityType="Self.LogInfoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogStatus" EntityType="Self.LogStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="media" EntityType="Self.media" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="natification" EntityType="Self.natification" Schema="dbo" store:Type="Tables" />
@@ -862,16 +887,6 @@
           <Property Name="CarId" Type="Int32" />
           <Property Name="İmage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="log">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="action_table" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="action_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="user_id" Type="Int32" />
-          <Property Name="date_of" Type="DateTime" Precision="0" />
-        </EntityType>
         <EntityType Name="medium">
           <Key>
             <PropertyRef Name="id" />
@@ -1100,7 +1115,6 @@
           <EntitySet Name="GeneralDesigns" EntityType="Self.GeneralDesign" />
           <EntitySet Name="Icons" EntityType="Self.Icon" />
           <EntitySet Name="Images" EntityType="Self.Image" />
-          <EntitySet Name="logs" EntityType="Self.log" />
           <EntitySet Name="media" EntityType="Self.medium" />
           <EntitySet Name="Menus" EntityType="Self.Menu" />
           <EntitySet Name="natifications" EntityType="Self.natification" />
@@ -1131,6 +1145,9 @@
             <End Role="SocialMediaType" EntitySet="SocialMediaTypes" />
             <End Role="SocialMedya" EntitySet="SocialMedyas" />
           </AssociationSet>
+          <EntitySet Name="LogInfoes" EntityType="IHALEDBModel.LogInfo" />
+          <EntitySet Name="LogStatus" EntityType="IHALEDBModel.LogStatu" />
+          <EntitySet Name="Logs" EntityType="IHALEDBModel.Log" />
         </EntityContainer>
         <EntityType Name="actionuser">
           <Key>
@@ -1183,6 +1200,39 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="LogInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="Controller" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ExceptionMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LogStatusId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LogStatu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="IPAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="UrlAccessed" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExecutionMs" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="LogStatusId" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1482,17 +1532,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="logs">
-            <EntityTypeMapping TypeName="IHALEDBModel.log">
-              <MappingFragment StoreEntitySet="log">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="action_table" ColumnName="action_table" />
-                <ScalarProperty Name="action_name" ColumnName="action_name" />
-                <ScalarProperty Name="user_id" ColumnName="user_id" />
-                <ScalarProperty Name="date_of" ColumnName="date_of" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="media">
             <EntityTypeMapping TypeName="IHALEDBModel.medium">
               <MappingFragment StoreEntitySet="media">
@@ -1754,6 +1793,42 @@
                 <ScalarProperty Name="cardetail_id" ColumnName="cardetail_id" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogInfoes">
+            <EntityTypeMapping TypeName="IHALEDBModel.LogInfo">
+              <MappingFragment StoreEntitySet="LogInfoes">
+                <ScalarProperty Name="LogStatusId" ColumnName="LogStatusId" />
+                <ScalarProperty Name="ExceptionMessage" ColumnName="ExceptionMessage" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogStatus">
+            <EntityTypeMapping TypeName="IHALEDBModel.LogStatu">
+              <MappingFragment StoreEntitySet="LogStatus">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="IHALEDBModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="LogStatusId" ColumnName="LogStatusId" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="ExecutionMs" ColumnName="ExecutionMs" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="UrlAccessed" ColumnName="UrlAccessed" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

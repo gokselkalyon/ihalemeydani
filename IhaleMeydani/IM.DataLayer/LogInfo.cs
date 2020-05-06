@@ -12,21 +12,20 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Log
+    public partial class LogInfo
     {
-        public Log()
+
+        public LogInfo()
         {
-            AddedDate = DateTime.Now;
+            Date = DateTime.Now;
         }
-
-
         public int Id { get; set; }
         public Nullable<int> UserId { get; set; }
-        public string IPAddress { get; set; }
-        public string UrlAccessed { get; set; }
-        public string Data { get; set; }
-        public Nullable<long> ExecutionMs { get; set; }
-        public Nullable<System.DateTime> AddedDate { get; set; }
+        public string Controller { get; set; }
+        public string Action { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public string Type { get; set; }
+        public string ExceptionMessage { get; set; }
         public Nullable<int> LogStatusId { get; set; }
     }
 }
