@@ -120,10 +120,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDataBusinessService.cs" />
+    <Compile Include="Abstract\IDatabaseQuery.cs" />
     <Compile Include="Concrete\AmountOfIncreaseManager.cs" />
     <Compile Include="Concrete\AuctionManager.cs" />
     <Compile Include="Concrete\AuctionUserManager.cs" />
     <Compile Include="Concrete\BankManager.cs" />
+    <Compile Include="Concrete\Base\BaseModal.cs" />
+    <Compile Include="Concrete\Base\DatabaseQuery.cs" />
     <Compile Include="Concrete\CarBrandManager.cs" />
     <Compile Include="Concrete\CarDetailManager.cs" />
     <Compile Include="Concrete\CarHardwareDetailsManager.cs" />
@@ -131,6 +134,7 @@
     <Compile Include="Concrete\CarTechnicalDetailManager.cs" />
     <Compile Include="Concrete\CityManager.cs" />
     <Compile Include="Concrete\ClaimManager.cs" />
+    <Compile Include="Concrete\Class1.cs" />
     <Compile Include="Concrete\ColorManager.cs" />
     <Compile Include="Concrete\CompanyManager.cs" />
     <Compile Include="Concrete\CompanyTypeManager.cs" />
@@ -222,6 +226,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
