@@ -504,6 +504,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="150" />
           <Property Name="Adress" Type="nvarchar" MaxLength="200" />
           <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" />
@@ -1054,24 +1055,6 @@
           <Property Name="title_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="title_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Dateofbird" Type="DateTime" Precision="0" />
-          <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-          <Property Name="IsDeleted" Type="Boolean" />
-          <Property Name="city_id" Type="Int32" />
-          <Property Name="UserType_Id" Type="Int32" />
-        </EntityType>
         <EntityType Name="UserRole">
           <Key>
             <PropertyRef Name="Id" />
@@ -1134,7 +1117,6 @@
           <EntitySet Name="tag_post" EntityType="Self.tag_post" />
           <EntitySet Name="Tax_Administration" EntityType="Self.Tax_Administration" />
           <EntitySet Name="titles" EntityType="Self.title" />
-          <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
           <EntitySet Name="UserTypes" EntityType="Self.UserType" />
           <EntitySet Name="actionusers" EntityType="IHALEDBModel.actionuser" />
@@ -1146,8 +1128,9 @@
             <End Role="SocialMedya" EntitySet="SocialMedyas" />
           </AssociationSet>
           <EntitySet Name="LogInfoes" EntityType="IHALEDBModel.LogInfo" />
-          <EntitySet Name="LogStatus" EntityType="IHALEDBModel.LogStatu" />
           <EntitySet Name="Logs" EntityType="IHALEDBModel.Log" />
+          <EntitySet Name="Users" EntityType="IHALEDBModel.User" />
+          <EntitySet Name="LogStatus1" EntityType="IHALEDBModel.LogStatus" />
         </EntityContainer>
         <EntityType Name="actionuser">
           <Key>
@@ -1213,13 +1196,6 @@
           <Property Name="ExceptionMessage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="LogStatusId" Type="Int32" />
         </EntityType>
-        <EntityType Name="LogStatu">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Log">
           <Key>
             <PropertyRef Name="Id" />
@@ -1232,6 +1208,32 @@
           <Property Name="ExecutionMs" Type="Int64" />
           <Property Name="AddedDate" Type="DateTime" Precision="3" />
           <Property Name="LogStatusId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Dateofbird" Type="DateTime" Precision="0" />
+          <Property Name="IdentityNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="city_id" Type="Int32" />
+          <Property Name="UserType_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LogStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1717,25 +1719,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="IHALEDBModel.User">
-              <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Surname" ColumnName="Surname" />
-                <ScalarProperty Name="Adress" ColumnName="Adress" />
-                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Dateofbird" ColumnName="Dateofbird" />
-                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-                <ScalarProperty Name="city_id" ColumnName="city_id" />
-                <ScalarProperty Name="UserType_Id" ColumnName="UserType_Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="UserRoles">
             <EntityTypeMapping TypeName="IHALEDBModel.UserRole">
               <MappingFragment StoreEntitySet="UserRole">
@@ -1810,14 +1793,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LogStatus">
-            <EntityTypeMapping TypeName="IHALEDBModel.LogStatu">
-              <MappingFragment StoreEntitySet="LogStatus">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Logs">
             <EntityTypeMapping TypeName="IHALEDBModel.Log">
               <MappingFragment StoreEntitySet="Log">
@@ -1828,6 +1803,34 @@
                 <ScalarProperty Name="UrlAccessed" ColumnName="UrlAccessed" />
                 <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="IHALEDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserType_Id" ColumnName="UserType_Id" />
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="Dateofbird" ColumnName="Dateofbird" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogStatus1">
+            <EntityTypeMapping TypeName="IHALEDBModel.LogStatus">
+              <MappingFragment StoreEntitySet="LogStatus">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

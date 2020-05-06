@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using IM.DataAccessLayer.Concrete.EFConcrete;
 
 namespace IM.PresentationLayer.Models
 {
@@ -16,6 +17,9 @@ namespace IM.PresentationLayer.Models
         private Log l = new Log();
         private Stopwatch _stopwatch;
         int UserId;
+        private UserConcrete userConcrete = new UserConcrete();
+        private LogInfoesConcrete logInfoes = new LogInfoesConcrete();
+        private LogConcrete logConcrete = new LogConcrete();
 
         public HandleErrors()
         {
@@ -43,7 +47,8 @@ namespace IM.PresentationLayer.Models
 
                 if (filterContext.HttpContext.User.Identity.IsAuthenticated)
                 {
-                    UserId = UserOperations.UserFindId(filterContext.HttpContext.User.Identity.Name);
+                    
+                    UserId = userConcrete.GetFilter(x=>x.UserName == filterContext.HttpContext.User.Identity.Name).Single().Id;
                     log.UserId = UserId;
                     l.UserId = UserId;
                 }
@@ -62,9 +67,8 @@ namespace IM.PresentationLayer.Models
                 l.UrlAccessed = request.RawUrl; //erişilen sayfanın ham url'i
                 l.LogStatusId = 2;
 
-                LogOperation.LogInfoAdd(log);
-
-                LogOperation.LogAdd(l);
+                logInfoes.Add(log);
+                logConcrete.Add(l);
 
                 if (filterContext.HttpContext.Request.IsAjaxRequest())
                 {

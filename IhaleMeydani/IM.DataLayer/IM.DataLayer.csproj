@@ -153,7 +153,7 @@
     <Compile Include="LogInfo.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LogStatu.cs">
+    <Compile Include="LogStatus.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="medium.cs">

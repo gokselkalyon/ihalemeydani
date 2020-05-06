@@ -14,12 +14,6 @@ namespace IM.DataLayer
     
     public partial class Log
     {
-        public Log()
-        {
-            AddedDate = DateTime.Now;
-        }
-
-
         public int Id { get; set; }
         public Nullable<int> UserId { get; set; }
         public string IPAddress { get; set; }

@@ -70,7 +70,6 @@ namespace IM.DataLayer
         public virtual DbSet<tag_post> tag_post { get; set; }
         public virtual DbSet<Tax_Administration> Tax_Administration { get; set; }
         public virtual DbSet<title> titles { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
         public virtual DbSet<actionuser> actionusers { get; set; }
@@ -78,7 +77,8 @@ namespace IM.DataLayer
         public virtual DbSet<SocialMediaType> SocialMediaTypes { get; set; }
         public virtual DbSet<userproduct> userproducts { get; set; }
         public virtual DbSet<LogInfo> LogInfoes { get; set; }
-        public virtual DbSet<LogStatus> LogStatus { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<LogStatus> LogStatus { get; set; }
     }
 }

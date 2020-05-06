@@ -14,11 +14,6 @@ namespace IM.DataLayer
     
     public partial class LogInfo
     {
-
-        public LogInfo()
-        {
-            Date = DateTime.Now;
-        }
         public int Id { get; set; }
         public Nullable<int> UserId { get; set; }
         public string Controller { get; set; }

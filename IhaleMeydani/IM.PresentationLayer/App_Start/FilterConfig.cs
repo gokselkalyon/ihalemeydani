@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using IM.PresentationLayer.Models;
+using System.Web;
 using System.Web.Mvc;
 
 namespace IM.PresentationLayer
@@ -7,7 +8,7 @@ namespace IM.PresentationLayer
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new HandleErrors());
         }
     }
 }
