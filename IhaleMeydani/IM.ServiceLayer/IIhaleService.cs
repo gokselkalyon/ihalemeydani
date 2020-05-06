@@ -84,6 +84,43 @@ namespace IM.ServiceLayer
         void UpdateLog(Log entity);
         #endregion
 
+        #region LogInfoes
+        [OperationContract]
+        List<LogInfo> GetLogInfoes();
+
+        [OperationContract]
+        LogInfo GetLogInfo(int Id);
+
+        [OperationContract]
+        void AddLogInfo(LogInfo entity);
+
+        [OperationContract]
+        void RemoveLogInfo(int Id);
+
+        [OperationContract]
+        void UpdateLogInfo(LogInfo entity);
+
+        #endregion
+
+        #region LogStatus
+        [OperationContract]
+        List<LogStatus> GetLogStatus();
+
+        [OperationContract]
+        LogStatus GetLogStatus(int Id);
+
+        [OperationContract]
+        void AddLogStatus(LogStatus entity);
+
+        [OperationContract]
+        void RemoveLogStatus(int Id);
+
+        [OperationContract]
+        void UpdateLogStatus(LogStatus entity);
+
+        #endregion
+
+
         #region AMOUNT_OF_INCREASE
         [OperationContract]
         List<AMOUNT_OF_INCREASE> GetsAmountofIncrease();
