@@ -2650,6 +2650,7 @@
     <Content Include="Views\Errors\Error502.cshtml" />
     <Content Include="Views\Shared\_AdminPanelLayout.cshtml" />
     <Content Include="Views\Auction\UserProductsViewPage.cshtml" />
+    <Content Include="Views\Errors\PageError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
