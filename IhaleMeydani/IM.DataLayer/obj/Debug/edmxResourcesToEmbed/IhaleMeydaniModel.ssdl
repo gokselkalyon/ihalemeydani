@@ -394,6 +394,13 @@
     <Property Name="senaryo" Type="nvarchar" MaxLength="20" />
     <Property Name="DATE_OF_UPDATE" Type="date" />
   </EntityType>
+  <EntityType Name="SocialMediaType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="SocialMedya">
     <Key>
       <PropertyRef Name="Id" />
@@ -480,6 +487,18 @@
     <Property Name="city_id" Type="int" />
     <Property Name="UserType_Id" Type="int" />
   </EntityType>
+  <EntityType Name="userproduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="cardetail_id" Type="int" />
+    <Property Name="date_of_created" Type="date" />
+    <Property Name="date_of_updated" Type="date" />
+    <Property Name="published_on" Type="bit" />
+    <Property Name="isdeleted" Type="bit" />
+  </EntityType>
   <EntityType Name="UserRole">
     <Key>
       <PropertyRef Name="Id" />
@@ -496,6 +515,18 @@
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="IsDeleted" Type="bit" />
   </EntityType>
+  <Association Name="FK_SocialMedya_SocialMediaType">
+    <End Role="SocialMediaType" Type="Self.SocialMediaType" Multiplicity="0..1" />
+    <End Role="SocialMedya" Type="Self.SocialMedya" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SocialMediaType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SocialMedya">
+        <PropertyRef Name="MediaTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="IHALEDBModelStoreContainer">
     <EntitySet Name="actionuser" EntityType="Self.actionuser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AMOUNT_OF_INCREASE" EntityType="Self.AMOUNT_OF_INCREASE" Schema="dbo" store:Type="Tables" />
@@ -537,6 +568,7 @@
     <EntitySet Name="RoleClaim" EntityType="Self.RoleClaim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Segment" EntityType="Self.Segment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="senaryo" EntityType="Self.senaryo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SocialMediaType" EntityType="Self.SocialMediaType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SocialMedya" EntityType="Self.SocialMedya" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SOLD_PRODUCT" EntityType="Self.SOLD_PRODUCT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="submit" EntityType="Self.submit" Schema="dbo" store:Type="Tables" />
@@ -546,7 +578,12 @@
     <EntitySet Name="Tax_Administration" EntityType="Self.Tax_Administration" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="title" EntityType="Self.title" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userproduct" EntityType="Self.userproduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_SocialMedya_SocialMediaType" Association="Self.FK_SocialMedya_SocialMediaType">
+      <End Role="SocialMediaType" EntitySet="SocialMediaType" />
+      <End Role="SocialMedya" EntitySet="SocialMedya" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

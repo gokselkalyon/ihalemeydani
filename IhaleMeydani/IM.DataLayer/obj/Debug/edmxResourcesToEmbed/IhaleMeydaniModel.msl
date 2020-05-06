@@ -548,5 +548,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SocialMediaTypes">
+      <EntityTypeMapping TypeName="IHALEDBModel.SocialMediaType">
+        <MappingFragment StoreEntitySet="SocialMediaType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userproducts">
+      <EntityTypeMapping TypeName="IHALEDBModel.userproduct">
+        <MappingFragment StoreEntitySet="userproduct">
+          <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+          <ScalarProperty Name="published_on" ColumnName="published_on" />
+          <ScalarProperty Name="date_of_updated" ColumnName="date_of_updated" />
+          <ScalarProperty Name="date_of_created" ColumnName="date_of_created" />
+          <ScalarProperty Name="cardetail_id" ColumnName="cardetail_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

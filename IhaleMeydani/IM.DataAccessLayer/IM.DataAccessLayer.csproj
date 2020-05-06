@@ -53,7 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDataAccessDal.cs" />
+    <Compile Include="Abstract\IDatabaseQuery.cs" />
     <Compile Include="Concrete\Basic\BaseConcrete.cs" />
+    <Compile Include="Concrete\Basic\DatabaseQuery.cs" />
     <Compile Include="Concrete\EFConcrete\Amount_Of_IncreaseConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\AuctionConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\AuctionUserConcrete.cs" />
