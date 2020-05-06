@@ -67,21 +67,21 @@ namespace IM.ServiceLayer
         void Updateprivateauction(private_auction entity);
         #endregion
 
-        #region log
+        #region Log
         [OperationContract]
-        List<log> GetLogs();
+        List<Log> GetLogs();
 
         [OperationContract]
-        log GetLog(int Id);
+        Log GetLog(int Id);
 
         [OperationContract]
-        void AddLog(log entity);
+        void AddLog(Log entity);
 
         [OperationContract]
         void RemoveLog(int Id);
 
         [OperationContract]
-        void UpdateLog(log entity);
+        void UpdateLog(Log entity);
         #endregion
 
         #region AMOUNT_OF_INCREASE

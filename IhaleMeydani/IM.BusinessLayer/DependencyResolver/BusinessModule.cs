@@ -43,7 +43,7 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataBusinessService<GeneralDesign>>().To<GeneralDesignManager>().InSingletonScope();
             Bind<IDataBusinessService<Icon>>().To<IconManager>().InSingletonScope();
             Bind<IDataBusinessService<Image>>().To<ImageManager>().InSingletonScope();
-            Bind<IDataBusinessService<log>>().To<LogManager>().InSingletonScope();
+            Bind<IDataBusinessService<Log>>().To<LogManager>().InSingletonScope();
             Bind<IDataBusinessService<medium>>().To<MediumManager>().InSingletonScope();
             Bind<IDataBusinessService<Menu>>().To<MenuManager>().InSingletonScope();
             Bind<IDataBusinessService<natification>>().To<NatificationManager>().InSingletonScope();
@@ -68,9 +68,13 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataBusinessService<private_auction>>().To<PrivateAuctionManager>().InSingletonScope();
             Bind<IDataBusinessService<actionuser>>().To<AuctionUserManager>().InSingletonScope();
             Bind<IDataBusinessService<userproduct>>().To<UserProductManager>().InSingletonScope();
+            Bind<IDataBusinessService<LogInfo>>().To<LogInfoesManager>().InSingletonScope();
+            Bind<IDataBusinessService<LogStatus>>().To<LogStatusManager>().InSingletonScope();
 
 
-            Bind<IDataAccessDal<log>>().To<LogConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<Log>>().To<LogConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<LogInfo>>().To<LogInfoesConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<LogStatus>>().To<LogStatusConcrete>().InSingletonScope();
             Bind<IDataAccessDal<AMOUNT_OF_INCREASE>>().To<Amount_Of_IncreaseConcrete>().InSingletonScope();
             Bind<IDataAccessDal<auction>>().To<AuctionConcrete>().InSingletonScope();
             Bind<IDataAccessDal<private_auction>>().To<PrivateAuctionConcrete>().InSingletonScope();

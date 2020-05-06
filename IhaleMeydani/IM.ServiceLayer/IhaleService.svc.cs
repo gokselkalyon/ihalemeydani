@@ -19,18 +19,18 @@ namespace IM.ServiceLayer
             return string.Format("sonuc {0}",x+y);
         }
 
-        #region log
-        public void AddLog(log entity)
+        #region Log
+        public void AddLog(Log entity)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 _db.Add(entity);
             }
         }
 
-        public log GetLog(int Id)
+        public Log GetLog(int Id)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 return _db.Get(Id);
             }
@@ -43,24 +43,24 @@ namespace IM.ServiceLayer
             }
         }
 
-        public List<log> GetLogs()
+        public List<Log> GetLogs()
         {
-            IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>();
+            IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>();
             var result = _db.GetAll();
             return result;
         }
 
         public void RemoveLog(int Id)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 _db.Remove(Id);
             }
         }
 
-        public void UpdateLog(log entity)
+        public void UpdateLog(Log entity)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 _db.Update(entity);
             }
