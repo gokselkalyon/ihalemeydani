@@ -10,7 +10,6 @@ namespace IM.PresentationLayer.Controllers
     public class AuctionController : Controller
     {
         AuctionModelView mv = new AuctionModelView();
-        // GET: Auction
         [Route("auction/index")]
         public ActionResult Index()
         {
@@ -18,11 +17,39 @@ namespace IM.PresentationLayer.Controllers
             return View(mv);
         }
 
-        // GET: Auction/Details/5
-        public ActionResult Details(int id)
+        // kullanıcıların ürünlerinin bulunduğu sayfa
+        [Route("auction/userproductdashboard")]
+        public ActionResult UserProductsViewPage()
         {
-            return View();
+            //SafeExecutor(() =>Console.WriteLine("goksel"));
+
+
+
+
+
+            return View(mv);
         }
+        //public void SafeExecutor(Action action)
+        //{
+        //    SafeExecutor(() => { action(); return 0; });
+        //}
+
+
+        //private T SafeExecutor<T>(Func<T> action)
+        //{
+        //    try
+        //    {
+        //        return action();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // common stuff
+        //    }
+
+        //    return default(T);
+        //}
+
+
 
         // GET: Auction/Create
         public ActionResult Create()

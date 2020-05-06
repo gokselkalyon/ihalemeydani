@@ -236,8 +236,6 @@ C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\obj\
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
@@ -246,8 +244,6 @@ C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
