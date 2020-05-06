@@ -88,6 +88,34 @@ namespace IM.PresentationLayer.Models
                     filterContext.Result = new RedirectResult("~/Hata");
                 }
             }
+            else
+            {
+                if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+                {
+
+                    UserId = userConcrete.GetFilter(x => x.UserName == filterContext.HttpContext.User.Identity.Name).Single().Id;
+                    log.UserId = UserId;
+                    l.UserId = UserId;
+                }
+
+                log.Controller = filterContext.RouteData.Values["controller"].ToString();
+                log.Action = filterContext.RouteData.Values["action"].ToString();
+                log.Date = DateTime.Now;
+                log.Type = string.Empty;
+                log.ExceptionMessage = "İşlem Başarıyla Gerçekleşti";
+                log.LogStatusId = 1;
+
+                l.AddedDate = DateTime.Now;
+                l.Data = SerializeRequest(request); //yukarıda alınan requesti serialize edip, string olarak yazıyorum. 
+                l.ExecutionMs = _stopwatch.ElapsedMilliseconds; //çalışma süresi
+                l.IPAddress = request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? request.UserHostAddress;
+                l.UrlAccessed = request.RawUrl; //erişilen sayfanın ham url'i
+                l.LogStatusId = 1;
+
+                logInfoes.Add(log);
+                logConcrete.Add(l);
+
+            }
 
             base.OnActionExecuted(filterContext);
 
