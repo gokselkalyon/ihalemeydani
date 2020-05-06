@@ -67,6 +67,7 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataBusinessService<UserType>>().To<UserTypeManager>().InSingletonScope();
             Bind<IDataBusinessService<private_auction>>().To<PrivateAuctionManager>().InSingletonScope();
             Bind<IDataBusinessService<actionuser>>().To<AuctionUserManager>().InSingletonScope();
+            Bind<IDataBusinessService<userproduct>>().To<UserProductManager>().InSingletonScope();
 
 
             Bind<IDataAccessDal<log>>().To<LogConcrete>().InSingletonScope();
@@ -119,6 +120,7 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataAccessDal<UserRole>>().To<UserRoleConcrete>().InSingletonScope();
             Bind<IDataAccessDal<UserType>>().To<UserTypeConcrete>().InSingletonScope();
             Bind<IDataAccessDal<User>>().To<UserConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<userproduct>>().To<UserProductConcrete>().InSingletonScope();
 
             Bind<ITCService>().To<TCServiceAdapter>().InSingletonScope();
         }

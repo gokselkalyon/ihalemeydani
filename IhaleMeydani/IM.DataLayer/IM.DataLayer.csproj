@@ -187,6 +187,9 @@
     <Compile Include="senaryo.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SocialMediaType.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SocialMedya.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
@@ -212,6 +215,9 @@
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="userproduct.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UserRole.cs">

@@ -399,6 +399,13 @@
           <Property Name="senaryo" Type="nvarchar" MaxLength="20" />
           <Property Name="DATE_OF_UPDATE" Type="date" />
         </EntityType>
+        <EntityType Name="SocialMediaType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="SocialMedya">
           <Key>
             <PropertyRef Name="Id" />
@@ -485,6 +492,18 @@
           <Property Name="city_id" Type="int" />
           <Property Name="UserType_Id" Type="int" />
         </EntityType>
+        <EntityType Name="userproduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="cardetail_id" Type="int" />
+          <Property Name="date_of_created" Type="date" />
+          <Property Name="date_of_updated" Type="date" />
+          <Property Name="published_on" Type="bit" />
+          <Property Name="isdeleted" Type="bit" />
+        </EntityType>
         <EntityType Name="UserRole">
           <Key>
             <PropertyRef Name="Id" />
@@ -501,6 +520,18 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDeleted" Type="bit" />
         </EntityType>
+        <Association Name="FK_SocialMedya_SocialMediaType">
+          <End Role="SocialMediaType" Type="Self.SocialMediaType" Multiplicity="0..1" />
+          <End Role="SocialMedya" Type="Self.SocialMedya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SocialMediaType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SocialMedya">
+              <PropertyRef Name="MediaTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="IHALEDBModelStoreContainer">
           <EntitySet Name="actionuser" EntityType="Self.actionuser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AMOUNT_OF_INCREASE" EntityType="Self.AMOUNT_OF_INCREASE" Schema="dbo" store:Type="Tables" />
@@ -542,6 +573,7 @@
           <EntitySet Name="RoleClaim" EntityType="Self.RoleClaim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Segment" EntityType="Self.Segment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="senaryo" EntityType="Self.senaryo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SocialMediaType" EntityType="Self.SocialMediaType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SocialMedya" EntityType="Self.SocialMedya" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SOLD_PRODUCT" EntityType="Self.SOLD_PRODUCT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="submit" EntityType="Self.submit" Schema="dbo" store:Type="Tables" />
@@ -551,8 +583,13 @@
           <EntitySet Name="Tax_Administration" EntityType="Self.Tax_Administration" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="title" EntityType="Self.title" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userproduct" EntityType="Self.userproduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_SocialMedya_SocialMediaType" Association="Self.FK_SocialMedya_SocialMediaType">
+            <End Role="SocialMediaType" EntitySet="SocialMediaType" />
+            <End Role="SocialMedya" EntitySet="SocialMedya" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -941,6 +978,7 @@
           <Property Name="Name" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
           <Property Name="IconId" Type="Int32" />
           <Property Name="MediaTypeId" Type="Int32" />
+          <NavigationProperty Name="SocialMediaType" Relationship="IHALEDBModel.FK_SocialMedya_SocialMediaType" FromRole="SocialMedya" ToRole="SocialMediaType" />
         </EntityType>
         <EntityType Name="SOLD_PRODUCT">
           <Key>
@@ -1087,6 +1125,12 @@
           <EntitySet Name="UserTypes" EntityType="Self.UserType" />
           <EntitySet Name="actionusers" EntityType="IHALEDBModel.actionuser" />
           <EntitySet Name="private_auction" EntityType="IHALEDBModel.private_auction" />
+          <EntitySet Name="SocialMediaTypes" EntityType="IHALEDBModel.SocialMediaType" />
+          <EntitySet Name="userproducts" EntityType="IHALEDBModel.userproduct" />
+          <AssociationSet Name="FK_SocialMedya_SocialMediaType" Association="IHALEDBModel.FK_SocialMedya_SocialMediaType">
+            <End Role="SocialMediaType" EntitySet="SocialMediaTypes" />
+            <End Role="SocialMedya" EntitySet="SocialMedyas" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="actionuser">
           <Key>
@@ -1107,6 +1151,38 @@
           <Property Name="auction_id" Type="Int32" />
           <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
         </EntityType>
+        <EntityType Name="SocialMediaType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SocialMedyas" Relationship="IHALEDBModel.FK_SocialMedya_SocialMediaType" FromRole="SocialMediaType" ToRole="SocialMedya" />
+        </EntityType>
+        <EntityType Name="userproduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="cardetail_id" Type="Int32" />
+          <Property Name="date_of_created" Type="DateTime" Precision="0" />
+          <Property Name="date_of_updated" Type="DateTime" Precision="0" />
+          <Property Name="published_on" Type="Boolean" />
+          <Property Name="isdeleted" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_SocialMedya_SocialMediaType">
+          <End Type="IHALEDBModel.SocialMediaType" Role="SocialMediaType" Multiplicity="0..1" />
+          <End Type="IHALEDBModel.SocialMedya" Role="SocialMedya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SocialMediaType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SocialMedya">
+              <PropertyRef Name="MediaTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1657,6 +1733,27 @@
                 <ScalarProperty Name="auction_id" ColumnName="auction_id" />
                 <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SocialMediaTypes">
+            <EntityTypeMapping TypeName="IHALEDBModel.SocialMediaType">
+              <MappingFragment StoreEntitySet="SocialMediaType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userproducts">
+            <EntityTypeMapping TypeName="IHALEDBModel.userproduct">
+              <MappingFragment StoreEntitySet="userproduct">
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+                <ScalarProperty Name="published_on" ColumnName="published_on" />
+                <ScalarProperty Name="date_of_updated" ColumnName="date_of_updated" />
+                <ScalarProperty Name="date_of_created" ColumnName="date_of_created" />
+                <ScalarProperty Name="cardetail_id" ColumnName="cardetail_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

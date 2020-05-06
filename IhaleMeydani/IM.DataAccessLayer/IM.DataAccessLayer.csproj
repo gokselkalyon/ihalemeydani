@@ -103,6 +103,7 @@
     <Compile Include="Concrete\EFConcrete\Tax_AdministrationConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\TitleConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\UserConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\UserProductConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\UserRoleConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\UserTypeConcrete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

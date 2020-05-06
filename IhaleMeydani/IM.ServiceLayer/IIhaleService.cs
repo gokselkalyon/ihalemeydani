@@ -15,6 +15,24 @@ namespace IM.ServiceLayer
         [OperationContract]
         string toplama(int x ,int y);
 
+        #region userproduct
+        [OperationContract]
+        List<userproduct> Getuserproducts();
+
+        [OperationContract]
+        userproduct Getuserproduct(int Id);
+
+        [OperationContract]
+        void Adduserproduct(userproduct entity);
+
+        [OperationContract]
+        void Removeuserproduct(int Id);
+
+        [OperationContract]
+        void Updateuserproduct(userproduct entity);
+        #endregion
+
+
         #region auctionuser
         [OperationContract]
         List<actionuser> Getactionusers();

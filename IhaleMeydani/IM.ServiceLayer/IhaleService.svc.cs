@@ -2240,7 +2240,45 @@ namespace IM.ServiceLayer
             }
         }
 
-        
+        public List<userproduct> Getuserproducts()
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                return _db.GetAll();
+            }
+        }
+
+        public userproduct Getuserproduct(int Id)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                return _db.Get(Id);
+            }
+        }
+
+        public void Adduserproduct(userproduct entity)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                _db.Add(entity);
+            }
+        }
+
+        public void Removeuserproduct(int Id)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                _db.Remove(Id);
+            }
+        }
+
+        public void Updateuserproduct(userproduct entity)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                _db.Update(entity);
+            }
+        }
     }
 
 }

@@ -76,5 +76,7 @@ namespace IM.DataLayer
         public virtual DbSet<UserType> UserTypes { get; set; }
         public virtual DbSet<actionuser> actionusers { get; set; }
         public virtual DbSet<private_auction> private_auction { get; set; }
+        public virtual DbSet<SocialMediaType> SocialMediaTypes { get; set; }
+        public virtual DbSet<userproduct> userproducts { get; set; }
     }
 }

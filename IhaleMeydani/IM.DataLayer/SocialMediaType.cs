@@ -12,13 +12,18 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class SocialMedya
+    public partial class SocialMediaType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SocialMediaType()
+        {
+            this.SocialMedyas = new HashSet<SocialMedya>();
+        }
+    
         public int Id { get; set; }
         public string Name { get; set; }
-        public Nullable<int> IconId { get; set; }
-        public Nullable<int> MediaTypeId { get; set; }
     
-        public virtual SocialMediaType SocialMediaType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SocialMedya> SocialMedyas { get; set; }
     }
 }

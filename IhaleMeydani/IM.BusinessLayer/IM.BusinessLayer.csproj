@@ -168,6 +168,7 @@
     <Compile Include="Concrete\TaxAdminstrationManager.cs" />
     <Compile Include="Concrete\TitleManager.cs" />
     <Compile Include="Concrete\UserManager.cs" />
+    <Compile Include="Concrete\UserProductManager.cs" />
     <Compile Include="Concrete\UserRoleManager.cs" />
     <Compile Include="Concrete\UserTypeManager.cs" />
     <Compile Include="Connected Services\TCServiceReference\Reference.cs">
