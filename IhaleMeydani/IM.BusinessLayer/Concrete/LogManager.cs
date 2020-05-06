@@ -16,34 +16,34 @@ using System.Threading.Tasks;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class LogManager : IDataBusinessService<log>
+    public class LogManager : IDataBusinessService<Log>
     {
-        private IDataAccessDal<log> _dataAccessDal;
+        private IDataAccessDal<Log> _dataAccessDal;
         private readonly IMapper _mapper;
 
-        public LogManager(IDataAccessDal<log> dataAccessDal,IMapper mapper)
+        public LogManager(IDataAccessDal<Log> dataAccessDal,IMapper mapper)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
         }
-        public void Add(log entity)
+        public void Add(Log entity)
         {
             _dataAccessDal.Add(entity);
         }
 
-        public log Get(int id)
+        public Log Get(int id)
         {
             return _dataAccessDal.Get(id);
         }
 
-        public List<log> GetAll()
+        public List<Log> GetAll()
         {
-            var _log = _mapper.Map<List<log>>(_dataAccessDal.GetAll());
-            //var _log = AutoMapperHelper.MapToSameTypeList(_dataAccessDal.GetAll());
-            return _log;
+            var _Log = _mapper.Map<List<Log>>(_dataAccessDal.GetAll());
+            //var _Log = AutoMapperHelper.MapToSameTypeList(_dataAccessDal.GetAll());
+            return _Log;
         }
 
-        public IEnumerable<log> GetFilter(Expression<Func<log, bool>> expression)
+        public IEnumerable<Log> GetFilter(Expression<Func<Log, bool>> expression)
         {
             return _dataAccessDal.GetFilter(expression);
         }
@@ -53,12 +53,12 @@ namespace IM.BusinessLayer.Concrete
             _dataAccessDal.Remove(id);
         }
 
-        public void RemoveAll(log t)
+        public void RemoveAll(Log t)
         {
             _dataAccessDal.RemoveAll(t);
         }
 
-        public void Update(log t)
+        public void Update(Log t)
         {
             _dataAccessDal.Update(t);
         }

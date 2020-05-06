@@ -131,7 +131,6 @@
     <Compile Include="Concrete\CarTechnicalDetailManager.cs" />
     <Compile Include="Concrete\CityManager.cs" />
     <Compile Include="Concrete\ClaimManager.cs" />
-    <Compile Include="Concrete\Class1.cs" />
     <Compile Include="Concrete\ColorManager.cs" />
     <Compile Include="Concrete\CompanyManager.cs" />
     <Compile Include="Concrete\CompanyTypeManager.cs" />
@@ -148,7 +147,9 @@
     <Compile Include="Concrete\GeneralDesignManager.cs" />
     <Compile Include="Concrete\IconManager.cs" />
     <Compile Include="Concrete\ImageManager.cs" />
+    <Compile Include="Concrete\LogInfoesManager.cs" />
     <Compile Include="Concrete\LogManager.cs" />
+    <Compile Include="Concrete\LogStatusManager.cs" />
     <Compile Include="Concrete\MediumManager.cs" />
     <Compile Include="Concrete\MenuManager.cs" />
     <Compile Include="Concrete\NatificationManager.cs" />

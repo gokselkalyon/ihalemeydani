@@ -84,6 +84,8 @@
     <Compile Include="Concrete\EFConcrete\IconConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\ImageConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\LogConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\LogInfoesConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\LogStatusConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\MediumConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\MenuConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\NatificationConcrete.cs" />
