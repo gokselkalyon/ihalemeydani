@@ -10,44 +10,44 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class LogConcrete : BaseConcrete, IDataAccessDal<Log>
+    public class LogInfoesConcrete:BaseConcrete, IDataAccessDal<LogInfo>
     {
-        public void Add(Log entity)
+        public void Add(LogInfo entity)
         {
-            DB.Logs.Add(entity);
+            DB.LogInfoes.Add(entity);
             DB.SaveChanges();
         }
 
-        public Log Get(int id)
+        public LogInfo Get(int id)
         {
-            return DB.Logs.Find(id);
+            return DB.LogInfoes.Find(id);
         }
 
-        public List<Log> GetAll()
+        public List<LogInfo> GetAll()
         {
-            return DB.Logs.ToList();
+            return DB.LogInfoes.ToList();
         }
 
-        public IEnumerable<Log> GetFilter(Expression<Func<Log, bool>> expression)
+        public IEnumerable<LogInfo> GetFilter(Expression<Func<LogInfo, bool>> expression)
         {
-            return DB.Logs.Where(expression);
+            return DB.LogInfoes.Where(expression);
         }
 
         public void Remove(int id)
         {
-            DB.Logs.Remove(DB.Logs.Find(id));
+            DB.LogInfoes.Remove(DB.LogInfoes.Find(id));
             DB.SaveChanges();
         }
 
-        public void RemoveAll(Log t)
+        public void RemoveAll(LogInfo t)
         {
-            DB.Logs.Remove(t);
+            DB.LogInfoes.Remove(t);
             DB.SaveChanges();
         }
 
-        public void Update(Log t)
+        public void Update(LogInfo t)
         {
-            DB.Logs.Attach(t);
+            DB.LogInfoes.Attach(t);
             DB.Entry(t).State = System.Data.Entity.EntityState.Modified;
             DB.SaveChanges();
         }

@@ -147,7 +147,9 @@
     <Compile Include="Concrete\GeneralDesignManager.cs" />
     <Compile Include="Concrete\IconManager.cs" />
     <Compile Include="Concrete\ImageManager.cs" />
+    <Compile Include="Concrete\LogInfoesManager.cs" />
     <Compile Include="Concrete\LogManager.cs" />
+    <Compile Include="Concrete\LogStatusManager.cs" />
     <Compile Include="Concrete\MediumManager.cs" />
     <Compile Include="Concrete\MenuManager.cs" />
     <Compile Include="Concrete\NatificationManager.cs" />
@@ -168,6 +170,7 @@
     <Compile Include="Concrete\TaxAdminstrationManager.cs" />
     <Compile Include="Concrete\TitleManager.cs" />
     <Compile Include="Concrete\UserManager.cs" />
+    <Compile Include="Concrete\UserProductManager.cs" />
     <Compile Include="Concrete\UserRoleManager.cs" />
     <Compile Include="Concrete\UserTypeManager.cs" />
     <Compile Include="Connected Services\TCServiceReference\Reference.cs">
@@ -221,6 +224,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

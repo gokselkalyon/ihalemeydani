@@ -15,6 +15,24 @@ namespace IM.ServiceLayer
         [OperationContract]
         string toplama(int x ,int y);
 
+        #region userproduct
+        [OperationContract]
+        List<userproduct> Getuserproducts();
+
+        [OperationContract]
+        userproduct Getuserproduct(int Id);
+
+        [OperationContract]
+        void Adduserproduct(userproduct entity);
+
+        [OperationContract]
+        void Removeuserproduct(int Id);
+
+        [OperationContract]
+        void Updateuserproduct(userproduct entity);
+        #endregion
+
+
         #region auctionuser
         [OperationContract]
         List<actionuser> Getactionusers();
@@ -49,22 +67,59 @@ namespace IM.ServiceLayer
         void Updateprivateauction(private_auction entity);
         #endregion
 
-        #region log
+        #region Log
         [OperationContract]
-        List<log> GetLogs();
+        List<Log> GetLogs();
 
         [OperationContract]
-        log GetLog(int Id);
+        Log GetLog(int Id);
 
         [OperationContract]
-        void AddLog(log entity);
+        void AddLog(Log entity);
 
         [OperationContract]
         void RemoveLog(int Id);
 
         [OperationContract]
-        void UpdateLog(log entity);
+        void UpdateLog(Log entity);
         #endregion
+
+        #region LogInfoes
+        [OperationContract]
+        List<LogInfo> GetLogInfoes();
+
+        [OperationContract]
+        LogInfo GetLogInfo(int Id);
+
+        [OperationContract]
+        void AddLogInfo(LogInfo entity);
+
+        [OperationContract]
+        void RemoveLogInfo(int Id);
+
+        [OperationContract]
+        void UpdateLogInfo(LogInfo entity);
+
+        #endregion
+
+        #region LogStatus
+        [OperationContract]
+        List<LogStatus> GetLogStatus();
+
+        [OperationContract]
+        LogStatus GetLogStatus(int Id);
+
+        [OperationContract]
+        void AddLogStatus(LogStatus entity);
+
+        [OperationContract]
+        void RemoveLogStatus(int Id);
+
+        [OperationContract]
+        void UpdateLogStatus(LogStatus entity);
+
+        #endregion
+
 
         #region AMOUNT_OF_INCREASE
         [OperationContract]

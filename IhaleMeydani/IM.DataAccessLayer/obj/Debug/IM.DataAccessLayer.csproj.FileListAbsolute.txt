@@ -42,6 +42,20 @@ C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\De
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.pdb
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll.config
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csprojAssemblyReference.cache
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
+D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll.config
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.pdb
@@ -57,17 +71,3 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\ob
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll.config
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.pdb
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.dll
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.pdb
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll.config
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.xml
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csprojAssemblyReference.cache
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
-D:\DERS\Ayv\2.SINIF\2.Yarıyıl\Web Programlama\Proje\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb

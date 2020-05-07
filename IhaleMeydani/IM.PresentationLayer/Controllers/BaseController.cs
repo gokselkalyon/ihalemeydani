@@ -1,4 +1,5 @@
 ﻿using IM.BusinessLayer.Firebase;
+using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace IM.PresentationLayer.Controllers
     public class BaseController : Controller
     {
         public FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper("ihale-meydan.appspot.com");
+        public JsonResultModel jsonResultModel = new JsonResultModel();
     }
 }

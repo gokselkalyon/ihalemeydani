@@ -147,7 +147,13 @@
     <Compile Include="Image.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="log.cs">
+    <Compile Include="Log.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogInfo.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogStatus.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="medium.cs">
@@ -187,6 +193,9 @@
     <Compile Include="senaryo.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SocialMediaType.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SocialMedya.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
@@ -212,6 +221,9 @@
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="userproduct.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UserRole.cs">

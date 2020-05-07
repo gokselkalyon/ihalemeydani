@@ -12,7 +12,7 @@ namespace IM.BusinessLayer.Mapping.AutomMapper
     {
         public BusinessProfile()
         {
-            CreateMap<log, log>();
+            CreateMap<Log, Log>();
         }
     }
 }

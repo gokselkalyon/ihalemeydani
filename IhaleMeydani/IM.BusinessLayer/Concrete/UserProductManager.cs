@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using IM.BusinessLayer.Abstract;
-using IM.BusinessLayer.helper;
 using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
 using Microsoft.Win32.SafeHandles;
 using System;
-using Microsoft.Win32.SafeHandles;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -16,34 +13,33 @@ using System.Threading.Tasks;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class LogManager : IDataBusinessService<Log>
+    public class UserProductManager : IDataBusinessService<userproduct>
     {
-        private IDataAccessDal<Log> _dataAccessDal;
+        private IDataAccessDal<userproduct> _dataAccessDal;
         private readonly IMapper _mapper;
 
-        public LogManager(IDataAccessDal<Log> dataAccessDal,IMapper mapper)
+        public UserProductManager(IDataAccessDal<userproduct> dataAccessDal, IMapper mapper)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
         }
-        public void Add(Log entity)
+        public void Add(userproduct entity)
         {
             _dataAccessDal.Add(entity);
         }
 
-        public Log Get(int id)
+        public userproduct Get(int id)
         {
             return _dataAccessDal.Get(id);
         }
 
-        public List<Log> GetAll()
+        public List<userproduct> GetAll()
         {
-            var _Log = _mapper.Map<List<Log>>(_dataAccessDal.GetAll());
-            //var _Log = AutoMapperHelper.MapToSameTypeList(_dataAccessDal.GetAll());
-            return _Log;
+            var bank = _mapper.Map<List<userproduct>>(_dataAccessDal.GetAll());
+            return bank;
         }
 
-        public IEnumerable<Log> GetFilter(Expression<Func<Log, bool>> expression)
+        public IEnumerable<userproduct> GetFilter(Expression<Func<userproduct, bool>> expression)
         {
             return _dataAccessDal.GetFilter(expression);
         }
@@ -53,17 +49,16 @@ namespace IM.BusinessLayer.Concrete
             _dataAccessDal.Remove(id);
         }
 
-        public void RemoveAll(Log t)
+        public void RemoveAll(userproduct t)
         {
             _dataAccessDal.RemoveAll(t);
         }
 
-        public void Update(Log t)
+        public void Update(userproduct t)
         {
             _dataAccessDal.Update(t);
         }
 
-        
         bool disposed = false;
         SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
 

@@ -12,13 +12,14 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class SocialMedya
+    public partial class userproduct
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> IconId { get; set; }
-        public Nullable<int> MediaTypeId { get; set; }
-    
-        public virtual SocialMediaType SocialMediaType { get; set; }
+        public int id { get; set; }
+        public Nullable<int> user_id { get; set; }
+        public Nullable<int> cardetail_id { get; set; }
+        public Nullable<System.DateTime> date_of_created { get; set; }
+        public Nullable<System.DateTime> date_of_updated { get; set; }
+        public Nullable<bool> published_on { get; set; }
+        public Nullable<bool> isdeleted { get; set; }
     }
 }

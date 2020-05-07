@@ -168,6 +168,9 @@
     </Compile>
     <Compile Include="Models\AuctionModelView.cs" />
     <Compile Include="Models\BlogModelView.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
+    <Compile Include="Models\HandleErrors.cs" />
+    <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signalr\SignalHub.cs" />
     <Compile Include="signalr\Startup.cs" />
@@ -2647,6 +2650,7 @@
     <Content Include="Views\Errors\Error502.cshtml" />
     <Content Include="Views\Shared\_AdminPanelLayout.cshtml" />
     <Content Include="Views\Auction\UserProductsViewPage.cshtml" />
+    <Content Include="Views\Errors\PageError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2893,6 +2897,14 @@
     <ProjectReference Include="..\IM.BusinessLayer\IM.BusinessLayer.csproj">
       <Project>{69A38E8E-C773-42E1-9288-10217542516B}</Project>
       <Name>IM.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IM.DataAccessLayer\IM.DataAccessLayer.csproj">
+      <Project>{86333051-9227-4ebc-bd7c-d366fad1ec2d}</Project>
+      <Name>IM.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IM.DataLayer\IM.DataLayer.csproj">
+      <Project>{E7632F51-9B6C-404B-8D2C-F5EA94DF23EB}</Project>
+      <Name>IM.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

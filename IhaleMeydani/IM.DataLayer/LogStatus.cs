@@ -12,13 +12,9 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class SocialMedya
+    public partial class LogStatus
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Nullable<int> IconId { get; set; }
-        public Nullable<int> MediaTypeId { get; set; }
-    
-        public virtual SocialMediaType SocialMediaType { get; set; }
     }
 }

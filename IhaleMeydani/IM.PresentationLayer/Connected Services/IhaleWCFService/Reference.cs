@@ -3722,21 +3722,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string action_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string action_tableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> date_ofField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> user_idField;
-        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -3744,71 +3729,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string action_name {
-            get {
-                return this.action_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.action_nameField, value) != true)) {
-                    this.action_nameField = value;
-                    this.RaisePropertyChanged("action_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string action_table {
-            get {
-                return this.action_tableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.action_tableField, value) != true)) {
-                    this.action_tableField = value;
-                    this.RaisePropertyChanged("action_table");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> date_of {
-            get {
-                return this.date_ofField;
-            }
-            set {
-                if ((this.date_ofField.Equals(value) != true)) {
-                    this.date_ofField = value;
-                    this.RaisePropertyChanged("date_of");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> user_id {
-            get {
-                return this.user_idField;
-            }
-            set {
-                if ((this.user_idField.Equals(value) != true)) {
-                    this.user_idField = value;
-                    this.RaisePropertyChanged("user_id");
-                }
             }
         }
         

@@ -12,25 +12,26 @@ namespace IM.ServiceLayer
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "IhaleService" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select IhaleService.svc or IhaleService.svc.cs at the Solution Explorer and start debugging.
-    public class IhaleService : IIhaleService
+    public class IhaleService :BaseService, IIhaleService
     {
         public string toplama(int x,int y)
         {
             return string.Format("sonuc {0}",x+y);
         }
 
-        #region log
-        public void AddLog(log entity)
+      
+        #region Log
+        public void AddLog(Log entity)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 _db.Add(entity);
             }
         }
 
-        public log GetLog(int Id)
+        public Log GetLog(int Id)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 return _db.Get(Id);
             }
@@ -43,24 +44,24 @@ namespace IM.ServiceLayer
             }
         }
 
-        public List<log> GetLogs()
+        public List<Log> GetLogs()
         {
-            IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>();
+            IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>();
             var result = _db.GetAll();
             return result;
         }
 
         public void RemoveLog(int Id)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 _db.Remove(Id);
             }
         }
 
-        public void UpdateLog(log entity)
+        public void UpdateLog(Log entity)
         {
-            using (IDataBusinessService<log> _db = InstanceFactory.GetInstance<IDataBusinessService<log>>())
+            using (IDataBusinessService<Log> _db = InstanceFactory.GetInstance<IDataBusinessService<Log>>())
             {
                 _db.Update(entity);
             }
@@ -2240,7 +2241,95 @@ namespace IM.ServiceLayer
             }
         }
 
-        
+        public List<userproduct> Getuserproducts()
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                return _db.GetAll();
+            }
+        }
+
+        public userproduct Getuserproduct(int Id)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                return _db.Get(Id);
+            }
+        }
+
+        public void Adduserproduct(userproduct entity)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                _db.Add(entity);
+            }
+        }
+
+        public void Removeuserproduct(int Id)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                _db.Remove(Id);
+            }
+        }
+
+        public void Updateuserproduct(userproduct entity)
+        {
+            using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
+            {
+                _db.Update(entity);
+            }
+        }
+
+        public List<LogInfo> GetLogInfoes()
+        {
+           return Create<LogInfo>().GetAll();
+        }
+
+        public LogInfo GetLogInfo(int Id)
+        {
+            return Create<LogInfo>().Get(Id);
+        }
+
+        public void AddLogInfo(LogInfo entity)
+        {
+            Create<LogInfo>().Add(entity);
+        }
+
+        public void RemoveLogInfo(int Id)
+        {
+            Create<LogInfo>().Remove(Id);
+        }
+
+        public void UpdateLogInfo(LogInfo entity)
+        {
+            Create<LogInfo>().Update(entity);
+        }
+
+        public List<LogStatus> GetLogStatus()
+        {
+            return Create<LogStatus>().GetAll();
+        }
+
+        public LogStatus GetLogStatus(int Id)
+        {
+            return Create<LogStatus>().Get(Id);
+        }
+
+        public void AddLogStatus(LogStatus entity)
+        {
+            Create<LogStatus>().Add(entity);
+        }
+
+        public void RemoveLogStatus(int Id)
+        {
+            Create<LogStatus>().Remove(Id);
+        }
+
+        public void UpdateLogStatus(LogStatus entity)
+        {
+            Create<LogStatus>().Update(entity);
+        }
     }
 
 }

@@ -51,7 +51,6 @@ namespace IM.DataLayer
         public virtual DbSet<GeneralDesign> GeneralDesigns { get; set; }
         public virtual DbSet<Icon> Icons { get; set; }
         public virtual DbSet<Image> Images { get; set; }
-        public virtual DbSet<log> logs { get; set; }
         public virtual DbSet<medium> media { get; set; }
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<natification> natifications { get; set; }
@@ -71,10 +70,15 @@ namespace IM.DataLayer
         public virtual DbSet<tag_post> tag_post { get; set; }
         public virtual DbSet<Tax_Administration> Tax_Administration { get; set; }
         public virtual DbSet<title> titles { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
         public virtual DbSet<actionuser> actionusers { get; set; }
         public virtual DbSet<private_auction> private_auction { get; set; }
+        public virtual DbSet<SocialMediaType> SocialMediaTypes { get; set; }
+        public virtual DbSet<userproduct> userproducts { get; set; }
+        public virtual DbSet<LogInfo> LogInfoes { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<LogStatus> LogStatus { get; set; }
     }
 }
