@@ -2443,7 +2443,10 @@
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\css\StyleSheet1.css" />
     <Content Include="Content\Template\js\boostrap.js" />
+    <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
+    <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
+    <Content Include="Content\Template\js\main.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert2.js" />
     <Content Include="favicon.ico" />

@@ -13,6 +13,9 @@ namespace IM.PresentationLayer
                       "~/Content/Template/js/jquery.js",
                       "~/Content/Template/js/boostrap.js",
                       "~/Content/Template/js/sweetalert2.js",
+                      "~/Content/Template/js/jquery.validate.js",
+                      "~/Content/Template/js/jquery.validate.unobtrusive.js",
+                      "~/Content/Template/js/jquery.unobtrusive-ajax.js",
                       "~/Content/Template/autoshop/assets/js/plugins.js",
                       "~/Content/Template/autoshop/assets/js/functions.js"
                       ));

@@ -1,4 +1,5 @@
 ﻿using IM.BusinessLayer.Concrete;
+using IM.DataAccessLayer.Tools;
 using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.Models;
 using System;
@@ -9,19 +10,18 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class RolesController : Controller
+    public class RolesController : BaseController
     {
         // GET: Roles 
-        IhaleServiceClient db = new IhaleServiceClient();
         RolesModelView rm = new RolesModelView();
         public ActionResult Index()
         {
-            var result = db.GetRoles();
+            var result = IhaleServiceClient.GetRoles();
             return View(result);
         }
         public ActionResult AddRole(RolesModelView roles)
         {
-            var query = (from r in db.GetClaims()
+            var query = (from r in IhaleServiceClient.GetClaims()
                          select new RoleModel()
                          {
                              Checked = false,
@@ -31,18 +31,21 @@ namespace IM.PresentationLayer.Controllers
             rm.roleList = query;
             return View(rm);
         }
-        public ActionResult RoleCreate(RolesModelView roles)
+        [HttpPost]
+        public JsonResult RoleCreate(RolesModelView roles)
         {
-            var query = db.GetRoles().ToList();
+            var query = IhaleServiceClient.GetRoles().ToList();
             var roleNameControll = query.Where(f => f.Name == roles.RoleName).Any();
             if (roleNameControll)
             {
-                return View();
+                jsonResultModel.Title = "Başarısız";
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Role Ekleme Başarısız";
                 //Burda hata Mesajı olucak!
             }
             Role r = new Role();
             r.Name = roles.RoleName;
-            db.AddRole(r);
+            IhaleServiceClient.AddRole(r);
             RoleClaim rc = new RoleClaim();
             foreach (var items in roles.roleList)
             {
@@ -52,7 +55,7 @@ namespace IM.PresentationLayer.Controllers
                     rc.RoleId = r.Id;
                 }
             }
-            return View();
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
     }
 }

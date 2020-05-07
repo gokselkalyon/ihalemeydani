@@ -35,27 +35,42 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            @using (Ajax.BeginForm("RoleCreate", "Role", new AjaxOptions { HttpMethod = "POST" }, new { id = "RoleForm" }))
+            @using (Ajax.BeginForm("RoleCreate", "Role", FormMethod.Post, new AjaxOptions()
             {
+                InsertionMode = InsertionMode.Replace,
+                HttpMethod = "POST",
+                OnSuccess = "returnPostJson(data)",
+                LoadingElementId = "loading-background",
+            },
+                          new
+                          {
+                              @class = "RoleForm",
+                              @id = "frmRoleForm",
+                              @name = "frmRoleForm",
+                          }))
+            {
+                @Html.AntiForgeryToken()
+
                 <div class="col-md-4" style="margin-left:30%;">
                     <div class="form-group">
                         <label for="inputName" class="control-label mb-10">Rol Adı</label>
                         <input type="text" class="form-control" name="RoleName" id="RoleName" required="">
                     </div>
                 </div>
-                for (int i = 0; i < Model.roleList.Count; i++)
+                foreach (var item in Model.roleList)
                 {
                     <div class="col-md-3">
-                        @Html.HiddenFor(m => m.roleList[i].ClaimId)
+                        @Html.Hidden("ClaimId", item.ClaimId);
                         <div style="height:60px;  margin-top:00px;">
                             <div class="input-group" style="color:black;" id="CheckBoxStatus">
-                                @Html.CheckBoxFor(m => m.roleList[i].Checked, new { @Id = Model.roleList[i].ClaimId }) @Model.roleList[i].Text
+                                @Html.CheckBox("Checked", item.Checked, new { @Id = item.ClaimId }) @item.Text
                             </div>
                         </div>
                     </div>
                 }
+
                 <div class="form-group" style="float:right; margin-top:20px; margin-right:5%;">
-                    <a type="button" href="/Roles/index" class="btn btn-danger" style="width:100px;">Vazgeç</a> 
+                    <a type="button" href="/Roles/index" class="btn btn-danger" style="width:100px;">Vazgeç</a>
                     <button type="submit" class="btn btn-success btn-anim"><i class="icon-rocket"></i><span class="btn-text">Kaydet</span></button>
                 </div>
             }
