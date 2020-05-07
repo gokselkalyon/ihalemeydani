@@ -9,12 +9,13 @@ namespace IM.PresentationLayer.Controllers
     public class QuickSellController : Controller
     {
         // GET: QuickSell
+        [Route("hizlisatis")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Route("hizlisatis")]
+        [Route("hizlisatisdetay")]
         public ActionResult Details()
         {
             return View();
