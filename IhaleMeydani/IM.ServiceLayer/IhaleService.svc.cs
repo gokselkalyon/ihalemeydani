@@ -2306,7 +2306,7 @@ namespace IM.ServiceLayer
             Create<LogInfo>().Update(entity);
         }
 
-        public List<LogStatus> GetLogStatus()
+        public List<LogStatus> GetLogStatusAll()
         {
             return Create<LogStatus>().GetAll();
         }

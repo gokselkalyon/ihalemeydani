@@ -163,6 +163,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickSellController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,6 +172,7 @@
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\HandleErrors.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
+    <Compile Include="Models\RolesModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signalr\SignalHub.cs" />
     <Compile Include="signalr\Startup.cs" />
@@ -2651,6 +2653,8 @@
     <Content Include="Views\Shared\_AdminPanelLayout.cshtml" />
     <Content Include="Views\Auction\UserProductsViewPage.cshtml" />
     <Content Include="Views\Errors\PageError.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Roles\AddRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

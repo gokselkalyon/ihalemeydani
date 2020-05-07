@@ -12,10 +12,9 @@ namespace IM.DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Claim
+    public partial class ClaimGroup
     {
         public int Id { get; set; }
-        public string Text { get; set; }
-        public Nullable<int> ClaimGroupId { get; set; }
+        public string Name { get; set; }
     }
 }

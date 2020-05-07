@@ -113,6 +113,14 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Text" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClaimGroupId" Type="int" />
+        </EntityType>
+        <EntityType Name="ClaimGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Color">
           <Key>
@@ -568,6 +576,7 @@
           <EntitySet Name="CarTechnicalDetails" EntityType="Self.CarTechnicalDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Claim" EntityType="Self.Claim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClaimGroup" EntityType="Self.ClaimGroup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="company_type" EntityType="Self.company_type" Schema="dbo" store:Type="Tables" />
@@ -719,6 +728,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimGroupId" Type="Int32" />
         </EntityType>
         <EntityType Name="Color">
           <Key>
@@ -1131,6 +1141,7 @@
           <EntitySet Name="Logs" EntityType="IHALEDBModel.Log" />
           <EntitySet Name="Users" EntityType="IHALEDBModel.User" />
           <EntitySet Name="LogStatus1" EntityType="IHALEDBModel.LogStatus" />
+          <EntitySet Name="ClaimGroups" EntityType="IHALEDBModel.ClaimGroup" />
         </EntityContainer>
         <EntityType Name="actionuser">
           <Key>
@@ -1234,6 +1245,13 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ClaimGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1345,6 +1363,7 @@
           <EntitySetMapping Name="Claims">
             <EntityTypeMapping TypeName="IHALEDBModel.Claim">
               <MappingFragment StoreEntitySet="Claim">
+                <ScalarProperty Name="ClaimGroupId" ColumnName="ClaimGroupId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Text" ColumnName="Text" />
               </MappingFragment>
@@ -1830,6 +1849,14 @@
           <EntitySetMapping Name="LogStatus1">
             <EntityTypeMapping TypeName="IHALEDBModel.LogStatus">
               <MappingFragment StoreEntitySet="LogStatus">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClaimGroups">
+            <EntityTypeMapping TypeName="IHALEDBModel.ClaimGroup">
+              <MappingFragment StoreEntitySet="ClaimGroup">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

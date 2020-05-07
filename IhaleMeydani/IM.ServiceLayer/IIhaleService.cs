@@ -104,7 +104,7 @@ namespace IM.ServiceLayer
 
         #region LogStatus
         [OperationContract]
-        List<LogStatus> GetLogStatus();
+        List<LogStatus> GetLogStatusAll();
 
         [OperationContract]
         LogStatus GetLogStatus(int Id);
