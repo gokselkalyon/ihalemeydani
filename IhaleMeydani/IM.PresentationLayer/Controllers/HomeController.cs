@@ -18,7 +18,7 @@ namespace IM.PresentationLayer.Controllers
 
         public PartialViewResult Menus()
         {
-            TempData["Menu"] = IhaleServiceClient.MainMenu();
+            TempData["Menus"] = IhaleServiceClient.MainMenu();
             return PartialView();
         }
 

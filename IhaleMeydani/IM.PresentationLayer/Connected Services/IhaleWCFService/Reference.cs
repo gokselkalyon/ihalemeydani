@@ -15,6 +15,24 @@ namespace IM.PresentationLayer.IhaleWCFService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IhaleWCFService.IIhaleService")]
     public interface IIhaleService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUser", ReplyAction="http://tempuri.org/IIhaleService/GetUserResponse")]
+        IM.DataLayer.User GetUser(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUser", ReplyAction="http://tempuri.org/IIhaleService/GetUserResponse")]
+        System.Threading.Tasks.Task<IM.DataLayer.User> GetUserAsync(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddUser", ReplyAction="http://tempuri.org/IIhaleService/AddUserResponse")]
+        void AddUser(IM.DataLayer.User entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddUser", ReplyAction="http://tempuri.org/IIhaleService/AddUserResponse")]
+        System.Threading.Tasks.Task AddUserAsync(IM.DataLayer.User entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveUser", ReplyAction="http://tempuri.org/IIhaleService/RemoveUserResponse")]
+        void RemoveUser(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveUser", ReplyAction="http://tempuri.org/IIhaleService/RemoveUserResponse")]
+        System.Threading.Tasks.Task RemoveUserAsync(int Id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateUser", ReplyAction="http://tempuri.org/IIhaleService/UpdateUserResponse")]
         void UpdateUser(IM.DataLayer.User entity);
         
@@ -80,6 +98,24 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateUserType", ReplyAction="http://tempuri.org/IIhaleService/UpdateUserTypeResponse")]
         System.Threading.Tasks.Task UpdateUserTypeAsync(IM.DataLayer.UserType entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetNatification", ReplyAction="http://tempuri.org/IIhaleService/GetNatificationResponse")]
+        IM.DataLayer.natification GetNatification(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetNatification", ReplyAction="http://tempuri.org/IIhaleService/GetNatificationResponse")]
+        System.Threading.Tasks.Task<IM.DataLayer.natification> GetNatificationAsync(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddNatification", ReplyAction="http://tempuri.org/IIhaleService/AddNatificationResponse")]
+        void AddNatification(IM.DataLayer.natification entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddNatification", ReplyAction="http://tempuri.org/IIhaleService/AddNatificationResponse")]
+        System.Threading.Tasks.Task AddNatificationAsync(IM.DataLayer.natification entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveNatification", ReplyAction="http://tempuri.org/IIhaleService/RemoveNatificationResponse")]
+        void RemoveNatification(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveNatification", ReplyAction="http://tempuri.org/IIhaleService/RemoveNatificationResponse")]
+        System.Threading.Tasks.Task RemoveNatificationAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateNatification", ReplyAction="http://tempuri.org/IIhaleService/UpdateNatificationResponse")]
         void UpdateNatification(IM.DataLayer.natification entity);
@@ -573,24 +609,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUsers", ReplyAction="http://tempuri.org/IIhaleService/GetUsersResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<IM.DataLayer.User>> GetUsersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUser", ReplyAction="http://tempuri.org/IIhaleService/GetUserResponse")]
-        IM.DataLayer.User GetUser(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUser", ReplyAction="http://tempuri.org/IIhaleService/GetUserResponse")]
-        System.Threading.Tasks.Task<IM.DataLayer.User> GetUserAsync(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddUser", ReplyAction="http://tempuri.org/IIhaleService/AddUserResponse")]
-        void AddUser(IM.DataLayer.User entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddUser", ReplyAction="http://tempuri.org/IIhaleService/AddUserResponse")]
-        System.Threading.Tasks.Task AddUserAsync(IM.DataLayer.User entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveUser", ReplyAction="http://tempuri.org/IIhaleService/RemoveUserResponse")]
-        void RemoveUser(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveUser", ReplyAction="http://tempuri.org/IIhaleService/RemoveUserResponse")]
-        System.Threading.Tasks.Task RemoveUserAsync(int Id);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateColor", ReplyAction="http://tempuri.org/IIhaleService/UpdateColorResponse")]
         void UpdateColor(IM.DataLayer.Color entity);
         
@@ -1053,6 +1071,24 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetMenus", ReplyAction="http://tempuri.org/IIhaleService/GetMenusResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<IM.DataLayer.Menu>> GetMenusAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/SubMenu", ReplyAction="http://tempuri.org/IIhaleService/SubMenuResponse")]
+        System.Collections.Generic.List<IM.DataLayer.Menu> SubMenu(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/SubMenu", ReplyAction="http://tempuri.org/IIhaleService/SubMenuResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<IM.DataLayer.Menu>> SubMenuAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/MainMenu", ReplyAction="http://tempuri.org/IIhaleService/MainMenuResponse")]
+        System.Text.StringBuilder MainMenu();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/MainMenu", ReplyAction="http://tempuri.org/IIhaleService/MainMenuResponse")]
+        System.Threading.Tasks.Task<System.Text.StringBuilder> MainMenuAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/SubCategory", ReplyAction="http://tempuri.org/IIhaleService/SubCategoryResponse")]
+        void SubCategory(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/SubCategory", ReplyAction="http://tempuri.org/IIhaleService/SubCategoryResponse")]
+        System.Threading.Tasks.Task SubCategoryAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetMenu", ReplyAction="http://tempuri.org/IIhaleService/GetMenuResponse")]
         IM.DataLayer.Menu GetMenu(int Id);
         
@@ -1082,24 +1118,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetNatifications", ReplyAction="http://tempuri.org/IIhaleService/GetNatificationsResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<IM.DataLayer.natification>> GetNatificationsAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetNatification", ReplyAction="http://tempuri.org/IIhaleService/GetNatificationResponse")]
-        IM.DataLayer.natification GetNatification(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetNatification", ReplyAction="http://tempuri.org/IIhaleService/GetNatificationResponse")]
-        System.Threading.Tasks.Task<IM.DataLayer.natification> GetNatificationAsync(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddNatification", ReplyAction="http://tempuri.org/IIhaleService/AddNatificationResponse")]
-        void AddNatification(IM.DataLayer.natification entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddNatification", ReplyAction="http://tempuri.org/IIhaleService/AddNatificationResponse")]
-        System.Threading.Tasks.Task AddNatificationAsync(IM.DataLayer.natification entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveNatification", ReplyAction="http://tempuri.org/IIhaleService/RemoveNatificationResponse")]
-        void RemoveNatification(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveNatification", ReplyAction="http://tempuri.org/IIhaleService/RemoveNatificationResponse")]
-        System.Threading.Tasks.Task RemoveNatificationAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/toplama", ReplyAction="http://tempuri.org/IIhaleService/toplamaResponse")]
         string toplama(int x, int y);
@@ -1639,6 +1657,30 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 base(binding, remoteAddress) {
         }
         
+        public IM.DataLayer.User GetUser(int Id) {
+            return base.Channel.GetUser(Id);
+        }
+        
+        public System.Threading.Tasks.Task<IM.DataLayer.User> GetUserAsync(int Id) {
+            return base.Channel.GetUserAsync(Id);
+        }
+        
+        public void AddUser(IM.DataLayer.User entity) {
+            base.Channel.AddUser(entity);
+        }
+        
+        public System.Threading.Tasks.Task AddUserAsync(IM.DataLayer.User entity) {
+            return base.Channel.AddUserAsync(entity);
+        }
+        
+        public void RemoveUser(int Id) {
+            base.Channel.RemoveUser(Id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveUserAsync(int Id) {
+            return base.Channel.RemoveUserAsync(Id);
+        }
+        
         public void UpdateUser(IM.DataLayer.User entity) {
             base.Channel.UpdateUser(entity);
         }
@@ -1725,6 +1767,30 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task UpdateUserTypeAsync(IM.DataLayer.UserType entity) {
             return base.Channel.UpdateUserTypeAsync(entity);
+        }
+        
+        public IM.DataLayer.natification GetNatification(int Id) {
+            return base.Channel.GetNatification(Id);
+        }
+        
+        public System.Threading.Tasks.Task<IM.DataLayer.natification> GetNatificationAsync(int Id) {
+            return base.Channel.GetNatificationAsync(Id);
+        }
+        
+        public void AddNatification(IM.DataLayer.natification entity) {
+            base.Channel.AddNatification(entity);
+        }
+        
+        public System.Threading.Tasks.Task AddNatificationAsync(IM.DataLayer.natification entity) {
+            return base.Channel.AddNatificationAsync(entity);
+        }
+        
+        public void RemoveNatification(int Id) {
+            base.Channel.RemoveNatification(Id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveNatificationAsync(int Id) {
+            return base.Channel.RemoveNatificationAsync(Id);
         }
         
         public void UpdateNatification(IM.DataLayer.natification entity) {
@@ -2383,30 +2449,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.GetUsersAsync();
         }
         
-        public IM.DataLayer.User GetUser(int Id) {
-            return base.Channel.GetUser(Id);
-        }
-        
-        public System.Threading.Tasks.Task<IM.DataLayer.User> GetUserAsync(int Id) {
-            return base.Channel.GetUserAsync(Id);
-        }
-        
-        public void AddUser(IM.DataLayer.User entity) {
-            base.Channel.AddUser(entity);
-        }
-        
-        public System.Threading.Tasks.Task AddUserAsync(IM.DataLayer.User entity) {
-            return base.Channel.AddUserAsync(entity);
-        }
-        
-        public void RemoveUser(int Id) {
-            base.Channel.RemoveUser(Id);
-        }
-        
-        public System.Threading.Tasks.Task RemoveUserAsync(int Id) {
-            return base.Channel.RemoveUserAsync(Id);
-        }
-        
         public void UpdateColor(IM.DataLayer.Color entity) {
             base.Channel.UpdateColor(entity);
         }
@@ -3023,6 +3065,30 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.GetMenusAsync();
         }
         
+        public System.Collections.Generic.List<IM.DataLayer.Menu> SubMenu(int id) {
+            return base.Channel.SubMenu(id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<IM.DataLayer.Menu>> SubMenuAsync(int id) {
+            return base.Channel.SubMenuAsync(id);
+        }
+        
+        public System.Text.StringBuilder MainMenu() {
+            return base.Channel.MainMenu();
+        }
+        
+        public System.Threading.Tasks.Task<System.Text.StringBuilder> MainMenuAsync() {
+            return base.Channel.MainMenuAsync();
+        }
+        
+        public void SubCategory(int id) {
+            base.Channel.SubCategory(id);
+        }
+        
+        public System.Threading.Tasks.Task SubCategoryAsync(int id) {
+            return base.Channel.SubCategoryAsync(id);
+        }
+        
         public IM.DataLayer.Menu GetMenu(int Id) {
             return base.Channel.GetMenu(Id);
         }
@@ -3061,30 +3127,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<IM.DataLayer.natification>> GetNatificationsAsync() {
             return base.Channel.GetNatificationsAsync();
-        }
-        
-        public IM.DataLayer.natification GetNatification(int Id) {
-            return base.Channel.GetNatification(Id);
-        }
-        
-        public System.Threading.Tasks.Task<IM.DataLayer.natification> GetNatificationAsync(int Id) {
-            return base.Channel.GetNatificationAsync(Id);
-        }
-        
-        public void AddNatification(IM.DataLayer.natification entity) {
-            base.Channel.AddNatification(entity);
-        }
-        
-        public System.Threading.Tasks.Task AddNatificationAsync(IM.DataLayer.natification entity) {
-            return base.Channel.AddNatificationAsync(entity);
-        }
-        
-        public void RemoveNatification(int Id) {
-            base.Channel.RemoveNatification(Id);
-        }
-        
-        public System.Threading.Tasks.Task RemoveNatificationAsync(int Id) {
-            return base.Channel.RemoveNatificationAsync(Id);
         }
         
         public string toplama(int x, int y) {
