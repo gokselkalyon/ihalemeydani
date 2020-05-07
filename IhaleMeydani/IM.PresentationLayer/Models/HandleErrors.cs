@@ -67,8 +67,8 @@ namespace IM.PresentationLayer.Models
                 l.UrlAccessed = request.RawUrl; //erişilen sayfanın ham url'i
                 l.LogStatusId = 2;
 
-                logInfoes.Add(log);
-                logConcrete.Add(l);
+                //logInfoes.Add(log);
+                //logConcrete.Add(l);
 
                 if (filterContext.HttpContext.Request.IsAjaxRequest())
                 {
@@ -112,8 +112,8 @@ namespace IM.PresentationLayer.Models
                 l.UrlAccessed = request.RawUrl; //erişilen sayfanın ham url'i
                 l.LogStatusId = 1;
 
-                logInfoes.Add(log);
-                logConcrete.Add(l);
+                //logInfoes.Add(log);
+                //logConcrete.Add(l);
 
             }
 
