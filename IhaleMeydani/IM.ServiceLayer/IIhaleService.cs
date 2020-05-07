@@ -1,4 +1,5 @@
 ﻿using IM.DataLayer;
+using IM.DataLayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void Adduserproduct(userproduct entity);
+        [OperationContract]
+        List<UserProductModel> userProductModels();
 
         [OperationContract]
         void Removeuserproduct(int Id);

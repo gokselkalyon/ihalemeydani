@@ -2,8 +2,10 @@
 using IM.BusinessLayer.Concrete;
 using IM.BusinessLayer.ServiceAdapter;
 using IM.DataAccessLayer.Abstract;
+using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataAccessLayer.Concrete.EFConcrete;
 using IM.DataLayer;
+using IM.DataLayer.Model;
 using Ninject.Modules;
 using System;
 using System.Collections.Generic;
@@ -71,7 +73,6 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataBusinessService<LogInfo>>().To<LogInfoesManager>().InSingletonScope();
             Bind<IDataBusinessService<LogStatus>>().To<LogStatusManager>().InSingletonScope();
 
-
             Bind<IDataAccessDal<Log>>().To<LogConcrete>().InSingletonScope();
             Bind<IDataAccessDal<LogInfo>>().To<LogInfoesConcrete>().InSingletonScope();
             Bind<IDataAccessDal<LogStatus>>().To<LogStatusConcrete>().InSingletonScope();
@@ -125,6 +126,12 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataAccessDal<UserType>>().To<UserTypeConcrete>().InSingletonScope();
             Bind<IDataAccessDal<User>>().To<UserConcrete>().InSingletonScope();
             Bind<IDataAccessDal<userproduct>>().To<UserProductConcrete>().InSingletonScope();
+
+            Bind<IDataBaseQueryService<UserProductModel>>().To<UserProductManager>().InSingletonScope();
+
+            Bind<IDataBaseQuery<UserProductModel>>().To<UserProductConcrete>().InSingletonScope();
+
+
 
             Bind<ITCService>().To<TCServiceAdapter>().InSingletonScope();
         }
