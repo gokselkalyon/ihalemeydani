@@ -181,6 +181,12 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.AMOUNT_OF_INCREASE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -256,7 +262,13 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Image.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.log.datasource">
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Log.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.LogInfo1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.LogStatus1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.medium.datasource">
@@ -278,6 +290,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PRICEBOT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.private_auction.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Role.datasource">
@@ -319,16 +334,16 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.userproduct1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserProductModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserRole.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.private_auction.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
@@ -879,7 +894,8 @@
     <Content Include="Content\adminpaneltemplate\src\html\ui-toasts.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-tooltip-popover.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-typography.html" />
-    <Content Include="Content\all.min.css" />
+    <Content Include="Content\Template\css\all.min.css" />
+    <Content Include="Content\Images\Loading2.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\QuickSellContent\css\bootstrap.min.css" />
     <Content Include="Content\QuickSellContent\js\bootstrap.min.js" />
@@ -2589,13 +2605,20 @@
     <Content Include="Content\Template\css\boostrap.css" />
     <Content Include="Content\Template\css\ErrorStyle.css" />
     <Content Include="Content\Template\css\Login.css" />
+    <Content Include="Content\Template\css\Main.css" />
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\css\StyleSheet1.css" />
     <Content Include="Content\Template\js\boostrap.js" />
+    <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
+    <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
+    <Content Include="Content\Template\js\main.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert2.js" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Connected Services\IhaleWCFService\IhaleService.wsdl" />
@@ -2617,6 +2640,7 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\Role.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2655,6 +2679,7 @@
     <Content Include="Views\Errors\PageError.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\AddRole.cshtml" />
+    <Content Include="Views\Home\Menus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2886,6 +2911,18 @@
     <Content Include="Content\adminpaneltemplate\src\scss\fonts\landingpage_fonts.scss" />
     <Content Include="Content\adminpaneltemplate\src\scss\icons\icons.scss" />
     <Content Include="Content\adminpaneltemplate\src\scss\style.scss" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2899,7 +2936,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IM.BusinessLayer\IM.BusinessLayer.csproj">
-      <Project>{69A38E8E-C773-42E1-9288-10217542516B}</Project>
+      <Project>{69a38e8e-c773-42e1-9288-10217542516b}</Project>
       <Name>IM.BusinessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\IM.DataAccessLayer\IM.DataAccessLayer.csproj">
@@ -2907,7 +2944,7 @@
       <Name>IM.DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\IM.DataLayer\IM.DataLayer.csproj">
-      <Project>{E7632F51-9B6C-404B-8D2C-F5EA94DF23EB}</Project>
+      <Project>{e7632f51-9b6c-404b-8d2c-f5ea94df23eb}</Project>
       <Name>IM.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>

@@ -573,6 +573,18 @@ namespace IM.ServiceLayer
         List<Menu> GetMenus();
 
         [OperationContract]
+        List<Menu> SubMenu(int id);
+
+        [OperationContract]
+        StringBuilder MainMenu();
+
+        [OperationContract]
+        string IconName(int? id);
+
+        [OperationContract]
+        void SubCategory(int id);
+
+        [OperationContract]
         Menu GetMenu(int Id);
 
         [OperationContract]

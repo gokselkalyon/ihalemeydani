@@ -1,4 +1,6 @@
 ﻿using IM.BusinessLayer.Concrete;
+using IM.DataAccessLayer.Tools;
+using IM.DataLayer;
 using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.Models;
 using System;
@@ -9,26 +11,52 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class RolesController : Controller
+    public class RolesController : BaseController
     {
         // GET: Roles 
-        IhaleServiceClient db = new IhaleServiceClient();
-
+        RolesModelView rm = new RolesModelView();
         public ActionResult Index()
         {
-            var result = db.GetRoles(); 
+            var result = IhaleServiceClient.GetRoles();
             return View(result);
         }
         public ActionResult AddRole(RolesModelView roles)
         {
-            var query = (from r in db.GetClaims()
-                         select new RolesModelView()
+            var query = (from r in IhaleServiceClient.GetClaims()
+                         select new RoleModel()
                          {
                              Checked = false,
-                             Id = r.Id,
-                             Name = r.Text
+                             ClaimId = r.Id,
+                             Text = r.Text
                          }).ToList();
-            return View(query);
+            rm.roleList = query;
+            return View(rm);
+        }
+        [HttpPost]
+        public JsonResult RoleCreate(RolesModelView roles)
+        {
+            var query = IhaleServiceClient.GetRoles().ToList();
+            var roleNameControll = query.Where(f => f.Name == roles.RoleName).Any();
+            if (roleNameControll)
+            {
+                jsonResultModel.Title = "Başarısız";
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Role Ekleme Başarısız";
+                //Burda hata Mesajı olucak!
+            }
+            Role r = new Role();
+            r.Name = roles.RoleName;
+            IhaleServiceClient.AddRole(r);
+            RoleClaim rc = new RoleClaim();
+            foreach (var items in roles.roleList)
+            {
+                if (items.Checked == true)
+                {
+                    rc.ClaimId = items.ClaimId;
+                    rc.RoleId = r.Id;
+                }
+            }
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
     }
 }

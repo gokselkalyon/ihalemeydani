@@ -7,7 +7,6 @@
 
 <html>
 <head>
-
     <title>@ViewBag.Title</title>
 
     <!-- Document Meta
@@ -27,11 +26,18 @@
     <!-- Stylesheets
         ============================================= -->
     @Styles.Render("~/bundles/css")
- 
+
     @RenderSection("css", false)
 
 </head>
 <body>
+
+    <div id="loading-background">
+        <div id="loading-img">
+            <img width="100" src="~/Content/Images/Loading2.gif" />
+        </div>
+    </div>
+
     <div id="wrapper" class="wrapper clearfix">
         <header id="navbar-spy" class="header header-1">
             <div class="top-bar">
@@ -96,85 +102,7 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-right" id="header-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-left">
-                            <li class="has-dropdown active">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Anasayfa</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="home-1.html">Anasayfa 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-2.html">Anasayfa 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-3.html">Anasayfa 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- li end -->
-                            <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mağaza</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mağaza Ürünleri</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="shop-product-grid-right-sidebar.html">Submenu1</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-product-grid-left-sidebar.html">Submenu2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mağaza Kategorileri</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="shop-category-right-sidebar.html">Submenu 3</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-category-left-sidebar.html">Submenu 4</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Tekli Mağaza</a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="shop-single-right-sidebar.html">Submenu 5</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-single-left-sidebar.html">Submenu 6</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-single-fullwidth.html">Submenu 7</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">Alışveriş Sepeti</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- li end -->
-                            <li>
-                                <a href="about.html">Hakkımızda</a>
-                            </li>
-                            <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sayfalar</a>
-                            </li>
-                            <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Özellikler</a>
-                            </li>
-                            <!-- li end -->
-                            <li class="has-dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Blog</a>
-                            </li>
-                            <li class="has-dropdown pull-left">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">İletişim</a>
-                            </li>
-                            <!-- li end -->
-                        </ul>
+                        @Html.Action("Menus","Home")
 
                         <!-- Mod-->
                         <div class="module module-search pull-left">
@@ -249,11 +177,11 @@
                 <!-- /.container-fluid -->
             </nav>
         </header>
-        @* 
-        simdi ben degisiklikleri yapsam baskasındada aynı problem cıkacaktır.
-            
+        @*
+            simdi ben degisiklikleri yapsam baskasındada aynı problem cıkacaktır.
+
         *@
-            @RenderBody()
+        @RenderBody()
 
         <footer id="footer" class="footer footer-1">
             <!-- Footer Info
