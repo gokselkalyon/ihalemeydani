@@ -4,6 +4,61 @@
     ViewBag.Title = "AddRole";
     Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
 }
-
-<h2>AddRole</h2>
-
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-7 align-self-center">
+            <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Jason!</h3>
+            <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">auction</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="index.html">YayımlananAraçlar</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-5 align-self-center">
+            <div class="customize-input float-right">
+                <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+                    <option selected>Aug 19</option>
+                    <option value="1">July 19</option>
+                    <option value="2">Jun 19</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            @using (Ajax.BeginForm("RoleCreate", "Role", new AjaxOptions { HttpMethod = "POST" }, new { id = "RoleForm" }))
+            {
+                <div class="col-md-4" style="margin-left:30%;">
+                    <div class="form-group">
+                        <label for="inputName" class="control-label mb-10">Rol Adı</label>
+                        <input type="text" class="form-control" name="RoleName" id="RoleName" required="">
+                    </div>
+                </div>
+                for (int i = 0; i < Model.roleList.Count; i++)
+                {
+                    <div class="col-md-3">
+                        @Html.HiddenFor(m => m.roleList[i].ClaimId)
+                        <div style="height:60px;  margin-top:00px;">
+                            <div class="input-group" style="color:black;" id="CheckBoxStatus">
+                                @Html.CheckBoxFor(m => m.roleList[i].Checked, new { @Id = Model.roleList[i].ClaimId }) @Model.roleList[i].Text
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="form-group" style="float:right; margin-top:20px; margin-right:5%;">
+                    <a type="button" href="/Roles/index" class="btn btn-danger" style="width:100px;">Vazgeç</a> 
+                    <button type="submit" class="btn btn-success btn-anim"><i class="icon-rocket"></i><span class="btn-text">Kaydet</span></button>
+                </div>
+            }
+        </div>
+    </div>
+</div> 

@@ -13,22 +13,46 @@ namespace IM.PresentationLayer.Controllers
     {
         // GET: Roles 
         IhaleServiceClient db = new IhaleServiceClient();
-
+        RolesModelView rm = new RolesModelView();
         public ActionResult Index()
         {
-            var result = db.GetRoles(); 
+            var result = db.GetRoles();
             return View(result);
         }
         public ActionResult AddRole(RolesModelView roles)
         {
             var query = (from r in db.GetClaims()
-                         select new RolesModelView()
+                         select new RoleModel()
                          {
                              Checked = false,
-                             Id = r.Id,
-                             Name = r.Text
+                             ClaimId = r.Id,
+                             Text = r.Text
                          }).ToList();
-            return View(query);
+            rm.roleList = query;
+            return View(rm);
+        }
+        public ActionResult RoleCreate(RolesModelView roles)
+        {
+            var query = db.GetRoles().ToList();
+            var roleNameControll = query.Where(f => f.Name == roles.RoleName).Any();
+            if (roleNameControll)
+            {
+                return View();
+                //Burda hata Mesajı olucak!
+            }
+            Role r = new Role();
+            r.Name = roles.RoleName;
+            db.AddRole(r);
+            RoleClaim rc = new RoleClaim();
+            foreach (var items in roles.roleList)
+            {
+                if (items.Checked == true)
+                {
+                    rc.ClaimId = items.ClaimId;
+                    rc.RoleId = r.Id;
+                }
+            }
+            return View();
         }
     }
 }
