@@ -14,6 +14,9 @@ namespace IM.ServiceLayer
     // NOTE: In order to launch WCF Test Client for testing this service, please select IhaleService.svc or IhaleService.svc.cs at the Solution Explorer and start debugging.
     public class IhaleService :BaseService, IIhaleService
     {
+        StringBuilder sb = new StringBuilder();
+        int MainCount = 0;
+
         public string toplama(int x,int y)
         {
             return string.Format("sonuc {0}",x+y);
@@ -1279,6 +1282,45 @@ namespace IM.ServiceLayer
             }
         }
 
+        public List<Menu> SubMenu(int id)
+        {
+            return Create<Menu>().GetFilter(x => x.MenuId == id).ToList();
+        }
+
+        public StringBuilder MainMenu()
+        {
+            sb.Clear();
+            sb.Append("<ul class='nav navbar-nav navbar-left'>");
+
+            var _MainMenu = Create<Menu>().GetFilter(x => x.MenuId == 0);
+            foreach (var mainmenu in _MainMenu)
+            {
+                MainCount++;
+                sb.Append("<li class='has-dropdown'><a data-toggle='dropdown' class='dropdown-toggle' href='" + mainmenu.Name + "'>" + mainmenu.Name + "</a>");
+                SubCategory(mainmenu.Id);
+                sb.Append("</li>");
+            }
+            sb.Append("</ul>");
+            return sb;
+        }
+
+        public void SubCategory(int id)
+        {
+            int say = SubMenu(id).Count;
+            if (say > 0)
+            {
+                var _submenu = SubMenu(id);
+                sb.Append("<ul class='dropdown-menu'>");
+                foreach (Menu submenus in _submenu)
+                {
+                    sb.Append("<li><a href='" + submenus.Name + "'>" + submenus.Name + "</a>");
+                    SubCategory(submenus.Id);//Eger alt kategorinin de alt kategorisi var ise Altkategori metoduna gönderiyoruz
+                    sb.Append("</li>");
+                }
+                sb.Append("</ul>");
+            }
+        }
+
         #endregion
 
         #region natification
@@ -2330,6 +2372,8 @@ namespace IM.ServiceLayer
         {
             Create<LogStatus>().Update(entity);
         }
+
+     
     }
 
 }

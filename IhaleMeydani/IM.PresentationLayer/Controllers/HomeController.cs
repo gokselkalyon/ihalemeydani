@@ -16,6 +16,12 @@ namespace IM.PresentationLayer.Controllers
             return View();
         }
 
+        public PartialViewResult Menus()
+        {
+            TempData["Menu"] = IhaleServiceClient.MainMenu();
+            return PartialView();
+        }
+
         //Örnek firebase kodları
 
         [HttpPost]

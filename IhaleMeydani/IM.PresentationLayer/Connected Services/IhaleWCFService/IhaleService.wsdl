@@ -7,6 +7,162 @@
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserRole" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypes" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserType" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserType" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserType" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserType" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateNatification_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNatification" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateNatification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNatificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getodeme_yontemleri_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getodeme_yontemleri" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getodeme_yontemleri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Getodeme_yontemleriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetOdemeYontemi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOdemeYontemi" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetOdemeYontemi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOdemeYontemiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddOdemeYontemi_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOdemeYontemi" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddOdemeYontemi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOdemeYontemiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveOdemeYontemi_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveOdemeYontemi" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveOdemeYontemi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveOdemeYontemiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateOdemeYontemi_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOdemeYontemi" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateOdemeYontemi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOdemeYontemiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPaymentPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentPlans" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPaymentPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPaymentPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentPlan" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPaymentPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPaymentPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPaymentPlan" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPaymentPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPaymentPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemovePaymentPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePaymentPlan" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemovePaymentPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePaymentPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdatePaymentPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentPlan" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdatePaymentPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosts" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemovePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemovePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePostResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_UpdatePost_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePost" />
   </wsdl:message>
@@ -427,71 +583,95 @@
   <wsdl:message name="IIhaleService_RemoveUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  <wsdl:message name="IIhaleService_UpdateColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateColor" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  <wsdl:message name="IIhaleService_UpdateColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateColorResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserRoles_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserRoles" />
+  <wsdl:message name="IIhaleService_GetCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanies" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserRoles_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserRolesResponse" />
+  <wsdl:message name="IIhaleService_GetCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompaniesResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserRole" />
+  <wsdl:message name="IIhaleService_GetCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompany" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserRoleResponse" />
+  <wsdl:message name="IIhaleService_GetCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddUserRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddUserRole" />
+  <wsdl:message name="IIhaleService_AddCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompany" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddUserRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddUserRoleResponse" />
+  <wsdl:message name="IIhaleService_AddCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveUserRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveUserRole" />
+  <wsdl:message name="IIhaleService_RemoveCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompany" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveUserRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveUserRoleResponse" />
+  <wsdl:message name="IIhaleService_RemoveCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateUserRole_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateUserRole" />
+  <wsdl:message name="IIhaleService_UpdateCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompany" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateUserRole_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateUserRoleResponse" />
+  <wsdl:message name="IIhaleService_UpdateCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserTypes_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserTypes" />
+  <wsdl:message name="IIhaleService_GetCompanyTypies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyTypies" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserTypes_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserTypesResponse" />
+  <wsdl:message name="IIhaleService_GetCompanyTypies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyTypiesResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserType_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserType" />
+  <wsdl:message name="IIhaleService_GetCompanyType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyType" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUserType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
+  <wsdl:message name="IIhaleService_GetCompanyType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyTypeResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddUserType_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddUserType" />
+  <wsdl:message name="IIhaleService_AddCompanyType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyType" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddUserType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddUserTypeResponse" />
+  <wsdl:message name="IIhaleService_AddCompanyType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompanyTypeResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveUserType_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveUserType" />
+  <wsdl:message name="IIhaleService_RemoveCompanyType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyType" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveUserType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveUserTypeResponse" />
+  <wsdl:message name="IIhaleService_RemoveCompanyType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCompanyTypeResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateUserType_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateUserType" />
+  <wsdl:message name="IIhaleService_UpdateCompanyType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyType" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  <wsdl:message name="IIhaleService_UpdateCompanyType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountry" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountry" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCountry" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCountryResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateCountry_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateCountry" />
@@ -913,101 +1093,41 @@
   <wsdl:message name="IIhaleService_RemoveNatification_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveNatificationResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateNatification_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateNatification" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateNatification_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateNatificationResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_Getodeme_yontemleri_InputMessage">
-    <wsdl:part name="parameters" element="tns:Getodeme_yontemleri" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_Getodeme_yontemleri_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Getodeme_yontemleriResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetOdemeYontemi_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetOdemeYontemi" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetOdemeYontemi_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetOdemeYontemiResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddOdemeYontemi_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddOdemeYontemi" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddOdemeYontemi_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddOdemeYontemiResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveOdemeYontemi_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveOdemeYontemi" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveOdemeYontemi_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveOdemeYontemiResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateOdemeYontemi_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateOdemeYontemi" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateOdemeYontemi_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateOdemeYontemiResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPaymentPlans_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPaymentPlans" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPaymentPlans_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPaymentPlansResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPaymentPlan_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPaymentPlan" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPaymentPlan_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPaymentPlanResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddPaymentPlan_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddPaymentPlan" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddPaymentPlan_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddPaymentPlanResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemovePaymentPlan_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemovePaymentPlan" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemovePaymentPlan_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemovePaymentPlanResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdatePaymentPlan_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePaymentPlan" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdatePaymentPlan_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePaymentPlanResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPosts_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPosts" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPosts_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPostsResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPost_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetPost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPostResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddPost_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddPost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddPost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddPostResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemovePost_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemovePost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemovePost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemovePostResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_OutputMessage">
     <wsdl:part name="parameters" element="tns:toplamaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getuserproducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getuserproducts" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getuserproducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetuserproductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getuserproduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getuserproduct" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Getuserproduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetuserproductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Adduserproduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:Adduserproduct" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Adduserproduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdduserproductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Removeuserproduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:Removeuserproduct" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Removeuserproduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveuserproductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Updateuserproduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updateuserproduct" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_Updateuserproduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateuserproductResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_Getactionusers_InputMessage">
     <wsdl:part name="parameters" element="tns:Getactionusers" />
@@ -1098,6 +1218,66 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateLog_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogInfoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogInfoes" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogInfoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogInfoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddLogInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddLogInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveLogInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveLogInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateLogInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateLogInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLogInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogStatusAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogStatusAll" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogStatusAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogStatusAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetLogStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddLogStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLogStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddLogStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLogStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveLogStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLogStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveLogStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLogStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateLogStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLogStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateLogStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLogStatusResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetsAmountofIncrease_InputMessage">
     <wsdl:part name="parameters" element="tns:GetsAmountofIncrease" />
@@ -1423,97 +1603,111 @@
   <wsdl:message name="IIhaleService_RemoveColor_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveColorResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateColor_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateColor" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateColor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateColorResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompanies_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompanies" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompanies_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompaniesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompany_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompany" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompany_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCompany_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddCompany" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCompany_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddCompanyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCompany_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCompany" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCompany_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCompanyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCompany_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCompany" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCompany_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCompanyResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompanyTypies_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompanyTypies" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompanyTypies_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompanyTypiesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompanyType_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompanyType" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCompanyType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCompanyTypeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCompanyType_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddCompanyType" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCompanyType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddCompanyTypeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCompanyType_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCompanyType" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCompanyType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCompanyTypeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCompanyType_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCompanyType" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateCompanyType_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCompanyTypeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCountries_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCountries" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCountries_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCountry_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCountry" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetCountry_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCountryResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCountry_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddCountry" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddCountry_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddCountryResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCountry_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCountry" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveCountry_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveCountryResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUser" message="tns:IIhaleService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserResponse" message="tns:IIhaleService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserRoles" message="tns:IIhaleService_GetUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserRolesResponse" message="tns:IIhaleService_GetUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserRole" message="tns:IIhaleService_GetUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserRoleResponse" message="tns:IIhaleService_GetUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUserRole" message="tns:IIhaleService_AddUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserRoleResponse" message="tns:IIhaleService_AddUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserRole" message="tns:IIhaleService_RemoveUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserRoleResponse" message="tns:IIhaleService_RemoveUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserRole" message="tns:IIhaleService_UpdateUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserRoleResponse" message="tns:IIhaleService_UpdateUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserTypes" message="tns:IIhaleService_GetUserTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserTypesResponse" message="tns:IIhaleService_GetUserTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserType" message="tns:IIhaleService_GetUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserTypeResponse" message="tns:IIhaleService_GetUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUserType" message="tns:IIhaleService_AddUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserTypeResponse" message="tns:IIhaleService_AddUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserType" message="tns:IIhaleService_RemoveUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserTypeResponse" message="tns:IIhaleService_RemoveUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNatification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateNatification" message="tns:IIhaleService_UpdateNatification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateNatificationResponse" message="tns:IIhaleService_UpdateNatification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getodeme_yontemleri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getodeme_yontemleri" message="tns:IIhaleService_Getodeme_yontemleri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/Getodeme_yontemleriResponse" message="tns:IIhaleService_Getodeme_yontemleri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOdemeYontemi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetOdemeYontemi" message="tns:IIhaleService_GetOdemeYontemi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetOdemeYontemiResponse" message="tns:IIhaleService_GetOdemeYontemi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOdemeYontemi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddOdemeYontemi" message="tns:IIhaleService_AddOdemeYontemi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddOdemeYontemiResponse" message="tns:IIhaleService_AddOdemeYontemi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOdemeYontemi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveOdemeYontemi" message="tns:IIhaleService_RemoveOdemeYontemi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveOdemeYontemiResponse" message="tns:IIhaleService_RemoveOdemeYontemi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOdemeYontemi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateOdemeYontemi" message="tns:IIhaleService_UpdateOdemeYontemi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateOdemeYontemiResponse" message="tns:IIhaleService_UpdateOdemeYontemi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentPlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlans" message="tns:IIhaleService_GetPaymentPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlansResponse" message="tns:IIhaleService_GetPaymentPlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlan" message="tns:IIhaleService_GetPaymentPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlanResponse" message="tns:IIhaleService_GetPaymentPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPaymentPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPaymentPlan" message="tns:IIhaleService_AddPaymentPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPaymentPlanResponse" message="tns:IIhaleService_AddPaymentPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePaymentPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePaymentPlan" message="tns:IIhaleService_RemovePaymentPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePaymentPlanResponse" message="tns:IIhaleService_RemovePaymentPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePaymentPlan" message="tns:IIhaleService_UpdatePaymentPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePaymentPlanResponse" message="tns:IIhaleService_UpdatePaymentPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPosts" message="tns:IIhaleService_GetPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPostsResponse" message="tns:IIhaleService_GetPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPost" message="tns:IIhaleService_GetPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPostResponse" message="tns:IIhaleService_GetPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPost" message="tns:IIhaleService_AddPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPostResponse" message="tns:IIhaleService_AddPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePost" message="tns:IIhaleService_RemovePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePostResponse" message="tns:IIhaleService_RemovePost_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdatePost">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePost" message="tns:IIhaleService_UpdatePost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePostResponse" message="tns:IIhaleService_UpdatePost_OutputMessage" />
@@ -1794,49 +1988,65 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveUser" message="tns:IIhaleService_RemoveUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserResponse" message="tns:IIhaleService_RemoveUser_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUser" message="tns:IIhaleService_UpdateUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserResponse" message="tns:IIhaleService_UpdateUser_OutputMessage" />
+    <wsdl:operation name="UpdateColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateColor" message="tns:IIhaleService_UpdateColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateColorResponse" message="tns:IIhaleService_UpdateColor_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserRoles">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserRoles" message="tns:IIhaleService_GetUserRoles_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserRolesResponse" message="tns:IIhaleService_GetUserRoles_OutputMessage" />
+    <wsdl:operation name="GetCompanies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompanies" message="tns:IIhaleService_GetCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompaniesResponse" message="tns:IIhaleService_GetCompanies_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserRole" message="tns:IIhaleService_GetUserRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserRoleResponse" message="tns:IIhaleService_GetUserRole_OutputMessage" />
+    <wsdl:operation name="GetCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompany" message="tns:IIhaleService_GetCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyResponse" message="tns:IIhaleService_GetCompany_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddUserRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUserRole" message="tns:IIhaleService_AddUserRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserRoleResponse" message="tns:IIhaleService_AddUserRole_OutputMessage" />
+    <wsdl:operation name="AddCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCompany" message="tns:IIhaleService_AddCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCompanyResponse" message="tns:IIhaleService_AddCompany_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveUserRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserRole" message="tns:IIhaleService_RemoveUserRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserRoleResponse" message="tns:IIhaleService_RemoveUserRole_OutputMessage" />
+    <wsdl:operation name="RemoveCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompany" message="tns:IIhaleService_RemoveCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompanyResponse" message="tns:IIhaleService_RemoveCompany_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateUserRole">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserRole" message="tns:IIhaleService_UpdateUserRole_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserRoleResponse" message="tns:IIhaleService_UpdateUserRole_OutputMessage" />
+    <wsdl:operation name="UpdateCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompany" message="tns:IIhaleService_UpdateCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompanyResponse" message="tns:IIhaleService_UpdateCompany_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserTypes">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserTypes" message="tns:IIhaleService_GetUserTypes_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserTypesResponse" message="tns:IIhaleService_GetUserTypes_OutputMessage" />
+    <wsdl:operation name="GetCompanyTypies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyTypies" message="tns:IIhaleService_GetCompanyTypies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyTypiesResponse" message="tns:IIhaleService_GetCompanyTypies_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserType" message="tns:IIhaleService_GetUserType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserTypeResponse" message="tns:IIhaleService_GetUserType_OutputMessage" />
+    <wsdl:operation name="GetCompanyType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyType" message="tns:IIhaleService_GetCompanyType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyTypeResponse" message="tns:IIhaleService_GetCompanyType_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddUserType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUserType" message="tns:IIhaleService_AddUserType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserTypeResponse" message="tns:IIhaleService_AddUserType_OutputMessage" />
+    <wsdl:operation name="AddCompanyType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCompanyType" message="tns:IIhaleService_AddCompanyType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCompanyTypeResponse" message="tns:IIhaleService_AddCompanyType_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveUserType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserType" message="tns:IIhaleService_RemoveUserType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserTypeResponse" message="tns:IIhaleService_RemoveUserType_OutputMessage" />
+    <wsdl:operation name="RemoveCompanyType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompanyType" message="tns:IIhaleService_RemoveCompanyType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompanyTypeResponse" message="tns:IIhaleService_RemoveCompanyType_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateUserType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    <wsdl:operation name="UpdateCompanyType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompanyType" message="tns:IIhaleService_UpdateCompanyType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompanyTypeResponse" message="tns:IIhaleService_UpdateCompanyType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCountries" message="tns:IIhaleService_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountriesResponse" message="tns:IIhaleService_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCountry" message="tns:IIhaleService_GetCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountryResponse" message="tns:IIhaleService_GetCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCountry" message="tns:IIhaleService_AddCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCountryResponse" message="tns:IIhaleService_AddCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountry" message="tns:IIhaleService_RemoveCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountryResponse" message="tns:IIhaleService_RemoveCountry_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateCountry">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCountry" message="tns:IIhaleService_UpdateCountry_InputMessage" />
@@ -2118,69 +2328,29 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveNatification" message="tns:IIhaleService_RemoveNatification_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveNatificationResponse" message="tns:IIhaleService_RemoveNatification_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateNatification">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateNatification" message="tns:IIhaleService_UpdateNatification_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateNatificationResponse" message="tns:IIhaleService_UpdateNatification_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Getodeme_yontemleri">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getodeme_yontemleri" message="tns:IIhaleService_Getodeme_yontemleri_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/Getodeme_yontemleriResponse" message="tns:IIhaleService_Getodeme_yontemleri_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetOdemeYontemi">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetOdemeYontemi" message="tns:IIhaleService_GetOdemeYontemi_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetOdemeYontemiResponse" message="tns:IIhaleService_GetOdemeYontemi_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddOdemeYontemi">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddOdemeYontemi" message="tns:IIhaleService_AddOdemeYontemi_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddOdemeYontemiResponse" message="tns:IIhaleService_AddOdemeYontemi_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveOdemeYontemi">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveOdemeYontemi" message="tns:IIhaleService_RemoveOdemeYontemi_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveOdemeYontemiResponse" message="tns:IIhaleService_RemoveOdemeYontemi_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateOdemeYontemi">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateOdemeYontemi" message="tns:IIhaleService_UpdateOdemeYontemi_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateOdemeYontemiResponse" message="tns:IIhaleService_UpdateOdemeYontemi_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPaymentPlans">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlans" message="tns:IIhaleService_GetPaymentPlans_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlansResponse" message="tns:IIhaleService_GetPaymentPlans_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPaymentPlan">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlan" message="tns:IIhaleService_GetPaymentPlan_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPaymentPlanResponse" message="tns:IIhaleService_GetPaymentPlan_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddPaymentPlan">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPaymentPlan" message="tns:IIhaleService_AddPaymentPlan_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPaymentPlanResponse" message="tns:IIhaleService_AddPaymentPlan_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemovePaymentPlan">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePaymentPlan" message="tns:IIhaleService_RemovePaymentPlan_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePaymentPlanResponse" message="tns:IIhaleService_RemovePaymentPlan_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePaymentPlan">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePaymentPlan" message="tns:IIhaleService_UpdatePaymentPlan_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePaymentPlanResponse" message="tns:IIhaleService_UpdatePaymentPlan_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPosts">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPosts" message="tns:IIhaleService_GetPosts_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPostsResponse" message="tns:IIhaleService_GetPosts_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPost" message="tns:IIhaleService_GetPost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPostResponse" message="tns:IIhaleService_GetPost_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddPost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPost" message="tns:IIhaleService_AddPost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPostResponse" message="tns:IIhaleService_AddPost_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemovePost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemovePost" message="tns:IIhaleService_RemovePost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemovePostResponse" message="tns:IIhaleService_RemovePost_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getuserproducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getuserproducts" message="tns:IIhaleService_Getuserproducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetuserproductsResponse" message="tns:IIhaleService_Getuserproducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getuserproduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getuserproduct" message="tns:IIhaleService_Getuserproduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetuserproductResponse" message="tns:IIhaleService_Getuserproduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Adduserproduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Adduserproduct" message="tns:IIhaleService_Adduserproduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AdduserproductResponse" message="tns:IIhaleService_Adduserproduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Removeuserproduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Removeuserproduct" message="tns:IIhaleService_Removeuserproduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveuserproductResponse" message="tns:IIhaleService_Removeuserproduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updateuserproduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Updateuserproduct" message="tns:IIhaleService_Updateuserproduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateuserproductResponse" message="tns:IIhaleService_Updateuserproduct_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Getactionusers">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getactionusers" message="tns:IIhaleService_Getactionusers_InputMessage" />
@@ -2241,6 +2411,46 @@
     <wsdl:operation name="UpdateLog">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateLog" message="tns:IIhaleService_UpdateLog_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateLogResponse" message="tns:IIhaleService_UpdateLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogInfoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetLogInfoes" message="tns:IIhaleService_GetLogInfoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetLogInfoesResponse" message="tns:IIhaleService_GetLogInfoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetLogInfo" message="tns:IIhaleService_GetLogInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetLogInfoResponse" message="tns:IIhaleService_GetLogInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLogInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddLogInfo" message="tns:IIhaleService_AddLogInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddLogInfoResponse" message="tns:IIhaleService_AddLogInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLogInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveLogInfo" message="tns:IIhaleService_RemoveLogInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveLogInfoResponse" message="tns:IIhaleService_RemoveLogInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLogInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateLogInfo" message="tns:IIhaleService_UpdateLogInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateLogInfoResponse" message="tns:IIhaleService_UpdateLogInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogStatusAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetLogStatusAll" message="tns:IIhaleService_GetLogStatusAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetLogStatusAllResponse" message="tns:IIhaleService_GetLogStatusAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetLogStatus" message="tns:IIhaleService_GetLogStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetLogStatusResponse" message="tns:IIhaleService_GetLogStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLogStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddLogStatus" message="tns:IIhaleService_AddLogStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddLogStatusResponse" message="tns:IIhaleService_AddLogStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLogStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveLogStatus" message="tns:IIhaleService_RemoveLogStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveLogStatusResponse" message="tns:IIhaleService_RemoveLogStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLogStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateLogStatus" message="tns:IIhaleService_UpdateLogStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateLogStatusResponse" message="tns:IIhaleService_UpdateLogStatus_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetsAmountofIncrease">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetsAmountofIncrease" message="tns:IIhaleService_GetsAmountofIncrease_InputMessage" />
@@ -2458,69 +2668,243 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveColor" message="tns:IIhaleService_RemoveColor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveColorResponse" message="tns:IIhaleService_RemoveColor_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateColor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateColor" message="tns:IIhaleService_UpdateColor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateColorResponse" message="tns:IIhaleService_UpdateColor_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCompanies">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompanies" message="tns:IIhaleService_GetCompanies_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompaniesResponse" message="tns:IIhaleService_GetCompanies_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCompany">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompany" message="tns:IIhaleService_GetCompany_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyResponse" message="tns:IIhaleService_GetCompany_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddCompany">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCompany" message="tns:IIhaleService_AddCompany_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCompanyResponse" message="tns:IIhaleService_AddCompany_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCompany">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompany" message="tns:IIhaleService_RemoveCompany_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompanyResponse" message="tns:IIhaleService_RemoveCompany_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCompany">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompany" message="tns:IIhaleService_UpdateCompany_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompanyResponse" message="tns:IIhaleService_UpdateCompany_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCompanyTypies">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyTypies" message="tns:IIhaleService_GetCompanyTypies_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyTypiesResponse" message="tns:IIhaleService_GetCompanyTypies_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCompanyType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyType" message="tns:IIhaleService_GetCompanyType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCompanyTypeResponse" message="tns:IIhaleService_GetCompanyType_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddCompanyType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCompanyType" message="tns:IIhaleService_AddCompanyType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCompanyTypeResponse" message="tns:IIhaleService_AddCompanyType_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCompanyType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompanyType" message="tns:IIhaleService_RemoveCompanyType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCompanyTypeResponse" message="tns:IIhaleService_RemoveCompanyType_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCompanyType">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompanyType" message="tns:IIhaleService_UpdateCompanyType_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateCompanyTypeResponse" message="tns:IIhaleService_UpdateCompanyType_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCountries">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCountries" message="tns:IIhaleService_GetCountries_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountriesResponse" message="tns:IIhaleService_GetCountries_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCountry">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetCountry" message="tns:IIhaleService_GetCountry_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetCountryResponse" message="tns:IIhaleService_GetCountry_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddCountry">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddCountry" message="tns:IIhaleService_AddCountry_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddCountryResponse" message="tns:IIhaleService_AddCountry_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCountry">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountry" message="tns:IIhaleService_RemoveCountry_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveCountryResponse" message="tns:IIhaleService_RemoveCountry_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRole">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypes">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNatification">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateNatification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getodeme_yontemleri">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getodeme_yontemleri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOdemeYontemi">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetOdemeYontemi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOdemeYontemi">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddOdemeYontemi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOdemeYontemi">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveOdemeYontemi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOdemeYontemi">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateOdemeYontemi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentPlans">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPaymentPlans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentPlan">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPaymentPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPaymentPlan">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPaymentPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePaymentPlan">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemovePaymentPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentPlan">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePaymentPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosts">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemovePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdatePost">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePost" style="document" />
       <wsdl:input>
@@ -3151,8 +3535,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateUser">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUser" style="document" />
+    <wsdl:operation name="UpdateColor">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateColor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3160,8 +3544,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserRoles">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserRoles" style="document" />
+    <wsdl:operation name="GetCompanies">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompanies" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3169,8 +3553,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserRole" style="document" />
+    <wsdl:operation name="GetCompany">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompany" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3178,8 +3562,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddUserRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUserRole" style="document" />
+    <wsdl:operation name="AddCompany">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCompany" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3187,8 +3571,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveUserRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveUserRole" style="document" />
+    <wsdl:operation name="RemoveCompany">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCompany" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3196,8 +3580,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateUserRole">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserRole" style="document" />
+    <wsdl:operation name="UpdateCompany">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCompany" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3205,8 +3589,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserTypes">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserTypes" style="document" />
+    <wsdl:operation name="GetCompanyTypies">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompanyTypies" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3214,8 +3598,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserType" style="document" />
+    <wsdl:operation name="GetCompanyType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompanyType" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3223,8 +3607,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddUserType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUserType" style="document" />
+    <wsdl:operation name="AddCompanyType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCompanyType" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3232,8 +3616,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveUserType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveUserType" style="document" />
+    <wsdl:operation name="RemoveCompanyType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCompanyType" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3241,8 +3625,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateUserType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+    <wsdl:operation name="UpdateCompanyType">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCompanyType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCountry">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCountry">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCountry" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3880,143 +4300,53 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateNatification">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateNatification" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Getodeme_yontemleri">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getodeme_yontemleri" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetOdemeYontemi">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetOdemeYontemi" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddOdemeYontemi">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddOdemeYontemi" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveOdemeYontemi">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveOdemeYontemi" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateOdemeYontemi">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateOdemeYontemi" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPaymentPlans">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPaymentPlans" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPaymentPlan">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPaymentPlan" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddPaymentPlan">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPaymentPlan" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemovePaymentPlan">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemovePaymentPlan" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePaymentPlan">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdatePaymentPlan" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPosts">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPosts" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddPost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemovePost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemovePost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getuserproducts">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getuserproducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getuserproduct">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Getuserproduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Adduserproduct">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Adduserproduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Removeuserproduct">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Removeuserproduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updateuserproduct">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/Updateuserproduct" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4152,6 +4482,96 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateLog">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogInfoes">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetLogInfoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogInfo">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetLogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLogInfo">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddLogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLogInfo">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveLogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLogInfo">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateLogInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogStatusAll">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetLogStatusAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogStatus">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetLogStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLogStatus">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddLogStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLogStatus">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveLogStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLogStatus">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateLogStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4638,141 +5058,6 @@
     </wsdl:operation>
     <wsdl:operation name="RemoveColor">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveColor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateColor">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateColor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCompanies">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompanies" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCompany">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompany" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddCompany">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCompany" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCompany">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCompany" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCompany">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCompany" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCompanyTypies">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompanyTypies" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCompanyType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCompanyType" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddCompanyType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCompanyType" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCompanyType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCompanyType" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCompanyType">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateCompanyType" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCountries">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCountries" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCountry">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetCountry" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddCountry">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddCountry" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCountry">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveCountry" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
