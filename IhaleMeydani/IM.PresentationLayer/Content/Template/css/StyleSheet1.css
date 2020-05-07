@@ -110,11 +110,72 @@ a {
 }
 
 /*arama butonu bitis*/
-.Sign-in{
+.Sign-in {
 }
-.Sign-in a {
-    color: #ee964b;
-    font-size:24px;
-    text-align:right;
-    float:right;
+
+    .Sign-in a {
+        color: #ee964b;
+        font-size: 24px;
+        text-align: right;
+        float: right;
+    }
+
+.selectbox {
+    z-index: 5
+}
+
+.menu {
+    background-color: #ee964b;
+}
+
+.car-navbar ul {
+    padding: 0;
+}
+
+.car-navbar li {
+    float: left;
+    display: block;
+}
+
+
+.car-navbar a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fffffff9;
+}
+
+
+
+.car-navbar li:first-child a {
+    background-color: white;
+    color: black;
+}
+
+.car-navbar a span:hover {
+    border-top-style: solid;
+    border-top-color: #fffffff9;
+    border-top-width: 2px;
+}
+
+.car-navbar li:first-child span:hover {
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 2px;
+}
+
+.sidebar-social li {
+    float: left;
+    display: block;
+    padding-left: 10px;
+}
+
+.menu-menu {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
