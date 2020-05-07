@@ -181,156 +181,6 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.AMOUNT_OF_INCREASE.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.auction.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.bank.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarBrand.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarDetail.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarHardwareDetail.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarMake.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CarTechnicalDetail.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.city.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Claim.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Color.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.company.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.company_type.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.country.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.county.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.CURRENCY.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.discountcart.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.employee.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.E_INVOICE.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.E_invoice_type.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.FuelType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.GearType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.GeneralDesign.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Icon.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Image.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.log.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.medium.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Menu.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.natification.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.odeme_yontemi.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.payment_plan.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Post.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PRICEBOT.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Role.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.RoleClaim.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Segment.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.senaryo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.SocialMedya.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.SOLD_PRODUCT.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.submit.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.sysdiagram.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.tag.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.tag_post.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Tax_Administration.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.title.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.User.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserRole.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.private_auction.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2655,6 +2505,59 @@
     <Content Include="Views\Errors\PageError.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\AddRole.cshtml" />
+    <Content Include="Properties\DataSources\IM.DataLayer.actionuser.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.AMOUNT_OF_INCREASE.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.auction.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.bank.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.CarBrand.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.CarDetail.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.CarHardwareDetail.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.CarMake.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.CarTechnicalDetail.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.city.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Claim.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Color.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.company.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.company_type.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.country.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.county.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.CURRENCY.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.discountcart.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.employee.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.E_INVOICE.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.E_invoice_type.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.FuelType.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.GearType.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.GeneralDesign.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Icon.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Image.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Log.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.LogInfo.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.LogStatus.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.medium.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Menu.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.natification.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.odeme_yontemi.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.payment_plan.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Post.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.PRICEBOT.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.private_auction.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Role.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.RoleClaim.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Segment.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.senaryo.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.SocialMedya.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.SOLD_PRODUCT.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.submit.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.sysdiagram.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.tag.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.tag_post.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.Tax_Administration.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.title.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.User.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.userproduct.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.UserRole.datasource" />
+    <Content Include="Properties\DataSources\IM.DataLayer.UserType.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
