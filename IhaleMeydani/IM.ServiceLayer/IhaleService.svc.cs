@@ -1296,7 +1296,7 @@ namespace IM.ServiceLayer
             foreach (var mainmenu in _MainMenu)
             {
                 MainCount++;
-                sb.Append("<li class='has-dropdown'><a data-toggle='dropdown' class='dropdown-toggle' href='" + mainmenu.Name + "'>" + mainmenu.Name + "</a>");
+                sb.Append("<li class='has-dropdown'><a data-toggle='dropdown' class='dropdown-toggle' href='" + mainmenu.Name + "'><i class='fas fa-" + IconName(mainmenu.Id) + "'></i>" + mainmenu.Name + "</a>");
                 SubCategory(mainmenu.Id);
                 sb.Append("</li>");
             }
@@ -1313,12 +1313,17 @@ namespace IM.ServiceLayer
                 sb.Append("<ul class='dropdown-menu'>");
                 foreach (Menu submenus in _submenu)
                 {
-                    sb.Append("<li><a href='" + submenus.Name + "'>" + submenus.Name + "</a>");
+                    sb.Append("<li><a href='" + submenus.Name + "'><i class='fas fa-"+IconName(submenus.Id)+"'></i>" + submenus.Name + "</a>");
                     SubCategory(submenus.Id);//Eger alt kategorinin de alt kategorisi var ise Altkategori metoduna gönderiyoruz
                     sb.Append("</li>");
                 }
                 sb.Append("</ul>");
             }
+        }
+
+        public string IconName(int id)
+        {
+            return Create<Icon>().GetFilter(x => x.Id == id).Select(x => x.Name).Single();
         }
 
         #endregion
@@ -2373,7 +2378,7 @@ namespace IM.ServiceLayer
             Create<LogStatus>().Update(entity);
         }
 
-     
+      
     }
 
 }

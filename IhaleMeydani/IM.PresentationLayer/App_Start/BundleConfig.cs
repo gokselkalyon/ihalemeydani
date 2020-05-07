@@ -24,7 +24,8 @@ namespace IM.PresentationLayer
                       "~/Content/Template/autoshop/assets/css/external.css",
                       "~/Content/Template/autoshop/assets/css/bootstrap.min.css",
                       "~/Content/Template/autoshop/assets/css/style.css",
-                      "~/Content/Template/css/Main.css"
+                      "~/Content/Template/css/Main.css",
+                      "~/Content/Template/css/all.min.css"
                       ));
         }
     }

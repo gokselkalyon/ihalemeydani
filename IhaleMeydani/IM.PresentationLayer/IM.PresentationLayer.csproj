@@ -732,7 +732,7 @@
     <Content Include="Content\adminpaneltemplate\src\html\ui-toasts.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-tooltip-popover.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-typography.html" />
-    <Content Include="Content\all.min.css" />
+    <Content Include="Content\Template\css\all.min.css" />
     <Content Include="Content\Images\Loading2.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\QuickSellContent\css\bootstrap.min.css" />
@@ -2454,6 +2454,9 @@
     <Content Include="Content\Template\js\main.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert2.js" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Connected Services\IhaleWCFService\IhaleService.wsdl" />
@@ -2799,6 +2802,18 @@
     <Content Include="Content\adminpaneltemplate\src\scss\fonts\landingpage_fonts.scss" />
     <Content Include="Content\adminpaneltemplate\src\scss\icons\icons.scss" />
     <Content Include="Content\adminpaneltemplate\src\scss\style.scss" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\Template\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\Template\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\Template\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
