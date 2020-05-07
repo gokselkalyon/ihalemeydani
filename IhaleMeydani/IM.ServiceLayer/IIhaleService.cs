@@ -576,7 +576,7 @@ namespace IM.ServiceLayer
         StringBuilder MainMenu();
 
         [OperationContract]
-        string IconName(int id);
+        string IconName(int? id);
 
         [OperationContract]
         void SubCategory(int id);
