@@ -730,6 +730,7 @@
     <Content Include="Content\adminpaneltemplate\src\html\ui-tooltip-popover.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-typography.html" />
     <Content Include="Content\all.min.css" />
+    <Content Include="Content\Images\Loading2.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\QuickSellContent\css\bootstrap.min.css" />
     <Content Include="Content\QuickSellContent\js\bootstrap.min.js" />
