@@ -14,6 +14,7 @@ namespace IM.PresentationLayer.Controllers
     {
         // GET: Roles 
         RolesModelView rm = new RolesModelView();
+        IhaleServiceClient ihaleClient = new IhaleServiceClient();
         public ActionResult Index()
         {
             var result = IhaleServiceClient.GetRoles();
@@ -21,7 +22,7 @@ namespace IM.PresentationLayer.Controllers
         }
         public ActionResult AddRole(RolesModelView roles)
         {
-            var query = (from r in IhaleServiceClient.GetClaims()
+            var query = (from r in ihaleClient.GetClaims()
                          select new RoleModel()
                          {
                              Checked = false,
@@ -34,7 +35,7 @@ namespace IM.PresentationLayer.Controllers
         [HttpPost]
         public JsonResult RoleCreate(RolesModelView roles)
         {
-            var query = IhaleServiceClient.GetRoles().ToList();
+            var query = ihaleClient.GetRoles().ToList();
             var roleNameControll = query.Where(f => f.Name == roles.RoleName).Any();
             if (roleNameControll)
             {
@@ -45,7 +46,7 @@ namespace IM.PresentationLayer.Controllers
             }
             Role r = new Role();
             r.Name = roles.RoleName;
-            IhaleServiceClient.AddRole(r);
+            ihaleClient.AddRole(r);
             RoleClaim rc = new RoleClaim();
             foreach (var items in roles.roleList)
             {

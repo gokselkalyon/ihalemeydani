@@ -2612,6 +2612,7 @@
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\css\StyleSheet1.css" />
+    <Content Include="Content\Template\css\sweetalert.css" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
