@@ -2651,6 +2651,7 @@
     <Content Include="Views\Shared\_AdminPanelLayout.cshtml" />
     <Content Include="Views\Auction\UserProductsViewPage.cshtml" />
     <Content Include="Views\Errors\PageError.cshtml" />
+    <Content Include="Views\BlogPost\AdminPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

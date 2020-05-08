@@ -23,5 +23,11 @@ namespace IM.PresentationLayer.Controllers
         {
             return View();
         }
+
+        [Route("AdminPanel")]
+        public ActionResult AdminPanel()
+        {
+            return View();
+        }
     }
 }
