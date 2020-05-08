@@ -16,12 +16,15 @@ namespace IM.ServiceLayer
     // NOTE: In order to launch WCF Test Client for testing this service, please select IhaleService.svc or IhaleService.svc.cs at the Solution Explorer and start debugging.
     public class IhaleService :BaseService, IIhaleService
     {
-        public string toplama(int x,int y)
+        StringBuilder sb = new StringBuilder();
+        int MainCount = 0;
+
+        public string toplama(int x, int y)
         {
-            return string.Format("sonuc {0}",x+y);
+            return string.Format("sonuc {0}", x + y);
         }
 
-      
+
         #region Log
         public void AddLog(Log entity)
         {
@@ -1281,6 +1284,50 @@ namespace IM.ServiceLayer
             }
         }
 
+        public List<Menu> SubMenu(int id)
+        {
+            return Create<Menu>().GetFilter(x => x.MenuId == id).ToList();
+        }
+
+        public StringBuilder MainMenu()
+        {
+            sb.Clear();
+            sb.Append("<ul class='nav navbar-nav navbar-left'>");
+
+            var _MainMenu = Create<Menu>().GetFilter(x => x.MenuId == 0);
+            foreach (var mainmenu in _MainMenu)
+            {
+                MainCount++;
+                sb.Append("<li class='has-dropdown'><a data-toggle='dropdown' class='dropdown-toggle' href='" + mainmenu.Name + "'><i class='fas fa-" + IconName(mainmenu.IconId) + "'></i>" + mainmenu.Name + "</a>");
+                SubCategory(mainmenu.Id);
+                sb.Append("</li>");
+            }
+            sb.Append("</ul>");
+            return sb;
+        }
+
+        public void SubCategory(int id)
+        {
+            int say = SubMenu(id).Count;
+            if (say > 0)
+            {
+                var _submenu = SubMenu(id);
+                sb.Append("<ul class='dropdown-menu'>");
+                foreach (Menu submenus in _submenu)
+                {
+                    sb.Append("<li><a href='" + submenus.Name + "'><i class='fas fa-" + IconName(submenus.IconId) + "'></i>" + submenus.Name + "</a>");
+                    SubCategory(submenus.Id);//Eger alt kategorinin de alt kategorisi var ise Altkategori metoduna gönderiyoruz
+                    sb.Append("</li>");
+                }
+                sb.Append("</ul>");
+            }
+        }
+
+        public string IconName(int? id)
+        {
+            return Create<Icon>().GetFilter(x => x.Id == id).Select(x => x.Name).Single();
+        }
+
         #endregion
 
         #region natification
@@ -1349,7 +1396,7 @@ namespace IM.ServiceLayer
         {
             using (IDataBusinessService<odeme_yontemi> _db = InstanceFactory.GetInstance<IDataBusinessService<odeme_yontemi>>())
             {
-                 _db.Add(entity);
+                _db.Add(entity);
             }
         }
 
@@ -1357,7 +1404,7 @@ namespace IM.ServiceLayer
         {
             using (IDataBusinessService<odeme_yontemi> _db = InstanceFactory.GetInstance<IDataBusinessService<odeme_yontemi>>())
             {
-                 _db.Remove(Id);
+                _db.Remove(Id);
             }
         }
 
@@ -1365,7 +1412,7 @@ namespace IM.ServiceLayer
         {
             using (IDataBusinessService<odeme_yontemi> _db = InstanceFactory.GetInstance<IDataBusinessService<odeme_yontemi>>())
             {
-                 _db.Update(entity);
+                _db.Update(entity);
             }
         }
 
@@ -2163,7 +2210,6 @@ namespace IM.ServiceLayer
         }
         #endregion
 
-
         public List<actionuser> Getactionusers()
         {
             using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
@@ -2275,6 +2321,7 @@ namespace IM.ServiceLayer
                 _db.Remove(Id);
             }
         }
+
         public void Updateuserproduct(userproduct entity)
         {
             using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
@@ -2285,7 +2332,7 @@ namespace IM.ServiceLayer
 
         public List<LogInfo> GetLogInfoes()
         {
-           return Create<LogInfo>().GetAll();
+            return Create<LogInfo>().GetAll();
         }
 
         public LogInfo GetLogInfo(int Id)

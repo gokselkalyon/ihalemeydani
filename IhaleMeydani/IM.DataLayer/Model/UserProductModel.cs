@@ -8,6 +8,8 @@ namespace IM.DataLayer.Model
 {
     public class UserProductModel
     {
+        public int id { get; set; }
+        public int userid { get; set; }
         public string username { get; set; }
         public string email { get; set; }
         public string name { get; set; }
@@ -23,7 +25,7 @@ namespace IM.DataLayer.Model
         public int hp { get; set; }
         public string licanceplate { get; set; }
         public int mileage { get; set; }
-        public DateTime registrationdate { get; set; }
+        public DateTime? registrationdate { get; set; }
         public string vin { get; set; }
         public string colorname { get; set; }
         public string colorvalue { get; set; }

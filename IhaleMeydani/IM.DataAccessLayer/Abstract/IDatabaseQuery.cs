@@ -8,6 +8,6 @@ namespace IM.DataAccessLayer.Abstract
 {
     public interface IDataBaseQuery<T> where T:class,new()
     {
-        List<T> QueryList(string query);
+        List<T> QueryList();
     }
 }

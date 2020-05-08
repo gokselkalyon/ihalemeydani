@@ -25,6 +25,7 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void Adduserproduct(userproduct entity);
+
         [OperationContract]
         List<UserProductModel> userProductModels();
 

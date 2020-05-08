@@ -1,6 +1,5 @@
 ﻿using IM.BusinessLayer.Concrete;
 using IM.DataAccessLayer.Tools;
-using IM.DataLayer;
 using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.Models;
 using System;
