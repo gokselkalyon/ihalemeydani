@@ -13,6 +13,9 @@ namespace IM.PresentationLayer
                       "~/Content/Template/js/jquery.js",
                       "~/Content/Template/js/boostrap.js",
                       "~/Content/Template/js/sweetalert2.js",
+                      "~/Content/Template/js/jquery.validate.js",
+                      "~/Content/Template/js/jquery.validate.unobtrusive.js",
+                      "~/Content/Template/js/jquery.unobtrusive-ajax.js",
                       "~/Content/Template/autoshop/assets/js/plugins.js",
                       "~/Content/Template/autoshop/assets/js/functions.js"
                       ));
@@ -20,7 +23,9 @@ namespace IM.PresentationLayer
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                       "~/Content/Template/autoshop/assets/css/external.css",
                       "~/Content/Template/autoshop/assets/css/bootstrap.min.css",
-                      "~/Content/Template/autoshop/assets/css/style.css"
+                      "~/Content/Template/autoshop/assets/css/style.css",
+                      "~/Content/Template/css/Main.css",
+                      "~/Content/Template/css/all.min.css"
                       ));
         }
     }

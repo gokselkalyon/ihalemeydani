@@ -84,6 +84,9 @@
     <Compile Include="Claim.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClaimGroup.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Color.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
@@ -162,6 +165,7 @@
     <Compile Include="Menu.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\UserProductModel.cs" />
     <Compile Include="natification.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>

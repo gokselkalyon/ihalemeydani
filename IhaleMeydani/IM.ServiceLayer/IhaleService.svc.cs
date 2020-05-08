@@ -1,6 +1,8 @@
 ﻿using IM.BusinessLayer.Abstract;
 using IM.BusinessLayer.DependencyResolver;
+using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
+using IM.DataLayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -2161,6 +2163,7 @@ namespace IM.ServiceLayer
         }
         #endregion
 
+
         public List<actionuser> Getactionusers()
         {
             using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
@@ -2272,7 +2275,6 @@ namespace IM.ServiceLayer
                 _db.Remove(Id);
             }
         }
-
         public void Updateuserproduct(userproduct entity)
         {
             using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
@@ -2306,7 +2308,7 @@ namespace IM.ServiceLayer
             Create<LogInfo>().Update(entity);
         }
 
-        public List<LogStatus> GetLogStatus()
+        public List<LogStatus> GetLogStatusAll()
         {
             return Create<LogStatus>().GetAll();
         }
@@ -2329,6 +2331,12 @@ namespace IM.ServiceLayer
         public void UpdateLogStatus(LogStatus entity)
         {
             Create<LogStatus>().Update(entity);
+        }
+
+        public List<UserProductModel> userProductModels()
+        {
+            IDataBaseQueryService<UserProductModel> _db = InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>();
+            return _db.QueryList();
         }
     }
 

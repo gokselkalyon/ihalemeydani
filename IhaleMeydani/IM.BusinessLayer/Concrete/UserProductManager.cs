@@ -2,6 +2,7 @@
 using IM.BusinessLayer.Abstract;
 using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
+using IM.DataLayer.Model;
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,17 @@ using System.Threading.Tasks;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class UserProductManager : IDataBusinessService<userproduct>
+    public class UserProductManager : IDataBusinessService<userproduct>, IDataBaseQueryService<UserProductModel>
     {
         private IDataAccessDal<userproduct> _dataAccessDal;
         private readonly IMapper _mapper;
+        private IDataBaseQuery<UserProductModel> _query;
 
-        public UserProductManager(IDataAccessDal<userproduct> dataAccessDal, IMapper mapper)
+        public UserProductManager(IDataAccessDal<userproduct> dataAccessDal, IMapper mapper,IDataBaseQuery<UserProductModel> query)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
+            _query = query;
         }
         public void Add(userproduct entity)
         {
@@ -38,7 +41,6 @@ namespace IM.BusinessLayer.Concrete
             var bank = _mapper.Map<List<userproduct>>(_dataAccessDal.GetAll());
             return bank;
         }
-
         public IEnumerable<userproduct> GetFilter(Expression<Func<userproduct, bool>> expression)
         {
             return _dataAccessDal.GetFilter(expression);
@@ -79,6 +81,11 @@ namespace IM.BusinessLayer.Concrete
             }
 
             disposed = true;
+        }
+
+        public List<UserProductModel> QueryList()
+        {
+            return _query.QueryList("userproductview");
         }
     }
 }

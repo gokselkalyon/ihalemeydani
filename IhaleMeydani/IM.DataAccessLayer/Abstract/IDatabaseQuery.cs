@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IM.BusinessLayer.Abstract
+namespace IM.DataAccessLayer.Abstract
 {
-    public interface IDatabaseQuery
+    public interface IDataBaseQuery<T> where T:class,new()
     {
-        List<TT> QueryList<TT>(string query);
+        List<T> QueryList(string query);
     }
 }

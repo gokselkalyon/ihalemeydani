@@ -119,6 +119,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IDataBaseQueryService.cs" />
     <Compile Include="Abstract\IDataBusinessService.cs" />
     <Compile Include="Concrete\AmountOfIncreaseManager.cs" />
     <Compile Include="Concrete\AuctionManager.cs" />

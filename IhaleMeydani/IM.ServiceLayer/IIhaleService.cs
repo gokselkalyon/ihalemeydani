@@ -1,4 +1,5 @@
 ﻿using IM.DataLayer;
+using IM.DataLayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void Adduserproduct(userproduct entity);
+        [OperationContract]
+        List<UserProductModel> userProductModels();
 
         [OperationContract]
         void Removeuserproduct(int Id);
@@ -104,7 +107,7 @@ namespace IM.ServiceLayer
 
         #region LogStatus
         [OperationContract]
-        List<LogStatus> GetLogStatus();
+        List<LogStatus> GetLogStatusAll();
 
         [OperationContract]
         LogStatus GetLogStatus(int Id);
@@ -568,6 +571,18 @@ namespace IM.ServiceLayer
         #region Menu
         [OperationContract]
         List<Menu> GetMenus();
+
+        [OperationContract]
+        List<Menu> SubMenu(int id);
+
+        [OperationContract]
+        StringBuilder MainMenu();
+
+        [OperationContract]
+        string IconName(int? id);
+
+        [OperationContract]
+        void SubCategory(int id);
 
         [OperationContract]
         Menu GetMenu(int Id);

@@ -16,5 +16,6 @@ namespace IM.DataLayer
     {
         public int Id { get; set; }
         public string Text { get; set; }
+        public Nullable<int> ClaimGroupId { get; set; }
     }
 }
