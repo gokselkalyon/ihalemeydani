@@ -4146,67 +4146,79 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarBrandNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarMakeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EngineDisplacementField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string brandField;
+        private string FuelTypeNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string carmakeField;
+        private string GearTypeNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string colornameField;
+        private int HPField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string colorvalueField;
+        private string HardwareDetailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string emailField;
+        private string LicancePlateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string fueltypeField;
+        private int MileageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string geartypeField;
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string hardwaredetailField;
+        private string SegmentNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int hpField;
+        private string SurnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VINField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> date_of_createdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> date_of_updatedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string licanceplateField;
+        private bool isdeletedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int mileageField;
+        private bool published_onField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
+        private System.Nullable<System.DateTime> registrationDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> registrationdateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string segmentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string surnameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int useridField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string usernameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string versionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string vinField;
+        private System.Nullable<int> user_idField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -4215,6 +4227,84 @@ namespace IM.PresentationLayer.IhaleWCFService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarBrandName {
+            get {
+                return this.CarBrandNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarBrandNameField, value) != true)) {
+                    this.CarBrandNameField = value;
+                    this.RaisePropertyChanged("CarBrandName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarMakeName {
+            get {
+                return this.CarMakeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarMakeNameField, value) != true)) {
+                    this.CarMakeNameField = value;
+                    this.RaisePropertyChanged("CarMakeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarVersion {
+            get {
+                return this.CarVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarVersionField, value) != true)) {
+                    this.CarVersionField = value;
+                    this.RaisePropertyChanged("CarVersion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorName {
+            get {
+                return this.ColorNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorNameField, value) != true)) {
+                    this.ColorNameField = value;
+                    this.RaisePropertyChanged("ColorName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorValue {
+            get {
+                return this.ColorValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorValueField, value) != true)) {
+                    this.ColorValueField = value;
+                    this.RaisePropertyChanged("ColorValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
             }
         }
         
@@ -4232,118 +4322,170 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string brand {
+        public string FuelTypeName {
             get {
-                return this.brandField;
+                return this.FuelTypeNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.brandField, value) != true)) {
-                    this.brandField = value;
-                    this.RaisePropertyChanged("brand");
+                if ((object.ReferenceEquals(this.FuelTypeNameField, value) != true)) {
+                    this.FuelTypeNameField = value;
+                    this.RaisePropertyChanged("FuelTypeName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string carmake {
+        public string GearTypeName {
             get {
-                return this.carmakeField;
+                return this.GearTypeNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.carmakeField, value) != true)) {
-                    this.carmakeField = value;
-                    this.RaisePropertyChanged("carmake");
+                if ((object.ReferenceEquals(this.GearTypeNameField, value) != true)) {
+                    this.GearTypeNameField = value;
+                    this.RaisePropertyChanged("GearTypeName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string colorname {
+        public int HP {
             get {
-                return this.colornameField;
+                return this.HPField;
             }
             set {
-                if ((object.ReferenceEquals(this.colornameField, value) != true)) {
-                    this.colornameField = value;
-                    this.RaisePropertyChanged("colorname");
+                if ((this.HPField.Equals(value) != true)) {
+                    this.HPField = value;
+                    this.RaisePropertyChanged("HP");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string colorvalue {
+        public string HardwareDetail {
             get {
-                return this.colorvalueField;
+                return this.HardwareDetailField;
             }
             set {
-                if ((object.ReferenceEquals(this.colorvalueField, value) != true)) {
-                    this.colorvalueField = value;
-                    this.RaisePropertyChanged("colorvalue");
+                if ((object.ReferenceEquals(this.HardwareDetailField, value) != true)) {
+                    this.HardwareDetailField = value;
+                    this.RaisePropertyChanged("HardwareDetail");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email {
+        public string LicancePlate {
             get {
-                return this.emailField;
+                return this.LicancePlateField;
             }
             set {
-                if ((object.ReferenceEquals(this.emailField, value) != true)) {
-                    this.emailField = value;
-                    this.RaisePropertyChanged("email");
+                if ((object.ReferenceEquals(this.LicancePlateField, value) != true)) {
+                    this.LicancePlateField = value;
+                    this.RaisePropertyChanged("LicancePlate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string fueltype {
+        public int Mileage {
             get {
-                return this.fueltypeField;
+                return this.MileageField;
             }
             set {
-                if ((object.ReferenceEquals(this.fueltypeField, value) != true)) {
-                    this.fueltypeField = value;
-                    this.RaisePropertyChanged("fueltype");
+                if ((this.MileageField.Equals(value) != true)) {
+                    this.MileageField = value;
+                    this.RaisePropertyChanged("Mileage");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string geartype {
+        public string Name {
             get {
-                return this.geartypeField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.geartypeField, value) != true)) {
-                    this.geartypeField = value;
-                    this.RaisePropertyChanged("geartype");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string hardwaredetail {
+        public string SegmentName {
             get {
-                return this.hardwaredetailField;
+                return this.SegmentNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.hardwaredetailField, value) != true)) {
-                    this.hardwaredetailField = value;
-                    this.RaisePropertyChanged("hardwaredetail");
+                if ((object.ReferenceEquals(this.SegmentNameField, value) != true)) {
+                    this.SegmentNameField = value;
+                    this.RaisePropertyChanged("SegmentName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int hp {
+        public string Surname {
             get {
-                return this.hpField;
+                return this.SurnameField;
             }
             set {
-                if ((this.hpField.Equals(value) != true)) {
-                    this.hpField = value;
-                    this.RaisePropertyChanged("hp");
+                if ((object.ReferenceEquals(this.SurnameField, value) != true)) {
+                    this.SurnameField = value;
+                    this.RaisePropertyChanged("Surname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VIN {
+            get {
+                return this.VINField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VINField, value) != true)) {
+                    this.VINField = value;
+                    this.RaisePropertyChanged("VIN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date_of_created {
+            get {
+                return this.date_of_createdField;
+            }
+            set {
+                if ((this.date_of_createdField.Equals(value) != true)) {
+                    this.date_of_createdField = value;
+                    this.RaisePropertyChanged("date_of_created");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date_of_updated {
+            get {
+                return this.date_of_updatedField;
+            }
+            set {
+                if ((this.date_of_updatedField.Equals(value) != true)) {
+                    this.date_of_updatedField = value;
+                    this.RaisePropertyChanged("date_of_updated");
                 }
             }
         }
@@ -4362,131 +4504,53 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string licanceplate {
+        public bool isdeleted {
             get {
-                return this.licanceplateField;
+                return this.isdeletedField;
             }
             set {
-                if ((object.ReferenceEquals(this.licanceplateField, value) != true)) {
-                    this.licanceplateField = value;
-                    this.RaisePropertyChanged("licanceplate");
+                if ((this.isdeletedField.Equals(value) != true)) {
+                    this.isdeletedField = value;
+                    this.RaisePropertyChanged("isdeleted");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int mileage {
+        public bool published_on {
             get {
-                return this.mileageField;
+                return this.published_onField;
             }
             set {
-                if ((this.mileageField.Equals(value) != true)) {
-                    this.mileageField = value;
-                    this.RaisePropertyChanged("mileage");
+                if ((this.published_onField.Equals(value) != true)) {
+                    this.published_onField = value;
+                    this.RaisePropertyChanged("published_on");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
+        public System.Nullable<System.DateTime> registrationDate {
             get {
-                return this.nameField;
+                return this.registrationDateField;
             }
             set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
+                if ((this.registrationDateField.Equals(value) != true)) {
+                    this.registrationDateField = value;
+                    this.RaisePropertyChanged("registrationDate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> registrationdate {
+        public System.Nullable<int> user_id {
             get {
-                return this.registrationdateField;
+                return this.user_idField;
             }
             set {
-                if ((this.registrationdateField.Equals(value) != true)) {
-                    this.registrationdateField = value;
-                    this.RaisePropertyChanged("registrationdate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string segment {
-            get {
-                return this.segmentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.segmentField, value) != true)) {
-                    this.segmentField = value;
-                    this.RaisePropertyChanged("segment");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string surname {
-            get {
-                return this.surnameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.surnameField, value) != true)) {
-                    this.surnameField = value;
-                    this.RaisePropertyChanged("surname");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int userid {
-            get {
-                return this.useridField;
-            }
-            set {
-                if ((this.useridField.Equals(value) != true)) {
-                    this.useridField = value;
-                    this.RaisePropertyChanged("userid");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string username {
-            get {
-                return this.usernameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.usernameField, value) != true)) {
-                    this.usernameField = value;
-                    this.RaisePropertyChanged("username");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string version {
-            get {
-                return this.versionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.versionField, value) != true)) {
-                    this.versionField = value;
-                    this.RaisePropertyChanged("version");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string vin {
-            get {
-                return this.vinField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.vinField, value) != true)) {
-                    this.vinField = value;
-                    this.RaisePropertyChanged("vin");
+                if ((this.user_idField.Equals(value) != true)) {
+                    this.user_idField = value;
+                    this.RaisePropertyChanged("user_id");
                 }
             }
         }
