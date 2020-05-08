@@ -17,7 +17,7 @@ namespace IM.PresentationLayer.Controllers
         IhaleServiceClient ihaleClient = new IhaleServiceClient();
         public ActionResult Index()
         {
-            var result = IhaleServiceClient.GetRoles();
+            var result = ihaleClient.GetRoles();
             return View(result);
         }
         public ActionResult AddRole(RolesModelView roles)
@@ -48,15 +48,29 @@ namespace IM.PresentationLayer.Controllers
             r.Name = roles.RoleName;
             ihaleClient.AddRole(r);
             RoleClaim rc = new RoleClaim();
-            foreach (var items in roles.roleList)
+            if (roles.roleList != null)
             {
-                if (items.Checked == true)
+                foreach (var items in roles.roleList)
                 {
-                    rc.ClaimId = items.ClaimId;
-                    rc.RoleId = r.Id;
+                    if (items.Checked == true)
+                    {
+                        rc.ClaimId = items.ClaimId;
+                        rc.RoleId = r.Id;
+                    }
                 }
             }
+            else
+            {
+                jsonResultModel.Title = "Başarısız";
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Role Ekleme Başarısız";
+            }
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        } 
+        [HttpPost]
+        public JsonResult RoleDelete(int id)
+        {  
+            return Json(1, JsonRequestBehavior.AllowGet);
         }
     }
 }
