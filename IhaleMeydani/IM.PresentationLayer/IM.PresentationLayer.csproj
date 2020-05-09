@@ -2686,9 +2686,7 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\AddRole.cshtml" />
     <Content Include="Views\Home\Menus.cshtml" />
-    <Content Include="Views\BlogPost\AdminPanel.cshtml" />
-    <Content Include="Views\BlogPost\AdminPanelCreate.cshtml" />
-    <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
+    <Content Include="Views\Roles\UpdateRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -57,13 +57,13 @@
                         <input type="text" class="form-control" name="RoleName" id="RoleName" required="">
                     </div>
                 </div>
-                foreach (var item in Model.roleList)
+                for (int i = 0; i < Model.roleList.Count; i++)
                 {
                     <div class="col-md-3">
-                        @Html.Hidden("ClaimId", item.ClaimId);
+                        @Html.HiddenFor(m => m.roleList[i].ClaimId)
                         <div style="height:60px;  margin-top:00px;">
                             <div class="input-group" style="color:black;" id="CheckBoxStatus">
-                                @Html.CheckBox("Checked", item.Checked, new { @Id = item.ClaimId }) @item.Text
+                                @Html.CheckBoxFor(m => m.roleList[i].Checked, new { @Id = Model.roleList[i].ClaimId }) @Model.roleList[i].Text
                             </div>
                         </div>
                     </div>
@@ -76,4 +76,4 @@
             }
         </div>
     </div>
-</div> 
+</div>
