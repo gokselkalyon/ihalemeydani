@@ -1,15 +1,15 @@
 ﻿
-@using IM.PresentationLayer.Models;
+@*@using IM.PresentationLayer.Models;
 @model BlogModelView
+
+@foreach (var item in Model.Posts)
+{
+    @item.Post_date;
+}*@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_BlogLayoutPage.cshtml";
 }
-@foreach (var item in Model.Posts)
-{
-    @item.Post_date;
-}
-
 <div class="container">
     <div id="blog" class="row">
         <div class="col-md-10 blogShort">

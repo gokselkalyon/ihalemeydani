@@ -2607,6 +2607,7 @@
     <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
+    <Content Include="Content\Template\css\Loginn.css" />
     <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\BlogPage.css" />
     <Content Include="Content\Template\css\boostrap.css" />
@@ -2616,12 +2617,14 @@
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\css\StyleSheet1.css" />
+    <Content Include="Content\Template\css\sweetalert.css" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Content\Template\js\main.js" />
     <Content Include="Content\Template\js\popper.js" />
+    <Content Include="Content\Template\js\sweetalert.min.js" />
     <Content Include="Content\Template\js\sweetalert2.js" />
     <Content Include="Content\Template\webfonts\fa-brands-400.svg" />
     <Content Include="Content\Template\webfonts\fa-regular-400.svg" />
@@ -2687,6 +2690,7 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\AddRole.cshtml" />
     <Content Include="Views\Home\Menus.cshtml" />
+    <Content Include="Views\Roles\UpdateRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

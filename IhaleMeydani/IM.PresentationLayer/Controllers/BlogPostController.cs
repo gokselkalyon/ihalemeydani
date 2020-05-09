@@ -24,8 +24,18 @@ namespace IM.PresentationLayer.Controllers
             return View();
         }
 
-        [Route("AdminPanel")]
+        [Route("BlogAdmin")]
         public ActionResult AdminPanel()
+        {
+            return View();
+        }
+        [Route("BlogAdminCreate")]
+        public ActionResult AdminPanelCreate()
+        {
+            return View();
+        }
+        [Route("BlogAdminUpdate")]
+        public ActionResult AdminPanelUpdate()
         {
             return View();
         }

@@ -11,6 +11,7 @@ namespace IM.PresentationLayer.Models
     {
         public List<RoleModel> roleList { get; set; }
         public string RoleName { get; set; }
+        public int Id { get; set; }
 
     }
     public class RoleModel
