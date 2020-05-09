@@ -36,13 +36,15 @@ namespace IM.ServiceLayer
         void Updateuserproduct(userproduct entity);
         #endregion
 
-
         #region auctionuser
         [OperationContract]
         List<actionuser> Getactionusers();
 
         [OperationContract]
         actionuser Getactionuser(int Id);
+
+        [OperationContract]
+        List<ActionUserModel> actionUserModels();
 
         [OperationContract]
         void Addactionuser(actionuser entity);

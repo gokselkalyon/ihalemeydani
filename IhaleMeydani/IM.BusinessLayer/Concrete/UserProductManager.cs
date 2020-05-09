@@ -38,8 +38,8 @@ namespace IM.BusinessLayer.Concrete
 
         public List<userproduct> GetAll()
         {
-            var bank = _mapper.Map<List<userproduct>>(_dataAccessDal.GetAll());
-            return bank;
+           return _dataAccessDal.GetAll();
+             
         }
         public IEnumerable<userproduct> GetFilter(Expression<Func<userproduct, bool>> expression)
         {

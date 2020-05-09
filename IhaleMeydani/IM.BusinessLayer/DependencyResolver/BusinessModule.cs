@@ -128,10 +128,10 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataAccessDal<userproduct>>().To<UserProductConcrete>().InSingletonScope();
 
             Bind<IDataBaseQueryService<UserProductModel>>().To<UserProductManager>().InSingletonScope();
+            Bind<IDataBaseQueryService<ActionUserModel>>().To<AuctionUserManager>().InSingletonScope();
 
             Bind<IDataBaseQuery<UserProductModel>>().To<UserProductConcrete>().InSingletonScope();
-
-
+            Bind<IDataBaseQuery<ActionUserModel>>().To<AuctionUserConcrete>().InSingletonScope();
 
             Bind<ITCService>().To<TCServiceAdapter>().InSingletonScope();
         }

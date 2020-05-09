@@ -2,6 +2,7 @@
 using IM.BusinessLayer.Abstract;
 using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
+using IM.DataLayer.Model;
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,16 @@ using System.Threading.Tasks;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class AuctionUserManager : IDataBusinessService<actionuser>
+    public class AuctionUserManager : IDataBusinessService<actionuser>, IDataBaseQueryService<ActionUserModel>
     {
         private IDataAccessDal<actionuser> _dataAccessDal;
         private readonly IMapper _mapper;
-
-        public AuctionUserManager(IDataAccessDal<actionuser> dataAccessDal, IMapper mapper)
+        private IDataBaseQuery<ActionUserModel> _query;
+        public AuctionUserManager(IDataAccessDal<actionuser> dataAccessDal, IMapper mapper, IDataBaseQuery<ActionUserModel> query)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
+            _query = query;
         }
         public void Add(actionuser entity)
         {
@@ -79,6 +81,11 @@ namespace IM.BusinessLayer.Concrete
             }
 
             disposed = true;
+        }
+
+        public List<ActionUserModel> QueryList()
+        {
+            return _query.QueryList();
         }
     }
 }

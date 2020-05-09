@@ -2210,6 +2210,7 @@ namespace IM.ServiceLayer
         }
         #endregion
 
+        #region actionusers
         public List<actionuser> Getactionusers()
         {
             using (IDataBusinessService<actionuser> _db = InstanceFactory.GetInstance<IDataBusinessService<actionuser>>())
@@ -2249,7 +2250,9 @@ namespace IM.ServiceLayer
                 _db.Update(entity);
             }
         }
+        #endregion
 
+        #region privateauctions
         public List<private_auction> Getprivateauctions()
         {
             using (IDataBusinessService<private_auction> _db = InstanceFactory.GetInstance<IDataBusinessService<private_auction>>())
@@ -2289,7 +2292,9 @@ namespace IM.ServiceLayer
                 _db.Update(entity);
             }
         }
+        #endregion
 
+        #region userproducts
         public List<userproduct> Getuserproducts()
         {
             using (IDataBusinessService<userproduct> _db = InstanceFactory.GetInstance<IDataBusinessService<userproduct>>())
@@ -2329,7 +2334,9 @@ namespace IM.ServiceLayer
                 _db.Update(entity);
             }
         }
+        #endregion
 
+        #region loginfoes
         public List<LogInfo> GetLogInfoes()
         {
             return Create<LogInfo>().GetAll();
@@ -2354,7 +2361,9 @@ namespace IM.ServiceLayer
         {
             Create<LogInfo>().Update(entity);
         }
+        #endregion
 
+        #region logstatus
         public List<LogStatus> GetLogStatusAll()
         {
             return Create<LogStatus>().GetAll();
@@ -2379,12 +2388,19 @@ namespace IM.ServiceLayer
         {
             Create<LogStatus>().Update(entity);
         }
+        #endregion
 
+        #region Viewmodel
         public List<UserProductModel> userProductModels()
         {
-            IDataBaseQueryService<UserProductModel> _db = InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>();
-            return _db.QueryList();
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>().QueryList();
         }
+
+        public List<ActionUserModel> actionUserModels()
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<ActionUserModel>>().QueryList();
+        }
+        #endregion
     }
 
 }
