@@ -4676,6 +4676,147 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ActionUserModel", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model")]
+    [System.SerializableAttribute()]
+    public partial class ActionUserModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DATE_OF_UPDATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsDeletedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int USER_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int auction_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal bidField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DATE_OF_UPDATE {
+            get {
+                return this.DATE_OF_UPDATEField;
+            }
+            set {
+                if ((this.DATE_OF_UPDATEField.Equals(value) != true)) {
+                    this.DATE_OF_UPDATEField = value;
+                    this.RaisePropertyChanged("DATE_OF_UPDATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsDeleted {
+            get {
+                return this.IsDeletedField;
+            }
+            set {
+                if ((this.IsDeletedField.Equals(value) != true)) {
+                    this.IsDeletedField = value;
+                    this.RaisePropertyChanged("IsDeleted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int USER_ID {
+            get {
+                return this.USER_IDField;
+            }
+            set {
+                if ((this.USER_IDField.Equals(value) != true)) {
+                    this.USER_IDField = value;
+                    this.RaisePropertyChanged("USER_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int auction_id {
+            get {
+                return this.auction_idField;
+            }
+            set {
+                if ((this.auction_idField.Equals(value) != true)) {
+                    this.auction_idField = value;
+                    this.RaisePropertyChanged("auction_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal bid {
+            get {
+                return this.bidField;
+            }
+            set {
+                if ((this.bidField.Equals(value) != true)) {
+                    this.bidField = value;
+                    this.RaisePropertyChanged("bid");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="private_auction", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
     public partial class private_auction : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -6236,6 +6377,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IhaleWCFService.IIhaleService")]
     public interface IIhaleService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveTitle", ReplyAction="http://tempuri.org/IIhaleService/RemoveTitleResponse")]
+        void RemoveTitle(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveTitle", ReplyAction="http://tempuri.org/IIhaleService/RemoveTitleResponse")]
+        System.Threading.Tasks.Task RemoveTitleAsync(int Id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateTitle", ReplyAction="http://tempuri.org/IIhaleService/UpdateTitleResponse")]
         void UpdateTitle(IM.PresentationLayer.IhaleWCFService.title entity);
         
@@ -6331,6 +6478,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateUserType", ReplyAction="http://tempuri.org/IIhaleService/UpdateUserTypeResponse")]
         System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveMenu", ReplyAction="http://tempuri.org/IIhaleService/RemoveMenuResponse")]
+        void RemoveMenu(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveMenu", ReplyAction="http://tempuri.org/IIhaleService/RemoveMenuResponse")]
+        System.Threading.Tasks.Task RemoveMenuAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateMenu", ReplyAction="http://tempuri.org/IIhaleService/UpdateMenuResponse")]
         void UpdateMenu(IM.PresentationLayer.IhaleWCFService.Menu entity);
@@ -6836,11 +6989,11 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddTitle", ReplyAction="http://tempuri.org/IIhaleService/AddTitleResponse")]
         System.Threading.Tasks.Task AddTitleAsync(IM.PresentationLayer.IhaleWCFService.title entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveTitle", ReplyAction="http://tempuri.org/IIhaleService/RemoveTitleResponse")]
-        void RemoveTitle(int Id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddColor", ReplyAction="http://tempuri.org/IIhaleService/AddColorResponse")]
+        void AddColor(IM.PresentationLayer.IhaleWCFService.Color entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveTitle", ReplyAction="http://tempuri.org/IIhaleService/RemoveTitleResponse")]
-        System.Threading.Tasks.Task RemoveTitleAsync(int Id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddColor", ReplyAction="http://tempuri.org/IIhaleService/AddColorResponse")]
+        System.Threading.Tasks.Task AddColorAsync(IM.PresentationLayer.IhaleWCFService.Color entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveColor", ReplyAction="http://tempuri.org/IIhaleService/RemoveColorResponse")]
         void RemoveColor(int Id);
@@ -7346,12 +7499,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddMenu", ReplyAction="http://tempuri.org/IIhaleService/AddMenuResponse")]
         System.Threading.Tasks.Task AddMenuAsync(IM.PresentationLayer.IhaleWCFService.Menu entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveMenu", ReplyAction="http://tempuri.org/IIhaleService/RemoveMenuResponse")]
-        void RemoveMenu(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveMenu", ReplyAction="http://tempuri.org/IIhaleService/RemoveMenuResponse")]
-        System.Threading.Tasks.Task RemoveMenuAsync(int Id);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/toplama", ReplyAction="http://tempuri.org/IIhaleService/toplamaResponse")]
         string toplama(int x, int y);
         
@@ -7405,6 +7552,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Getactionuser", ReplyAction="http://tempuri.org/IIhaleService/GetactionuserResponse")]
         System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.actionuser> GetactionuserAsync(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/actionUserModels", ReplyAction="http://tempuri.org/IIhaleService/actionUserModelsResponse")]
+        System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.ActionUserModel> actionUserModels();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/actionUserModels", ReplyAction="http://tempuri.org/IIhaleService/actionUserModelsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.ActionUserModel>> actionUserModelsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Addactionuser", ReplyAction="http://tempuri.org/IIhaleService/AddactionuserResponse")]
         void Addactionuser(IM.PresentationLayer.IhaleWCFService.actionuser entity);
@@ -7855,12 +8008,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetColor", ReplyAction="http://tempuri.org/IIhaleService/GetColorResponse")]
         System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Color> GetColorAsync(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddColor", ReplyAction="http://tempuri.org/IIhaleService/AddColorResponse")]
-        void AddColor(IM.PresentationLayer.IhaleWCFService.Color entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddColor", ReplyAction="http://tempuri.org/IIhaleService/AddColorResponse")]
-        System.Threading.Tasks.Task AddColorAsync(IM.PresentationLayer.IhaleWCFService.Color entity);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -7888,6 +8035,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public IhaleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void RemoveTitle(int Id) {
+            base.Channel.RemoveTitle(Id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveTitleAsync(int Id) {
+            return base.Channel.RemoveTitleAsync(Id);
         }
         
         public void UpdateTitle(IM.PresentationLayer.IhaleWCFService.title entity) {
@@ -8016,6 +8171,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity) {
             return base.Channel.UpdateUserTypeAsync(entity);
+        }
+        
+        public void RemoveMenu(int Id) {
+            base.Channel.RemoveMenu(Id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveMenuAsync(int Id) {
+            return base.Channel.RemoveMenuAsync(Id);
         }
         
         public void UpdateMenu(IM.PresentationLayer.IhaleWCFService.Menu entity) {
@@ -8690,12 +8853,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.AddTitleAsync(entity);
         }
         
-        public void RemoveTitle(int Id) {
-            base.Channel.RemoveTitle(Id);
+        public void AddColor(IM.PresentationLayer.IhaleWCFService.Color entity) {
+            base.Channel.AddColor(entity);
         }
         
-        public System.Threading.Tasks.Task RemoveTitleAsync(int Id) {
-            return base.Channel.RemoveTitleAsync(Id);
+        public System.Threading.Tasks.Task AddColorAsync(IM.PresentationLayer.IhaleWCFService.Color entity) {
+            return base.Channel.AddColorAsync(entity);
         }
         
         public void RemoveColor(int Id) {
@@ -9370,14 +9533,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.AddMenuAsync(entity);
         }
         
-        public void RemoveMenu(int Id) {
-            base.Channel.RemoveMenu(Id);
-        }
-        
-        public System.Threading.Tasks.Task RemoveMenuAsync(int Id) {
-            return base.Channel.RemoveMenuAsync(Id);
-        }
-        
         public string toplama(int x, int y) {
             return base.Channel.toplama(x, y);
         }
@@ -9448,6 +9603,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.actionuser> GetactionuserAsync(int Id) {
             return base.Channel.GetactionuserAsync(Id);
+        }
+        
+        public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.ActionUserModel> actionUserModels() {
+            return base.Channel.actionUserModels();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.ActionUserModel>> actionUserModelsAsync() {
+            return base.Channel.actionUserModelsAsync();
         }
         
         public void Addactionuser(IM.PresentationLayer.IhaleWCFService.actionuser entity) {
@@ -10048,14 +10211,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Color> GetColorAsync(int Id) {
             return base.Channel.GetColorAsync(Id);
-        }
-        
-        public void AddColor(IM.PresentationLayer.IhaleWCFService.Color entity) {
-            base.Channel.AddColor(entity);
-        }
-        
-        public System.Threading.Tasks.Task AddColorAsync(IM.PresentationLayer.IhaleWCFService.Color entity) {
-            return base.Channel.AddColorAsync(entity);
         }
     }
 }

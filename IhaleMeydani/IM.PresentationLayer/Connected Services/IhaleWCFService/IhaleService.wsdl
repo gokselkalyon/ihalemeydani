@@ -9,6 +9,12 @@
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_RemoveTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTitle" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTitleResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateTitle_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTitle" />
   </wsdl:message>
@@ -104,6 +110,12 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMenu" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMenuResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateMenu_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateMenu" />
@@ -609,11 +621,11 @@
   <wsdl:message name="IIhaleService_AddTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddTitleResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveTitle_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveTitle" />
+  <wsdl:message name="IIhaleService_AddColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddColor" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveTitle_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveTitleResponse" />
+  <wsdl:message name="IIhaleService_AddColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddColorResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_RemoveColor_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveColor" />
@@ -1119,12 +1131,6 @@
   <wsdl:message name="IIhaleService_AddMenu_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddMenuResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveMenu_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveMenu" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveMenu_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveMenuResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
@@ -1178,6 +1184,12 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_Getactionuser_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetactionuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_actionUserModels_InputMessage">
+    <wsdl:part name="parameters" element="tns:actionUserModels" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_actionUserModels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actionUserModelsResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_Addactionuser_InputMessage">
     <wsdl:part name="parameters" element="tns:Addactionuser" />
@@ -1629,13 +1641,11 @@
   <wsdl:message name="IIhaleService_GetColor_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetColorResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddColor_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddColor" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddColor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddColorResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="RemoveTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveTitle" message="tns:IIhaleService_RemoveTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveTitleResponse" message="tns:IIhaleService_RemoveTitle_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateTitle">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTitle" message="tns:IIhaleService_UpdateTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTitleResponse" message="tns:IIhaleService_UpdateTitle_OutputMessage" />
@@ -1699,6 +1709,10 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveMenu" message="tns:IIhaleService_RemoveMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveMenuResponse" message="tns:IIhaleService_RemoveMenu_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateMenu">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMenu" message="tns:IIhaleService_UpdateMenu_InputMessage" />
@@ -2036,9 +2050,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddTitle" message="tns:IIhaleService_AddTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddTitleResponse" message="tns:IIhaleService_AddTitle_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveTitle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveTitle" message="tns:IIhaleService_RemoveTitle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveTitleResponse" message="tns:IIhaleService_RemoveTitle_OutputMessage" />
+    <wsdl:operation name="AddColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddColor" message="tns:IIhaleService_AddColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddColorResponse" message="tns:IIhaleService_AddColor_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveColor">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveColor" message="tns:IIhaleService_RemoveColor_InputMessage" />
@@ -2376,10 +2390,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddMenu" message="tns:IIhaleService_AddMenu_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddMenuResponse" message="tns:IIhaleService_AddMenu_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveMenu">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveMenu" message="tns:IIhaleService_RemoveMenu_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveMenuResponse" message="tns:IIhaleService_RemoveMenu_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
@@ -2415,6 +2425,10 @@
     <wsdl:operation name="Getactionuser">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getactionuser" message="tns:IIhaleService_Getactionuser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetactionuserResponse" message="tns:IIhaleService_Getactionuser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actionUserModels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/actionUserModels" message="tns:IIhaleService_actionUserModels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/actionUserModelsResponse" message="tns:IIhaleService_actionUserModels_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Addactionuser">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Addactionuser" message="tns:IIhaleService_Addactionuser_InputMessage" />
@@ -2716,13 +2730,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetColor" message="tns:IIhaleService_GetColor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetColorResponse" message="tns:IIhaleService_GetColor_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddColor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddColor" message="tns:IIhaleService_AddColor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddColorResponse" message="tns:IIhaleService_AddColor_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RemoveTitle">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateTitle">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateTitle" style="document" />
       <wsdl:input>
@@ -2860,6 +2879,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMenu">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveMenu" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3623,8 +3651,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveTitle">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveTitle" style="document" />
+    <wsdl:operation name="AddColor">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddColor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4388,15 +4416,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveMenu">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveMenu" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
       <wsdl:input>
@@ -4471,6 +4490,15 @@
     </wsdl:operation>
     <wsdl:operation name="Getactionuser">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/Getactionuser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actionUserModels">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/actionUserModels" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -5146,15 +5174,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetColor">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetColor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddColor">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddColor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

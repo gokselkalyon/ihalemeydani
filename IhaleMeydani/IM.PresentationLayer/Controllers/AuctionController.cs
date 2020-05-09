@@ -11,10 +11,14 @@ namespace IM.PresentationLayer.Controllers
     public class AuctionController : Controller
     {
         AuctionModelView mv = new AuctionModelView();
-        [Route("auction/index")]
-        public ActionResult Index()
+        [Route("auction/index/{auctionid}")]
+        public ActionResult Index(int auctionid)
         {
-            
+            if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
+                return RedirectToRoute("default");
+
+            mv.productModel = new IhaleServiceClient().userProductModels().Where(x => x.id == 1).FirstOrDefault();
+            AuctionModelView.auctionid = auctionid;
             return View(mv);
         }
 
@@ -22,34 +26,13 @@ namespace IM.PresentationLayer.Controllers
         [Route("auction/userproductdashboard")]
         public ActionResult UserProductsViewPage()
         {
-            //SafeExecutor(() =>Console.WriteLine("goksel"));
-
+           
             IhaleServiceClient db = new IhaleServiceClient();
             mv.userProductModels = db.userProductModels().Where(x=>x.user_id == 1).ToList();
-
+            mv.carpublished = db.userProductModels().Where(x => x.user_id == 1 && x.published_on == true).Count();
 
             return View(mv);
         }
-        //public void SafeExecutor(Action action)
-        //{
-        //    SafeExecutor(() => { action(); return 0; });
-        //}
-
-
-        //private T SafeExecutor<T>(Func<T> action)
-        //{
-        //    try
-        //    {
-        //        return action();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // common stuff
-        //    }
-
-        //    return default(T);
-        //}
-
 
 
         // GET: Auction/Create

@@ -9,9 +9,14 @@ namespace IM.PresentationLayer.Models
     public class AuctionModelView
     {
         /*
-            hangi actiona kim ne kadar yatırmış olduğuna bakmak için
+            hangi auctiona kim ne kadar yatırmış olduğuna bakmak için
         */
-        public List<actionuser> actionusers { get; set; }
+        public List<ActionUserModel> actionusers { get; set; }
+
+        /*
+            girilen actionın satılan araç bilgileri 
+             */
+        public UserProductModel productModel { get; set; }
         /*
          kullanıcıların hangi açıkartımalara kayıtlı olduğunu bulmak için
             yukardaki ikisinin farkı actionusers fiyat vereceğinden tablo sürekli tekrarlanıcak ve veri fazla olacak
@@ -32,5 +37,9 @@ namespace IM.PresentationLayer.Models
         public List<E_INVOICE> einvoices { get; set; }
 
         public List<UserProductModel> userProductModels { get; set; }
+
+        public int carpublished { get; set; }
+
+        public static int auctionid { get; set; }
     }
 }
