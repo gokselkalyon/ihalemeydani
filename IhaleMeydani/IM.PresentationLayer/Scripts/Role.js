@@ -17,15 +17,17 @@
                 if (isConfirm) {
                     debugger;
                     $.ajax({ 
-                        url: '/Roles/RoleDelete/' + id,
+                        url: '/Roles/RoleDelete/',
+                        data: { "id": id },
                         type: "POST",
+                        dataType: 'json',
                         success: function (result) { 
                             if (result == 1) {
                                 deleteTr.remove(); 
-                                alert("Başarılı");
                             }
                             else {
-                                alert("İşlem sırasında hata oluştu");
+
+                                swal("Başarısız!", "silme İşlemi Gerçekleşmedi!");
                             }
                         }
                     });
