@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
-using IM.DataLayer;
 using IM.PresentationLayer.IhaleWCFService;
 using Microsoft.AspNet.SignalR;
 

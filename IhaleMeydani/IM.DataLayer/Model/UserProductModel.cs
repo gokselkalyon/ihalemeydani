@@ -8,25 +8,31 @@ namespace IM.DataLayer.Model
 {
     public class UserProductModel
     {
-        public string username { get; set; }
-        public string email { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public string hardwaredetail { get; set; }
-        public string carmake { get; set; }
-        public string brand { get; set; }
-        public string version { get; set; }
-        public string geartype { get; set; }
-        public string fueltype { get; set; }
-        public string segment { get; set; }
+        public int id { get; set; }
+        public Nullable<int> user_id { get; set; }
+        public bool published_on { get; set; }
+        public bool isdeleted { get; set; }
+        public DateTime? date_of_created { get; set; }
+        public DateTime? date_of_updated { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string HardwareDetail { get; set; }
+        public string CarMakeName { get; set; }
+        public string CarBrandName { get; set; }
+        public string CarVersion { get; set; }
+        public string GearTypeName { get; set; }
+        public string FuelTypeName { get; set; }
+        public string SegmentName { get; set; }
         public int EngineDisplacement { get; set; }
-        public int hp { get; set; }
-        public string licanceplate { get; set; }
-        public int mileage { get; set; }
-        public DateTime registrationdate { get; set; }
-        public string vin { get; set; }
-        public string colorname { get; set; }
-        public string colorvalue { get; set; }
+        public int HP { get; set; }
+        public string LicancePlate { get; set; }
+        public int Mileage { get; set; }
+        public DateTime? registrationDate { get; set; }
+        public string VIN { get; set; }
+        public string ColorName { get; set; }
+        public string ColorValue { get; set; }
 
     }
 }

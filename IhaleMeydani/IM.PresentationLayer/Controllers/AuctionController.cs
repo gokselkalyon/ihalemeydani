@@ -1,4 +1,5 @@
-﻿using IM.PresentationLayer.Models;
+﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,8 @@ namespace IM.PresentationLayer.Controllers
         {
             //SafeExecutor(() =>Console.WriteLine("goksel"));
 
-
-
+            IhaleServiceClient db = new IhaleServiceClient();
+            mv.userProductModels = db.userProductModels().Where(x=>x.user_id == 1).ToList();
 
 
             return View(mv);

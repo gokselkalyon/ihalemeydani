@@ -85,7 +85,7 @@ namespace IM.BusinessLayer.Concrete
 
         public List<UserProductModel> QueryList()
         {
-            return _query.QueryList("userproductview");
+            return _query.QueryList();
         }
     }
 }

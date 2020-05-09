@@ -5,9 +5,34 @@
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" />
-      <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
+      <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Text" />
+      <xsd:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_UpdateTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTitle" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_RemoveUser_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveUser" />
   </wsdl:message>
@@ -79,6 +104,30 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMenu" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetNatifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNatifications" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetNatifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNatificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetNatification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNatification" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetNatification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNatificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddNatification_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNatification" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddNatification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNatificationResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_RemoveNatification_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveNatification" />
@@ -566,30 +615,6 @@
   <wsdl:message name="IIhaleService_RemoveTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveTitleResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateTitle_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateTitle" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateTitle_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateTitleResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUsers_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUsers" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUsers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUser" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddUser" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddUserResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_RemoveColor_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveColor" />
   </wsdl:message>
@@ -1058,6 +1083,30 @@
   <wsdl:message name="IIhaleService_GetMenus_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMenusResponse" />
   </wsdl:message>
+  <wsdl:message name="IIhaleService_SubMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubMenu" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_SubMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_MainMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:MainMenu" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_MainMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MainMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_IconName_InputMessage">
+    <wsdl:part name="parameters" element="tns:IconName" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_IconName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IconNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_SubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubCategory" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_SubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubCategoryResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetMenu_InputMessage">
     <wsdl:part name="parameters" element="tns:GetMenu" />
   </wsdl:message>
@@ -1075,30 +1124,6 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_RemoveMenu_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveMenuResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateMenu_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateMenu" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateMenu_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateMenuResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetNatifications_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNatifications" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetNatifications_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNatificationsResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetNatification_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNatification" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetNatification_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNatificationResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddNatification_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddNatification" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddNatification_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddNatificationResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
@@ -1611,6 +1636,22 @@
     <wsdl:part name="parameters" element="tns:AddColorResponse" />
   </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="UpdateTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTitle" message="tns:IIhaleService_UpdateTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTitleResponse" message="tns:IIhaleService_UpdateTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUsers" message="tns:IIhaleService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUsersResponse" message="tns:IIhaleService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUser" message="tns:IIhaleService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserResponse" message="tns:IIhaleService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUser" message="tns:IIhaleService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserResponse" message="tns:IIhaleService_AddUser_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="RemoveUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveUser" message="tns:IIhaleService_RemoveUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveUserResponse" message="tns:IIhaleService_RemoveUser_OutputMessage" />
@@ -1658,6 +1699,22 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMenu" message="tns:IIhaleService_UpdateMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateMenuResponse" message="tns:IIhaleService_UpdateMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNatifications">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetNatifications" message="tns:IIhaleService_GetNatifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetNatificationsResponse" message="tns:IIhaleService_GetNatifications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNatification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetNatification" message="tns:IIhaleService_GetNatification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetNatificationResponse" message="tns:IIhaleService_GetNatification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNatification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddNatification" message="tns:IIhaleService_AddNatification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddNatificationResponse" message="tns:IIhaleService_AddNatification_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveNatification">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveNatification" message="tns:IIhaleService_RemoveNatification_InputMessage" />
@@ -1983,22 +2040,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveTitle" message="tns:IIhaleService_RemoveTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveTitleResponse" message="tns:IIhaleService_RemoveTitle_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateTitle">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTitle" message="tns:IIhaleService_UpdateTitle_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTitleResponse" message="tns:IIhaleService_UpdateTitle_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUsers" message="tns:IIhaleService_GetUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUsersResponse" message="tns:IIhaleService_GetUsers_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUser" message="tns:IIhaleService_GetUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserResponse" message="tns:IIhaleService_GetUser_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUser" message="tns:IIhaleService_AddUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserResponse" message="tns:IIhaleService_AddUser_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="RemoveColor">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveColor" message="tns:IIhaleService_RemoveColor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveColorResponse" message="tns:IIhaleService_RemoveColor_OutputMessage" />
@@ -2311,6 +2352,22 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetMenus" message="tns:IIhaleService_GetMenus_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetMenusResponse" message="tns:IIhaleService_GetMenus_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="SubMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/SubMenu" message="tns:IIhaleService_SubMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/SubMenuResponse" message="tns:IIhaleService_SubMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MainMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/MainMenu" message="tns:IIhaleService_MainMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/MainMenuResponse" message="tns:IIhaleService_MainMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IconName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/IconName" message="tns:IIhaleService_IconName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/IconNameResponse" message="tns:IIhaleService_IconName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/SubCategory" message="tns:IIhaleService_SubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/SubCategoryResponse" message="tns:IIhaleService_SubCategory_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetMenu">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetMenu" message="tns:IIhaleService_GetMenu_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetMenuResponse" message="tns:IIhaleService_GetMenu_OutputMessage" />
@@ -2322,22 +2379,6 @@
     <wsdl:operation name="RemoveMenu">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveMenu" message="tns:IIhaleService_RemoveMenu_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveMenuResponse" message="tns:IIhaleService_RemoveMenu_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateMenu">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMenu" message="tns:IIhaleService_UpdateMenu_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateMenuResponse" message="tns:IIhaleService_UpdateMenu_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetNatifications">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetNatifications" message="tns:IIhaleService_GetNatifications_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetNatificationsResponse" message="tns:IIhaleService_GetNatifications_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetNatification">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetNatification" message="tns:IIhaleService_GetNatification_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetNatificationResponse" message="tns:IIhaleService_GetNatification_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddNatification">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddNatification" message="tns:IIhaleService_AddNatification_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddNatificationResponse" message="tns:IIhaleService_AddNatification_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
@@ -2682,6 +2723,42 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateTitle">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="RemoveUser">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveUser" style="document" />
       <wsdl:input>
@@ -2783,6 +2860,42 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMenu">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNatifications">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetNatifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNatification">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetNatification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNatification">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddNatification" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3519,42 +3632,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateTitle">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateTitle" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetUsers">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUsers" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetUser">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUser" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddUser">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUser" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="RemoveColor">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveColor" style="document" />
       <wsdl:input>
@@ -4257,6 +4334,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SubMenu">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/SubMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MainMenu">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/MainMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IconName">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/IconName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubCategory">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/SubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetMenu">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetMenu" style="document" />
       <wsdl:input>
@@ -4277,42 +4390,6 @@
     </wsdl:operation>
     <wsdl:operation name="RemoveMenu">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveMenu" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateMenu">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateMenu" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetNatifications">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetNatifications" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetNatification">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetNatification" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddNatification">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddNatification" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

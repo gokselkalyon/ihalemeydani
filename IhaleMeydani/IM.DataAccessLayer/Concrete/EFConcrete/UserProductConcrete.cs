@@ -34,9 +34,9 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
             return DB.userproducts.Where(expression);
         }
 
-        public List<UserProductModel> QueryList(string query)
+        public List<UserProductModel> QueryList()
         {
-            return DB.Database.SqlQuery<UserProductModel>(query).ToList();
+            return DB.Database.SqlQuery<UserProductModel>("select * from userproductviews").ToList();
         }
 
         public void Remove(int id)

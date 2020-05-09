@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" />
-  <xs:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
+  <xs:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Text" />
+  <xs:import schemaLocation="http://localhost:62786/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
+  <xs:element name="UpdateTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q1:title" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUsersResult" nillable="true" type="q2:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserResult" nillable="true" type="q3:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q4:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="RemoveUser">
     <xs:complexType>
       <xs:sequence>
@@ -17,7 +68,7 @@
   <xs:element name="UpdateUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q1:User" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q5:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -34,7 +85,7 @@
   <xs:element name="GetUserRolesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRolesResult" nillable="true" type="q2:ArrayOfUserRole" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRolesResult" nillable="true" type="q6:ArrayOfUserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,14 +99,14 @@
   <xs:element name="GetUserRoleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRoleResult" nillable="true" type="q3:UserRole" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserRoleResult" nillable="true" type="q7:UserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddUserRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q4:UserRole" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q8:UserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -79,7 +130,7 @@
   <xs:element name="UpdateUserRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q5:UserRole" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q9:UserRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -96,7 +147,7 @@
   <xs:element name="GetUserTypesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypesResult" nillable="true" type="q6:ArrayOfUserType" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypesResult" nillable="true" type="q10:ArrayOfUserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -110,14 +161,14 @@
   <xs:element name="GetUserTypeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypeResult" nillable="true" type="q7:UserType" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserTypeResult" nillable="true" type="q11:UserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddUserType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q8:UserType" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q12:UserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -141,11 +192,61 @@
   <xs:element name="UpdateUserType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q9:UserType" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q13:UserType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q14:Menu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMenuResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatifications">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatificationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationsResult" nillable="true" type="q15:ArrayOfnatification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNatificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationResult" nillable="true" type="q16:natification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNatification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q17:natification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNatificationResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -165,7 +266,7 @@
   <xs:element name="UpdateNatification">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q10:natification" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q18:natification" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -182,7 +283,7 @@
   <xs:element name="Getodeme_yontemleriResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="Getodeme_yontemleriResult" nillable="true" type="q11:ArrayOfodeme_yontemi" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="Getodeme_yontemleriResult" nillable="true" type="q19:ArrayOfodeme_yontemi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -196,14 +297,14 @@
   <xs:element name="GetOdemeYontemiResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetOdemeYontemiResult" nillable="true" type="q12:odeme_yontemi" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetOdemeYontemiResult" nillable="true" type="q20:odeme_yontemi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddOdemeYontemi">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q13:odeme_yontemi" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q21:odeme_yontemi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -227,7 +328,7 @@
   <xs:element name="UpdateOdemeYontemi">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q14:odeme_yontemi" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q22:odeme_yontemi" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -244,7 +345,7 @@
   <xs:element name="GetPaymentPlansResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlansResult" nillable="true" type="q15:ArrayOfpayment_plan" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlansResult" nillable="true" type="q23:ArrayOfpayment_plan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -258,14 +359,14 @@
   <xs:element name="GetPaymentPlanResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlanResult" nillable="true" type="q16:payment_plan" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPaymentPlanResult" nillable="true" type="q24:payment_plan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddPaymentPlan">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q17:payment_plan" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q25:payment_plan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -289,7 +390,7 @@
   <xs:element name="UpdatePaymentPlan">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q18:payment_plan" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q26:payment_plan" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -306,7 +407,7 @@
   <xs:element name="GetPostsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostsResult" nillable="true" type="q19:ArrayOfPost" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostsResult" nillable="true" type="q27:ArrayOfPost" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -320,14 +421,14 @@
   <xs:element name="GetPostResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostResult" nillable="true" type="q20:Post" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPostResult" nillable="true" type="q28:Post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddPost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q21:Post" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q29:Post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -351,7 +452,7 @@
   <xs:element name="UpdatePost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q22:Post" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q30:Post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -368,7 +469,7 @@
   <xs:element name="GetPricebotsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotsResult" nillable="true" type="q23:ArrayOfPRICEBOT" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotsResult" nillable="true" type="q31:ArrayOfPRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -382,14 +483,14 @@
   <xs:element name="GetPricebotResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotResult" nillable="true" type="q24:PRICEBOT" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetPricebotResult" nillable="true" type="q32:PRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddPricebot">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q25:PRICEBOT" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q33:PRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -413,7 +514,7 @@
   <xs:element name="UpdatePricebot">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q26:PRICEBOT" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q34:PRICEBOT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -430,7 +531,7 @@
   <xs:element name="GetRolesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRolesResult" nillable="true" type="q27:ArrayOfRole" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRolesResult" nillable="true" type="q35:ArrayOfRole" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -444,14 +545,14 @@
   <xs:element name="GetRoleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleResult" nillable="true" type="q28:Role" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleResult" nillable="true" type="q36:Role" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q29:Role" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q37:Role" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -475,7 +576,7 @@
   <xs:element name="UpdateRole">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q30:Role" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q38:Role" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -492,7 +593,7 @@
   <xs:element name="GetRoleClaimsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimsResult" nillable="true" type="q31:ArrayOfRoleClaim" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimsResult" nillable="true" type="q39:ArrayOfRoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -506,14 +607,14 @@
   <xs:element name="GetRoleClaimResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimResult" nillable="true" type="q32:RoleClaim" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetRoleClaimResult" nillable="true" type="q40:RoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddRoleClaim">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q33:RoleClaim" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q41:RoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -537,7 +638,7 @@
   <xs:element name="UpdateRoleClaim">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q34:RoleClaim" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q42:RoleClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -554,7 +655,7 @@
   <xs:element name="GetSegmentsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentsResult" nillable="true" type="q35:ArrayOfSegment" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentsResult" nillable="true" type="q43:ArrayOfSegment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -568,14 +669,14 @@
   <xs:element name="GetSegmentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentResult" nillable="true" type="q36:Segment" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSegmentResult" nillable="true" type="q44:Segment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSegment">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q37:Segment" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q45:Segment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -599,7 +700,7 @@
   <xs:element name="UpdateSegment">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q38:Segment" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q46:Segment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -616,7 +717,7 @@
   <xs:element name="GetSenariosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenariosResult" nillable="true" type="q39:ArrayOfsenaryo" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenariosResult" nillable="true" type="q47:ArrayOfsenaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -630,14 +731,14 @@
   <xs:element name="GetSenarioResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenarioResult" nillable="true" type="q40:senaryo" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSenarioResult" nillable="true" type="q48:senaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSenario">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q41:senaryo" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q49:senaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -661,7 +762,7 @@
   <xs:element name="UpdateSenario">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q42:senaryo" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q50:senaryo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -678,7 +779,7 @@
   <xs:element name="GetSocialMediasResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediasResult" nillable="true" type="q43:ArrayOfSocialMedya" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediasResult" nillable="true" type="q51:ArrayOfSocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -692,14 +793,14 @@
   <xs:element name="GetSocialMediaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediaResult" nillable="true" type="q44:SocialMedya" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSocialMediaResult" nillable="true" type="q52:SocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSocialMedia">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q45:SocialMedya" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q53:SocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -723,7 +824,7 @@
   <xs:element name="UpdateSocialMedia">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q46:SocialMedya" />
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q54:SocialMedya" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -740,7 +841,7 @@
   <xs:element name="GetSoldProductsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductsResult" nillable="true" type="q47:ArrayOfSOLD_PRODUCT" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductsResult" nillable="true" type="q55:ArrayOfSOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -754,14 +855,14 @@
   <xs:element name="GetSoldProductResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductResult" nillable="true" type="q48:SOLD_PRODUCT" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSoldProductResult" nillable="true" type="q56:SOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSoldProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q49:SOLD_PRODUCT" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q57:SOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -785,7 +886,7 @@
   <xs:element name="UpdateSoldProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q50:SOLD_PRODUCT" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q58:SOLD_PRODUCT" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -802,7 +903,7 @@
   <xs:element name="GetSubmitsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitsResult" nillable="true" type="q51:ArrayOfsubmit" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitsResult" nillable="true" type="q59:ArrayOfsubmit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -816,14 +917,14 @@
   <xs:element name="GetSubmitResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitResult" nillable="true" type="q52:submit" />
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSubmitResult" nillable="true" type="q60:submit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSubmit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q53:submit" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q61:submit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -847,7 +948,7 @@
   <xs:element name="UpdateSubmit">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q54:submit" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q62:submit" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -864,7 +965,7 @@
   <xs:element name="GetSysdiagramsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramsResult" nillable="true" type="q55:ArrayOfsysdiagram" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramsResult" nillable="true" type="q63:ArrayOfsysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -878,14 +979,14 @@
   <xs:element name="GetSysdiagramResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramResult" nillable="true" type="q56:sysdiagram" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetSysdiagramResult" nillable="true" type="q64:sysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddSysdiagram">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q57:sysdiagram" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q65:sysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -909,7 +1010,7 @@
   <xs:element name="UpdateSysdiagram">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q58:sysdiagram" />
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q66:sysdiagram" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -926,7 +1027,7 @@
   <xs:element name="GetTagsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagsResult" nillable="true" type="q59:ArrayOftag" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagsResult" nillable="true" type="q67:ArrayOftag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -940,14 +1041,14 @@
   <xs:element name="GetTagResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagResult" nillable="true" type="q60:tag" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagResult" nillable="true" type="q68:tag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddTag">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q61:tag" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q69:tag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -971,7 +1072,7 @@
   <xs:element name="UpdateTag">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q62:tag" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q70:tag" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -988,7 +1089,7 @@
   <xs:element name="GetTagPostsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostsResult" nillable="true" type="q63:ArrayOftag_post" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostsResult" nillable="true" type="q71:ArrayOftag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1002,14 +1103,14 @@
   <xs:element name="GetTagPostResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostResult" nillable="true" type="q64:tag_post" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTagPostResult" nillable="true" type="q72:tag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddTagPost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q65:tag_post" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q73:tag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1033,7 +1134,7 @@
   <xs:element name="UpdateTagPost">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q66:tag_post" />
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q74:tag_post" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1050,7 +1151,7 @@
   <xs:element name="GetTax_AdministrationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationsResult" nillable="true" type="q67:ArrayOfTax_Administration" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationsResult" nillable="true" type="q75:ArrayOfTax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1064,14 +1165,14 @@
   <xs:element name="GetTax_AdministrationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationResult" nillable="true" type="q68:Tax_Administration" />
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTax_AdministrationResult" nillable="true" type="q76:Tax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddTax_Administration">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q69:Tax_Administration" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q77:Tax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1095,7 +1196,7 @@
   <xs:element name="UpdateTax_Administration">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q70:Tax_Administration" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q78:Tax_Administration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1112,7 +1213,7 @@
   <xs:element name="GetTitlesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitlesResult" nillable="true" type="q71:ArrayOftitle" />
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitlesResult" nillable="true" type="q79:ArrayOftitle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1126,14 +1227,14 @@
   <xs:element name="GetTitleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitleResult" nillable="true" type="q72:title" />
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetTitleResult" nillable="true" type="q80:title" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddTitle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q73:title" />
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q81:title" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1154,56 +1255,6 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateTitle">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q74:title" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateTitleResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUsers">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUsersResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUsersResult" nillable="true" type="q75:ArrayOfUser" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetUserResult" nillable="true" type="q76:User" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q77:User" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddUserResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="RemoveColor">
     <xs:complexType>
       <xs:sequence>
@@ -1219,7 +1270,7 @@
   <xs:element name="UpdateColor">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q78:Color" />
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q82:Color" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1236,7 +1287,7 @@
   <xs:element name="GetCompaniesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompaniesResult" nillable="true" type="q79:ArrayOfcompany" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompaniesResult" nillable="true" type="q83:ArrayOfcompany" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1250,14 +1301,14 @@
   <xs:element name="GetCompanyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyResult" nillable="true" type="q80:company" />
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyResult" nillable="true" type="q84:company" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCompany">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q81:company" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q85:company" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1281,7 +1332,7 @@
   <xs:element name="UpdateCompany">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q82:company" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q86:company" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1298,7 +1349,7 @@
   <xs:element name="GetCompanyTypiesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypiesResult" nillable="true" type="q83:ArrayOfcompany_type" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypiesResult" nillable="true" type="q87:ArrayOfcompany_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1312,14 +1363,14 @@
   <xs:element name="GetCompanyTypeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypeResult" nillable="true" type="q84:company_type" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCompanyTypeResult" nillable="true" type="q88:company_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCompanyType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q85:company_type" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q89:company_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1343,7 +1394,7 @@
   <xs:element name="UpdateCompanyType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q86:company_type" />
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q90:company_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1360,7 +1411,7 @@
   <xs:element name="GetCountriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountriesResult" nillable="true" type="q87:ArrayOfcountry" />
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountriesResult" nillable="true" type="q91:ArrayOfcountry" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1374,14 +1425,14 @@
   <xs:element name="GetCountryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountryResult" nillable="true" type="q88:country" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountryResult" nillable="true" type="q92:country" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCountry">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q89:country" />
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q93:country" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1405,7 +1456,7 @@
   <xs:element name="UpdateCountry">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q90:country" />
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q94:country" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1422,7 +1473,7 @@
   <xs:element name="GetCountiesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountiesResult" nillable="true" type="q91:ArrayOfcounty" />
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountiesResult" nillable="true" type="q95:ArrayOfcounty" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1436,14 +1487,14 @@
   <xs:element name="GetCountyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountyResult" nillable="true" type="q92:county" />
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCountyResult" nillable="true" type="q96:county" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCounty">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q93:county" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q97:county" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1467,7 +1518,7 @@
   <xs:element name="UpdateCounty">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q94:county" />
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q98:county" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1484,7 +1535,7 @@
   <xs:element name="GetCurrenciesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrenciesResult" nillable="true" type="q95:ArrayOfCURRENCY" />
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrenciesResult" nillable="true" type="q99:ArrayOfCURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1498,14 +1549,14 @@
   <xs:element name="GetCurrencyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrencyResult" nillable="true" type="q96:CURRENCY" />
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCurrencyResult" nillable="true" type="q100:CURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCurrency">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q97:CURRENCY" />
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q101:CURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1529,7 +1580,7 @@
   <xs:element name="UpdateCurrency">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q98:CURRENCY" />
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q102:CURRENCY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1546,7 +1597,7 @@
   <xs:element name="GetDiscountcartsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartsResult" nillable="true" type="q99:ArrayOfdiscountcart" />
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartsResult" nillable="true" type="q103:ArrayOfdiscountcart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1560,14 +1611,14 @@
   <xs:element name="GetDiscountcartResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartResult" nillable="true" type="q100:discountcart" />
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetDiscountcartResult" nillable="true" type="q104:discountcart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddDiscountcart">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q101:discountcart" />
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q105:discountcart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1591,7 +1642,7 @@
   <xs:element name="UpdateDiscountcart">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q102:discountcart" />
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q106:discountcart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1608,7 +1659,7 @@
   <xs:element name="GetE_InvoicesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoicesResult" nillable="true" type="q103:ArrayOfE_INVOICE" />
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoicesResult" nillable="true" type="q107:ArrayOfE_INVOICE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1622,14 +1673,14 @@
   <xs:element name="GetE_InvoiceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoiceResult" nillable="true" type="q104:E_INVOICE" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_InvoiceResult" nillable="true" type="q108:E_INVOICE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddE_Invoice">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q105:E_INVOICE" />
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q109:E_INVOICE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1653,7 +1704,7 @@
   <xs:element name="UpdateE_Invoice">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q106:E_INVOICE" />
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q110:E_INVOICE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1670,7 +1721,7 @@
   <xs:element name="GetE_invoice_typesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typesResult" nillable="true" type="q107:ArrayOfE_invoice_type" />
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typesResult" nillable="true" type="q111:ArrayOfE_invoice_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1684,14 +1735,14 @@
   <xs:element name="GetE_invoice_typeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typeResult" nillable="true" type="q108:E_invoice_type" />
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetE_invoice_typeResult" nillable="true" type="q112:E_invoice_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddE_invoice_type">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q109:E_invoice_type" />
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q113:E_invoice_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1715,7 +1766,7 @@
   <xs:element name="UpdateE_invoice_type">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q110:E_invoice_type" />
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q114:E_invoice_type" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1732,7 +1783,7 @@
   <xs:element name="GetEmployeesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q111:ArrayOfemployee" />
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q115:ArrayOfemployee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1746,14 +1797,14 @@
   <xs:element name="GetEmployeeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeeResult" nillable="true" type="q112:employee" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetEmployeeResult" nillable="true" type="q116:employee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddEmployee">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q113:employee" />
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q117:employee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1777,7 +1828,7 @@
   <xs:element name="UpdateEmployee">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q114:employee" />
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q118:employee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1794,7 +1845,7 @@
   <xs:element name="GetFuelTypesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypesResult" nillable="true" type="q115:ArrayOfFuelType" />
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypesResult" nillable="true" type="q119:ArrayOfFuelType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1808,14 +1859,14 @@
   <xs:element name="GetFuelTypeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypeResult" nillable="true" type="q116:FuelType" />
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetFuelTypeResult" nillable="true" type="q120:FuelType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddFuelType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q117:FuelType" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q121:FuelType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1839,7 +1890,7 @@
   <xs:element name="UpdateFuelType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q118:FuelType" />
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q122:FuelType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1856,7 +1907,7 @@
   <xs:element name="GetGearTypesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypesResult" nillable="true" type="q119:ArrayOfGearType" />
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypesResult" nillable="true" type="q123:ArrayOfGearType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1870,14 +1921,14 @@
   <xs:element name="GetGearTypeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypeResult" nillable="true" type="q120:GearType" />
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGearTypeResult" nillable="true" type="q124:GearType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddGearType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q121:GearType" />
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q125:GearType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1901,7 +1952,7 @@
   <xs:element name="UpdateGearType">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q122:GearType" />
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q126:GearType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1918,7 +1969,7 @@
   <xs:element name="GetGeneralDesignesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignesResult" nillable="true" type="q123:ArrayOfGeneralDesign" />
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignesResult" nillable="true" type="q127:ArrayOfGeneralDesign" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1932,14 +1983,14 @@
   <xs:element name="GetGeneralDesignResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignResult" nillable="true" type="q124:GeneralDesign" />
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetGeneralDesignResult" nillable="true" type="q128:GeneralDesign" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddGeneralDesign">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q125:GeneralDesign" />
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q129:GeneralDesign" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1963,7 +2014,7 @@
   <xs:element name="UpdateGeneralDesign">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q126:GeneralDesign" />
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q130:GeneralDesign" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1980,7 +2031,7 @@
   <xs:element name="GetIconsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconsResult" nillable="true" type="q127:ArrayOfIcon" />
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconsResult" nillable="true" type="q131:ArrayOfIcon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1994,14 +2045,14 @@
   <xs:element name="GetIconResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconResult" nillable="true" type="q128:Icon" />
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetIconResult" nillable="true" type="q132:Icon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddIcon">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q129:Icon" />
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q133:Icon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2025,7 +2076,7 @@
   <xs:element name="UpdateIcon">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q130:Icon" />
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q134:Icon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2042,7 +2093,7 @@
   <xs:element name="GetImagesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImagesResult" nillable="true" type="q131:ArrayOfImage" />
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImagesResult" nillable="true" type="q135:ArrayOfImage" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2056,14 +2107,14 @@
   <xs:element name="GetImageResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImageResult" nillable="true" type="q132:Image" />
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetImageResult" nillable="true" type="q136:Image" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddImage">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q133:Image" />
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q137:Image" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2087,7 +2138,7 @@
   <xs:element name="UpdateImage">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q134:Image" />
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q138:Image" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2104,7 +2155,7 @@
   <xs:element name="GetMediumsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumsResult" nillable="true" type="q135:ArrayOfmedium" />
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumsResult" nillable="true" type="q139:ArrayOfmedium" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2118,14 +2169,14 @@
   <xs:element name="GetMediumResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumResult" nillable="true" type="q136:medium" />
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMediumResult" nillable="true" type="q140:medium" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddMedium">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q137:medium" />
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q141:medium" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2149,7 +2200,7 @@
   <xs:element name="UpdateMedium">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q138:medium" />
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q142:medium" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2166,8 +2217,60 @@
   <xs:element name="GetMenusResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenusResult" nillable="true" type="q139:ArrayOfMenu" />
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenusResult" nillable="true" type="q143:ArrayOfMenu" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="SubMenuResult" nillable="true" type="q144:ArrayOfMenu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainMenu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MainMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/System.Text" minOccurs="0" name="MainMenuResult" nillable="true" type="q145:StringBuilder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IconName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IconNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IconNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="GetMenu">
@@ -2180,14 +2283,14 @@
   <xs:element name="GetMenuResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenuResult" nillable="true" type="q140:Menu" />
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetMenuResult" nillable="true" type="q146:Menu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddMenu">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q141:Menu" />
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q147:Menu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2204,56 +2307,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="RemoveMenuResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateMenu">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q142:Menu" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateMenuResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatifications">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatificationsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationsResult" nillable="true" type="q143:ArrayOfnatification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatification">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNatificationResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetNatificationResult" nillable="true" type="q144:natification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddNatification">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q145:natification" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddNatificationResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -2281,7 +2334,7 @@
   <xs:element name="GetuserproductsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetuserproductsResult" nillable="true" type="q146:ArrayOfuserproduct" />
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetuserproductsResult" nillable="true" type="q148:ArrayOfuserproduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2295,14 +2348,14 @@
   <xs:element name="GetuserproductResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetuserproductResult" nillable="true" type="q147:userproduct" />
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetuserproductResult" nillable="true" type="q149:userproduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Adduserproduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q148:userproduct" />
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q150:userproduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2319,7 +2372,7 @@
   <xs:element name="userProductModelsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" minOccurs="0" name="userProductModelsResult" nillable="true" type="q149:ArrayOfUserProductModel" />
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" minOccurs="0" name="userProductModelsResult" nillable="true" type="q151:ArrayOfUserProductModel" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2338,7 +2391,7 @@
   <xs:element name="Updateuserproduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q150:userproduct" />
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q152:userproduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2355,7 +2408,7 @@
   <xs:element name="GetactionusersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetactionusersResult" nillable="true" type="q151:ArrayOfactionuser" />
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetactionusersResult" nillable="true" type="q153:ArrayOfactionuser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2369,14 +2422,14 @@
   <xs:element name="GetactionuserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetactionuserResult" nillable="true" type="q152:actionuser" />
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetactionuserResult" nillable="true" type="q154:actionuser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Addactionuser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q153:actionuser" />
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q155:actionuser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2400,7 +2453,7 @@
   <xs:element name="Updateactionuser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q154:actionuser" />
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q156:actionuser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2417,7 +2470,7 @@
   <xs:element name="GetprivateauctionsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetprivateauctionsResult" nillable="true" type="q155:ArrayOfprivate_auction" />
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetprivateauctionsResult" nillable="true" type="q157:ArrayOfprivate_auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2431,14 +2484,14 @@
   <xs:element name="GetprivateauctionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetprivateauctionResult" nillable="true" type="q156:private_auction" />
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetprivateauctionResult" nillable="true" type="q158:private_auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Addprivateauction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q157:private_auction" />
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q159:private_auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2462,7 +2515,7 @@
   <xs:element name="Updateprivateauction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q158:private_auction" />
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q160:private_auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2479,7 +2532,7 @@
   <xs:element name="GetLogsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogsResult" nillable="true" type="q159:ArrayOfLog" />
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogsResult" nillable="true" type="q161:ArrayOfLog" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2493,14 +2546,14 @@
   <xs:element name="GetLogResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogResult" nillable="true" type="q160:Log" />
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogResult" nillable="true" type="q162:Log" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddLog">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q161:Log" />
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q163:Log" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2524,7 +2577,7 @@
   <xs:element name="UpdateLog">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q162:Log" />
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q164:Log" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2541,7 +2594,7 @@
   <xs:element name="GetLogInfoesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogInfoesResult" nillable="true" type="q163:ArrayOfLogInfo" />
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogInfoesResult" nillable="true" type="q165:ArrayOfLogInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2555,14 +2608,14 @@
   <xs:element name="GetLogInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogInfoResult" nillable="true" type="q164:LogInfo" />
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogInfoResult" nillable="true" type="q166:LogInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddLogInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q165:LogInfo" />
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q167:LogInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2586,7 +2639,7 @@
   <xs:element name="UpdateLogInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q166:LogInfo" />
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q168:LogInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2603,7 +2656,7 @@
   <xs:element name="GetLogStatusAllResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogStatusAllResult" nillable="true" type="q167:ArrayOfLogStatus" />
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogStatusAllResult" nillable="true" type="q169:ArrayOfLogStatus" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2617,14 +2670,14 @@
   <xs:element name="GetLogStatusResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogStatusResult" nillable="true" type="q168:LogStatus" />
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetLogStatusResult" nillable="true" type="q170:LogStatus" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddLogStatus">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q169:LogStatus" />
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q171:LogStatus" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2648,7 +2701,7 @@
   <xs:element name="UpdateLogStatus">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q170:LogStatus" />
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q172:LogStatus" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2665,7 +2718,7 @@
   <xs:element name="GetsAmountofIncreaseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetsAmountofIncreaseResult" nillable="true" type="q171:ArrayOfAMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetsAmountofIncreaseResult" nillable="true" type="q173:ArrayOfAMOUNT_OF_INCREASE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2679,14 +2732,14 @@
   <xs:element name="GetAmountofIncreaseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAmountofIncreaseResult" nillable="true" type="q172:AMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAmountofIncreaseResult" nillable="true" type="q174:AMOUNT_OF_INCREASE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddAmountofIncrease">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q173:AMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q175:AMOUNT_OF_INCREASE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2710,7 +2763,7 @@
   <xs:element name="UpdateAmountofIncrease">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q174:AMOUNT_OF_INCREASE" />
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q176:AMOUNT_OF_INCREASE" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2727,7 +2780,7 @@
   <xs:element name="GetAuctionsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionsResult" nillable="true" type="q175:ArrayOfauction" />
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionsResult" nillable="true" type="q177:ArrayOfauction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2741,14 +2794,14 @@
   <xs:element name="GetAuctionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionResult" nillable="true" type="q176:auction" />
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAuctionResult" nillable="true" type="q178:auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddAuction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q177:auction" />
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q179:auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2772,7 +2825,7 @@
   <xs:element name="UpdateAuction">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q178:auction" />
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q180:auction" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2789,7 +2842,7 @@
   <xs:element name="GetBanksResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBanksResult" nillable="true" type="q179:ArrayOfbank" />
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBanksResult" nillable="true" type="q181:ArrayOfbank" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2803,14 +2856,14 @@
   <xs:element name="GetBankResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBankResult" nillable="true" type="q180:bank" />
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetBankResult" nillable="true" type="q182:bank" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddBank">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q181:bank" />
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q183:bank" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2834,7 +2887,7 @@
   <xs:element name="UpdateBank">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q182:bank" />
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q184:bank" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2851,7 +2904,7 @@
   <xs:element name="GetCarBrandsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandsResult" nillable="true" type="q183:ArrayOfCarBrand" />
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandsResult" nillable="true" type="q185:ArrayOfCarBrand" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2865,14 +2918,14 @@
   <xs:element name="GetCarBrandResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandResult" nillable="true" type="q184:CarBrand" />
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarBrandResult" nillable="true" type="q186:CarBrand" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCarBrand">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q185:CarBrand" />
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q187:CarBrand" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2896,7 +2949,7 @@
   <xs:element name="UpdateCarBrand">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q186:CarBrand" />
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q188:CarBrand" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2913,7 +2966,7 @@
   <xs:element name="GetCarDetailsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailsResult" nillable="true" type="q187:ArrayOfCarDetail" />
+        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailsResult" nillable="true" type="q189:ArrayOfCarDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2927,14 +2980,14 @@
   <xs:element name="GetCarDetailResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailResult" nillable="true" type="q188:CarDetail" />
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarDetailResult" nillable="true" type="q190:CarDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCarDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q189:CarDetail" />
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q191:CarDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2958,7 +3011,7 @@
   <xs:element name="UpdateCarDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q190:CarDetail" />
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q192:CarDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2975,7 +3028,7 @@
   <xs:element name="GetCarHardwareDetailsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailsResult" nillable="true" type="q191:ArrayOfCarHardwareDetail" />
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailsResult" nillable="true" type="q193:ArrayOfCarHardwareDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -2989,14 +3042,14 @@
   <xs:element name="GetCarHardwareDetailResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailResult" nillable="true" type="q192:CarHardwareDetail" />
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarHardwareDetailResult" nillable="true" type="q194:CarHardwareDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCarHardwareDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q193:CarHardwareDetail" />
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q195:CarHardwareDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3020,7 +3073,7 @@
   <xs:element name="UpdateCarHardwareDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q194:CarHardwareDetail" />
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q196:CarHardwareDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3037,7 +3090,7 @@
   <xs:element name="GetCarMakesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakesResult" nillable="true" type="q195:ArrayOfCarMake" />
+        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakesResult" nillable="true" type="q197:ArrayOfCarMake" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3051,14 +3104,14 @@
   <xs:element name="GetCarMakeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakeResult" nillable="true" type="q196:CarMake" />
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarMakeResult" nillable="true" type="q198:CarMake" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCarMake">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q197:CarMake" />
+        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q199:CarMake" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3082,7 +3135,7 @@
   <xs:element name="UpdateCarMake">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q198:CarMake" />
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q200:CarMake" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3099,7 +3152,7 @@
   <xs:element name="GetCarTechnicalDetailsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailsResult" nillable="true" type="q199:ArrayOfCarTechnicalDetail" />
+        <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailsResult" nillable="true" type="q201:ArrayOfCarTechnicalDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3113,14 +3166,14 @@
   <xs:element name="GetCarTechnicalDetailResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailResult" nillable="true" type="q200:CarTechnicalDetail" />
+        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCarTechnicalDetailResult" nillable="true" type="q202:CarTechnicalDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCarTechnicalDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q201:CarTechnicalDetail" />
+        <xs:element xmlns:q203="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q203:CarTechnicalDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3144,7 +3197,7 @@
   <xs:element name="UpdateCarTechnicalDetail">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q202:CarTechnicalDetail" />
+        <xs:element xmlns:q204="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q204:CarTechnicalDetail" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3161,7 +3214,7 @@
   <xs:element name="GetCitiesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q203="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCitiesResult" nillable="true" type="q203:ArrayOfcity" />
+        <xs:element xmlns:q205="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCitiesResult" nillable="true" type="q205:ArrayOfcity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3175,14 +3228,14 @@
   <xs:element name="GetCityResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q204="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCityResult" nillable="true" type="q204:city" />
+        <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetCityResult" nillable="true" type="q206:city" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddCity">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q205="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q205:city" />
+        <xs:element xmlns:q207="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q207:city" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3206,7 +3259,7 @@
   <xs:element name="UpdateCity">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q206:city" />
+        <xs:element xmlns:q208="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q208:city" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3223,7 +3276,7 @@
   <xs:element name="GetClaimsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q207="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimsResult" nillable="true" type="q207:ArrayOfClaim" />
+        <xs:element xmlns:q209="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimsResult" nillable="true" type="q209:ArrayOfClaim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3237,14 +3290,14 @@
   <xs:element name="GetClaimResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q208="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimResult" nillable="true" type="q208:Claim" />
+        <xs:element xmlns:q210="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetClaimResult" nillable="true" type="q210:Claim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddClaim">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q209="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q209:Claim" />
+        <xs:element xmlns:q211="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q211:Claim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3268,7 +3321,7 @@
   <xs:element name="UpdateClaim">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q210="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q210:Claim" />
+        <xs:element xmlns:q212="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q212:Claim" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3285,7 +3338,7 @@
   <xs:element name="GetAllColorResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q211="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAllColorResult" nillable="true" type="q211:ArrayOfColor" />
+        <xs:element xmlns:q213="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetAllColorResult" nillable="true" type="q213:ArrayOfColor" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -3299,14 +3352,14 @@
   <xs:element name="GetColorResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q212="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetColorResult" nillable="true" type="q212:Color" />
+        <xs:element xmlns:q214="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="GetColorResult" nillable="true" type="q214:Color" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddColor">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q213="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q213:Color" />
+        <xs:element xmlns:q215="http://schemas.datacontract.org/2004/07/IM.DataLayer" minOccurs="0" name="entity" nillable="true" type="q215:Color" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
