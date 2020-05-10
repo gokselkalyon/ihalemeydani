@@ -1,10 +1,10 @@
-﻿
+﻿@model IM.PresentationLayer.Models.LoginModelView
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/LoginPage.cshtml";
 }
 
-<div class="login-wrap">
+<div class="login-wrap mt-5">
     <div class="login-html">
         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Giriş Yap</label>
         <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Kayıt Ol</label>
@@ -23,28 +23,32 @@
                 </div>
                 <div class="hr"></div>
             </div>
-            <div class="for-pwd-htm">
-                <div class="group">
-                    <label for="user" class="label">Email</label>
-                    <input id="user" type="text" class="input">
+            <form id="frmUserCreate" >
+                <div class="for-pwd-htm">
+                    <div class="group">
+                        <label for="user" class="label">Email</label>
+                        <input id="user" name="Email" type="text" class="input" required> 
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Kullanıcı Adı</label>
+                        <input id="user" name="Username" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Şifre</label>
+                        <input id="pass" name="Password" type="password" class="input" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Şifre</label>
+                        <input id="pass" name="Password2" type="password" class="input" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Kayıt Ol">
+                    </div>
+                    <div class="hr"></div>
                 </div>
-                <div class="group">
-                    <label for="user" class="label">Kullanıcı Adı</label>
-                    <input id="user" type="text" class="input">
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Şifre</label>
-                    <input id="pass" type="password" class="input" data-type="password">
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Şifre</label>
-                    <input id="pass" type="password" class="input" data-type="password">
-                </div>
-                <div class="group">
-                    <input type="submit" class="button" value="Kayıt Ol">
-                </div>
-                <div class="hr"></div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
+<div id="snackbar">Şifreler Birbirine Uymuyor.</div>
+

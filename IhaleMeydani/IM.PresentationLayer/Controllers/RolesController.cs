@@ -53,7 +53,7 @@ namespace IM.PresentationLayer.Controllers
             return View(rm);
         }
         [HttpPost]
-        public JsonResult RoleCreate(RolesModelView roles)
+        public ActionResult RoleCreate(RolesModelView roles)
         {
             var query = ihaleClient.GetRoles().ToList();
             var roleNameControll = query.Where(f => f.Name == roles.RoleName).Any();
@@ -86,7 +86,8 @@ namespace IM.PresentationLayer.Controllers
                 jsonResultModel.Icon = "error";
                 jsonResultModel.Description = "Role Ekleme Başarısız";
             }
-            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("index");
+            //return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
         [HttpPost]
         public JsonResult RoleDelete(int id)
@@ -109,7 +110,7 @@ namespace IM.PresentationLayer.Controllers
             }
             return Json(1, JsonRequestBehavior.AllowGet);
         } 
-        public JsonResult RoleUpdate(RolesModelView roles)
+        public ActionResult RoleUpdate(RolesModelView roles)
         {
             var oldName = ihaleClient.GetRoles().FirstOrDefault(x => x.Name == roles.RoleName);
             if (oldName != null)
@@ -118,7 +119,7 @@ namespace IM.PresentationLayer.Controllers
                 oldName.Name = roles.RoleName;
                 ihaleClient.UpdateRole(r);
             }
-            return Json(1, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("index");
         }
     }
 }
