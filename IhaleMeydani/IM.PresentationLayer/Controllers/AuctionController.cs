@@ -1,4 +1,5 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,9 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class AuctionController : Controller
+    public class AuctionController : BaseController
     {
+
         AuctionModelView mv = new AuctionModelView();
         [Route("auction/index/{auctionid}")]
         public ActionResult Index(int auctionid)
@@ -17,7 +19,7 @@ namespace IM.PresentationLayer.Controllers
             if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
                 return RedirectToRoute("default");
 
-            mv.productModel = new IhaleServiceClient().userProductModels().Where(x => x.id == 1).FirstOrDefault();
+            mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == SessionManager.CurrentUser.Id).FirstOrDefault();
             AuctionModelView.auctionid = auctionid;
             return View(mv);
         }
@@ -26,28 +28,30 @@ namespace IM.PresentationLayer.Controllers
         [Route("auction/userproductdashboard")]
         public ActionResult UserProductsViewPage()
         {
-           
-            IhaleServiceClient db = new IhaleServiceClient();
-            mv.userProductModels = db.userProductModels().Where(x=>x.user_id == 1).ToList();
-            mv.carpublished = db.userProductModels().Where(x => x.user_id == 1 && x.published_on == true).Count();
-
+            int de = SessionManager.CurrentUser.Id;
+            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x=>x.user_id == SessionManager.CurrentUser.Id).ToList();
+            mv.carpublished = IhaleServiceClient.userProductModels().Where(x => x.user_id == SessionManager.CurrentUser.Id && x.published_on == true).Count();
+            mv.User = IhaleServiceClient.GetUser(SessionManager.CurrentUser.Id);
             return View(mv);
         }
 
 
         // GET: Auction/Create
-        public ActionResult Create()
+        [Route("auction/productcreate")]
+        public ActionResult ProductCreate()
         {
             return View();
         }
 
         // POST: Auction/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [Route("auction/productcreate/{carmodel}")]
+        public ActionResult Create(UserProductModel carmodel)
         {
             try
             {
-                // TODO: Add insert logic here
+                carmodel.
+                IhaleServiceClient.add
 
                 return RedirectToAction("Index");
             }

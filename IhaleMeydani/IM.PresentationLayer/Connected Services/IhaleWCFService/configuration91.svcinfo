@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="A34xwCxfX92dJaA+qKvFKZaMOFYCnRRstJFisq48mog=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/CdRFLPBOZ1kYtvZuYe5tefK+sWlTfdYlgkuIjd2ELs=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IIhaleService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IIhaleService" contract="IhaleWCFService.IIhaleService" bindingType="basicHttpBinding" address="http://localhost:62786/IhaleService.svc" bindingConfiguration="BasicHttpBinding_IIhaleService">
+    <endpoint name="BasicHttpBinding_IIhaleService" contract="IhaleWCFService.IIhaleService" bindingType="basicHttpBinding" address="http://localhost:8081/IhaleService.svc" bindingConfiguration="BasicHttpBinding_IIhaleService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:62786/IhaleService.svc</serializedValue>
+          <serializedValue>http://localhost:8081/IhaleService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

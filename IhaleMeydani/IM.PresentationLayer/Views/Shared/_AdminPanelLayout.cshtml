@@ -1,4 +1,4 @@
-﻿
+﻿@using IM.PresentationLayer.LoginSecurity
 <!DOCTYPE html>
 
 <html>
@@ -224,7 +224,7 @@
                                 <img src="~/Content/adminpaneltemplate/src/assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
                                      width="40">
                                 <span class="ml-2 d-none d-lg-inline-block">
-                                    <span>Hello,</span> <span class="text-dark">Jason Doe</span> <i data-feather="chevron-down"
+                                    <span>Hello,</span> <span class="text-dark">@SessionManager.CurrentUser.UserName</span> <i data-feather="chevron-down"
                                                                                                     class="svg-icon"></i>
                                 </span>
                             </a>
@@ -285,9 +285,15 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="sidebar-item">
-                            <a class="sidebar-link sidebar-link" href="/auction/userproductdashboard"
+                            <a class="sidebar-link sidebar-link" href="@Url.Action("userproductdashboard", "auction")"
                                aria-expanded="false">
-                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">AuctionPage</span>
+                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Product Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="@Url.Action("","Roles")"
+                               aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Roles</span>
                             </a>
                         </li>
                         <li class="list-divider"></li>
