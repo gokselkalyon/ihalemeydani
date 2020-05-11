@@ -46,10 +46,10 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
-      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
-      <xs:element minOccurs="0" name="USER_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="auction_id" type="xs:int" />
+      <xs:element minOccurs="0" name="auction_id" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="bid" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>

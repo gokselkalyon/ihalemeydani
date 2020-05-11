@@ -131,6 +131,7 @@
     <Compile Include="Concrete\CarMakeManager.cs" />
     <Compile Include="Concrete\CarTechnicalDetailManager.cs" />
     <Compile Include="Concrete\CityManager.cs" />
+    <Compile Include="Concrete\ClaimGroupManager.cs" />
     <Compile Include="Concrete\ClaimManager.cs" />
     <Compile Include="Concrete\ColorManager.cs" />
     <Compile Include="Concrete\CompanyManager.cs" />

@@ -38,3 +38,27 @@ $("#frmUserCreate").submit(function (e) {
     });
 });
 
+$("#frmUserLogin").submit(function (e) { 
+    e.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+        url: "/Login/UserLogin",
+        type: "POST",
+        data: formData,
+        mimeType: "multipart/form-data",
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data, textStatus, jqXHR) {
+            if (data == 1) {
+                window.location.href = "/";
+            } else {
+                $("#snackbar").append('Geçersiz şifre veya kullanıcı adı.');
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+            }
+        }
+    });
+});
+

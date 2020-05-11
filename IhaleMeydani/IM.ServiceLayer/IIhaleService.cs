@@ -382,6 +382,23 @@ namespace IM.ServiceLayer
         void UpdateCounty(county entity);
         #endregion
 
+        #region ClaimGroup
+        [OperationContract]
+        List<ClaimGroup> GetClaimGroups();
+
+        [OperationContract]
+        ClaimGroup GetClaimGroup(int Id);
+
+        [OperationContract]
+        void AddClaimGroup(ClaimGroup entity);
+
+        [OperationContract]
+        void RemoveClaimGroup(int Id);
+
+        [OperationContract]
+        void UpdateClaimGroup(ClaimGroup entity);
+        #endregion
+
         #region CURRENCY
         [OperationContract]
         List<CURRENCY> GetCurrencies();

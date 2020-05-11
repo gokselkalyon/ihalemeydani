@@ -168,13 +168,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Helper.cs" />
+    <Compile Include="LoginSecurity\ihaleClientFilter.cs" />
+    <Compile Include="LoginSecurity\SessionManager.cs" />
+    <Compile Include="LoginSecurity\UserProvider.cs" />
     <Compile Include="Models\AuctionModelView.cs" />
     <Compile Include="Models\BlogModelView.cs" />
+    <Compile Include="Models\ClaimGroupModelView.cs" />
+    <Compile Include="Models\EncrypModel.cs" />
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\HandleErrors.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Models\LoginModelView.cs" />
     <Compile Include="Models\RolesModelView.cs" />
+    <Compile Include="Models\UserModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signalr\SignalHub.cs" />
     <Compile Include="signalr\Startup.cs" />
@@ -352,6 +358,9 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ActionUserModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">

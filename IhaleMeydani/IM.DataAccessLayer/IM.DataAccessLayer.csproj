@@ -66,6 +66,7 @@
     <Compile Include="Concrete\EFConcrete\CarTechnicalDetailConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CityConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\ClaimConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\ClaimGroupConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\ColorConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CompanyConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\Company_TypeConcrete.cs" />

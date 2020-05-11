@@ -2401,6 +2401,34 @@ namespace IM.ServiceLayer
             return InstanceFactory.GetInstance<IDataBaseQueryService<ActionUserModel>>().QueryList();
         }
         #endregion
+
+        #region ClaimGroup
+        public List<ClaimGroup> GetClaimGroups()
+        {
+            return Create<ClaimGroup>().GetAll();
+        }
+
+        public ClaimGroup GetClaimGroup(int Id)
+        {
+
+            return Create<ClaimGroup>().Get(Id);
+        }
+
+        public void AddClaimGroup(ClaimGroup entity)
+        {
+             Create<ClaimGroup>().Add(entity);
+        }
+
+        public void RemoveClaimGroup(int Id)
+        {
+             Create<ClaimGroup>().Remove(Id);
+        }
+
+        public void UpdateClaimGroup(ClaimGroup entity)
+        {
+             Create<ClaimGroup>().Update(entity);
+        }
+        #endregion
     }
 
 }
