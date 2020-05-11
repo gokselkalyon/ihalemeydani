@@ -63,7 +63,7 @@ namespace IM.PresentationLayer.Controllers
             {   
                 var p = (from x in ihaleClient.GetUsers()
                          where x.UserName == ln.Username
-                         select new UserModelView()
+                         select new UserModel()
                          {
                              Name = x.Name,
                              Username = x.UserName,

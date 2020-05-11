@@ -50,8 +50,8 @@ namespace IM.PresentationLayer.Controllers
         {
             try
             {
-                carmodel.
-                IhaleServiceClient.add
+                //carmodel.
+                //IhaleServiceClient.add
 
                 return RedirectToAction("Index");
             }

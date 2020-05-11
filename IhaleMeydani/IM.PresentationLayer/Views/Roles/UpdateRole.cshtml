@@ -51,6 +51,7 @@
     {
         @Html.AntiForgeryToken()
         <div style="margin-left:40%; width:230px;margin-top:20px;">
+            <input type="text" value="@Model.Id" name="Id"  hidden/>
             <div class="form-group">
                 <label for="inputName" class="control-label mb-10">Rol Adı</label>
                 <input type="text" class="form-control" name="RoleName" value="@Model.RoleName" required="">
