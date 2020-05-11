@@ -14,40 +14,40 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
     {
         public void Add(LogStatus entity)
         {
-            DB.LogStatus.Add(entity);
+            DB.LogStatus1.Add(entity);
             DB.SaveChanges();
         }
 
         public LogStatus Get(int id)
         {
-            return DB.LogStatus.Find(id);
+            return DB.LogStatus1.Find(id);
         }
 
         public List<LogStatus> GetAll()
         {
-            return DB.LogStatus.ToList();
+            return DB.LogStatus1.ToList();
         }
 
         public IEnumerable<LogStatus> GetFilter(Expression<Func<LogStatus, bool>> expression)
         {
-            return DB.LogStatus.Where(expression);
+            return DB.LogStatus1.Where(expression);
         }
 
         public void Remove(int id)
         {
-            DB.LogStatus.Remove(DB.LogStatus.Find(id));
+            DB.LogStatus1.Remove(DB.LogStatus1.Find(id));
             DB.SaveChanges();
         }
 
         public void RemoveAll(LogStatus t)
         {
-            DB.LogStatus.Remove(t);
+            DB.LogStatus1.Remove(t);
             DB.SaveChanges();
         }
 
         public void Update(LogStatus t)
         {
-            DB.LogStatus.Attach(t);
+            DB.LogStatus1.Attach(t);
             DB.Entry(t).State = System.Data.Entity.EntityState.Modified;
             DB.SaveChanges();
         }

@@ -82,9 +82,21 @@ namespace IM.PresentationLayer.Controllers
 
             return View("PageError", null);
         }
+        public ActionResult AuthorityError(string aspxerrorpath)
+        {
+            Session["Source"] = null;
 
-       
-     
+            if (!string.IsNullOrEmpty(aspxerrorpath))
+                Session["Source"] = aspxerrorpath;
+
+            Session["Title"] = "Yetkiniz Bulunmamaktadır.";
+
+            Session["Url"] = "/Content/template/assets/img/error-404-monochrome.svg";
+
+            return RedirectToAction("PageError");
+        }
+
+
         [Route("Errors/Error405")]
         public ActionResult Error405()
         {

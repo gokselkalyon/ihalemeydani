@@ -72,6 +72,7 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataBusinessService<userproduct>>().To<UserProductManager>().InSingletonScope();
             Bind<IDataBusinessService<LogInfo>>().To<LogInfoesManager>().InSingletonScope();
             Bind<IDataBusinessService<LogStatus>>().To<LogStatusManager>().InSingletonScope();
+            Bind<IDataBusinessService<ClaimGroup>>().To<ClaimGroupManager>().InSingletonScope();
 
             Bind<IDataAccessDal<Log>>().To<LogConcrete>().InSingletonScope();
             Bind<IDataAccessDal<LogInfo>>().To<LogInfoesConcrete>().InSingletonScope();
@@ -126,12 +127,13 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataAccessDal<UserType>>().To<UserTypeConcrete>().InSingletonScope();
             Bind<IDataAccessDal<User>>().To<UserConcrete>().InSingletonScope();
             Bind<IDataAccessDal<userproduct>>().To<UserProductConcrete>().InSingletonScope();
+            Bind<IDataAccessDal<ClaimGroup>>().To<ClaimGroupConcrete>().InSingletonScope();
 
             Bind<IDataBaseQueryService<UserProductModel>>().To<UserProductManager>().InSingletonScope();
+            Bind<IDataBaseQueryService<ActionUserModel>>().To<AuctionUserManager>().InSingletonScope();
 
             Bind<IDataBaseQuery<UserProductModel>>().To<UserProductConcrete>().InSingletonScope();
-
-
+            Bind<IDataBaseQuery<ActionUserModel>>().To<AuctionUserConcrete>().InSingletonScope();
 
             Bind<ITCService>().To<TCServiceAdapter>().InSingletonScope();
         }

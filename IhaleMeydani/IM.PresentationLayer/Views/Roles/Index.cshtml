@@ -59,22 +59,23 @@
                         <th data-field="Name" data-sortable="true">Rol adı</th>
                     </tr>
                 </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@item.Id</td>
-                            <td>@item.Name</td>
-                            <td>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-danger delete-row-role" data-id="@item.Id">Sil</button>
-                                </div>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a  href="/Roles/UpdateRole/@item.Id" class="btn btn-secondary">Güncelle</a>
-                                </div>
-                            </td>
-                        </tr>
-                    } 
+                <tbody> 
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-danger delete-row-role" data-id="@item.Id">Sil</button>
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a href="/Roles/UpdateRole/@item.Id" class="btn btn-secondary">Güncelle</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        } 
+
                 </tbody>
             </table>
         </div>

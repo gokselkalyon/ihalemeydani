@@ -36,13 +36,15 @@ namespace IM.ServiceLayer
         void Updateuserproduct(userproduct entity);
         #endregion
 
-
         #region auctionuser
         [OperationContract]
         List<actionuser> Getactionusers();
 
         [OperationContract]
         actionuser Getactionuser(int Id);
+
+        [OperationContract]
+        List<ActionUserModel> actionUserModels();
 
         [OperationContract]
         void Addactionuser(actionuser entity);
@@ -378,6 +380,23 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void UpdateCounty(county entity);
+        #endregion
+
+        #region ClaimGroup
+        [OperationContract]
+        List<ClaimGroup> GetClaimGroups();
+
+        [OperationContract]
+        ClaimGroup GetClaimGroup(int Id);
+
+        [OperationContract]
+        void AddClaimGroup(ClaimGroup entity);
+
+        [OperationContract]
+        void RemoveClaimGroup(int Id);
+
+        [OperationContract]
+        void UpdateClaimGroup(ClaimGroup entity);
         #endregion
 
         #region CURRENCY

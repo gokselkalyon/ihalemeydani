@@ -13,13 +13,7 @@ body {
     padding-top: 50px;
     font-family: Roboto;
     padding-bottom: 20px;
-    background: #292D34;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    background: #fbfbfb;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

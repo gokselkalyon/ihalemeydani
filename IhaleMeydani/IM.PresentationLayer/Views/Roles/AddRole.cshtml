@@ -57,18 +57,26 @@
                         <input type="text" class="form-control" name="RoleName" id="RoleName" required="">
                     </div>
                 </div>
-                for (int i = 0; i < Model.roleList.Count; i++)
-                {
-                    <div class="col-md-3">
-                        @Html.HiddenFor(m => m.roleList[i].ClaimId)
-                        <div style="height:60px;  margin-top:00px;">
-                            <div class="input-group" style="color:black;" id="CheckBoxStatus">
-                                @Html.CheckBoxFor(m => m.roleList[i].Checked, new { @Id = Model.roleList[i].ClaimId }) @Model.roleList[i].Text
-                            </div>
-                        </div>
-                    </div>
-                }
+                foreach (var item in Model.claimGroupList)
+                { 
+                        <div class="col-md-8">
+                            <h2>@item.ClaimGroupName</h2> 
+                            @for (int i = 0; i < Model.roleList.Count; i++)
+                            {
+                                if (item.Id == Model.roleList[i].ClaimGroupId)
+                                {
+                                    @Html.HiddenFor(m => m.roleList[i].ClaimId)
+                                    <div style="height:60px;  margin-top:00px;">
+                                        <div class="input-group" style="color:black;" id="CheckBoxStatus">
+                                            @Html.CheckBoxFor(m => m.roleList[i].Checked, new { @Id = Model.roleList[i].ClaimId }) @Model.roleList[i].Text
+                                        </div>
+                                    </div>
+                                }
 
+
+                            }
+                        </div> 
+                }
                 <div class="form-group" style="float:right; margin-top:20px; margin-right:5%;">
                     <a type="button" href="/Roles/index" class="btn btn-danger" style="width:100px;">Vazgeç</a>
                     <button type="submit" class="btn btn-success btn-anim"><i class="icon-rocket"></i><span class="btn-text">Kaydet</span></button>

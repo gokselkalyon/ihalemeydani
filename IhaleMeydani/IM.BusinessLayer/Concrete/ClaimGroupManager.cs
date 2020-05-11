@@ -1,47 +1,45 @@
 ﻿using AutoMapper;
 using IM.BusinessLayer.Abstract;
+using IM.BusinessLayer.helper;
 using IM.DataAccessLayer.Abstract;
 using IM.DataLayer;
-using IM.DataLayer.Model;
-using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Win32.SafeHandles;
+using System.Runtime.InteropServices;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class AuctionUserManager : IDataBusinessService<actionuser>, IDataBaseQueryService<ActionUserModel>
+    public class ClaimGroupManager : IDataBusinessService<ClaimGroup>
     {
-        private IDataAccessDal<actionuser> _dataAccessDal;
+        private IDataAccessDal<ClaimGroup> _dataAccessDal;
         private readonly IMapper _mapper;
-        private IDataBaseQuery<ActionUserModel> _query;
-        public AuctionUserManager(IDataAccessDal<actionuser> dataAccessDal, IMapper mapper, IDataBaseQuery<ActionUserModel> query)
+
+        public ClaimGroupManager(IDataAccessDal<ClaimGroup> dataAccessDal, IMapper mapper)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
-            _query = query;
         }
-        public void Add(actionuser entity)
+        public void Add(ClaimGroup entity)
         {
             _dataAccessDal.Add(entity);
         }
 
-        public actionuser Get(int id)
+        public ClaimGroup Get(int id)
         {
             return _dataAccessDal.Get(id);
         }
-        
-        public List<actionuser> GetAll()
-        {
-            var auctionuser = _mapper.Map<List<actionuser>>(_dataAccessDal.GetAll());
-            return auctionuser;
+
+        public List<ClaimGroup> GetAll()
+        { 
+            return _dataAccessDal.GetAll();
         }
 
-        public IEnumerable<actionuser> GetFilter(Expression<Func<actionuser, bool>> expression)
+        public IEnumerable<ClaimGroup> GetFilter(Expression<Func<ClaimGroup, bool>> expression)
         {
             return _dataAccessDal.GetFilter(expression);
         }
@@ -51,12 +49,12 @@ namespace IM.BusinessLayer.Concrete
             _dataAccessDal.Remove(id);
         }
 
-        public void RemoveAll(actionuser t)
+        public void RemoveAll(ClaimGroup t)
         {
             _dataAccessDal.RemoveAll(t);
         }
 
-        public void Update(actionuser t)
+        public void Update(ClaimGroup t)
         {
             _dataAccessDal.Update(t);
         }
@@ -82,10 +80,7 @@ namespace IM.BusinessLayer.Concrete
 
             disposed = true;
         }
-
-        public List<ActionUserModel> QueryList()
-        {
-            return _query.QueryList();
-        }
+         
+         
     }
 }

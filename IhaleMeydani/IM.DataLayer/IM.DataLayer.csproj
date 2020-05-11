@@ -165,6 +165,7 @@
     <Compile Include="Menu.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ActionUserModel.cs" />
     <Compile Include="Model\UserProductModel.cs" />
     <Compile Include="natification.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>

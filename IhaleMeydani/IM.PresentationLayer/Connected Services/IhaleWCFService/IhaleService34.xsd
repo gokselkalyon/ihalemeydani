@@ -36,4 +36,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UserProductModel" nillable="true" type="tns:UserProductModel" />
+  <xs:complexType name="ArrayOfActionUserModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionUserModel" nillable="true" type="tns:ActionUserModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionUserModel" nillable="true" type="tns:ArrayOfActionUserModel" />
+  <xs:complexType name="ActionUserModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="auction_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="bid" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionUserModel" nillable="true" type="tns:ActionUserModel" />
 </xs:schema>

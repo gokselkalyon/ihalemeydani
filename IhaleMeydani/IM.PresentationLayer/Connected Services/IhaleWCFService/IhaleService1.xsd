@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IM.DataLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Tax_Administration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Tax_Administration_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tax_Administration_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tax_Administration" nillable="true" type="tns:Tax_Administration" />
+  <xs:complexType name="ArrayOftitle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="title" nillable="true" type="tns:title" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftitle" nillable="true" type="tns:ArrayOftitle" />
   <xs:complexType name="title">
     <xs:sequence>
       <xs:element minOccurs="0" name="title_id" type="xs:int" />
@@ -304,22 +320,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfTax_Administration" nillable="true" type="tns:ArrayOfTax_Administration" />
-  <xs:complexType name="Tax_Administration">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Tax_Administration_code" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Tax_Administration_name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Tax_Administration" nillable="true" type="tns:Tax_Administration" />
-  <xs:complexType name="ArrayOftitle">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="title" nillable="true" type="tns:title" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOftitle" nillable="true" type="tns:ArrayOftitle" />
   <xs:complexType name="Color">
     <xs:sequence>
       <xs:element minOccurs="0" name="ColorId" type="xs:int" />
@@ -396,6 +396,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="county" nillable="true" type="tns:county" />
+  <xs:complexType name="ArrayOfClaimGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimGroup" nillable="true" type="tns:ClaimGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimGroup" nillable="true" type="tns:ArrayOfClaimGroup" />
+  <xs:complexType name="ClaimGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimGroup" nillable="true" type="tns:ClaimGroup" />
   <xs:complexType name="ArrayOfCURRENCY">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="CURRENCY" nillable="true" type="tns:CURRENCY" />

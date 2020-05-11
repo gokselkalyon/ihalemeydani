@@ -1,4 +1,6 @@
-﻿using IM.PresentationLayer.IhaleWCFService;
+﻿ 
+using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Linq;
@@ -11,24 +13,36 @@ namespace IM.PresentationLayer.Controllers
         // GET: Roles 
         RolesModelView rm = new RolesModelView();
         IhaleServiceClient ihaleClient = new IhaleServiceClient();
+        [Route("Roles")]
+        [ihaleClientFilter("Role.Görüntüle")] 
         public ActionResult Index()
         {
             var result = ihaleClient.GetRoles();
             return View(result);
         }
+        [ihaleClientFilter("Role.Ekle")]
         public ActionResult AddRole(RolesModelView roles)
         {
-            var query = (from r in ihaleClient.GetClaims()
+            var groupList = (from r in ihaleClient.GetClaimGroups().AsQueryable()
+                             select new ClaimGroupModelView()
+                             {
+                                 Id = r.Id,
+                                 ClaimGroupName = r.Name
+                             }).ToList();
+            var query = (from r in ihaleClient.GetClaims().AsQueryable() 
                          select new RoleModel()
                          {
-                             Checked = false,
+                             Checked = false, 
                              ClaimId = r.Id,
-                             Text = r.Text
+                             Text = r.Text,  
+                             ClaimGroupId = r.ClaimGroupId
                          }).ToList();
             rm.roleList = query;
+            rm.claimGroupList = groupList;
             return View(rm);
         }
         [Route("Roles/UpdateRole/{Id}")]
+         [ihaleClientFilter("Role.Güncelle")] 
         public ActionResult UpdateRole(int Id)
         {
             var roleName = ihaleClient.GetRole(Id).Name;
@@ -53,7 +67,7 @@ namespace IM.PresentationLayer.Controllers
             return View(rm);
         }
         [HttpPost]
-        public JsonResult RoleCreate(RolesModelView roles)
+        public ActionResult RoleCreate(RolesModelView roles)
         {
             var query = ihaleClient.GetRoles().ToList();
             var roleNameControll = query.Where(f => f.Name == roles.RoleName).Any();
@@ -86,9 +100,11 @@ namespace IM.PresentationLayer.Controllers
                 jsonResultModel.Icon = "error";
                 jsonResultModel.Description = "Role Ekleme Başarısız";
             }
-            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("index");
+            //return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
         [HttpPost]
+        [ihaleClientFilter("Role.Sil")]
         public JsonResult RoleDelete(int id)
         {
             try
@@ -109,7 +125,7 @@ namespace IM.PresentationLayer.Controllers
             }
             return Json(1, JsonRequestBehavior.AllowGet);
         } 
-        public JsonResult RoleUpdate(RolesModelView roles)
+        public ActionResult RoleUpdate(RolesModelView roles)
         {
             var oldName = ihaleClient.GetRoles().FirstOrDefault(x => x.Name == roles.RoleName);
             if (oldName != null)
@@ -118,7 +134,7 @@ namespace IM.PresentationLayer.Controllers
                 oldName.Name = roles.RoleName;
                 ihaleClient.UpdateRole(r);
             }
-            return Json(1, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("index");
         }
     }
 }
