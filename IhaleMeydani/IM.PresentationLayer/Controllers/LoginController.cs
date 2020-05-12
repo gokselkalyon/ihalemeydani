@@ -37,6 +37,12 @@ namespace IM.PresentationLayer.Controllers
                         var result = ur.Password.Length;
                         ur.UserName = ln.Username;
                         ihaleClient.AddUser(ur);
+                        var roleName = ihaleClient.GetRoles().FirstOrDefault(f => f.Name == ln.RoleType);
+                        var newCustomer = ihaleClient.GetUsers().FirstOrDefault(f => f.UserName == ln.Username).Id;
+                        UserRole userRole = new UserRole();
+                        userRole.Role_Id = roleName.Id;
+                        userRole.User_Id = newCustomer;
+                        ihaleClient.AddUserRole(userRole);
                         return Json(1, JsonRequestBehavior.AllowGet);
                     }
                     else
@@ -59,24 +65,31 @@ namespace IM.PresentationLayer.Controllers
         { 
             ln.Password = EncrypModel.EncryptSHA1(ln.Password);
             var user = ihaleClient.GetUsers().Where(f => f.UserName == ln.Username && f.Password == ln.Password).FirstOrDefault();
-            if (user != null)
-            {   
-                var p = (from x in ihaleClient.GetUsers()
-                         where x.UserName == ln.Username
-                         select new UserModel()
-                         {
-                             Name = x.Name,
-                             Username = x.UserName,
-                             Id = x.Id
-                         }).FirstOrDefault();
-                SessionManager.Current.Set(SessionKey.CurrentUser, p); 
-                FormsAuthentication.SetAuthCookie(user.Id.ToString(), false); 
-                return Json(1, JsonRequestBehavior.AllowGet);
+            if (user.IsDeleted != true)
+            {
+                if (user != null)
+                {
+                    var p = (from x in ihaleClient.GetUsers()
+                             where x.UserName == ln.Username
+                             select new UserModel()
+                             {
+                                 Name = x.Name,
+                                 Username = x.UserName,
+                                 Id = x.Id
+                             }).FirstOrDefault();
+                    SessionManager.Current.Set(SessionKey.CurrentUser, p);
+                    FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
+                    return Json(1, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json(2, JsonRequestBehavior.AllowGet);
+                }
             }
             else
-            { 
-                return Json(2, JsonRequestBehavior.AllowGet);
-            } 
+            {
+                return Json(3, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿.alert {
+    padding: 20px;
+    background-color: green;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    /* When moving the mouse over the close button */
+    .closebtn:hover {
+        color: black;
+    }
+
+.kisa_kes {
+    width: 20px; /* genişlik değeri, ul da ki 500px değerini referans alacak  */
+    text-overflow: ellipsis; /* eğer uzun ise sonuna 3 nokta koyar */
+    white-space: nowrap; /* yazıyı alt satıra geçirmez, tek satırda gösterir */
+    overflow: hidden; /*verilen genişlikten sonrasını gizler*/
+}

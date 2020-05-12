@@ -81,5 +81,6 @@ namespace IM.DataLayer
         public virtual DbSet<LogStatus> LogStatus1 { get; set; }
         public virtual DbSet<ClaimGroup> ClaimGroups { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
     }
 }
