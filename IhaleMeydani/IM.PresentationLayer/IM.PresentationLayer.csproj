@@ -190,9 +190,11 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.wsdl" />
     <None Include="Connected Services\IhaleWCFService\IhaleService31.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.disco" />
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -355,6 +357,9 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\IhaleWCFService\IhaleService34.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -364,6 +369,12 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2707,6 +2718,7 @@
     <Content Include="Views\Home\Menus.cshtml" />
     <Content Include="Views\Roles\UpdateRole.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Auction\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

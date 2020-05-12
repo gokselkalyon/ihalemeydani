@@ -25,6 +25,7 @@ namespace IM.PresentationLayer.Controllers
         }
 
         // kullanıcıların ürünlerinin bulunduğu sayfa
+        [ihaleClientFilter("Araba.Listele")]
         [Route("auction/userproductdashboard")]
         public ActionResult UserProductsViewPage()
         {
@@ -37,23 +38,25 @@ namespace IM.PresentationLayer.Controllers
 
 
         // GET: Auction/Create
-        [Route("auction/productcreate")]
-        public ActionResult ProductCreate()
+        [HttpGet]
+        [Route("auction/Create")]
+        [ihaleClientFilter("Araba.Ekle")]
+        public ActionResult Create()
         {
             return View();
         }
 
         // POST: Auction/Create
         [HttpPost]
-        [Route("auction/productcreate/{carmodel}")]
+        [ihaleClientFilter("Araba.Ekle")]
+        [Route("auction/Create")]
         public ActionResult Create(UserProductModel carmodel)
         {
             try
             {
-                //carmodel.
-                //IhaleServiceClient.add
-
-                return RedirectToAction("Index");
+                carmodel.user_id = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.AdduserProductmodel(carmodel);
+                return RedirectToAction("userproductdashboard");
             }
             catch
             {
