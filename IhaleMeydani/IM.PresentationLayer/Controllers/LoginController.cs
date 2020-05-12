@@ -59,24 +59,31 @@ namespace IM.PresentationLayer.Controllers
         { 
             ln.Password = EncrypModel.EncryptSHA1(ln.Password);
             var user = ihaleClient.GetUsers().Where(f => f.UserName == ln.Username && f.Password == ln.Password).FirstOrDefault();
-            if (user != null)
-            {   
-                var p = (from x in ihaleClient.GetUsers()
-                         where x.UserName == ln.Username
-                         select new UserModel()
-                         {
-                             Name = x.Name,
-                             Username = x.UserName,
-                             Id = x.Id
-                         }).FirstOrDefault();
-                SessionManager.Current.Set(SessionKey.CurrentUser, p); 
-                FormsAuthentication.SetAuthCookie(user.Id.ToString(), false); 
-                return Json(1, JsonRequestBehavior.AllowGet);
+            if (user.IsDeleted != true)
+            {
+                if (user != null)
+                {
+                    var p = (from x in ihaleClient.GetUsers()
+                             where x.UserName == ln.Username
+                             select new UserModel()
+                             {
+                                 Name = x.Name,
+                                 Username = x.UserName,
+                                 Id = x.Id
+                             }).FirstOrDefault();
+                    SessionManager.Current.Set(SessionKey.CurrentUser, p);
+                    FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
+                    return Json(1, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json(2, JsonRequestBehavior.AllowGet);
+                }
             }
             else
-            { 
-                return Json(2, JsonRequestBehavior.AllowGet);
-            } 
+            {
+                return Json(3, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }
