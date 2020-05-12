@@ -7,7 +7,10 @@ namespace IM.PresentationLayer.Models
 {
 	public class UserModelView
 	{
-		public List<UserModel> userModel { get; set; }
+		public List<UserModel> userModelList { get; set; }
+		public List<RoleModel> roleModelList { get; set; }
+
+		public UserModel userModel { get; set; }
 	}
 	public class UserModel
 	{

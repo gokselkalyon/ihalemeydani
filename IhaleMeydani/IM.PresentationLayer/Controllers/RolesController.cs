@@ -125,8 +125,8 @@ namespace IM.PresentationLayer.Controllers
             return Json(1, JsonRequestBehavior.AllowGet);
         } 
         public ActionResult RoleUpdate(RolesModelView roles)
-        { 
-            
+        {  
+
             var oldName = ihaleClient.GetRoles().FirstOrDefault(x => x.Id == roles.Id);
             if (oldName != null)
             {  

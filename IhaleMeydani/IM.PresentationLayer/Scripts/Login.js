@@ -44,7 +44,7 @@ $("#frmUserLogin").submit(function (e) {
     $("#snackbar").empty();
     var formData = new FormData(this);
     $.ajax({
-        url: "/Login/UserLogin",
+        url: "/Login/UserLogin",    
         type: "POST",
         data: formData,
         mimeType: "multipart/form-data",

@@ -17,6 +17,7 @@ namespace IM.PresentationLayer.Models
     }
     public class RoleModel
     {
+        public int RoleId { get; set; }
         public bool Checked { get; set; }
         public string Text { get; set; } 
         public int ClaimId { get; set; }

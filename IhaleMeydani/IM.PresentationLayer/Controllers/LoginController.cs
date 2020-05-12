@@ -37,6 +37,12 @@ namespace IM.PresentationLayer.Controllers
                         var result = ur.Password.Length;
                         ur.UserName = ln.Username;
                         ihaleClient.AddUser(ur);
+                        var roleName = ihaleClient.GetRoles().FirstOrDefault(f => f.Name == ln.RoleType);
+                        var newCustomer = ihaleClient.GetUsers().FirstOrDefault(f => f.UserName == ln.Username).Id;
+                        UserRole userRole = new UserRole();
+                        userRole.Role_Id = roleName.Id;
+                        userRole.User_Id = newCustomer;
+                        ihaleClient.AddUserRole(userRole);
                         return Json(1, JsonRequestBehavior.AllowGet);
                     }
                     else
