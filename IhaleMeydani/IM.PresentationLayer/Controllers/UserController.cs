@@ -1,4 +1,5 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace IM.PresentationLayer.Controllers
         // GET: User
         [HttpGet] 
         [Route("User/View")]
+        [ihaleClientFilter("Kullanıcı.Listele")]
         public ActionResult Index()
         {
             var query = (from r in ihaleClient.GetUsers()
@@ -35,6 +37,7 @@ namespace IM.PresentationLayer.Controllers
             user.userModelList = query; 
             return View(user);
         }
+        [ihaleClientFilter("Kullanıcı.Engelle")]
         public JsonResult UserBlock(int id) 
         {
             try
@@ -53,6 +56,7 @@ namespace IM.PresentationLayer.Controllers
             } 
         }
         [Route("User/Update/{id}")]
+        [ihaleClientFilter("Kullanıcı.Güncelle")]
         public ActionResult UserRoleUpdate(int id)
         {
             var query = (from r in ihaleClient.GetUsers() 
