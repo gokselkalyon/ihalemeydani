@@ -9,9 +9,18 @@ namespace IM.DataLayer.Model
     public class UserProductModel
     {
         public int id { get; set; }
+        public int CarDetailId { get; set; }
+        public int CarTechnicalDetailId { get; set; }
+        public int CarHardwareDetailsId { get; set; }
+        public int CarMakeId { get; set; }
+        public int GearTypeId { get; set; }
+        public int FuelTypeId { get; set; }
+        public int SegmentId { get; set; }
+        public int CarBrandId { get; set; }
+        public int ColorId { get; set; }
         public Nullable<int> user_id { get; set; }
-        public bool published_on { get; set; }
-        public bool isdeleted { get; set; }
+        public Nullable<bool> published_on { get; set; }
+        public Nullable<bool> isdeleted { get; set; }
         public DateTime? date_of_created { get; set; }
         public DateTime? date_of_updated { get; set; }
         public string UserName { get; set; }

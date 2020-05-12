@@ -2402,6 +2402,19 @@ namespace IM.ServiceLayer
         }
         #endregion
 
+        #region viewmodelcrud
+        public int AdduserProductmodel(UserProductModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>().MultiAdded(entity);
+        }
+
+        public int UpdateuserProductmodel(UserProductModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>().Multiupdate(entity);
+
+        }
+        #endregion
+
         #region ClaimGroup
         public List<ClaimGroup> GetClaimGroups()
         {
@@ -2428,6 +2441,7 @@ namespace IM.ServiceLayer
         {
              Create<ClaimGroup>().Update(entity);
         }
+
         #endregion
     }
 

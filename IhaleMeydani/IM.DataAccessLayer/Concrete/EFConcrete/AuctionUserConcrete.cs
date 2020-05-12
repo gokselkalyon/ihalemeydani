@@ -34,6 +34,16 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
             return DB.actionusers.Where(expression);
         }
 
+        public int MultiAdded(ActionUserModel t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Multiupdate(ActionUserModel t)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<ActionUserModel> QueryList()
         {
            return DB.Database.SqlQuery<ActionUserModel>("select * from actionuserview").ToList();

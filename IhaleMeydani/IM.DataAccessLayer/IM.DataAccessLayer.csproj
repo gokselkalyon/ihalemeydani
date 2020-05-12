@@ -70,6 +70,7 @@
     <Compile Include="Concrete\EFConcrete\ColorConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CompanyConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\Company_TypeConcrete.cs" />
+    <Compile Include="Concrete\EFConcrete\ContactConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CountryConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CountyConcrete.cs" />
     <Compile Include="Concrete\EFConcrete\CurrencyConcrete.cs" />

@@ -9,6 +9,18 @@
       <xsd:import schemaLocation="http://localhost:8081/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_GetTax_Administration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTax_Administration" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetTax_Administration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTax_AdministrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddTax_Administration_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTax_Administration" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddTax_Administration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTax_AdministrationResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_RemoveTax_Administration_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveTax_Administration" />
   </wsdl:message>
@@ -140,6 +152,18 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetMenus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenus" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetMenus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_SubMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubMenu" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_SubMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubMenuResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_MainMenu_InputMessage">
     <wsdl:part name="parameters" element="tns:MainMenu" />
@@ -639,17 +663,17 @@
   <wsdl:message name="IIhaleService_GetTax_Administrations_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTax_AdministrationsResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTax_Administration_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetTax_Administration" />
+  <wsdl:message name="IIhaleService_GetAllColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllColor" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTax_Administration_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetTax_AdministrationResponse" />
+  <wsdl:message name="IIhaleService_GetAllColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllColorResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddTax_Administration_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddTax_Administration" />
+  <wsdl:message name="IIhaleService_GetColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColor" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddTax_Administration_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddTax_AdministrationResponse" />
+  <wsdl:message name="IIhaleService_GetColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColorResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_AddColor_InputMessage">
     <wsdl:part name="parameters" element="tns:AddColor" />
@@ -1149,18 +1173,6 @@
   <wsdl:message name="IIhaleService_UpdateMedium_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateMediumResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetMenus_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetMenus" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetMenus_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetMenusResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_SubMenu_InputMessage">
-    <wsdl:part name="parameters" element="tns:SubMenu" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_SubMenu_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SubMenuResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
@@ -1202,6 +1214,18 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_Updateuserproduct_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateuserproductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AdduserProductmodel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdduserProductmodel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AdduserProductmodel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdduserProductmodelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateuserProductmodel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateuserProductmodel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateuserProductmodel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateuserProductmodelResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_Getactionusers_InputMessage">
     <wsdl:part name="parameters" element="tns:Getactionusers" />
@@ -1659,19 +1683,15 @@
   <wsdl:message name="IIhaleService_UpdateClaim_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateClaimResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetAllColor_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllColor" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetAllColor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllColorResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetColor_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetColor" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_GetColor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetColorResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="GetTax_Administration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administration" message="tns:IIhaleService_GetTax_Administration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationResponse" message="tns:IIhaleService_GetTax_Administration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTax_Administration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddTax_Administration" message="tns:IIhaleService_AddTax_Administration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddTax_AdministrationResponse" message="tns:IIhaleService_AddTax_Administration_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="RemoveTax_Administration">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveTax_Administration" message="tns:IIhaleService_RemoveTax_Administration_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveTax_AdministrationResponse" message="tns:IIhaleService_RemoveTax_Administration_OutputMessage" />
@@ -1759,6 +1779,14 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetMenus" message="tns:IIhaleService_GetMenus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetMenusResponse" message="tns:IIhaleService_GetMenus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/SubMenu" message="tns:IIhaleService_SubMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/SubMenuResponse" message="tns:IIhaleService_SubMenu_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="MainMenu">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/MainMenu" message="tns:IIhaleService_MainMenu_InputMessage" />
@@ -2092,13 +2120,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administrations" message="tns:IIhaleService_GetTax_Administrations_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse" message="tns:IIhaleService_GetTax_Administrations_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTax_Administration">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administration" message="tns:IIhaleService_GetTax_Administration_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationResponse" message="tns:IIhaleService_GetTax_Administration_OutputMessage" />
+    <wsdl:operation name="GetAllColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetAllColor" message="tns:IIhaleService_GetAllColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetAllColorResponse" message="tns:IIhaleService_GetAllColor_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddTax_Administration">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddTax_Administration" message="tns:IIhaleService_AddTax_Administration_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddTax_AdministrationResponse" message="tns:IIhaleService_AddTax_Administration_OutputMessage" />
+    <wsdl:operation name="GetColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetColor" message="tns:IIhaleService_GetColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetColorResponse" message="tns:IIhaleService_GetColor_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddColor">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddColor" message="tns:IIhaleService_AddColor_InputMessage" />
@@ -2432,14 +2460,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMedium" message="tns:IIhaleService_UpdateMedium_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateMediumResponse" message="tns:IIhaleService_UpdateMedium_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetMenus">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetMenus" message="tns:IIhaleService_GetMenus_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetMenusResponse" message="tns:IIhaleService_GetMenus_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SubMenu">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/SubMenu" message="tns:IIhaleService_SubMenu_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/SubMenuResponse" message="tns:IIhaleService_SubMenu_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
@@ -2467,6 +2487,14 @@
     <wsdl:operation name="Updateuserproduct">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Updateuserproduct" message="tns:IIhaleService_Updateuserproduct_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateuserproductResponse" message="tns:IIhaleService_Updateuserproduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdduserProductmodel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AdduserProductmodel" message="tns:IIhaleService_AdduserProductmodel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AdduserProductmodelResponse" message="tns:IIhaleService_AdduserProductmodel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateuserProductmodel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateuserProductmodel" message="tns:IIhaleService_UpdateuserProductmodel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateuserProductmodelResponse" message="tns:IIhaleService_UpdateuserProductmodel_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Getactionusers">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/Getactionusers" message="tns:IIhaleService_Getactionusers_InputMessage" />
@@ -2772,17 +2800,27 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaim" message="tns:IIhaleService_UpdateClaim_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaimResponse" message="tns:IIhaleService_UpdateClaim_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetAllColor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetAllColor" message="tns:IIhaleService_GetAllColor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetAllColorResponse" message="tns:IIhaleService_GetAllColor_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetColor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetColor" message="tns:IIhaleService_GetColor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetColorResponse" message="tns:IIhaleService_GetColor_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTax_Administration">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTax_Administration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTax_Administration">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddTax_Administration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="RemoveTax_Administration">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveTax_Administration" style="document" />
       <wsdl:input>
@@ -2974,6 +3012,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenus">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetMenus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubMenu">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/SubMenu" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3728,8 +3784,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetTax_Administration">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTax_Administration" style="document" />
+    <wsdl:operation name="GetAllColor">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetAllColor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3737,8 +3793,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddTax_Administration">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddTax_Administration" style="document" />
+    <wsdl:operation name="GetColor">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetColor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4493,24 +4549,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetMenus">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetMenus" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SubMenu">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/SubMenu" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
       <wsdl:input>
@@ -4567,6 +4605,24 @@
     </wsdl:operation>
     <wsdl:operation name="Updateuserproduct">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/Updateuserproduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdduserProductmodel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AdduserProductmodel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateuserProductmodel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateuserProductmodel" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -5251,24 +5307,6 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateClaim">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateClaim" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetAllColor">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetAllColor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetColor">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetColor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

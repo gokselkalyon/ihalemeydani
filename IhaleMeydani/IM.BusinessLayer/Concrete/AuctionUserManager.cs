@@ -87,5 +87,15 @@ namespace IM.BusinessLayer.Concrete
         {
             return _query.QueryList();
         }
+
+        public int MultiAdded(ActionUserModel t)
+        {
+            return _query.MultiAdded(t);
+        }
+
+        public int Multiupdate(ActionUserModel t)
+        {
+            return _query.Multiupdate(t);
+        }
     }
 }
