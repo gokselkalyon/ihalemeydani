@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IhaleMeydani"
+    "\\IhaleMeydani",
+    "\\IhaleMeydani\\IM.PresentationLayer",
+    "\\IhaleMeydani\\IM.PresentationLayer\\Controllers",
+    "\\IhaleMeydani\\IM.PresentationLayer\\Views",
+    "\\IhaleMeydani\\IM.PresentationLayer\\Views\\Auction"
   ],
   "PreviewInSolutionExplorer": false
 }
