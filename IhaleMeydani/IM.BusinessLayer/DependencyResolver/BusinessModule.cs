@@ -131,7 +131,7 @@ namespace IM.BusinessLayer.DependencyResolver
             Bind<IDataAccessDal<userproduct>>().To<UserProductConcrete>().InSingletonScope();
             Bind<IDataAccessDal<ClaimGroup>>().To<ClaimGroupConcrete>().InSingletonScope();
 
-            Bind<IDataAccessDal<Contact>>().To<ContactConcrete>().InSingletonScope()
+            Bind<IDataAccessDal<Contact>>().To<ContactConcrete>().InSingletonScope();
 
             Bind<IDataBaseQueryService<UserProductModel>>().To<UserProductManager>().InSingletonScope();
             Bind<IDataBaseQueryService<ActionUserModel>>().To<AuctionUserManager>().InSingletonScope();

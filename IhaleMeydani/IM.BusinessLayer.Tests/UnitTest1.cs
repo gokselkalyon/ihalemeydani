@@ -85,6 +85,7 @@ namespace IM.BusinessLayer.Tests
                 isdeleted = false
             };
             bool calisti = false;
+            int sonuc1 = InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>().Multiupdate(userProduct);
             var sonuc = InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>().QueryList().Where(x=>x.id ==userProduct.id && x.date_of_updated == userProduct.date_of_updated && x.ColorName == userProduct.ColorName).ToList();
             if (sonuc != null)
                 calisti = true;

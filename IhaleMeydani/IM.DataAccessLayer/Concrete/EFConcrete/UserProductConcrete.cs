@@ -175,7 +175,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                     userproduct userproduct = new userproduct
                     {
                         user_id = t.user_id,
-                        published_on = true,
+                        published_on = t.published_on,
                         date_of_created = DateTime.Now,
                         date_of_updated = DateTime.Now,
                         isdeleted = false,
