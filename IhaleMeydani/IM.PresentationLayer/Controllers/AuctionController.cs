@@ -1,5 +1,4 @@
-﻿using IM.PresentationLayer.IhaleWCFService;
-using IM.PresentationLayer.LoginSecurity;
+﻿using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -9,38 +8,24 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class AuctionController : BaseController
+    public class AuctionController : Controller
     {
-
         AuctionModelView mv = new AuctionModelView();
+        [HttpGet]
         [Route("auction/index/{auctionid}")]
-        public ActionResult Index(int auctionid)
+        public ActionResult Dashboard()
         {
-            if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
-                return RedirectToRoute("default");
-
-            mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == SessionManager.CurrentUser.Id).FirstOrDefault();
-            AuctionModelView.auctionid = auctionid;
-            return View(mv);
+            //mv. SessionManager.CurrentUser.Id
+            return View();
         }
 
-        // kullanıcıların ürünlerinin bulunduğu sayfa
-        [ihaleClientFilter("Araba.Listele")]
-        [Route("auction/userproductdashboard")]
-        public ActionResult UserProductsViewPage()
+        // GET: Auction/Details/5
+        public ActionResult Details(int id)
         {
-            int de = SessionManager.CurrentUser.Id;
-            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x=>x.user_id == SessionManager.CurrentUser.Id).ToList();
-            mv.carpublished = IhaleServiceClient.userProductModels().Where(x => x.user_id == SessionManager.CurrentUser.Id && x.published_on == true).Count();
-            mv.User = IhaleServiceClient.GetUser(SessionManager.CurrentUser.Id);
-            return View(mv);
+            return View();
         }
-
 
         // GET: Auction/Create
-        [HttpGet]
-        [Route("auction/Create")]
-        [ihaleClientFilter("Araba.Ekle")]
         public ActionResult Create()
         {
             return View();
@@ -48,15 +33,13 @@ namespace IM.PresentationLayer.Controllers
 
         // POST: Auction/Create
         [HttpPost]
-        [ihaleClientFilter("Araba.Ekle")]
-        [Route("auction/Create")]
-        public ActionResult Create(UserProductModel carmodel)
+        public ActionResult Create(FormCollection collection)
         {
             try
             {
-                carmodel.user_id = SessionManager.CurrentUser.Id;
-                int deger = IhaleServiceClient.AdduserProductmodel(carmodel);
-                return RedirectToAction("userproductdashboard");
+                // TODO: Add insert logic here
+
+                return RedirectToAction("Index");
             }
             catch
             {

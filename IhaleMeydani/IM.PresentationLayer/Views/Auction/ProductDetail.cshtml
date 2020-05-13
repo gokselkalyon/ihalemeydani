@@ -1,0 +1,168 @@
+﻿@model IM.PresentationLayer.Models.AuctionModelView
+
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h2>ProductDetail</h2>
+
+<div>
+    <h4>UserProductModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.CarBrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.CarBrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.CarMakeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.CarMakeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.CarVersion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.CarVersion)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.ColorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.ColorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.ColorValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.ColorValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.EngineDisplacement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.EngineDisplacement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.FuelTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.FuelTypeName)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.GearTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.GearTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.HP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.HP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.HardwareDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.HardwareDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.LicancePlate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.LicancePlate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.Mileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.Mileage)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.SegmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.SegmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.VIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.VIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.date_of_created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.date_of_created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.date_of_updated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.date_of_updated)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.published_on)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.published_on)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productModel.registrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productModel.registrationDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit","auction")/@Model.productModel.id ">güncelle</a>
+    @Html.ActionLink("Back to List", "userproductdashboard")
+
+</p>

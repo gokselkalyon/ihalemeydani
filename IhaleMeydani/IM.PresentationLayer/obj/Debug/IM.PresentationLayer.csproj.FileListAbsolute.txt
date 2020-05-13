@@ -644,3 +644,9 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Net.Http.Formatting.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Http.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Http.WebHost.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Net.Http.Formatting.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Http.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Http.WebHost.xml

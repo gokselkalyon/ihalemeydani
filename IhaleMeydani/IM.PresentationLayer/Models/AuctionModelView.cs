@@ -28,6 +28,12 @@ namespace IM.PresentationLayer.Models
        */
         public User User { get; set; }
         /*
+         kullanıcının açtığı açık arttırmaları görebilmek için
+             */
+        public auction auction { get; set; }
+
+        public List<auction> auctions { get; set; }
+        /*
             user list işlemleri için çalışacak property
         */
         public List<User> Users { get; set; }
@@ -39,6 +45,7 @@ namespace IM.PresentationLayer.Models
         public List<UserProductModel> userProductModels { get; set; }
 
         public int carpublished { get; set; }
+        public int carauctioncount { get; set; }
 
         public static int auctionid { get; set; }
     }
