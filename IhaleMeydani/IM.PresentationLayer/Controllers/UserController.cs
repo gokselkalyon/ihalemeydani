@@ -14,6 +14,33 @@ namespace IM.PresentationLayer.Controllers
         UserModelView user = new UserModelView();
         IhaleServiceClient ihaleClient = new IhaleServiceClient();
         // GET: User
+        [HttpGet]
+        [Route("User/Profile/{id}")]
+        [ihaleClientFilter("Kullanıcı.Profil")]
+        public ActionResult UserProfile(int id)
+        {
+            var query = (from r in ihaleClient.GetUsers()
+                         where r.Id == id
+                         select new UserModel
+                         {
+                             Id = r.Id,
+                             Name = r.Name,
+                             Surname = r.Surname,
+                             Email = r.Email,
+                             Adress = r.Adress,
+                             CompanyName = r.CompanyName,
+                             DateOfBirt = r.Dateofbird,
+                             IdentityNo = r.IdentityNo,
+                             IsDeleted = r.IsDeleted,
+                             Username = r.UserName,
+                             Phone = r.Phone
+                         }).FirstOrDefault();
+            user.userModel = query;
+            return View(user);
+        }
+
+
+
         [HttpGet] 
         [Route("User/View")]
         [ihaleClientFilter("Kullanıcı.Listele")]
