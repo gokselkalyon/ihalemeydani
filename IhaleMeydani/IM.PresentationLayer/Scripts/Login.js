@@ -65,6 +65,9 @@ $("#frmUserLogin").submit(function (e) {
                 x.className = "show";
                 setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
             }
+            else if (data == 4) {
+                window.location.href = "Admin";
+            }
         }
     });
 });

@@ -79,6 +79,15 @@ namespace IM.PresentationLayer.Controllers
                              }).FirstOrDefault();
                     SessionManager.Current.Set(SessionKey.CurrentUser, p);
                     FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
+                    var query = ihaleClient.GetUserRoles().Where(f => f.User_Id == p.Id).ToList();
+                    foreach (var item in query)
+                    {
+                        var FindRoleName = ihaleClient.GetRoles().Where(f => f.Id == item.Role_Id).FirstOrDefault();
+                        if (FindRoleName.Name == "Admin")
+                        {
+                            return Json(4, JsonRequestBehavior.AllowGet);
+                        }
+                    }
                     return Json(1, JsonRequestBehavior.AllowGet);
                 }
                 else
