@@ -1,4 +1,4 @@
-﻿using IM.PresentationLayer.IhaleWCFService;
+﻿using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -11,29 +11,19 @@ namespace IM.PresentationLayer.Controllers
     public class AuctionController : Controller
     {
         AuctionModelView mv = new AuctionModelView();
+        [HttpGet]
         [Route("auction/index/{auctionid}")]
-        public ActionResult Index(int auctionid)
+        public ActionResult Dashboard()
         {
-            if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
-                return RedirectToRoute("default");
-
-            mv.productModel = new IhaleServiceClient().userProductModels().Where(x => x.id == 1).FirstOrDefault();
-            AuctionModelView.auctionid = auctionid;
-            return View(mv);
+            //mv. SessionManager.CurrentUser.Id
+            return View();
         }
 
-        // kullanıcıların ürünlerinin bulunduğu sayfa
-        [Route("auction/userproductdashboard")]
-        public ActionResult UserProductsViewPage()
+        // GET: Auction/Details/5
+        public ActionResult Details(int id)
         {
-           
-            IhaleServiceClient db = new IhaleServiceClient();
-            mv.userProductModels = db.userProductModels().Where(x=>x.user_id == 1).ToList();
-            mv.carpublished = db.userProductModels().Where(x => x.user_id == 1 && x.published_on == true).Count();
-
-            return View(mv);
+            return View();
         }
-
 
         // GET: Auction/Create
         public ActionResult Create()

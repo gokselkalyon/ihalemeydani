@@ -31,6 +31,7 @@ namespace IM.BusinessLayer.Concrete
             _dataAccessDal.Add(entity);
         }
 
+
         public userproduct Get(int id)
         {
             return _dataAccessDal.Get(id);
@@ -86,6 +87,16 @@ namespace IM.BusinessLayer.Concrete
         public List<UserProductModel> QueryList()
         {
             return _query.QueryList();
+        }
+
+        public int MultiAdded(UserProductModel t)
+        {
+           return _query.MultiAdded(t);
+        }
+
+        public int Multiupdate(UserProductModel t)
+        {
+            return _query.Multiupdate(t);
         }
     }
 }

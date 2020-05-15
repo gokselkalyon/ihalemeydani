@@ -79,6 +79,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -89,6 +92,12 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -157,6 +166,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AuctionController.cs" />
+    <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
@@ -164,6 +174,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\QuickSellController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2617,6 +2628,7 @@
     <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
+    <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\Template\css\Loginn.css" />
     <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\BlogPage.css" />
@@ -2629,11 +2641,14 @@
     <Content Include="Content\Template\css\Style.css" />
     <Content Include="Content\Template\css\StyleSheet1.css" />
     <Content Include="Content\Template\css\sweetalert.css" />
+    <Content Include="Content\Template\css\TempDataMessage.css" />
     <Content Include="Content\Template\js\boostrap.js" />
+    <Content Include="Content\Template\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Content\Template\js\main.js" />
+    <Content Include="Content\Template\js\moment.min.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert.min.js" />
     <Content Include="Content\Template\js\sweetalert2.js" />
@@ -2662,8 +2677,10 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Scripts\Role.js" />
+    <Content Include="Scripts\User.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2674,11 +2691,10 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_AuctionLayout.cshtml" />
-    <Content Include="Views\Auction\Index.cshtml" />
+    <Content Include="Views\Cars\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Views\Shared\BlogPageContent.cshtml" />
     <Content Include="Views\Shared\_BlogLayoutPage.cshtml" />
     <Content Include="Views\BlogPost\Index.cshtml" />
@@ -2698,12 +2714,19 @@
     <Content Include="Views\Errors\Error501.cshtml" />
     <Content Include="Views\Errors\Error502.cshtml" />
     <Content Include="Views\Shared\_AdminPanelLayout.cshtml" />
-    <Content Include="Views\Auction\UserProductsViewPage.cshtml" />
+    <Content Include="Views\Cars\UserProductsViewPage.cshtml" />
     <Content Include="Views\Errors\PageError.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\AddRole.cshtml" />
     <Content Include="Views\Home\Menus.cshtml" />
     <Content Include="Views\Roles\UpdateRole.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\UserRoleUpdate.cshtml" />
+    <Content Include="Views\Cars\Create.cshtml" />
+    <Content Include="Views\Cars\Edit.cshtml" />
+    <Content Include="Views\Cars\ProductDetail.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
+    <Content Include="Views\Home\AdminHomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

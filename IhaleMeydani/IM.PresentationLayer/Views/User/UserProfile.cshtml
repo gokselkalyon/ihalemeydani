@@ -1,0 +1,90 @@
+﻿@model IM.PresentationLayer.Models.UserModelView
+@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<div class="container bootstrap snippet"> 
+    <div class="row">
+        <div class="col-sm-3 mt-3">
+            <ul class="list-group">
+                <li class="list-group-item text-muted">Aktivitelerim <i class="fa fa-dashboard fa-1x"></i></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Arabalarım</strong></span> 125</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Makalelerim</strong></span> 13</li>
+            </ul>
+
+        </div><!--/col-3-->
+        <div class="col-sm-9">
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <hr>
+                    <form class="form" action="##" method="post" id="registrationForm">
+                        <input value="@Model.userModel.Id" hidden name="Id" />
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="first_name"><h4>Adı</h4></label>
+                                <input type="text" class="form-control" name="first_name" id="first_name" required placeholder="Adı" value="@Model.userModel.Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="last_name"><h4>Soyadı</h4></label>
+                                <input type="text" class="form-control" name="Surname" id="last_name" required placeholder="Soyadı" value="@Model.userModel.Surname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="phone"><h4>Telefon Numarası</h4></label>
+                                <input type="text" class="form-control" name="Phone" id="phone" placeholder="Telefon Numarası" value="@Model.userModel.Phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="mobile"><h4>TC Kimlik Numarası</h4></label>
+                                <input type="text" class="form-control" name="IdentityNo" id="mobile" placeholder="TC Kimlik Numarası" @Model.userModel.IdentityNo>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="email"><h4>Email</h4></label>
+                                <input type="email" class="form-control" required name="Email" id="email" placeholder="you@email.com" value="@Model.userModel.Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="email"><h4>Doğum Tarihi</h4></label>
+                                <input type="email" class="form-control" id="location" placeholder="somewhere" value="@Model.userModel.DateOfBirt">
+                            </div>
+                        </div>
+                        <hr />
+                        <h4 style="color:red">Şifre Güncelle</h4>
+                        <hr />
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="password"><h4>Şifre</h4></label>
+                                <input type="password" class="form-control" required name="Password" id="password" placeholder="Şifre">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="password2"><h4>Şifre(Tekrar)</h4></label>
+                                <input type="password" class="form-control" required name="Password2" id="password2" placeholder="Password2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <br>
+                                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>Kaydet</button> 
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr>
+                </div>
+    </div><!--/col-9-->
+</div><!--/row-->

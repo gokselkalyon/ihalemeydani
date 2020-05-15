@@ -55,7 +55,7 @@ namespace IM.PresentationLayer
 
             IController errorsController = new Controllers.ErrorsController();
             var rc = new RequestContext(new HttpContextWrapper(Context), routeData);
-            errorsController.Execute(rc);
+            //errorsController.Execute(rc);
         }
     }
 }

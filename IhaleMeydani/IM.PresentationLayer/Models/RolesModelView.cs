@@ -12,12 +12,12 @@ namespace IM.PresentationLayer.Models
         public List<RoleModel> roleList { get; set; }
         public List<ClaimGroupModelView> claimGroupList { get; set; }
         public string RoleName { get; set; }
-        public int Id { get; set; } 
-       
+        public int Id { get; set; }  
 
     }
     public class RoleModel
     {
+        public int RoleId { get; set; }
         public bool Checked { get; set; }
         public string Text { get; set; } 
         public int ClaimId { get; set; }

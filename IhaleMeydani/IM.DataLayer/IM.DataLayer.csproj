@@ -96,6 +96,9 @@
     <Compile Include="company_type.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Contact.cs">
+      <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="country.cs">
       <DependentUpon>IhaleMeydaniModel.tt</DependentUpon>
     </Compile>

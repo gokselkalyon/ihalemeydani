@@ -12,8 +12,7 @@ namespace IM.PresentationLayer.Controllers
     {
         // GET: Roles 
         RolesModelView rm = new RolesModelView();
-        IhaleServiceClient ihaleClient = new IhaleServiceClient();
-        [Route("Roles")]
+        IhaleServiceClient ihaleClient = new IhaleServiceClient(); 
         [ihaleClientFilter("Role.Görüntüle")] 
         public ActionResult Index()
         {
@@ -126,13 +125,31 @@ namespace IM.PresentationLayer.Controllers
             return Json(1, JsonRequestBehavior.AllowGet);
         } 
         public ActionResult RoleUpdate(RolesModelView roles)
-        {
-            var oldName = ihaleClient.GetRoles().FirstOrDefault(x => x.Name == roles.RoleName);
+        {  
+
+            var oldName = ihaleClient.GetRoles().FirstOrDefault(x => x.Id == roles.Id);
             if (oldName != null)
-            {
-                Role r = new Role();
+            {  
                 oldName.Name = roles.RoleName;
-                ihaleClient.UpdateRole(r);
+                ihaleClient.UpdateRole(oldName); 
+            } 
+
+            var oldRoles = ihaleClient.GetRoleClaims().Where(x => x.RoleId == roles.Id).ToList();
+            if (oldRoles != null)
+            {
+                foreach (var item in oldRoles)
+                {
+                    ihaleClient.RemoveRoleClaim(item.Id); 
+                }
+            }
+            for (int i = 0; i < roles.roleList.Count; i++)
+            {
+                var ur = roles.roleList[i];
+                if (ur.Checked)
+                {
+                    var roleClaim = new RoleClaim() { ClaimId = ur.ClaimId, RoleId = oldName.Id };
+                    ihaleClient.AddRoleClaim(roleClaim); 
+                }
             }
             return RedirectToAction("index");
         }

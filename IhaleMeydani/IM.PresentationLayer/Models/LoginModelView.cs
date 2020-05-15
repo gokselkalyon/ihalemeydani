@@ -12,5 +12,7 @@ namespace IM.PresentationLayer.Models
         public string Password { get; set; }
         [Required(ErrorMessage = "Bu alan boş Geçilemez!")]
         public string Password2 { get; set; }
+
+        public string RoleType = "Kullanıcı";
     }
 }

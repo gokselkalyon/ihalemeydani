@@ -62,6 +62,7 @@
         <EntityTypeShape EntityType="IHALEDBModel.LogStatus" Width="1.5" PointX="19.375" PointY="7.75" />
         <EntityTypeShape EntityType="IHALEDBModel.ClaimGroup" Width="1.5" PointX="9.375" PointY="19.75" />
         <EntityTypeShape EntityType="IHALEDBModel.User" Width="1.5" PointX="19.375" PointY="10.75" />
+        <EntityTypeShape EntityType="IHALEDBModel.Contact" Width="1.5" PointX="11.375" PointY="19.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
