@@ -64,7 +64,33 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
 
         public int Multiupdate(PostModel t)
         {
-            throw new NotImplementedException();
+            using (var transaction = DB.Database.BeginTransaction())
+            {
+                try
+                {
+                    medium media = new medium { id =t.id, image_name = t.image_name, image_path = t.image_path, image_title = t.image_title, image_subtitle = t.image_subtitle };
+                    DB.media.Attach(media);
+                    DB.Entry(media).State = System.Data.Entity.EntityState.Modified;
+                    DB.SaveChanges();
+                    submit submit = new submit { submit_id = t.submit_id, media_id = media.id, submit_article = t.submit_article };
+                    DB.submits.Attach(submit);
+                    DB.Entry(submit).State = System.Data.Entity.EntityState.Modified;
+                    DB.SaveChanges();
+                    Post post = new Post { Post_id = t.Post_id, content_id = t.content_id, Post_date = DateTime.Now, users_id = t.users_id };
+                    DB.Posts.Attach(post);
+                    DB.Entry(post).State = System.Data.Entity.EntityState.Modified;
+                    DB.SaveChanges();
+                    transaction.Commit();
+                    return post.Post_id;
+                }
+                catch (Exception ex)
+                {
+
+                    var deneme = ex.Message;
+                    transaction.Rollback();
+                    return 0;
+                }
+            }
         }
 
         public List<PostModel> QueryList()
