@@ -592,6 +592,115 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="medium", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
+    [System.SerializableAttribute()]
+    public partial class medium : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string image_nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string image_pathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string image_subtitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string image_titleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_name {
+            get {
+                return this.image_nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.image_nameField, value) != true)) {
+                    this.image_nameField = value;
+                    this.RaisePropertyChanged("image_name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_path {
+            get {
+                return this.image_pathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.image_pathField, value) != true)) {
+                    this.image_pathField = value;
+                    this.RaisePropertyChanged("image_path");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_subtitle {
+            get {
+                return this.image_subtitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.image_subtitleField, value) != true)) {
+                    this.image_subtitleField = value;
+                    this.RaisePropertyChanged("image_subtitle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_title {
+            get {
+                return this.image_titleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.image_titleField, value) != true)) {
+                    this.image_titleField = value;
+                    this.RaisePropertyChanged("image_title");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Menu", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
     public partial class Menu : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -2077,6 +2186,83 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((this.tag_post_idField.Equals(value) != true)) {
                     this.tag_post_idField = value;
                     this.RaisePropertyChanged("tag_post_id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Claim", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
+    [System.SerializableAttribute()]
+    public partial class Claim : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ClaimGroupIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TextField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ClaimGroupId {
+            get {
+                return this.ClaimGroupIdField;
+            }
+            set {
+                if ((this.ClaimGroupIdField.Equals(value) != true)) {
+                    this.ClaimGroupIdField = value;
+                    this.RaisePropertyChanged("ClaimGroupId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Text {
+            get {
+                return this.TextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TextField, value) != true)) {
+                    this.TextField = value;
+                    this.RaisePropertyChanged("Text");
                 }
             }
         }
@@ -3949,115 +4135,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="medium", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
-    [System.SerializableAttribute()]
-    public partial class medium : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string image_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string image_pathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string image_subtitleField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string image_titleField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string image_name {
-            get {
-                return this.image_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.image_nameField, value) != true)) {
-                    this.image_nameField = value;
-                    this.RaisePropertyChanged("image_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string image_path {
-            get {
-                return this.image_pathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.image_pathField, value) != true)) {
-                    this.image_pathField = value;
-                    this.RaisePropertyChanged("image_path");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string image_subtitle {
-            get {
-                return this.image_subtitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.image_subtitleField, value) != true)) {
-                    this.image_subtitleField = value;
-                    this.RaisePropertyChanged("image_subtitle");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string image_title {
-            get {
-                return this.image_titleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.image_titleField, value) != true)) {
-                    this.image_titleField = value;
-                    this.RaisePropertyChanged("image_title");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="userproduct", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
     public partial class userproduct : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -5788,6 +5865,483 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserAuctionModel", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model")]
+    [System.SerializableAttribute()]
+    public partial class UserAuctionModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> ACUTION_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ACUTION_SALES_TIMEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AoFIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarBrandNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarMakeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DATE_OF_UPDATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EngineDisplacementField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FuelTypeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GearTypeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int HPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HardwareDetailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal INCREASE_PRICEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LicancePlateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal MAX_PRICEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal MIN_PRICEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MileageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NAMEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SegmentNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VINField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> date_of_createdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isdeletedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> registrationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userproductIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ACUTION_DATE {
+            get {
+                return this.ACUTION_DATEField;
+            }
+            set {
+                if ((this.ACUTION_DATEField.Equals(value) != true)) {
+                    this.ACUTION_DATEField = value;
+                    this.RaisePropertyChanged("ACUTION_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ACUTION_SALES_TIME {
+            get {
+                return this.ACUTION_SALES_TIMEField;
+            }
+            set {
+                if ((this.ACUTION_SALES_TIMEField.Equals(value) != true)) {
+                    this.ACUTION_SALES_TIMEField = value;
+                    this.RaisePropertyChanged("ACUTION_SALES_TIME");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AoFID {
+            get {
+                return this.AoFIDField;
+            }
+            set {
+                if ((this.AoFIDField.Equals(value) != true)) {
+                    this.AoFIDField = value;
+                    this.RaisePropertyChanged("AoFID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarBrandName {
+            get {
+                return this.CarBrandNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarBrandNameField, value) != true)) {
+                    this.CarBrandNameField = value;
+                    this.RaisePropertyChanged("CarBrandName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarMakeName {
+            get {
+                return this.CarMakeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarMakeNameField, value) != true)) {
+                    this.CarMakeNameField = value;
+                    this.RaisePropertyChanged("CarMakeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarVersion {
+            get {
+                return this.CarVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarVersionField, value) != true)) {
+                    this.CarVersionField = value;
+                    this.RaisePropertyChanged("CarVersion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorName {
+            get {
+                return this.ColorNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorNameField, value) != true)) {
+                    this.ColorNameField = value;
+                    this.RaisePropertyChanged("ColorName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ColorValue {
+            get {
+                return this.ColorValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorValueField, value) != true)) {
+                    this.ColorValueField = value;
+                    this.RaisePropertyChanged("ColorValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DATE_OF_UPDATE {
+            get {
+                return this.DATE_OF_UPDATEField;
+            }
+            set {
+                if ((this.DATE_OF_UPDATEField.Equals(value) != true)) {
+                    this.DATE_OF_UPDATEField = value;
+                    this.RaisePropertyChanged("DATE_OF_UPDATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EngineDisplacement {
+            get {
+                return this.EngineDisplacementField;
+            }
+            set {
+                if ((this.EngineDisplacementField.Equals(value) != true)) {
+                    this.EngineDisplacementField = value;
+                    this.RaisePropertyChanged("EngineDisplacement");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FuelTypeName {
+            get {
+                return this.FuelTypeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FuelTypeNameField, value) != true)) {
+                    this.FuelTypeNameField = value;
+                    this.RaisePropertyChanged("FuelTypeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string GearTypeName {
+            get {
+                return this.GearTypeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GearTypeNameField, value) != true)) {
+                    this.GearTypeNameField = value;
+                    this.RaisePropertyChanged("GearTypeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int HP {
+            get {
+                return this.HPField;
+            }
+            set {
+                if ((this.HPField.Equals(value) != true)) {
+                    this.HPField = value;
+                    this.RaisePropertyChanged("HP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HardwareDetail {
+            get {
+                return this.HardwareDetailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HardwareDetailField, value) != true)) {
+                    this.HardwareDetailField = value;
+                    this.RaisePropertyChanged("HardwareDetail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal INCREASE_PRICE {
+            get {
+                return this.INCREASE_PRICEField;
+            }
+            set {
+                if ((this.INCREASE_PRICEField.Equals(value) != true)) {
+                    this.INCREASE_PRICEField = value;
+                    this.RaisePropertyChanged("INCREASE_PRICE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LicancePlate {
+            get {
+                return this.LicancePlateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LicancePlateField, value) != true)) {
+                    this.LicancePlateField = value;
+                    this.RaisePropertyChanged("LicancePlate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal MAX_PRICE {
+            get {
+                return this.MAX_PRICEField;
+            }
+            set {
+                if ((this.MAX_PRICEField.Equals(value) != true)) {
+                    this.MAX_PRICEField = value;
+                    this.RaisePropertyChanged("MAX_PRICE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal MIN_PRICE {
+            get {
+                return this.MIN_PRICEField;
+            }
+            set {
+                if ((this.MIN_PRICEField.Equals(value) != true)) {
+                    this.MIN_PRICEField = value;
+                    this.RaisePropertyChanged("MIN_PRICE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Mileage {
+            get {
+                return this.MileageField;
+            }
+            set {
+                if ((this.MileageField.Equals(value) != true)) {
+                    this.MileageField = value;
+                    this.RaisePropertyChanged("Mileage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NAME {
+            get {
+                return this.NAMEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NAMEField, value) != true)) {
+                    this.NAMEField = value;
+                    this.RaisePropertyChanged("NAME");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SegmentName {
+            get {
+                return this.SegmentNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SegmentNameField, value) != true)) {
+                    this.SegmentNameField = value;
+                    this.RaisePropertyChanged("SegmentName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VIN {
+            get {
+                return this.VINField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VINField, value) != true)) {
+                    this.VINField = value;
+                    this.RaisePropertyChanged("VIN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date_of_created {
+            get {
+                return this.date_of_createdField;
+            }
+            set {
+                if ((this.date_of_createdField.Equals(value) != true)) {
+                    this.date_of_createdField = value;
+                    this.RaisePropertyChanged("date_of_created");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isdeleted {
+            get {
+                return this.isdeletedField;
+            }
+            set {
+                if ((this.isdeletedField.Equals(value) != true)) {
+                    this.isdeletedField = value;
+                    this.RaisePropertyChanged("isdeleted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> registrationDate {
+            get {
+                return this.registrationDateField;
+            }
+            set {
+                if ((this.registrationDateField.Equals(value) != true)) {
+                    this.registrationDateField = value;
+                    this.RaisePropertyChanged("registrationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userproductID {
+            get {
+                return this.userproductIDField;
+            }
+            set {
+                if ((this.userproductIDField.Equals(value) != true)) {
+                    this.userproductIDField = value;
+                    this.RaisePropertyChanged("userproductID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="bank", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
     public partial class bank : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -6501,86 +7055,15 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Claim", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
-    [System.SerializableAttribute()]
-    public partial class Claim : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ClaimGroupIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TextField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ClaimGroupId {
-            get {
-                return this.ClaimGroupIdField;
-            }
-            set {
-                if ((this.ClaimGroupIdField.Equals(value) != true)) {
-                    this.ClaimGroupIdField = value;
-                    this.RaisePropertyChanged("ClaimGroupId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Text {
-            get {
-                return this.TextField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TextField, value) != true)) {
-                    this.TextField = value;
-                    this.RaisePropertyChanged("Text");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IhaleWCFService.IIhaleService")]
     public interface IIhaleService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetTax_Administrations", ReplyAction="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse")]
+        System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration> GetTax_Administrations();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetTax_Administrations", ReplyAction="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration>> GetTax_AdministrationsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetTax_Administration", ReplyAction="http://tempuri.org/IIhaleService/GetTax_AdministrationResponse")]
         IM.PresentationLayer.IhaleWCFService.Tax_Administration GetTax_Administration(int Id);
@@ -6725,6 +7208,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateUserType", ReplyAction="http://tempuri.org/IIhaleService/UpdateUserTypeResponse")]
         System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateMedium", ReplyAction="http://tempuri.org/IIhaleService/UpdateMediumResponse")]
+        void UpdateMedium(IM.PresentationLayer.IhaleWCFService.medium entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateMedium", ReplyAction="http://tempuri.org/IIhaleService/UpdateMediumResponse")]
+        System.Threading.Tasks.Task UpdateMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetMenus", ReplyAction="http://tempuri.org/IIhaleService/GetMenusResponse")]
         System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Menu> GetMenus();
@@ -7230,11 +7719,11 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateTagPost", ReplyAction="http://tempuri.org/IIhaleService/UpdateTagPostResponse")]
         System.Threading.Tasks.Task UpdateTagPostAsync(IM.PresentationLayer.IhaleWCFService.tag_post entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetTax_Administrations", ReplyAction="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse")]
-        System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration> GetTax_Administrations();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateClaim", ReplyAction="http://tempuri.org/IIhaleService/UpdateClaimResponse")]
+        void UpdateClaim(IM.PresentationLayer.IhaleWCFService.Claim entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetTax_Administrations", ReplyAction="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration>> GetTax_AdministrationsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateClaim", ReplyAction="http://tempuri.org/IIhaleService/UpdateClaimResponse")]
+        System.Threading.Tasks.Task UpdateClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetAllColor", ReplyAction="http://tempuri.org/IIhaleService/GetAllColorResponse")]
         System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Color> GetAllColor();
@@ -7740,12 +8229,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveMedium", ReplyAction="http://tempuri.org/IIhaleService/RemoveMediumResponse")]
         System.Threading.Tasks.Task RemoveMediumAsync(int Id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateMedium", ReplyAction="http://tempuri.org/IIhaleService/UpdateMediumResponse")]
-        void UpdateMedium(IM.PresentationLayer.IhaleWCFService.medium entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateMedium", ReplyAction="http://tempuri.org/IIhaleService/UpdateMediumResponse")]
-        System.Threading.Tasks.Task UpdateMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/toplama", ReplyAction="http://tempuri.org/IIhaleService/toplamaResponse")]
         string toplama(int x, int y);
         
@@ -8016,6 +8499,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateAuction", ReplyAction="http://tempuri.org/IIhaleService/UpdateAuctionResponse")]
         System.Threading.Tasks.Task UpdateAuctionAsync(IM.PresentationLayer.IhaleWCFService.auction entity);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUserAuctionModel", ReplyAction="http://tempuri.org/IIhaleService/GetUserAuctionModelResponse")]
+        System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.UserAuctionModel> GetUserAuctionModel(IM.PresentationLayer.IhaleWCFService.UserAuctionModel entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetUserAuctionModel", ReplyAction="http://tempuri.org/IIhaleService/GetUserAuctionModelResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.UserAuctionModel>> GetUserAuctionModelAsync(IM.PresentationLayer.IhaleWCFService.UserAuctionModel entity);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetBanks", ReplyAction="http://tempuri.org/IIhaleService/GetBanksResponse")]
         System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.bank> GetBanks();
         
@@ -8249,12 +8738,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveClaim", ReplyAction="http://tempuri.org/IIhaleService/RemoveClaimResponse")]
         System.Threading.Tasks.Task RemoveClaimAsync(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateClaim", ReplyAction="http://tempuri.org/IIhaleService/UpdateClaimResponse")]
-        void UpdateClaim(IM.PresentationLayer.IhaleWCFService.Claim entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateClaim", ReplyAction="http://tempuri.org/IIhaleService/UpdateClaimResponse")]
-        System.Threading.Tasks.Task UpdateClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -8282,6 +8765,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public IhaleServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration> GetTax_Administrations() {
+            return base.Channel.GetTax_Administrations();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration>> GetTax_AdministrationsAsync() {
+            return base.Channel.GetTax_AdministrationsAsync();
         }
         
         public IM.PresentationLayer.IhaleWCFService.Tax_Administration GetTax_Administration(int Id) {
@@ -8474,6 +8965,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity) {
             return base.Channel.UpdateUserTypeAsync(entity);
+        }
+        
+        public void UpdateMedium(IM.PresentationLayer.IhaleWCFService.medium entity) {
+            base.Channel.UpdateMedium(entity);
+        }
+        
+        public System.Threading.Tasks.Task UpdateMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity) {
+            return base.Channel.UpdateMediumAsync(entity);
         }
         
         public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Menu> GetMenus() {
@@ -9148,12 +9647,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.UpdateTagPostAsync(entity);
         }
         
-        public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration> GetTax_Administrations() {
-            return base.Channel.GetTax_Administrations();
+        public void UpdateClaim(IM.PresentationLayer.IhaleWCFService.Claim entity) {
+            base.Channel.UpdateClaim(entity);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Tax_Administration>> GetTax_AdministrationsAsync() {
-            return base.Channel.GetTax_AdministrationsAsync();
+        public System.Threading.Tasks.Task UpdateClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity) {
+            return base.Channel.UpdateClaimAsync(entity);
         }
         
         public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.Color> GetAllColor() {
@@ -9828,14 +10327,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.RemoveMediumAsync(Id);
         }
         
-        public void UpdateMedium(IM.PresentationLayer.IhaleWCFService.medium entity) {
-            base.Channel.UpdateMedium(entity);
-        }
-        
-        public System.Threading.Tasks.Task UpdateMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity) {
-            return base.Channel.UpdateMediumAsync(entity);
-        }
-        
         public string toplama(int x, int y) {
             return base.Channel.toplama(x, y);
         }
@@ -10196,6 +10687,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.UpdateAuctionAsync(entity);
         }
         
+        public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.UserAuctionModel> GetUserAuctionModel(IM.PresentationLayer.IhaleWCFService.UserAuctionModel entity) {
+            return base.Channel.GetUserAuctionModel(entity);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.UserAuctionModel>> GetUserAuctionModelAsync(IM.PresentationLayer.IhaleWCFService.UserAuctionModel entity) {
+            return base.Channel.GetUserAuctionModelAsync(entity);
+        }
+        
         public System.Collections.Generic.List<IM.PresentationLayer.IhaleWCFService.bank> GetBanks() {
             return base.Channel.GetBanks();
         }
@@ -10506,14 +11005,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task RemoveClaimAsync(int Id) {
             return base.Channel.RemoveClaimAsync(Id);
-        }
-        
-        public void UpdateClaim(IM.PresentationLayer.IhaleWCFService.Claim entity) {
-            base.Channel.UpdateClaim(entity);
-        }
-        
-        public System.Threading.Tasks.Task UpdateClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity) {
-            return base.Channel.UpdateClaimAsync(entity);
         }
     }
 }

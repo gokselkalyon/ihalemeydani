@@ -16,7 +16,7 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Index()
         {
             bm.Posts = IhaleServiceClient.GetPosts().ToList();
-            IhaleServiceClient.AddPost();
+            //IhaleServiceClient.AddPost();
             return View(bm);
         }
         [Route("BlogContent")]

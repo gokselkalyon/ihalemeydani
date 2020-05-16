@@ -179,6 +179,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\Singleton.cs" />
     <Compile Include="LoginSecurity\ihaleClientFilter.cs" />
     <Compile Include="LoginSecurity\SessionManager.cs" />
     <Compile Include="LoginSecurity\UserProvider.cs" />
@@ -200,9 +201,11 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.wsdl" />
     <None Include="Connected Services\IhaleWCFService\IhaleService31.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.disco" />
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -365,6 +368,9 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\IhaleWCFService\IhaleService34.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -372,6 +378,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserAuctionModel1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
