@@ -2689,7 +2689,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_AuctionLayout.cshtml" />
-    <Content Include="Views\Auction\Index.cshtml" />
+    <Content Include="Views\Cars\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -2712,7 +2712,7 @@
     <Content Include="Views\Errors\Error501.cshtml" />
     <Content Include="Views\Errors\Error502.cshtml" />
     <Content Include="Views\Shared\_AdminPanelLayout.cshtml" />
-    <Content Include="Views\Auction\UserProductsViewPage.cshtml" />
+    <Content Include="Views\Cars\UserProductsViewPage.cshtml" />
     <Content Include="Views\Errors\PageError.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\AddRole.cshtml" />
@@ -2720,9 +2720,9 @@
     <Content Include="Views\Roles\UpdateRole.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\UserRoleUpdate.cshtml" />
-    <Content Include="Views\Auction\Create.cshtml" />
-    <Content Include="Views\Auction\Edit.cshtml" />
-    <Content Include="Views\Auction\ProductDetail.cshtml" />
+    <Content Include="Views\Cars\Create.cshtml" />
+    <Content Include="Views\Cars\Edit.cshtml" />
+    <Content Include="Views\Cars\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
