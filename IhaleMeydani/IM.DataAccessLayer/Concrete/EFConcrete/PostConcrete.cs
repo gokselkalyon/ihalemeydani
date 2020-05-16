@@ -1,6 +1,7 @@
 ﻿using IM.DataAccessLayer.Abstract;
 using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
+using IM.DataLayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class PostConcrete : BaseConcrete, IDataAccessDal<Post>
+    public class PostConcrete : BaseConcrete, IDataAccessDal<Post>, IDataBaseQuery<PostModel>
     {
         public void Add(Post entity)
         {
@@ -31,6 +32,21 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
         public IEnumerable<Post> GetFilter(Expression<Func<Post, bool>> expression)
         {
             return DB.Posts.Where(expression);
+        }
+
+        public int MultiAdded(PostModel t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Multiupdate(PostModel t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<PostModel> QueryList()
+        {
+            return DB.Database.SqlQuery<PostModel>("select * from postview").ToList();
         }
 
         public void Remove(int id)
