@@ -15,8 +15,10 @@ namespace IM.DataLayer
     public partial class SOLD_PRODUCT
     {
         public int ID { get; set; }
-        public Nullable<int> CarDetail_ID { get; set; }
         public Nullable<int> E_INVOICE_ID { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
+        public Nullable<int> userproductId { get; set; }
+    
+        public virtual userproduct userproduct { get; set; }
     }
 }

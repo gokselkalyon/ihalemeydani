@@ -163,6 +163,8 @@
           <Property Name="Address" Type="text" />
           <Property Name="Email" Type="varchar" MaxLength="175" />
           <Property Name="Faks" Type="int" />
+          <Property Name="Telefon" Type="char" MaxLength="11" />
+          <Property Name="GoogleMapUrl" Type="varchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="country">
           <Key>
@@ -460,9 +462,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CarDetail_ID" Type="int" />
           <Property Name="E_INVOICE_ID" Type="int" />
           <Property Name="DATE_OF_UPDATE" Type="date" />
+          <Property Name="userproductId" Type="int" />
         </EntityType>
         <EntityType Name="submit">
           <Key>
@@ -544,6 +546,7 @@
           <Property Name="date_of_updated" Type="date" />
           <Property Name="published_on" Type="bit" />
           <Property Name="isdeleted" Type="bit" />
+          <Property Name="isSaled" Type="bit" />
         </EntityType>
         <EntityType Name="UserRole">
           <Key>
@@ -570,6 +573,18 @@
             </Principal>
             <Dependent Role="SocialMedya">
               <PropertyRef Name="MediaTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SOLD_PRODUCT_userproduct">
+          <End Role="userproduct" Type="Self.userproduct" Multiplicity="0..1" />
+          <End Role="SOLD_PRODUCT" Type="Self.SOLD_PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userproduct">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="SOLD_PRODUCT">
+              <PropertyRef Name="userproductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -634,6 +649,10 @@
           <AssociationSet Name="FK_SocialMedya_SocialMediaType" Association="Self.FK_SocialMedya_SocialMediaType">
             <End Role="SocialMediaType" EntitySet="SocialMediaType" />
             <End Role="SocialMedya" EntitySet="SocialMedya" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SOLD_PRODUCT_userproduct" Association="Self.FK_SOLD_PRODUCT_userproduct">
+            <End Role="userproduct" EntitySet="userproduct" />
+            <End Role="SOLD_PRODUCT" EntitySet="SOLD_PRODUCT" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -1016,15 +1035,6 @@
           <Property Name="MediaTypeId" Type="Int32" />
           <NavigationProperty Name="SocialMediaType" Relationship="IHALEDBModel.FK_SocialMedya_SocialMediaType" FromRole="SocialMedya" ToRole="SocialMediaType" />
         </EntityType>
-        <EntityType Name="SOLD_PRODUCT">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CarDetail_ID" Type="Int32" />
-          <Property Name="E_INVOICE_ID" Type="Int32" />
-          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
-        </EntityType>
         <EntityType Name="submit">
           <Key>
             <PropertyRef Name="submit_id" />
@@ -1130,7 +1140,6 @@
           <EntitySet Name="Segments" EntityType="Self.Segment" />
           <EntitySet Name="senaryoes" EntityType="Self.senaryo" />
           <EntitySet Name="SocialMedyas" EntityType="Self.SocialMedya" />
-          <EntitySet Name="SOLD_PRODUCT" EntityType="Self.SOLD_PRODUCT" />
           <EntitySet Name="submits" EntityType="Self.submit" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="tags" EntityType="Self.tag" />
@@ -1142,7 +1151,6 @@
           <EntitySet Name="actionusers" EntityType="IHALEDBModel.actionuser" />
           <EntitySet Name="private_auction" EntityType="IHALEDBModel.private_auction" />
           <EntitySet Name="SocialMediaTypes" EntityType="IHALEDBModel.SocialMediaType" />
-          <EntitySet Name="userproducts" EntityType="IHALEDBModel.userproduct" />
           <AssociationSet Name="FK_SocialMedya_SocialMediaType" Association="IHALEDBModel.FK_SocialMedya_SocialMediaType">
             <End Role="SocialMediaType" EntitySet="SocialMediaTypes" />
             <End Role="SocialMedya" EntitySet="SocialMedyas" />
@@ -1153,6 +1161,12 @@
           <EntitySet Name="ClaimGroups" EntityType="IHALEDBModel.ClaimGroup" />
           <EntitySet Name="Users" EntityType="IHALEDBModel.User" />
           <EntitySet Name="Contacts" EntityType="IHALEDBModel.Contact" />
+          <EntitySet Name="userproducts" EntityType="IHALEDBModel.userproduct" />
+          <EntitySet Name="SOLD_PRODUCT" EntityType="IHALEDBModel.SOLD_PRODUCT" />
+          <AssociationSet Name="FK_SOLD_PRODUCT_userproduct" Association="IHALEDBModel.FK_SOLD_PRODUCT_userproduct">
+            <End Role="userproduct" EntitySet="userproducts" />
+            <End Role="SOLD_PRODUCT" EntitySet="SOLD_PRODUCT" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="actionuser">
           <Key>
@@ -1180,18 +1194,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="SocialMedyas" Relationship="IHALEDBModel.FK_SocialMedya_SocialMediaType" FromRole="SocialMediaType" ToRole="SocialMedya" />
-        </EntityType>
-        <EntityType Name="userproduct">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="user_id" Type="Int32" />
-          <Property Name="cardetail_id" Type="Int32" />
-          <Property Name="date_of_created" Type="DateTime" Precision="0" />
-          <Property Name="date_of_updated" Type="DateTime" Precision="0" />
-          <Property Name="published_on" Type="Boolean" />
-          <Property Name="isdeleted" Type="Boolean" />
         </EntityType>
         <Association Name="FK_SocialMedya_SocialMediaType">
           <End Type="IHALEDBModel.SocialMediaType" Role="SocialMediaType" Multiplicity="0..1" />
@@ -1272,7 +1274,45 @@
           <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="175" FixedLength="false" Unicode="false" />
           <Property Name="Faks" Type="Int32" />
+          <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="GoogleMapUrl" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="userproduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="cardetail_id" Type="Int32" />
+          <Property Name="date_of_created" Type="DateTime" Precision="0" />
+          <Property Name="date_of_updated" Type="DateTime" Precision="0" />
+          <Property Name="published_on" Type="Boolean" />
+          <Property Name="isdeleted" Type="Boolean" />
+          <Property Name="isSaled" Type="Boolean" />
+          <NavigationProperty Name="SOLD_PRODUCT" Relationship="IHALEDBModel.FK_SOLD_PRODUCT_userproduct" FromRole="userproduct" ToRole="SOLD_PRODUCT" />
+        </EntityType>
+        <EntityType Name="SOLD_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="E_INVOICE_ID" Type="Int32" />
+          <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
+          <Property Name="userproductId" Type="Int32" />
+          <NavigationProperty Name="userproduct" Relationship="IHALEDBModel.FK_SOLD_PRODUCT_userproduct" FromRole="SOLD_PRODUCT" ToRole="userproduct" />
+        </EntityType>
+        <Association Name="FK_SOLD_PRODUCT_userproduct">
+          <End Type="IHALEDBModel.userproduct" Role="userproduct" Multiplicity="0..1" />
+          <End Type="IHALEDBModel.SOLD_PRODUCT" Role="SOLD_PRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userproduct">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="SOLD_PRODUCT">
+              <PropertyRef Name="userproductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1692,16 +1732,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="SOLD_PRODUCT">
-            <EntityTypeMapping TypeName="IHALEDBModel.SOLD_PRODUCT">
-              <MappingFragment StoreEntitySet="SOLD_PRODUCT">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="CarDetail_ID" ColumnName="CarDetail_ID" />
-                <ScalarProperty Name="E_INVOICE_ID" ColumnName="E_INVOICE_ID" />
-                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="submits">
             <EntityTypeMapping TypeName="IHALEDBModel.submit">
               <MappingFragment StoreEntitySet="submit">
@@ -1805,19 +1835,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="userproducts">
-            <EntityTypeMapping TypeName="IHALEDBModel.userproduct">
-              <MappingFragment StoreEntitySet="userproduct">
-                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
-                <ScalarProperty Name="published_on" ColumnName="published_on" />
-                <ScalarProperty Name="date_of_updated" ColumnName="date_of_updated" />
-                <ScalarProperty Name="date_of_created" ColumnName="date_of_created" />
-                <ScalarProperty Name="cardetail_id" ColumnName="cardetail_id" />
-                <ScalarProperty Name="user_id" ColumnName="user_id" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="LogInfoes">
             <EntityTypeMapping TypeName="IHALEDBModel.LogInfo">
               <MappingFragment StoreEntitySet="LogInfoes">
@@ -1885,10 +1902,36 @@
           <EntitySetMapping Name="Contacts">
             <EntityTypeMapping TypeName="IHALEDBModel.Contact">
               <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="GoogleMapUrl" ColumnName="GoogleMapUrl" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="Faks" ColumnName="Faks" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userproducts">
+            <EntityTypeMapping TypeName="IHALEDBModel.userproduct">
+              <MappingFragment StoreEntitySet="userproduct">
+                <ScalarProperty Name="isSaled" ColumnName="isSaled" />
+                <ScalarProperty Name="isdeleted" ColumnName="isdeleted" />
+                <ScalarProperty Name="published_on" ColumnName="published_on" />
+                <ScalarProperty Name="date_of_updated" ColumnName="date_of_updated" />
+                <ScalarProperty Name="date_of_created" ColumnName="date_of_created" />
+                <ScalarProperty Name="cardetail_id" ColumnName="cardetail_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SOLD_PRODUCT">
+            <EntityTypeMapping TypeName="IHALEDBModel.SOLD_PRODUCT">
+              <MappingFragment StoreEntitySet="SOLD_PRODUCT">
+                <ScalarProperty Name="userproductId" ColumnName="userproductId" />
+                <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
+                <ScalarProperty Name="E_INVOICE_ID" ColumnName="E_INVOICE_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
