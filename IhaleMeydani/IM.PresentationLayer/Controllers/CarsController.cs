@@ -26,6 +26,13 @@ namespace IM.PresentationLayer.Controllers
             return View(mv);
         }
 
+        [Route("Cars/list")]
+        public ActionResult Carslist()
+        {
+            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x => x.isdeleted == false).ToList();
+            return View(mv);
+        }
+
         // kullanıcıların ürünlerinin bulunduğu sayfa
         [ihaleClientFilter("Araba.Listele")]
         [Route("Cars/userproductdashboard")]
