@@ -14,6 +14,12 @@ namespace IM.DataLayer
     
     public partial class userproduct
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public userproduct()
+        {
+            this.SOLD_PRODUCT = new HashSet<SOLD_PRODUCT>();
+        }
+    
         public int id { get; set; }
         public Nullable<int> user_id { get; set; }
         public Nullable<int> cardetail_id { get; set; }
@@ -21,5 +27,9 @@ namespace IM.DataLayer
         public Nullable<System.DateTime> date_of_updated { get; set; }
         public Nullable<bool> published_on { get; set; }
         public Nullable<bool> isdeleted { get; set; }
+        public Nullable<bool> isSaled { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SOLD_PRODUCT> SOLD_PRODUCT { get; set; }
     }
 }
