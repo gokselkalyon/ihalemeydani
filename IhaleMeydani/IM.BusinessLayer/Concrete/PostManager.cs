@@ -10,18 +10,20 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using IM.DataLayer.Model;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class PostManager:IDataBusinessService<Post>
+    public class PostManager:IDataBusinessService<Post>,IDataBaseQueryService<PostModel>
     {
         private IDataAccessDal<Post> _dataAccessDal;
         private readonly IMapper _mapper;
-
-        public PostManager(IDataAccessDal<Post> dataAccessDal, IMapper mapper)
+        private IDataBaseQuery<PostModel> _query;
+        public PostManager(IDataAccessDal<Post> dataAccessDal, IMapper mapper,IDataBaseQuery<PostModel> query)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
+            _query = query;
         }
         public void Add(Post entity)
         {
@@ -79,6 +81,21 @@ namespace IM.BusinessLayer.Concrete
             }
 
             disposed = true;
+        }
+
+        public List<PostModel> QueryList()
+        {
+            return _query.QueryList();
+        }
+
+        public int Multiupdate(PostModel t)
+        {
+            return _query.Multiupdate(t);
+        }
+
+        public int MultiAdded(PostModel t)
+        {
+            return _query.MultiAdded(t);
         }
     }
 }

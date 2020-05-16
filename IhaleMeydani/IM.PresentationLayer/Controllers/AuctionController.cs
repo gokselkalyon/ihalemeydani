@@ -15,7 +15,7 @@ namespace IM.PresentationLayer.Controllers
         [Route("auction/index/{auctionid}")]
         public ActionResult Dashboard()
         {
-            //mv. SessionManager.CurrentUser.Id
+            //mv.
             return View();
         }
 

@@ -9,6 +9,7 @@ namespace IM.PresentationLayer.Helper
 {
     public class Helper
     {
+
         /// <summary>
         /// kullanıcının verilen auction'a kayıtlı olup olmadığına bakıyoruz
         /// </summary>
@@ -17,7 +18,7 @@ namespace IM.PresentationLayer.Helper
         public static bool userauctioncontrol(int auctionid)/// şuan basit bir deneme olduğu için singleton falan kullanılmadı
         {
 
-            bool db = new IhaleServiceClient().Getprivateauctions().Exists(x=> x.auction_id == auctionid && x.USER_ID == 1);
+            bool db = Singleton.GetIhaleinstance().Getprivateauctions().Exists(x=> x.auction_id == auctionid && x.USER_ID == 1);
             if(!db)
                 return false;
             return true;
