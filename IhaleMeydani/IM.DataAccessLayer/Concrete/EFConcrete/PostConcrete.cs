@@ -36,7 +36,30 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
 
         public int MultiAdded(PostModel t)
         {
-            throw new NotImplementedException();
+            using (var transaction = DB.Database.BeginTransaction())
+            {
+                try
+                {
+                    medium media = new medium { image_name = t.image_name, image_path = t.image_path, image_title = t.image_title, image_subtitle = t.image_subtitle };
+                    DB.media.Add(media);
+                    DB.SaveChanges();
+                    submit submit = new submit { media_id = media.id, submit_article = t.submit_article };
+                    DB.submits.Add(submit);
+                    DB.SaveChanges();
+                    Post post = new Post { content_id = t.content_id, Post_date = DateTime.Now, users_id = t.users_id };
+                    DB.Posts.Add(post);
+                    DB.SaveChanges();
+                    transaction.Commit();
+                    return post.Post_id;
+                }
+                catch (Exception ex)
+                {
+
+                    var deneme = ex.Message;
+                    transaction.Rollback();
+                    return 0;
+                }
+            }
         }
 
         public int Multiupdate(PostModel t)
