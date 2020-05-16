@@ -2400,6 +2400,10 @@ namespace IM.ServiceLayer
         {
             return InstanceFactory.GetInstance<IDataBaseQueryService<ActionUserModel>>().QueryList();
         }
+        public List<UserAuctionModel> GetUserAuctionModel(UserAuctionModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserAuctionModel>>().QueryList();
+        }
         #endregion
 
         #region viewmodelcrud
@@ -2442,6 +2446,7 @@ namespace IM.ServiceLayer
              Create<ClaimGroup>().Update(entity);
         }
 
+       
         #endregion
     }
 
