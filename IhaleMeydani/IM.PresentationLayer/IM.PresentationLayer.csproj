@@ -178,7 +178,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helper\Singleton.cs" />
     <Compile Include="Helper\Helper.cs" />
     <Compile Include="LoginSecurity\ihaleClientFilter.cs" />
     <Compile Include="LoginSecurity\SessionManager.cs" />
@@ -2629,6 +2628,7 @@
     <Content Include="Content\Template\autoshop\shop-single-left-sidebar.html" />
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
+    <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\Template\css\Loginn.css" />
     <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\BlogPage.css" />
@@ -2643,10 +2643,12 @@
     <Content Include="Content\Template\css\sweetalert.css" />
     <Content Include="Content\Template\css\TempDataMessage.css" />
     <Content Include="Content\Template\js\boostrap.js" />
+    <Content Include="Content\Template\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Content\Template\js\main.js" />
+    <Content Include="Content\Template\js\moment.min.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert.min.js" />
     <Content Include="Content\Template\js\sweetalert2.js" />
@@ -2723,6 +2725,8 @@
     <Content Include="Views\Cars\Create.cshtml" />
     <Content Include="Views\Cars\Edit.cshtml" />
     <Content Include="Views\Cars\ProductDetail.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
+    <Content Include="Views\Home\AdminHomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

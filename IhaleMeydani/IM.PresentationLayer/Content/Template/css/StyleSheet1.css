@@ -6,7 +6,6 @@
 }
 /*Furkan yeni layout css kodları bitiş*/
 body {
-    background-color: grey;
 }
 
 .currency-language {
@@ -178,4 +177,38 @@ a {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.footertitle {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footersocial > li {
+    float: left;
+    padding: 0;
+    margin: 0px 30px 10px 0;
+    display: block;
+}
+
+    .footersocial > li i:hover {
+        color: #ee964b;
+    }
+
+.footersocial {
+    width: 180px;
+    position: absolute;
+    padding:0;
+}
+
+
+.footerdown {
+    background-color: #f8f8f8;
+    padding:10px;
+    align-items:center;
+}
+
+.copyright{
+    font-size:17px;
 }

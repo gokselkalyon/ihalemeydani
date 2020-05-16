@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IM.PresentationLayer.LoginSecurity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -42,6 +43,12 @@ namespace IM.PresentationLayer.Controllers
             var _value = (string)Session["Image"];
 
             return Json(await firebaseStorageHelper.GetFile(_value), JsonRequestBehavior.AllowGet);
+        }
+        [ihaleClientFilter("AdminPanel.Görüntüle")]
+        [Route("Admin")]
+        public ActionResult AdminHomePage()
+        {
+            return View();
         }
     }
 }
