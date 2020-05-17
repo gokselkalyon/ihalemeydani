@@ -62,7 +62,7 @@
         <EntityTypeShape EntityType="IHALEDBModel.User" Width="1.5" PointX="19.375" PointY="10.75" />
         <EntityTypeShape EntityType="IHALEDBModel.Contact" Width="1.5" PointX="11.375" PointY="19.75" />
         <EntityTypeShape EntityType="IHALEDBModel.userproduct" Width="1.5" PointX="14.5" PointY="24.5" />
-        <EntityTypeShape EntityType="IHALEDBModel.SOLD_PRODUCT" Width="1.5" PointX="16.75" PointY="24.875" />
+        <EntityTypeShape EntityType="IHALEDBModel.SOLD_PRODUCT" Width="1.5" PointX="16.75" PointY="24.75" />
         <AssociationConnector Association="IHALEDBModel.FK_SOLD_PRODUCT_userproduct" />
       </Diagram>
     </edmx:Diagrams>

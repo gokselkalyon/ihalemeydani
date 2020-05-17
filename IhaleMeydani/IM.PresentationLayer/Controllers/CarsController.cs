@@ -1,6 +1,7 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
+using Rotativa;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,14 @@ namespace IM.PresentationLayer.Controllers
             AuctionModelView.auctionid = auctionid;
             return View(mv);
         }
-
+        public  ActionResult InvoicePfdView()
+        {
+            return View();
+        }
+        public ActionResult PrintPartialViewToPdf(int id)
+        {
+            return View();
+        }
         [Route("Cars/list")]
         public ActionResult Carslist()
         {

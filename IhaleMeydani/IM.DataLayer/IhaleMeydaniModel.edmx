@@ -465,6 +465,7 @@
           <Property Name="E_INVOICE_ID" Type="int" />
           <Property Name="DATE_OF_UPDATE" Type="date" />
           <Property Name="userproductId" Type="int" />
+          <Property Name="SaledUserId" Type="int" />
         </EntityType>
         <EntityType Name="submit">
           <Key>
@@ -1299,6 +1300,7 @@
           <Property Name="E_INVOICE_ID" Type="Int32" />
           <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
           <Property Name="userproductId" Type="Int32" />
+          <Property Name="SaledUserId" Type="Int32" />
           <NavigationProperty Name="userproduct" Relationship="IHALEDBModel.FK_SOLD_PRODUCT_userproduct" FromRole="SOLD_PRODUCT" ToRole="userproduct" />
         </EntityType>
         <Association Name="FK_SOLD_PRODUCT_userproduct">
@@ -1928,6 +1930,7 @@
           <EntitySetMapping Name="SOLD_PRODUCT">
             <EntityTypeMapping TypeName="IHALEDBModel.SOLD_PRODUCT">
               <MappingFragment StoreEntitySet="SOLD_PRODUCT">
+                <ScalarProperty Name="SaledUserId" ColumnName="SaledUserId" />
                 <ScalarProperty Name="userproductId" ColumnName="userproductId" />
                 <ScalarProperty Name="DATE_OF_UPDATE" ColumnName="DATE_OF_UPDATE" />
                 <ScalarProperty Name="E_INVOICE_ID" ColumnName="E_INVOICE_ID" />

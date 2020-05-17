@@ -86,3 +86,18 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\ob
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll.config
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.dll
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataAccessLayer.pdb
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.pdb
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\IM.DataLayer.dll.config
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.csproj.CopyComplete
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.dll
+C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataAccessLayer\obj\Debug\IM.DataAccessLayer.pdb
