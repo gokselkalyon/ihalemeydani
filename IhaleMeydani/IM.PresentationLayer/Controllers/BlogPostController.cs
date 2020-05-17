@@ -19,10 +19,12 @@ namespace IM.PresentationLayer.Controllers
             //IhaleServiceClient.AddPost();
             return View();
         }
-        [Route("BlogContent")]
-        public ActionResult BlogIndex()
+        [Route("Blog/Content/{id}")]
+        public ActionResult BlogIndex(int id)
         {
-            return View();
+            mv.Post = IhaleServiceClient.QueryListPostModel().Where(x => x.Post_id == id).FirstOrDefault();
+            PostModel post = mv.Post;
+            return View(post);
         }
 
         [Route("BlogAdmin")]
