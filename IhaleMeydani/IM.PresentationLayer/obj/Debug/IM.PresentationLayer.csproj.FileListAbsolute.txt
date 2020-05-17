@@ -653,3 +653,6 @@ C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\System.Net.Http.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\System.Net.Http.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.xml

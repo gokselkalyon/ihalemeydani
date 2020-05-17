@@ -1,4 +1,5 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -10,35 +11,57 @@ namespace IM.PresentationLayer.Controllers
 {
     public class BlogPostController : BaseController
     {
-        
-        BlogModelView bm = new BlogModelView();
+
+        BlogModelView mv = new BlogModelView();
         [Route("Blog")]
         public ActionResult Index()
         {
-            bm.Posts = IhaleServiceClient.GetPosts().ToList();
-            //IhaleServiceClient.AddPost();
-            return View(bm);
+            mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
+            return View(mv);
         }
-        [Route("BlogContent")]
-        public ActionResult BlogIndex()
+        [Route("Blog/Content/{id}")]
+        public ActionResult BlogIndex(int id)
         {
-            return View();
+            mv.Post = IhaleServiceClient.QueryListPostModel().Where(x => x.Post_id == id).FirstOrDefault();
+            PostModel post = mv.Post;
+            return View(post);
         }
 
         [Route("BlogAdmin")]
         public ActionResult AdminPanel()
         {
-            return View();
+            mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
+            return View(mv);
         }
-        [Route("BlogAdminCreate")]
+        [Route("BlogAdmin/Create")]
         public ActionResult AdminPanelCreate()
         {
             return View();
         }
-        [Route("BlogAdminUpdate")]
-        public ActionResult AdminPanelUpdate()
+        [HttpPost]
+        [Route("BlogAdmin/Create")]
+        public ActionResult AdminPanelCreate(PostModel postModel)
         {
-            return View();
+            postModel.users_id = SessionManager.CurrentUser.Id;
+            int değer = IhaleServiceClient.AddPostModel(postModel);
+            return RedirectToAction("", "BlogAdmin");
+        }
+        [HttpGet]
+        [Route("BlogAdmin/Update/{id}")]
+        public ActionResult AdminPanelUpdate(int id)
+        {
+            mv.Post = IhaleServiceClient.QueryListPostModel().Where(x => x.Post_id == id).FirstOrDefault();
+            PostModel post = mv.Post;
+            return View(post);
+        }
+        [HttpPost]
+        [Route("BlogAdmin/Update")]
+        public ActionResult AdminPanelUpdate(PostModel postModel)
+        {
+            postModel.users_id = SessionManager.CurrentUser.Id;
+
+            int değer = IhaleServiceClient.UpdataPostModel(postModel);
+            return RedirectToAction("", "BlogAdmin");
         }
     }
 }

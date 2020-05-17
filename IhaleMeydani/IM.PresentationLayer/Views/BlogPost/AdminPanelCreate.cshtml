@@ -1,38 +1,69 @@
-﻿
+﻿@model IM.PresentationLayer.IhaleWCFService.PostModel
+
 @{
     ViewBag.Title = "AdminPanelCreate";
     Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
 }
 
-<div class="page-breadcrumb">
-    <div class="row">
-        <div class="col-7 align-self-center">
-            <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Jason!</h3>
-            <div class="d-flex align-items-center">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb m-0 p-0">
-                        <li class="breadcrumb-item">
-                            <a href="index.html">auction</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="index.html">YayımlananAraçlar</a>
-                        </li>
-                    </ol>
-                </nav>
+<h2>AdminPanelCreate</h2>
+
+@using (Html.BeginForm("Create", "BlogAdmin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>PostModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.image_name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.image_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.image_name, "", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="col-5 align-self-center">
-            <div class="customize-input float-right">
-                <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
-                    <option selected>Aug 19</option>
-                    <option value="1">July 19</option>
-                    <option value="2">Jun 19</option>
-                </select>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.image_path, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.image_path, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.image_path, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.image_subtitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.image_subtitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.image_subtitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.image_title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.image_title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.image_title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.submit_article, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.submit_article, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.submit_article, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid">
-    @* arasına yazılacak*@
-</div>
+}
 
+<div>
+    @Html.ActionLink("Back to List","","BlogAdmin")
+</div>

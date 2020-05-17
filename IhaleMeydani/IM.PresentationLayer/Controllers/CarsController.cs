@@ -18,8 +18,8 @@ namespace IM.PresentationLayer.Controllers
         [Route("Cars/index/{auctionid}")]
         public ActionResult Index(int auctionid)
         {
-            if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
-                return RedirectToRoute("default");
+           // if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
+               // return RedirectToRoute("default");
 
             mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == SessionManager.CurrentUser.Id).FirstOrDefault();
             AuctionModelView.auctionid = auctionid;
