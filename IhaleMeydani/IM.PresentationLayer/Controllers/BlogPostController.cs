@@ -10,14 +10,13 @@ namespace IM.PresentationLayer.Controllers
 {
     public class BlogPostController : BaseController
     {
-        
-        BlogModelView bm = new BlogModelView();
+
+        BlogModelView mv = new BlogModelView();
         [Route("Blog")]
         public ActionResult Index()
-        {
-            bm.Posts = IhaleServiceClient.GetPosts().ToList();
+        {        
             //IhaleServiceClient.AddPost();
-            return View(bm);
+            return View();
         }
         [Route("BlogContent")]
         public ActionResult BlogIndex()
@@ -28,6 +27,7 @@ namespace IM.PresentationLayer.Controllers
         [Route("BlogAdmin")]
         public ActionResult AdminPanel()
         {
+            mv.Posts=IhaleServiceClient.
             return View();
         }
         [Route("BlogAdminCreate")]

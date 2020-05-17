@@ -690,6 +690,12 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void UpdatePost(Post entity);
+        [OperationContract]
+        List<PostModel> QueryListPostModel();
+        [OperationContract]
+        int AddPostModel(PostModel entity);
+        [OperationContract]
+        int UpdataPostModel(PostModel entity);
         #endregion
 
         #region PRICEBOT

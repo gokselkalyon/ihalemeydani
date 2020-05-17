@@ -2417,6 +2417,20 @@ namespace IM.ServiceLayer
             return InstanceFactory.GetInstance<IDataBaseQueryService<UserProductModel>>().Multiupdate(entity);
 
         }
+        public List<PostModel> QueryListPostModel()
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<PostModel>>().QueryList();
+        }
+
+        public int AddPostModel(PostModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<PostModel>>().MultiAdded(entity);
+        }
+
+        public int UpdataPostModel(PostModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<PostModel>>().Multiupdate(entity);
+        }
         #endregion
 
         #region ClaimGroup
@@ -2446,8 +2460,8 @@ namespace IM.ServiceLayer
              Create<ClaimGroup>().Update(entity);
         }
 
-       
         #endregion
+
     }
 
 }

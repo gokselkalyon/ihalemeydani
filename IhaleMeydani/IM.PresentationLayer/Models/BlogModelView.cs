@@ -1,4 +1,5 @@
-﻿using IM.PresentationLayer.IhaleWCFService;
+﻿using IM.DataLayer.Model;
+using IM.PresentationLayer.IhaleWCFService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,7 @@ namespace IM.PresentationLayer.Models
     {
         //public List<tag> Tags { get; set; }
         //public List<tag_post> Tags_posts { get; set; }
-        public List<Post> Posts { get; set; } //post yerine söylenecek view
+        public List<PostModel> Posts { get; set; } //post yerine söylenecek view
     }
 
-    public class BlogModel
-    {
-        public int Id { get; set; }
-        public int content_id { get; set; }
-        public int users_id { get; set; }
-        public DateTime? Time { get; set; }
-    }
 }
