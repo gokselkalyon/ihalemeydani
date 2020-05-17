@@ -8,31 +8,35 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class AuctionController : Controller
+    public class AuctionController : BaseController
     {
         AuctionModelView mv = new AuctionModelView();
         [HttpGet]
-        [Route("auction/index/{auctionid}")]
+        [Route("auction/index")]
         public ActionResult Dashboard()
         {
-            //mv.
-            return View();
+            mv.auctions = IhaleServiceClient.GetUserAuctionModel().Where(x=>x.userid == SessionManager.CurrentUser.Id).ToList();
+            return View(mv);
         }
 
-        // GET: Auction/Details/5
+        [HttpGet]
+        [Route("auction/detail/{id}")]
         public ActionResult Details(int id)
         {
-            return View();
+            mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
+            return View(mv);
         }
 
-        // GET: Auction/Create
+        [HttpGet]
+        [Route("auction/create")]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Auction/Create
+        
         [HttpPost]
+        [Route("auction/create")]
         public ActionResult Create(FormCollection collection)
         {
             try
@@ -46,8 +50,8 @@ namespace IM.PresentationLayer.Controllers
                 return View();
             }
         }
-
-        // GET: Auction/Edit/5
+        [HttpGet]
+        [Route("auction/Edit/{id}")]
         public ActionResult Edit(int id)
         {
             return View();
