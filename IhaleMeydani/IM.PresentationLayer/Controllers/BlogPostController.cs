@@ -44,10 +44,22 @@ namespace IM.PresentationLayer.Controllers
             int değer = IhaleServiceClient.AddPostModel(postModel);
             return RedirectToAction("", "BlogAdmin");
         }
-        [Route("BlogAdmin/Update")]
-        public ActionResult AdminPanelUpdate()
+        [HttpGet]
+        [Route("BlogAdmin/Update/{id}")]
+        public ActionResult AdminPanelUpdate(int id)
         {
-            return View();
+            mv.Post = IhaleServiceClient.QueryListPostModel().Where(x => x.Post_id == id).FirstOrDefault();
+            PostModel post = mv.Post;
+            return View(post);
+        }
+        [HttpPost]
+        [Route("BlogAdmin/Update")]
+        public ActionResult AdminPanelUpdate(PostModel postModel)
+        {
+            postModel.users_id = SessionManager.CurrentUser.Id;
+
+            int değer = IhaleServiceClient.UpdataPostModel(postModel);
+            return RedirectToAction("", "BlogAdmin");
         }
     }
 }
