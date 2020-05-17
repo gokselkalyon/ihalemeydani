@@ -15,9 +15,9 @@ namespace IM.PresentationLayer.Controllers
         BlogModelView mv = new BlogModelView();
         [Route("Blog")]
         public ActionResult Index()
-        {        
-            //IhaleServiceClient.AddPost();
-            return View();
+        {
+            mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
+            return View(mv);
         }
         [Route("Blog/Content/{id}")]
         public ActionResult BlogIndex(int id)
