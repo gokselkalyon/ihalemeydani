@@ -9,6 +9,24 @@
       <xsd:import schemaLocation="http://localhost:8081/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_AddTagPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTagPost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddTagPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTagPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveTagPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTagPost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveTagPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTagPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateTagPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTagPost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateTagPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTagPostResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetTax_Administrations_InputMessage">
     <wsdl:part name="parameters" element="tns:GetTax_Administrations" />
   </wsdl:message>
@@ -339,6 +357,24 @@
   <wsdl:message name="IIhaleService_UpdatePost_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePostResponse" />
   </wsdl:message>
+  <wsdl:message name="IIhaleService_QueryListPostModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryListPostModel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_QueryListPostModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryListPostModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPostModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPostModel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddPostModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPostModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdataPostModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataPostModel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdataPostModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataPostModelResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetPricebots_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPricebots" />
   </wsdl:message>
@@ -650,24 +686,6 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetTagPost_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTagPostResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddTagPost_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddTagPost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddTagPost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddTagPostResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveTagPost_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveTagPost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveTagPost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveTagPostResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateTagPost_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateTagPost" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateTagPost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateTagPostResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateClaim_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateClaim" />
@@ -1690,6 +1708,18 @@
     <wsdl:part name="parameters" element="tns:RemoveClaimResponse" />
   </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="AddTagPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddTagPost" message="tns:IIhaleService_AddTagPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddTagPostResponse" message="tns:IIhaleService_AddTagPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTagPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveTagPost" message="tns:IIhaleService_RemoveTagPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveTagPostResponse" message="tns:IIhaleService_RemoveTagPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTagPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagPost" message="tns:IIhaleService_UpdateTagPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagPostResponse" message="tns:IIhaleService_UpdateTagPost_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetTax_Administrations">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administrations" message="tns:IIhaleService_GetTax_Administrations_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse" message="tns:IIhaleService_GetTax_Administrations_OutputMessage" />
@@ -1910,6 +1940,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdatePost" message="tns:IIhaleService_UpdatePost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdatePostResponse" message="tns:IIhaleService_UpdatePost_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="QueryListPostModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/QueryListPostModel" message="tns:IIhaleService_QueryListPostModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/QueryListPostModelResponse" message="tns:IIhaleService_QueryListPostModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPostModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddPostModel" message="tns:IIhaleService_AddPostModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddPostModelResponse" message="tns:IIhaleService_AddPostModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdataPostModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdataPostModel" message="tns:IIhaleService_UpdataPostModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdataPostModelResponse" message="tns:IIhaleService_UpdataPostModel_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetPricebots">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetPricebots" message="tns:IIhaleService_GetPricebots_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetPricebotsResponse" message="tns:IIhaleService_GetPricebots_OutputMessage" />
@@ -2117,18 +2159,6 @@
     <wsdl:operation name="GetTagPost">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTagPost" message="tns:IIhaleService_GetTagPost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTagPostResponse" message="tns:IIhaleService_GetTagPost_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="AddTagPost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddTagPost" message="tns:IIhaleService_AddTagPost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddTagPostResponse" message="tns:IIhaleService_AddTagPost_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveTagPost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveTagPost" message="tns:IIhaleService_RemoveTagPost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveTagPostResponse" message="tns:IIhaleService_RemoveTagPost_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateTagPost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagPost" message="tns:IIhaleService_UpdateTagPost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagPostResponse" message="tns:IIhaleService_UpdateTagPost_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateClaim">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaim" message="tns:IIhaleService_UpdateClaim_InputMessage" />
@@ -2813,6 +2843,33 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddTagPost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddTagPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTagPost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveTagPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTagPost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateTagPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetTax_Administrations">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTax_Administrations" style="document" />
       <wsdl:input>
@@ -3308,6 +3365,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="QueryListPostModel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/QueryListPostModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPostModel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddPostModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdataPostModel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdataPostModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetPricebots">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetPricebots" style="document" />
       <wsdl:input>
@@ -3769,33 +3853,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetTagPost">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTagPost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddTagPost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddTagPost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveTagPost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveTagPost" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateTagPost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateTagPost" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

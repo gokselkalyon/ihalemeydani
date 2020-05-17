@@ -1,8 +1,10 @@
-﻿
+﻿@model IM.PresentationLayer.Models.BlogModelView
+
 @{
     ViewBag.Title = "AdminPanel";
     Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
 }
+
 
 <div class="page-breadcrumb">
     <div class="row">
@@ -34,5 +36,63 @@
 </div>
 <div class="container-fluid">
     @* arasına yazılacak*@
-</div>
 
+
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                post date
+            </th>
+            <th>
+                image name
+            </th>
+            <th>
+                image path
+            </th>
+            <th>
+                image subtitle
+            </th>
+            <th>
+                image title
+            </th>
+            <th>
+                sumbit aricte
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Posts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Post_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image_path)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image_subtitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image_title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.submit_article)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

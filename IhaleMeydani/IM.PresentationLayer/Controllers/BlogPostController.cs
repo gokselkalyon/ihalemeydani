@@ -27,8 +27,8 @@ namespace IM.PresentationLayer.Controllers
         [Route("BlogAdmin")]
         public ActionResult AdminPanel()
         {
-            mv.Posts=IhaleServiceClient.
-            return View();
+            mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
+            return View(mv);
         }
         [Route("BlogAdminCreate")]
         public ActionResult AdminPanelCreate()

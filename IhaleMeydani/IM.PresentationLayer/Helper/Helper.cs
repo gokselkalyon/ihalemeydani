@@ -15,13 +15,15 @@ namespace IM.PresentationLayer.Helper
         /// </summary>
         /// <param name="auctionid"></param>
         /// <returns name="bool"></returns>
-        public static bool userauctioncontrol(int auctionid)/// şuan basit bir deneme olduğu için singleton falan kullanılmadı
-        {
+        //public static bool userauctioncontrol(int auctionid)/// şuan basit bir deneme olduğu için singleton falan kullanılmadı
+        //{
 
-            bool db = Singleton.GetIhaleinstance().Getprivateauctions().Exists(x=> x.auction_id == auctionid && x.USER_ID == 1);
-            if(!db)
-                return false;
-            return true;
-        }
+        //    bool db = Singleton.GetIhaleinstance().Getprivateauctions().Exists(x=> x.auction_id == auctionid && x.USER_ID == 1);
+        //    if(!db)
+        //        return false;
+        //    return true;
+        //}
+
+        // bunu düzelt
     }
 }
