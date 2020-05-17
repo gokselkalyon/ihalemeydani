@@ -79,6 +79,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         Mileage = t.Mileage,
                         SegmentId = segment.SegmentId,
                         VIN = t.VIN
+                        
                     };
 
                     DB.CarTechnicalDetails.Add(carTechnicalDetai);
@@ -101,7 +102,8 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         published_on = true,
                         date_of_created = DateTime.Now,
                         date_of_updated = DateTime.Now,
-                        isdeleted =false
+                        isdeleted =false,
+                        isSaled = false
                     };
                     DB.userproducts.Add(userproduct);
                     DB.SaveChanges();
@@ -180,7 +182,8 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         date_of_updated = DateTime.Now,
                         isdeleted = false,
                         id = t.id,
-                        cardetail_id = t.CarDetailId
+                        cardetail_id = t.CarDetailId,
+                        isSaled = t.isSaled
                     };
                     DB.userproducts.Attach(userproduct);
                     DB.Entry(userproduct).State = System.Data.Entity.EntityState.Modified;

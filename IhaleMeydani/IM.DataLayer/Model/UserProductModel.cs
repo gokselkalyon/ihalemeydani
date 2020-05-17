@@ -42,6 +42,7 @@ namespace IM.DataLayer.Model
         public string VIN { get; set; }
         public string ColorName { get; set; }
         public string ColorValue { get; set; }
+        public bool isSaled { get; set; }
 
     }
 }

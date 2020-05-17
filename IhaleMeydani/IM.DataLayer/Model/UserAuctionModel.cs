@@ -21,6 +21,7 @@ namespace IM.DataLayer.Model
         public bool isdeleted { get; set; }
         public DateTime? date_of_created { get; set; }
         public string UserName { get; set; }
+        public int userid { get; set; }
         public string HardwareDetail { get; set; }
         public string CarMakeName { get; set; }
         public string CarBrandName { get; set; }
