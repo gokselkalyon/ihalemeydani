@@ -1,4 +1,5 @@
-﻿using IM.PresentationLayer.LoginSecurity;
+﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,8 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Details(int id)
         {
             mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
-            return View(mv);
+            UserAuctionModel uam = mv.auction;
+            return View(uam);
         }
 
         [HttpGet]
