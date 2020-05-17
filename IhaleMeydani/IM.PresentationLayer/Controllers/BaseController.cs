@@ -1,4 +1,5 @@
 ﻿using IM.BusinessLayer.Firebase;
+using IM.PresentationLayer.Helper;
 using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.Models;
 using System;
@@ -11,8 +12,8 @@ namespace IM.PresentationLayer.Controllers
 {
     public class BaseController : Controller
     {
-        public FirebaseStorageHelper firebaseStorageHelper = new FirebaseStorageHelper("ihale-meydan.appspot.com");
-        public JsonResultModel jsonResultModel = new JsonResultModel();
-        public IhaleServiceClient IhaleServiceClient = new IhaleServiceClient();
+        public FirebaseStorageHelper firebaseStorageHelper = Singleton.GetfirebaseStorageHelperinstance();
+        public JsonResultModel jsonResultModel = Singleton.GetjsonResultModelinstance();
+        public IhaleServiceClient IhaleServiceClient = Singleton.GetIhaleinstance();
     }
 }

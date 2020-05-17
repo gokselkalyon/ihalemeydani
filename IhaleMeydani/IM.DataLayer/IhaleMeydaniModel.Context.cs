@@ -63,7 +63,6 @@ namespace IM.DataLayer
         public virtual DbSet<Segment> Segments { get; set; }
         public virtual DbSet<senaryo> senaryoes { get; set; }
         public virtual DbSet<SocialMedya> SocialMedyas { get; set; }
-        public virtual DbSet<SOLD_PRODUCT> SOLD_PRODUCT { get; set; }
         public virtual DbSet<submit> submits { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<tag> tags { get; set; }
@@ -75,12 +74,13 @@ namespace IM.DataLayer
         public virtual DbSet<actionuser> actionusers { get; set; }
         public virtual DbSet<private_auction> private_auction { get; set; }
         public virtual DbSet<SocialMediaType> SocialMediaTypes { get; set; }
-        public virtual DbSet<userproduct> userproducts { get; set; }
         public virtual DbSet<LogInfo> LogInfoes { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
         public virtual DbSet<LogStatus> LogStatus1 { get; set; }
         public virtual DbSet<ClaimGroup> ClaimGroups { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<userproduct> userproducts { get; set; }
+        public virtual DbSet<SOLD_PRODUCT> SOLD_PRODUCT { get; set; }
     }
 }

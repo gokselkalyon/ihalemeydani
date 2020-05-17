@@ -8,14 +8,15 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class BlogPostController : Controller
+    public class BlogPostController : BaseController
     {
-        IhaleServiceClient Db = new IhaleServiceClient();
+        
         BlogModelView bm = new BlogModelView();
         [Route("Blog")]
         public ActionResult Index()
         {
-            bm.Posts = Db.GetPosts().ToList();
+            bm.Posts = IhaleServiceClient.GetPosts().ToList();
+            //IhaleServiceClient.AddPost();
             return View(bm);
         }
         [Route("BlogContent")]

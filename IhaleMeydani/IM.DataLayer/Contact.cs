@@ -18,5 +18,7 @@ namespace IM.DataLayer
         public string Address { get; set; }
         public string Email { get; set; }
         public Nullable<int> Faks { get; set; }
+        public string Telefon { get; set; }
+        public string GoogleMapUrl { get; set; }
     }
 }

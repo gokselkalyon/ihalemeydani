@@ -107,8 +107,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http">
-    </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -179,6 +177,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\Singleton.cs" />
     <Compile Include="LoginSecurity\ihaleClientFilter.cs" />
     <Compile Include="LoginSecurity\SessionManager.cs" />
     <Compile Include="LoginSecurity\UserProvider.cs" />
@@ -200,9 +199,11 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.wsdl" />
     <None Include="Connected Services\IhaleWCFService\IhaleService31.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.disco" />
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -365,6 +366,9 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\IhaleWCFService\IhaleService34.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -372,6 +376,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserAuctionModel1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
@@ -2727,9 +2740,7 @@
     <Content Include="Views\Cars\ProductDetail.cshtml" />
     <Content Include="Views\User\UserProfile.cshtml" />
     <Content Include="Views\Home\AdminHomePage.cshtml" />
-    <Content Include="Views\BlogPost\AdminPanelCreate.cshtml" />
-    <Content Include="Views\BlogPost\AdminPanel.cshtml" />
-    <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
+    <Content Include="Views\Cars\Carslist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

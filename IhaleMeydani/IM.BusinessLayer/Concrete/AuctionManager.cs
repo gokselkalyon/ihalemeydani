@@ -11,18 +11,21 @@ using System.Text;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using IM.DataLayer.Model;
 
 namespace IM.BusinessLayer.Concrete
 {
-    public class AuctionManager : IDataBusinessService<auction>
+    public class AuctionManager : IDataBusinessService<auction>,IDataBaseQueryService<UserAuctionModel>
     {
         private IDataAccessDal<auction> _dataAccessDal;
         private readonly IMapper _mapper;
+        private IDataBaseQuery<UserAuctionModel> _query;
 
-        public AuctionManager(IDataAccessDal<auction> dataAccessDal, IMapper mapper)
+        public AuctionManager(IDataAccessDal<auction> dataAccessDal, IMapper mapper,IDataBaseQuery<UserAuctionModel> query)
         {
             _dataAccessDal = dataAccessDal;
             _mapper = mapper;
+            _query = query;
         }
         public void Add(auction entity)
         {
@@ -80,6 +83,21 @@ namespace IM.BusinessLayer.Concrete
             }
 
             disposed = true;
+        }
+
+        public List<UserAuctionModel> QueryList()
+        {
+            return _query.QueryList();
+        }
+
+        public int Multiupdate(UserAuctionModel t)
+        {
+            return _query.Multiupdate(t);
+        }
+
+        public int MultiAdded(UserAuctionModel t)
+        {
+            return _query.MultiAdded(t);
         }
     }
 }

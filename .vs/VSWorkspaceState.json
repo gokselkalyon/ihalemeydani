@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\IhaleMeydani"
+    "\\IhaleMeydani",
+    "\\IhaleMeydani\\IM.PresentationLayer",
+    "\\IhaleMeydani\\IM.PresentationLayer\\Views",
+    "\\IhaleMeydani\\IM.PresentationLayer\\Views\\QuickSell",
+    "\\IhaleMeydani\\IM.PresentationLayer\\Views\\Shared"
   ],
+  "SelectedNode": "\\IhaleMeydani\\IM.PresentationLayer\\Views\\QuickSell\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

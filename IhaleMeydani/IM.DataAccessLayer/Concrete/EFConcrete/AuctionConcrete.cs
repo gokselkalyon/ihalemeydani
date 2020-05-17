@@ -1,6 +1,7 @@
 ﻿using IM.DataAccessLayer.Abstract;
 using IM.DataAccessLayer.Concrete.Basic;
 using IM.DataLayer;
+using IM.DataLayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace IM.DataAccessLayer.Concrete.EFConcrete
 {
-    public class AuctionConcrete : BaseConcrete, IDataAccessDal<auction>
+    public class AuctionConcrete : BaseConcrete, IDataAccessDal<auction>,IDataBaseQuery<UserAuctionModel>
     {
         public void Add(auction entity)
         {
@@ -31,6 +32,21 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
         public IEnumerable<auction> GetFilter(Expression<Func<auction, bool>> expression)
         {
             return DB.auctions.Where(expression);
+        }
+
+        public int MultiAdded(UserAuctionModel t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Multiupdate(UserAuctionModel t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<UserAuctionModel> QueryList()
+        {
+            return DB.Database.SqlQuery<UserAuctionModel>("select * from userauctionview").ToList();
         }
 
         public void Remove(int id)

@@ -9,6 +9,12 @@
       <xsd:import schemaLocation="http://localhost:8081/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_GetTax_Administrations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTax_Administrations" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetTax_Administrations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTax_AdministrationsResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetTax_Administration_InputMessage">
     <wsdl:part name="parameters" element="tns:GetTax_Administration" />
   </wsdl:message>
@@ -152,6 +158,12 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateMedium_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMedium" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpdateMedium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMediumResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetMenus_InputMessage">
     <wsdl:part name="parameters" element="tns:GetMenus" />
@@ -657,11 +669,11 @@
   <wsdl:message name="IIhaleService_UpdateTagPost_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTagPostResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTax_Administrations_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetTax_Administrations" />
+  <wsdl:message name="IIhaleService_UpdateClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClaim" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTax_Administrations_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetTax_AdministrationsResponse" />
+  <wsdl:message name="IIhaleService_UpdateClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClaimResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_GetAllColor_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllColor" />
@@ -1167,12 +1179,6 @@
   <wsdl:message name="IIhaleService_RemoveMedium_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveMediumResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateMedium_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateMedium" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateMedium_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateMediumResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
@@ -1443,6 +1449,12 @@
   <wsdl:message name="IIhaleService_UpdateAuction_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateAuctionResponse" />
   </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserAuctionModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAuctionModel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetUserAuctionModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAuctionModelResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetBanks_InputMessage">
     <wsdl:part name="parameters" element="tns:GetBanks" />
   </wsdl:message>
@@ -1677,13 +1689,11 @@
   <wsdl:message name="IIhaleService_RemoveClaim_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveClaimResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateClaim_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateClaim" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_UpdateClaim_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateClaimResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="GetTax_Administrations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administrations" message="tns:IIhaleService_GetTax_Administrations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse" message="tns:IIhaleService_GetTax_Administrations_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetTax_Administration">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administration" message="tns:IIhaleService_GetTax_Administration_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationResponse" message="tns:IIhaleService_GetTax_Administration_OutputMessage" />
@@ -1779,6 +1789,10 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMedium">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMedium" message="tns:IIhaleService_UpdateMedium_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateMediumResponse" message="tns:IIhaleService_UpdateMedium_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetMenus">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetMenus" message="tns:IIhaleService_GetMenus_InputMessage" />
@@ -2116,9 +2130,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagPost" message="tns:IIhaleService_UpdateTagPost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagPostResponse" message="tns:IIhaleService_UpdateTagPost_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTax_Administrations">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTax_Administrations" message="tns:IIhaleService_GetTax_Administrations_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTax_AdministrationsResponse" message="tns:IIhaleService_GetTax_Administrations_OutputMessage" />
+    <wsdl:operation name="UpdateClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaim" message="tns:IIhaleService_UpdateClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaimResponse" message="tns:IIhaleService_UpdateClaim_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllColor">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetAllColor" message="tns:IIhaleService_GetAllColor_InputMessage" />
@@ -2456,10 +2470,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveMedium" message="tns:IIhaleService_RemoveMedium_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveMediumResponse" message="tns:IIhaleService_RemoveMedium_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateMedium">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMedium" message="tns:IIhaleService_UpdateMedium_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateMediumResponse" message="tns:IIhaleService_UpdateMedium_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
@@ -2640,6 +2650,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateAuction" message="tns:IIhaleService_UpdateAuction_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateAuctionResponse" message="tns:IIhaleService_UpdateAuction_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetUserAuctionModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserAuctionModel" message="tns:IIhaleService_GetUserAuctionModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserAuctionModelResponse" message="tns:IIhaleService_GetUserAuctionModel_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetBanks">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetBanks" message="tns:IIhaleService_GetBanks_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetBanksResponse" message="tns:IIhaleService_GetBanks_OutputMessage" />
@@ -2796,13 +2810,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveClaim" message="tns:IIhaleService_RemoveClaim_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveClaimResponse" message="tns:IIhaleService_RemoveClaim_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateClaim">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaim" message="tns:IIhaleService_UpdateClaim_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaimResponse" message="tns:IIhaleService_UpdateClaim_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTax_Administrations">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTax_Administrations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetTax_Administration">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTax_Administration" style="document" />
       <wsdl:input>
@@ -3012,6 +3031,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMedium">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateMedium" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3775,8 +3803,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetTax_Administrations">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTax_Administrations" style="document" />
+    <wsdl:operation name="UpdateClaim">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateClaim" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4540,15 +4568,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateMedium">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateMedium" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
       <wsdl:input>
@@ -4954,6 +4973,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetUserAuctionModel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetUserAuctionModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetBanks">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetBanks" style="document" />
       <wsdl:input>
@@ -5298,15 +5326,6 @@
     </wsdl:operation>
     <wsdl:operation name="RemoveClaim">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveClaim" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateClaim">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateClaim" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -135,9 +135,13 @@ namespace IM.BusinessLayer.DependencyResolver
 
             Bind<IDataBaseQueryService<UserProductModel>>().To<UserProductManager>().InSingletonScope();
             Bind<IDataBaseQueryService<ActionUserModel>>().To<AuctionUserManager>().InSingletonScope();
+            Bind<IDataBaseQueryService<PostModel>>().To<PostManager>().InSingletonScope();
+            Bind<IDataBaseQueryService<UserAuctionModel>>().To<AuctionManager>().InSingletonScope();
 
             Bind<IDataBaseQuery<UserProductModel>>().To<UserProductConcrete>().InSingletonScope();
             Bind<IDataBaseQuery<ActionUserModel>>().To<AuctionUserConcrete>().InSingletonScope();
+            Bind<IDataBaseQuery<PostModel>>().To<PostConcrete>().InSingletonScope();
+            Bind<IDataBaseQuery<UserAuctionModel>>().To<AuctionConcrete>().InSingletonScope();
 
             Bind<ITCService>().To<TCServiceAdapter>().InSingletonScope();
         }

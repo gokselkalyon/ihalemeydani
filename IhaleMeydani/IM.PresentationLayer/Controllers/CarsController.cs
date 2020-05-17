@@ -15,7 +15,7 @@ namespace IM.PresentationLayer.Controllers
 
         AuctionModelView mv = new AuctionModelView();
         [HttpGet]
-        [Route("auction/index/{auctionid}")]
+        [Route("Cars/index/{auctionid}")]
         public ActionResult Index(int auctionid)
         {
             if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
@@ -26,9 +26,16 @@ namespace IM.PresentationLayer.Controllers
             return View(mv);
         }
 
+        [Route("Cars/list")]
+        public ActionResult Carslist()
+        {
+            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x => x.isdeleted == false).ToList();
+            return View(mv);
+        }
+
         // kullanıcıların ürünlerinin bulunduğu sayfa
         [ihaleClientFilter("Araba.Listele")]
-        [Route("auction/userproductdashboard")]
+        [Route("Cars/userproductdashboard")]
         public ActionResult UserProductsViewPage()
         {
             int id = SessionManager.CurrentUser.Id;
@@ -40,7 +47,7 @@ namespace IM.PresentationLayer.Controllers
         }
 
         [ihaleClientFilter("Araba.Listele")]
-        [Route("auction/Detail/{id}")]
+        [Route("Cars/Detail/{id}")]
         public ActionResult ProductDetail(int id)
         {
             mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == id).FirstOrDefault();
@@ -50,7 +57,7 @@ namespace IM.PresentationLayer.Controllers
 
         // GET: Auction/Create
         [HttpGet]
-        [Route("auction/Create")]
+        [Route("Cars/Create")]
         [ihaleClientFilter("Araba.Ekle")]
         public ActionResult Create()
         {
@@ -60,7 +67,7 @@ namespace IM.PresentationLayer.Controllers
         // POST: Auction/Create
         [HttpPost]
         [ihaleClientFilter("Araba.Ekle")]
-        [Route("auction/Create")]
+        [Route("Cars/Create")]
         public ActionResult Create(UserProductModel carmodel)
         {
             try
@@ -76,7 +83,7 @@ namespace IM.PresentationLayer.Controllers
         }
 
         [HttpGet]
-        [Route("auction/Edit/{id}")]
+        [Route("Cars/Edit/{id}")]
         [ihaleClientFilter("Araba.Güncelle")]
         public ActionResult Edit(int id)
         {
@@ -87,7 +94,7 @@ namespace IM.PresentationLayer.Controllers
 
         // POST: Auction/Edit/5
         [HttpPost]
-        [Route("auction/Edit")]
+        [Route("Cars/Edit")]
         [ihaleClientFilter("Araba.Güncelle")]
         public ActionResult Edit(UserProductModel carmodel)
         {
@@ -103,7 +110,8 @@ namespace IM.PresentationLayer.Controllers
             }
         }
 
-        [Route("auction/Delete/{id}")]
+        [HttpGet]
+        [Route("Cars/Delete/{id}")]
         [ihaleClientFilter("Araba.Sil")]
         public ActionResult Delete(int id)
         {

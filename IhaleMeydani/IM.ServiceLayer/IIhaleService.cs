@@ -163,6 +163,9 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void UpdateAuction(auction entity);
+
+        [OperationContract]
+        List<UserAuctionModel> GetUserAuctionModel(UserAuctionModel entity);
         #endregion
 
         #region bank
