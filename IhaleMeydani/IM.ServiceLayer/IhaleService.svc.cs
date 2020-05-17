@@ -2440,7 +2440,7 @@ namespace IM.ServiceLayer
 
         public int AddUserAuctionModel(UserAuctionModel entity)
         {
-            return InstanceFactory.GetInstance<IDataBaseQueryService<UserAuctionModel>>().Multiupdate(entity);
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserAuctionModel>>().MultiAdded(entity);
         }
 
         public int UpadateUserAuctionModel(UserAuctionModel entity)

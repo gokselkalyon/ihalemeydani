@@ -39,11 +39,12 @@ namespace IM.PresentationLayer.Controllers
         
         [HttpPost]
         [Route("auction/create")]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(UserAuctionModel uam)
         {
             try
             {
-                // TODO: Add insert logic here
+                uam.userid = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.AddUserAuctionModel(uam);
 
                 return RedirectToAction("Index");
             }

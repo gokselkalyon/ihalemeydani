@@ -65,6 +65,8 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         user_id = t.userid,
                         date_of_updated = DateTime.Now,
                         published_on = true,
+                        Name = t.NAME,
+                        
                     };
                     int upmid = new UserProductConcrete().MultiAdded(upm);
                     DB.SaveChanges();
@@ -76,7 +78,6 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         MAX_PRICE = t.MAX_PRICE,
                         MIN_PRICE = t.MIN_PRICE,
                         CURRENCY_ID = cURRENCY.ID,
-                        UPDATED_PERSON_ID = t.userproductID
                     };
                     DB.AMOUNT_OF_INCREASE.Add(aoi);
                     DB.SaveChanges();

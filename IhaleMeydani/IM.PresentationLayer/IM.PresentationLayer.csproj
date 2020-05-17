@@ -2721,6 +2721,8 @@
     <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
     <Content Include="Views\BlogPost\BlogIndex.cshtml" />
     <Content Include="Views\Auction\Dashboard.cshtml" />
+    <Content Include="Views\Auction\Details.cshtml" />
+    <Content Include="Views\Auction\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

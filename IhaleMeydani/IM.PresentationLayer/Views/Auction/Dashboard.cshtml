@@ -9,7 +9,7 @@
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-7 align-self-center">
-            <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Product Dashboard</h3>
+            <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Auction Dashboard</h3>
             <div class="d-flex align-items-center">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb m-0 p-0">
@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-lg-12">
             <a href="@Url.Action("Create")">
-                <button type="button" class="btn btn-success btn-lg"><i class="fa fa-plus"></i>&nbsp; Araç Ekle</button>
+                <button type="button" class="btn btn-success btn-lg"><i class="fa fa-plus"></i>&nbsp; Acık artırma Ekle</button>
             </a>
         </div>
     </div>
@@ -55,11 +55,10 @@
                         <th data-field="id" data-sortable="true" data-width="10">ID</th>
                         <th data-field="maxprice" data-sortable="true">max price</th>
                         <th data-field="minprice" data-sortable="true">min price</th>
-                        <th data-field="auctiondate" data-sortable="true">auction date</th>
-                        <th data-field="auctionsalestime" data-width="20">auction sales time</th>
-                        <th data-field="carbrand" data-width="20">car brand</th>
-                        <th data-field="increaseprice" data-width="20">increase price</th>
-                        <th data-field="carlicanceplate" data-width="20">car licance plate</th>
+                        <th data-field="auctionsalestime" data-sortable="true" data-width="20">auction sales time</th>
+                        <th data-field="carbrand" data-sortable="true" data-width="20">car brand</th>
+                        <th data-field="increaseprice" data-sortable="true" data-width="20">increase price</th>
+                        <th data-field="carlicanceplate" data-sortable="true" data-width="20">car licance plate</th>
                         <th data-field="islemler" data-width="20">işlemler</th>
                     </tr>
                 </thead>
@@ -74,16 +73,14 @@
                                 <td>1</td>
                                 <td>@auction.MAX_PRICE</td>
                                 <td>@auction.MIN_PRICE</td>
-                                <td>@auction.ACUTION_DATE</td>
                                 <td>@auction.ACUTION_SALES_TIME</td>
                                 <td>@auction.CarBrandName</td>
                                 <td>@auction.INCREASE_PRICE</td>
                                 <td>@auction.LicancePlate</td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        @Html.ActionLink("Detay", "ProductDetail", new { id = auction.ID }, new { @class = "btn btn-secondary" })
-
-                                        @Html.ActionLink("Sil", "Delete", "Cars", new { id = auction.ID }, new { @class = "btn btn-danger" })
+                                        <a href="@Url.Action("detail", "auction")/@auction.ID" class="btn btn-secondary">Detay</a>
+                                        @Html.ActionLink("Sil", "Delete", "auction", new { id = auction.ID }, new { @class = "btn btn-danger" })
                                     </div>
                                 </td>
                             </tr>
