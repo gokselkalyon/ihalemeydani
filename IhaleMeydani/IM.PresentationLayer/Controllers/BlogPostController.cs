@@ -1,4 +1,5 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -30,12 +31,20 @@ namespace IM.PresentationLayer.Controllers
             mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
             return View(mv);
         }
-        [Route("BlogAdminCreate")]
+        [Route("BlogAdmin/Create")]
         public ActionResult AdminPanelCreate()
         {
             return View();
         }
-        [Route("BlogAdminUpdate")]
+        [HttpPost]
+        [Route("BlogAdmin/Create")]
+        public ActionResult AdminPanelCreate(PostModel postModel)
+        {
+            postModel.users_id = SessionManager.CurrentUser.Id;
+            int değer = IhaleServiceClient.AddPostModel(postModel);
+            return RedirectToAction("", "BlogAdmin");
+        }
+        [Route("BlogAdmin/Update")]
         public ActionResult AdminPanelUpdate()
         {
             return View();

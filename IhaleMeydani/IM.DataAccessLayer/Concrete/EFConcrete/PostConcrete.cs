@@ -46,7 +46,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                     submit submit = new submit { media_id = media.id, submit_article = t.submit_article };
                     DB.submits.Add(submit);
                     DB.SaveChanges();
-                    Post post = new Post { content_id = t.content_id, Post_date = DateTime.Now, users_id = t.users_id };
+                    Post post = new Post { content_id = submit.submit_id, Post_date = DateTime.Now, users_id = t.users_id };
                     DB.Posts.Add(post);
                     DB.SaveChanges();
                     transaction.Commit();
