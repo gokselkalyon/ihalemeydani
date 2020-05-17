@@ -1,28 +1,31 @@
-﻿
-@*@using IM.PresentationLayer.Models;
-@model BlogModelView
-
-@foreach (var item in Model.Posts)
-{
-    @item.Post_date;
-}*@
+﻿@model IM.PresentationLayer.Models.BlogModelView
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_BlogLayoutPage.cshtml";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
-<div class="container">
-    <div id="blog" class="row">
-        <div class="col-md-10 blogShort">
-            <h1>Sivaslı firma metal tozundan motor parçası üretti Volvo'ya sattı</h1>
-            <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
 
-            <article>
-                <p>
-                    Sivas'ta faaliyet gösteren firma, metal tozlarından ürettiği küçük motor parçalarını Volvo'ya satıyor - ESTAŞ Genel Müdürü Osman Mavuş: - "İçten yanmalı motorlarda şu anda Volvo grubuna ihracat yapıyoruz. Bu parçaları ilk olarak Volvo grubu kullanmaya başladı"
-                </p>
-            </article>
-            <a class="btn btn-blog pull-right marginBottom10" href="http://bootsnipp.com/user/snippets/2RoQ">Devamını Oku</a>
+
+
+    <div class="container p-5">
+        <div class="row row-cols-1 row-cols-md-3">
+            @foreach (var item in Model.Posts)
+            {
+
+            <div class="card">
+                <img src="https://source.unsplash.com/WLUHO9A_xik/300x300" class="card-img-top img-responsive" alt="" />@*@item.image_subtitle   @item.image_path*@
+                <div class="card-body">
+                    <h5 class="card-title">@item.image_title</h5>
+                    <p class="card-text">@item.submit_article.Substring(0, 2)</p>
+                    <p class=" float-right">
+                        <a href="@Url.Action("Content","Blog")/@item.Post_id">Devamını Oku</a>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated @item.Post_date</small>
+                </div>
+            </div>
+
+            }
+
         </div>
-        <div class="col-md-12 gap10"></div>
     </div>
-</div>
