@@ -2431,6 +2431,22 @@ namespace IM.ServiceLayer
         {
             return InstanceFactory.GetInstance<IDataBaseQueryService<PostModel>>().Multiupdate(entity);
         }
+
+
+        public List<UserAuctionModel> GetUserAuctionModel()
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserAuctionModel>>().QueryList();
+        }
+
+        public int AddUserAuctionModel(UserAuctionModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserAuctionModel>>().Multiupdate(entity);
+        }
+
+        public int UpadateUserAuctionModel(UserAuctionModel entity)
+        {
+            return InstanceFactory.GetInstance<IDataBaseQueryService<UserAuctionModel>>().Multiupdate(entity);
+        }
         #endregion
 
         #region ClaimGroup
@@ -2459,6 +2475,8 @@ namespace IM.ServiceLayer
         {
              Create<ClaimGroup>().Update(entity);
         }
+
+        
 
         #endregion
 
