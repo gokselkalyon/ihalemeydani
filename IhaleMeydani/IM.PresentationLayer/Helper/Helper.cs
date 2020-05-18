@@ -19,8 +19,8 @@ namespace IM.PresentationLayer.Helper
         public static bool userauctioncontrol(int auctionid)
         {
 
-            var db = Singleton.GetIhaleinstance().Getprivateauctions().Where(x=>x.auction_id == auctionid && x.USER_ID == SessionManager.CurrentUser.Id ).ToList();
-            if (db == null)
+            var db = Singleton.GetIhaleinstance().Getprivateauctions().Where(x=>x.auction_id == auctionid && x.USER_ID == SessionManager.CurrentUser.Id ).Count();
+            if (db <= 0)
                 return false;
             return true;
         }
