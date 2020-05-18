@@ -29,7 +29,15 @@ namespace IM.PresentationLayer.Controllers
         [Route("Cars/list")]
         public ActionResult Carslist()
         {
-            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x => x.isdeleted == false).ToList();
+            try
+            {
+                mv.userProductModels = IhaleServiceClient.userProductModels().Where(x => x.isdeleted == false).ToList();
+
+            }
+            catch (Exception ex)
+            {
+                var deneme = ex.Message;
+            }
             return View(mv);
         }
 

@@ -1,122 +1,31 @@
-﻿@model IEnumerable<IM.PresentationLayer.IhaleWCFService.UserProductModel>
+﻿@model IM.PresentationLayer.Models.AuctionModelView
 
 @{
     ViewBag.Title = "Carslist";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
-
-<h2>Carslist</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        
-        <th>
-            @Html.DisplayNameFor(model => model.CarBrandName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CarMakeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CarVersion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ColorName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ColorValue)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EngineDisplacement)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FuelTypeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GearTypeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HardwareDetail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LicancePlate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mileage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SegmentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VIN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.date_of_created)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CarBrandName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CarMakeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CarVersion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ColorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ColorValue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FuelTypeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GearTypeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HardwareDetail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LicancePlate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mileage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SegmentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VIN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.date_of_created)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
-
-</table>
+    <table>
+        @foreach (var item in Model.userProductModels)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarBrandName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ColorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GearTypeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LicancePlate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mileage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_of_created)
+                </td>
+            </tr>
+        }
+    </table>

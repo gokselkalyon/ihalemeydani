@@ -4643,7 +4643,7 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private int idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool isSaledField;
+        private System.Nullable<bool> isSaledField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<bool> isdeletedField;
@@ -5058,7 +5058,7 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool isSaled {
+        public System.Nullable<bool> isSaled {
             get {
                 return this.isSaledField;
             }

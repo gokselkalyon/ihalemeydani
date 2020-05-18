@@ -61,7 +61,7 @@
       <xs:element minOccurs="0" name="date_of_created" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="date_of_updated" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="isSaled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isSaled" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="isdeleted" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="published_on" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="registrationDate" nillable="true" type="xs:dateTime" />
