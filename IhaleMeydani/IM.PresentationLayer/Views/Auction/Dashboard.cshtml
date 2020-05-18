@@ -80,6 +80,7 @@
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <a href="@Url.Action("detail", "auction")/@auction.ID" class="btn btn-secondary">Detay</a>
+                                        <a href="@Url.Action("Edit", "auction")/@auction.ID" class="btn btn-success">Güncelle</a>
                                         @Html.ActionLink("Sil", "Delete", "auction", new { id = auction.ID }, new { @class = "btn btn-danger" })
                                     </div>
                                 </td>

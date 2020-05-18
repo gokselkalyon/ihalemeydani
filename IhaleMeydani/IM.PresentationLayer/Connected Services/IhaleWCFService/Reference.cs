@@ -6167,13 +6167,31 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private int AoFIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CarBrandIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarBrandNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CarDetailIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CarHardwareDetailsIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CarMakeIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarMakeNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CarTechnicalDetailIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ColorIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ColorNameField;
@@ -6188,7 +6206,13 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private int EngineDisplacementField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FuelTypeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FuelTypeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int GearTypeIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string GearTypeNameField;
@@ -6219,6 +6243,9 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NAMEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SegmentIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SegmentNameField;
@@ -6294,6 +6321,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarBrandId {
+            get {
+                return this.CarBrandIdField;
+            }
+            set {
+                if ((this.CarBrandIdField.Equals(value) != true)) {
+                    this.CarBrandIdField = value;
+                    this.RaisePropertyChanged("CarBrandId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string CarBrandName {
             get {
                 return this.CarBrandNameField;
@@ -6302,6 +6342,45 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.CarBrandNameField, value) != true)) {
                     this.CarBrandNameField = value;
                     this.RaisePropertyChanged("CarBrandName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarDetailId {
+            get {
+                return this.CarDetailIdField;
+            }
+            set {
+                if ((this.CarDetailIdField.Equals(value) != true)) {
+                    this.CarDetailIdField = value;
+                    this.RaisePropertyChanged("CarDetailId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarHardwareDetailsId {
+            get {
+                return this.CarHardwareDetailsIdField;
+            }
+            set {
+                if ((this.CarHardwareDetailsIdField.Equals(value) != true)) {
+                    this.CarHardwareDetailsIdField = value;
+                    this.RaisePropertyChanged("CarHardwareDetailsId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarMakeId {
+            get {
+                return this.CarMakeIdField;
+            }
+            set {
+                if ((this.CarMakeIdField.Equals(value) != true)) {
+                    this.CarMakeIdField = value;
+                    this.RaisePropertyChanged("CarMakeId");
                 }
             }
         }
@@ -6320,6 +6399,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CarTechnicalDetailId {
+            get {
+                return this.CarTechnicalDetailIdField;
+            }
+            set {
+                if ((this.CarTechnicalDetailIdField.Equals(value) != true)) {
+                    this.CarTechnicalDetailIdField = value;
+                    this.RaisePropertyChanged("CarTechnicalDetailId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string CarVersion {
             get {
                 return this.CarVersionField;
@@ -6328,6 +6420,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.CarVersionField, value) != true)) {
                     this.CarVersionField = value;
                     this.RaisePropertyChanged("CarVersion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ColorId {
+            get {
+                return this.ColorIdField;
+            }
+            set {
+                if ((this.ColorIdField.Equals(value) != true)) {
+                    this.ColorIdField = value;
+                    this.RaisePropertyChanged("ColorId");
                 }
             }
         }
@@ -6385,6 +6490,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FuelTypeId {
+            get {
+                return this.FuelTypeIdField;
+            }
+            set {
+                if ((this.FuelTypeIdField.Equals(value) != true)) {
+                    this.FuelTypeIdField = value;
+                    this.RaisePropertyChanged("FuelTypeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string FuelTypeName {
             get {
                 return this.FuelTypeNameField;
@@ -6393,6 +6511,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.FuelTypeNameField, value) != true)) {
                     this.FuelTypeNameField = value;
                     this.RaisePropertyChanged("FuelTypeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int GearTypeId {
+            get {
+                return this.GearTypeIdField;
+            }
+            set {
+                if ((this.GearTypeIdField.Equals(value) != true)) {
+                    this.GearTypeIdField = value;
+                    this.RaisePropertyChanged("GearTypeId");
                 }
             }
         }
@@ -6523,6 +6654,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.NAMEField, value) != true)) {
                     this.NAMEField = value;
                     this.RaisePropertyChanged("NAME");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SegmentId {
+            get {
+                return this.SegmentIdField;
+            }
+            set {
+                if ((this.SegmentIdField.Equals(value) != true)) {
+                    this.SegmentIdField = value;
+                    this.RaisePropertyChanged("SegmentId");
                 }
             }
         }

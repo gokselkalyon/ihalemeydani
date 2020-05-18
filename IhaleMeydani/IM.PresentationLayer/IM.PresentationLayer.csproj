@@ -2723,6 +2723,7 @@
     <Content Include="Views\Auction\Dashboard.cshtml" />
     <Content Include="Views\Auction\Details.cshtml" />
     <Content Include="Views\Auction\Create.cshtml" />
+    <Content Include="Views\Auction\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

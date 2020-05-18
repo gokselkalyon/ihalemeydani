@@ -12,6 +12,7 @@ namespace IM.PresentationLayer.Controllers
     public class AuctionController : BaseController
     {
         AuctionModelView mv = new AuctionModelView();
+        UserAuctionModel uam = new UserAuctionModel();
         [HttpGet]
         [Route("auction/index")]
         public ActionResult Dashboard()
@@ -25,7 +26,7 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Details(int id)
         {
             mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
-            UserAuctionModel uam = mv.auction;
+            uam = mv.auction;
             return View(uam);
         }
 
@@ -57,16 +58,20 @@ namespace IM.PresentationLayer.Controllers
         [Route("auction/Edit/{id}")]
         public ActionResult Edit(int id)
         {
-            return View();
+            mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
+            uam = mv.auction;
+            return View(uam);
         }
 
         // POST: Auction/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [Route("auction/Edit")]
+        public ActionResult Edit(UserAuctionModel uam)
         {
             try
             {
-                // TODO: Add update logic here
+                uam.userid = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.UpadateUserAuctionModel(uam);
 
                 return RedirectToAction("Index");
             }
@@ -79,23 +84,9 @@ namespace IM.PresentationLayer.Controllers
         // GET: Auction/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            IhaleServiceClient.Updateuserproduct(new userproduct { id = id, isdeleted = true });
+            return RedirectToAction("Index");
         }
 
-        // POST: Auction/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

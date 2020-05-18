@@ -110,7 +110,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
             {
                 try
                 {
-                    CURRENCY cURRENCY = new CURRENCY { NAME = t.NAME };
+                    CURRENCY cURRENCY = new CURRENCY { NAME = t.NAME ,ID = t.ID};
                     DB.CURRENCies.Attach(cURRENCY);
                     DB.Entry(cURRENCY).State = System.Data.Entity.EntityState.Modified;
                     UserProductModel upm = new UserProductModel
@@ -136,6 +136,16 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         user_id = t.userid,
                         date_of_updated = DateTime.Now,
                         published_on = true,
+                        CarDetailId =t.CarDetailId,
+                        CarHardwareDetailsId = t.CarHardwareDetailsId,
+                        CarBrandId=t.CarBrandId,
+                        CarMakeId=t.CarMakeId,
+                        CarTechnicalDetailId = t.CarTechnicalDetailId,
+                        ColorId = t.ColorId,
+                        FuelTypeId = t.FuelTypeId ,
+                        GearTypeId= t.GearTypeId,
+                        SegmentId = t.SegmentId,
+                        id = t.userproductID
                     };
                     int upmid = new UserProductConcrete().Multiupdate(upm);
                     DB.SaveChanges();
