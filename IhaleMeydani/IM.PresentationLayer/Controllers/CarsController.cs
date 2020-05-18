@@ -17,14 +17,15 @@ namespace IM.PresentationLayer.Controllers
 
         // açık artırmanın teklif verildiği sayfa
         [HttpGet]
-        [ihaleClientFilter("privateauction.listele")]
+        //[ihaleClientFilter("privateauction.listele")]
         [Route("Cars/index/{auctionid}")]
         public ActionResult Index(int auctionid)
         {
             if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
                 return RedirectToRoute("default");
 
-            mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == SessionManager.CurrentUser.Id).FirstOrDefault();
+            int dd = SessionManager.CurrentUser.Id;
+            mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.ID == auctionid).FirstOrDefault();
             AuctionModelView.auctionid = auctionid;
             return View(mv);
         }

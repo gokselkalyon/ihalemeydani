@@ -41,8 +41,8 @@
                 });
             }
 
-            loghub.client.addauctionuser = function (actionuser) {
-                $scope.actionusers.push(actionuser);
+            loghub.client.addauctionuser = function (actionusers) {
+                $scope.actionusers = actionusers;
                 $scope.$apply();
 
                 $("#bars li .bar").each(function (key, bar) {
