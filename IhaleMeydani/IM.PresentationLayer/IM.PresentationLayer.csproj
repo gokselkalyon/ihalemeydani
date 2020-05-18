@@ -2685,10 +2685,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\BlogPageContent.cshtml" />
-    <Content Include="Views\Shared\_BlogLayoutPage.cshtml" />
     <Content Include="Views\BlogPost\Index.cshtml" />
     <Content Include="Views\QuickSell\Details.cshtml" />
-    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\QuickSell\Index.cshtml" />
     <Content Include="Views\Shared\LoginPage.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
