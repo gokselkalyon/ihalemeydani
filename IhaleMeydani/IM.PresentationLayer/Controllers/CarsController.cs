@@ -14,18 +14,23 @@ namespace IM.PresentationLayer.Controllers
     {
 
         AuctionModelView mv = new AuctionModelView();
+
+        // açık artırmanın teklif verildiği sayfa
         [HttpGet]
+        [ihaleClientFilter("privateauction.listele")]
         [Route("Cars/index/{auctionid}")]
         public ActionResult Index(int auctionid)
         {
-           // if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
-               // return RedirectToRoute("default");
+            if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
+                return RedirectToRoute("default");
 
             mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == SessionManager.CurrentUser.Id).FirstOrDefault();
             AuctionModelView.auctionid = auctionid;
             return View(mv);
         }
 
+        //araçların listelendiği sayfa
+        [HttpGet]
         [Route("Cars/list")]
         public ActionResult Carslist()
         {
@@ -42,6 +47,7 @@ namespace IM.PresentationLayer.Controllers
         }
 
         // kullanıcıların ürünlerinin bulunduğu sayfa
+        [HttpGet]
         [ihaleClientFilter("Araba.Listele")]
         [Route("Cars/userproductdashboard")]
         public ActionResult UserProductsViewPage()
@@ -54,6 +60,7 @@ namespace IM.PresentationLayer.Controllers
             return View(mv);
         }
 
+        [HttpGet]
         [ihaleClientFilter("Araba.Listele")]
         [Route("Cars/Detail/{id}")]
         public ActionResult ProductDetail(int id)

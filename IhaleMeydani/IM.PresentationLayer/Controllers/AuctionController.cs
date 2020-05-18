@@ -13,7 +13,9 @@ namespace IM.PresentationLayer.Controllers
     {
         AuctionModelView mv = new AuctionModelView();
         UserAuctionModel uam = new UserAuctionModel();
+
         [HttpGet]
+        [ihaleClientFilter("auction.listele")]
         [Route("auction/index")]
         public ActionResult Dashboard()
         {
@@ -22,6 +24,7 @@ namespace IM.PresentationLayer.Controllers
         }
 
         [HttpGet]
+        [ihaleClientFilter("auction.listele")]
         [Route("auction/detail/{id}")]
         public ActionResult Details(int id)
         {
@@ -31,6 +34,7 @@ namespace IM.PresentationLayer.Controllers
         }
 
         [HttpGet]
+        [ihaleClientFilter("auction.ekle")]
         [Route("auction/create")]
         public ActionResult Create()
         {
@@ -39,6 +43,7 @@ namespace IM.PresentationLayer.Controllers
 
         
         [HttpPost]
+        [ihaleClientFilter("auction.ekle")]
         [Route("auction/create")]
         public ActionResult Create(UserAuctionModel uam)
         {
@@ -55,6 +60,7 @@ namespace IM.PresentationLayer.Controllers
             }
         }
         [HttpGet]
+        [ihaleClientFilter("auction.guncelle")]
         [Route("auction/Edit/{id}")]
         public ActionResult Edit(int id)
         {
@@ -65,6 +71,7 @@ namespace IM.PresentationLayer.Controllers
 
         // POST: Auction/Edit/5
         [HttpPost]
+        [ihaleClientFilter("auction.guncelle")]
         [Route("auction/Edit")]
         public ActionResult Edit(UserAuctionModel uam)
         {
@@ -81,7 +88,9 @@ namespace IM.PresentationLayer.Controllers
             }
         }
 
-        // GET: Auction/Delete/5
+        [HttpGet]
+        [Route("auction/delete")]
+        [ihaleClientFilter("auction.sil")]
         public ActionResult Delete(int id)
         {
             IhaleServiceClient.Updateuserproduct(new userproduct { id = id, isdeleted = true });
