@@ -2764,6 +2764,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\BlogImages\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\LoginPage\" />
   </ItemGroup>
