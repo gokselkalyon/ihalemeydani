@@ -1,157 +1,156 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
+﻿@model IM.PresentationLayer.Models.InvoiceModelView
+<!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>InvoicePfdView</title>
-    <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
-    <link href="~/Content/Template/css/invoice.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <title>A simple, clean, and responsive HTML invoice template</title>
+
+    <style>
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+
+            .invoice-box table {
+                width: 100%;
+                line-height: inherit;
+                text-align: left;
+            }
+
+                .invoice-box table td {
+                    padding: 5px;
+                    vertical-align: top;
+                }
+
+                .invoice-box table tr td:nth-child(2) {
+                    text-align: right;
+                }
+
+                .invoice-box table tr.top table td {
+                    padding-bottom: 20px;
+                }
+
+                    .invoice-box table tr.top table td.title {
+                        font-size: 45px;
+                        line-height: 45px;
+                        color: #333;
+                    }
+
+                .invoice-box table tr.information table td {
+                    padding-bottom: 40px;
+                }
+
+                .invoice-box table tr.heading td {
+                    background: #eee;
+                    border-bottom: 1px solid #ddd;
+                    font-weight: bold;
+                }
+
+                .invoice-box table tr.details td {
+                    padding-bottom: 20px;
+                }
+
+                .invoice-box table tr.item td {
+                    border-bottom: 1px solid #eee;
+                }
+
+                .invoice-box table tr.item.last td {
+                    border-bottom: none;
+                }
+
+                .invoice-box table tr.total td:nth-child(2) {
+                    border-top: 2px solid #eee;
+                    font-weight: bold;
+                }
+        /** RTL **/
+        .rtl {
+            direction: rtl;
+            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        }
+
+            .rtl table {
+                text-align: right;
+            }
+
+                .rtl table tr td:nth-child(2) {
+                    text-align: left;
+                }
+    </style>
 </head>
+
 <body>
-    <div>
-        <div class="receipt-content">
-            <div class="container bootstrap snippet">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="invoice-wrapper">
-                            <div class="intro">
-                                Hi <strong>John McClane</strong>,
-                                <br>
-                                This is the receipt for a payment of <strong>$312.00</strong> (USD) for your works
-                            </div>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>  
+                            <td>
+                                Fatura No:  @Model.eInvoice.INVOICE_NO<br>
+                                Fatura Tarihi: @Model.eInvoice.INVOICE_DATE<br> 
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-                            <div class="payment-info">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <span>Payment No.</span>
-                                        <strong>434334343</strong>
-                                    </div>
-                                    <div class="col-sm-6 text-right">
-                                        <span>Payment Date</span>
-                                        <strong>Jul 09, 2014 - 12:20 pm</strong>
-                                    </div>
-                                </div>
-                            </div>
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                <span style="color:red"> Alıcı</span> <br>
+                                @Model.saledUser.Name @Model.saledUser.Surname<br>
+                                @Model.saledUser.Phone<br>
+                                @Model.saledUser.Email
+                            </td>
 
-                            <div class="payment-details">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <span>Client</span>
-                                        <strong>
-                                            Andres felipe posada
-                                        </strong>
-                                        <p>
-                                            989 5th Avenue <br>
-                                            City of monterrey <br>
-                                            55839 <br>
-                                            USA <br>
-                                            <a href="#">
-                                                jonnydeff@gmail.com
-                                            </a>
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-6 text-right">
-                                        <span>Payment To</span>
-                                        <strong>
-                                            Juan fernando arias
-                                        </strong>
-                                        <p>
-                                            344 9th Avenue <br>
-                                            San Francisco <br>
-                                            99383 <br>
-                                            USA <br>
-                                            <a href="#">
-                                                juanfer@gmail.com
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <td>
+                                <span style="color:red"> Satıcı</span> <br>
+                                @Model.saleUser.Name @Model.saleUser.Surname<br>
+                                @Model.saleUser.Phone<br>
+                                @Model.saleUser.Email
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>  
 
-                            <div class="line-items">
-                                <div class="headers clearfix">
-                                    <div class="row">
-                                        <div class="col-xs-4">Description</div>
-                                        <div class="col-xs-3">Quantity</div>
-                                        <div class="col-xs-5 text-right">Amount</div>
-                                    </div>
-                                </div>
-                                <div class="items">
-                                    <div class="row item">
-                                        <div class="col-xs-4 desc">
-                                            Html theme
-                                        </div>
-                                        <div class="col-xs-3 qty">
-                                            3
-                                        </div>
-                                        <div class="col-xs-5 amount text-right">
-                                            $60.00
-                                        </div>
-                                    </div>
-                                    <div class="row item">
-                                        <div class="col-xs-4 desc">
-                                            Bootstrap snippet
-                                        </div>
-                                        <div class="col-xs-3 qty">
-                                            1
-                                        </div>
-                                        <div class="col-xs-5 amount text-right">
-                                            $20.00
-                                        </div>
-                                    </div>
-                                    <div class="row item">
-                                        <div class="col-xs-4 desc">
-                                            Snippets on bootdey
-                                        </div>
-                                        <div class="col-xs-3 qty">
-                                            2
-                                        </div>
-                                        <div class="col-xs-5 amount text-right">
-                                            $18.00
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="total text-right">
-                                    <p class="extra-notes">
-                                        <strong>Extra Notes</strong>
-                                        Please send all items at the same time to shipping address by next week.
-                                        Thanks a lot.
-                                    </p>
-                                    <div class="field">
-                                        Subtotal <span>$379.00</span>
-                                    </div>
-                                    <div class="field">
-                                        Shipping <span>$0.00</span>
-                                    </div>
-                                    <div class="field">
-                                        Discount <span>4.5%</span>
-                                    </div>
-                                    <div class="field grand-total">
-                                        Total <span>$312.00</span>
-                                    </div>
-                                </div>
+            <tr class="heading">
+                <td>
+                    Ürün
+                </td>
 
-                                <div class="print">
-                                    <a href="#">
-                                        <i class="fa fa-print"></i>
-                                        Print this receipt
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <td>
+                    Fiyat
+                </td>
+            </tr>
 
-                        <div class="footer">
-                            Copyright © 2014. company name
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <tr class="item">
+                <td>
+                   @Model.userProduct.CarBrandName
+                </td>
+
+                <td>
+                   @Model.userProduct.Price
+                </td>
+            </tr>  
+
+            <tr class="total">
+                <td></td>
+
+                <td>
+                    Toplam :  @Model.userProduct.Price
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
-</html>
+</html> 

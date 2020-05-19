@@ -543,6 +543,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="user_id" Type="int" />
           <Property Name="cardetail_id" Type="int" />
+          <Property Name="Price" Type="money" />
           <Property Name="date_of_created" Type="date" />
           <Property Name="date_of_updated" Type="date" />
           <Property Name="published_on" Type="bit" />
@@ -574,18 +575,6 @@
             </Principal>
             <Dependent Role="SocialMedya">
               <PropertyRef Name="MediaTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SOLD_PRODUCT_userproduct">
-          <End Role="userproduct" Type="Self.userproduct" Multiplicity="0..1" />
-          <End Role="SOLD_PRODUCT" Type="Self.SOLD_PRODUCT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="userproduct">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="SOLD_PRODUCT">
-              <PropertyRef Name="userproductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -650,10 +639,6 @@
           <AssociationSet Name="FK_SocialMedya_SocialMediaType" Association="Self.FK_SocialMedya_SocialMediaType">
             <End Role="SocialMediaType" EntitySet="SocialMediaType" />
             <End Role="SocialMedya" EntitySet="SocialMedya" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SOLD_PRODUCT_userproduct" Association="Self.FK_SOLD_PRODUCT_userproduct">
-            <End Role="userproduct" EntitySet="userproduct" />
-            <End Role="SOLD_PRODUCT" EntitySet="SOLD_PRODUCT" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -1164,10 +1149,6 @@
           <EntitySet Name="Contacts" EntityType="IHALEDBModel.Contact" />
           <EntitySet Name="userproducts" EntityType="IHALEDBModel.userproduct" />
           <EntitySet Name="SOLD_PRODUCT" EntityType="IHALEDBModel.SOLD_PRODUCT" />
-          <AssociationSet Name="FK_SOLD_PRODUCT_userproduct" Association="IHALEDBModel.FK_SOLD_PRODUCT_userproduct">
-            <End Role="userproduct" EntitySet="userproducts" />
-            <End Role="SOLD_PRODUCT" EntitySet="SOLD_PRODUCT" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="actionuser">
           <Key>
@@ -1285,12 +1266,12 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="user_id" Type="Int32" />
           <Property Name="cardetail_id" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="date_of_created" Type="DateTime" Precision="0" />
           <Property Name="date_of_updated" Type="DateTime" Precision="0" />
           <Property Name="published_on" Type="Boolean" />
           <Property Name="isdeleted" Type="Boolean" />
           <Property Name="isSaled" Type="Boolean" />
-          <NavigationProperty Name="SOLD_PRODUCT" Relationship="IHALEDBModel.FK_SOLD_PRODUCT_userproduct" FromRole="userproduct" ToRole="SOLD_PRODUCT" />
         </EntityType>
         <EntityType Name="SOLD_PRODUCT">
           <Key>
@@ -1301,20 +1282,7 @@
           <Property Name="DATE_OF_UPDATE" Type="DateTime" Precision="0" />
           <Property Name="userproductId" Type="Int32" />
           <Property Name="SaledUserId" Type="Int32" />
-          <NavigationProperty Name="userproduct" Relationship="IHALEDBModel.FK_SOLD_PRODUCT_userproduct" FromRole="SOLD_PRODUCT" ToRole="userproduct" />
         </EntityType>
-        <Association Name="FK_SOLD_PRODUCT_userproduct">
-          <End Type="IHALEDBModel.userproduct" Role="userproduct" Multiplicity="0..1" />
-          <End Type="IHALEDBModel.SOLD_PRODUCT" Role="SOLD_PRODUCT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="userproduct">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="SOLD_PRODUCT">
-              <PropertyRef Name="userproductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1921,6 +1889,7 @@
                 <ScalarProperty Name="published_on" ColumnName="published_on" />
                 <ScalarProperty Name="date_of_updated" ColumnName="date_of_updated" />
                 <ScalarProperty Name="date_of_created" ColumnName="date_of_created" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="cardetail_id" ColumnName="cardetail_id" />
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
                 <ScalarProperty Name="id" ColumnName="id" />

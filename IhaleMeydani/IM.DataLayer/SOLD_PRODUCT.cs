@@ -18,7 +18,6 @@ namespace IM.DataLayer
         public Nullable<int> E_INVOICE_ID { get; set; }
         public Nullable<System.DateTime> DATE_OF_UPDATE { get; set; }
         public Nullable<int> userproductId { get; set; }
-    
-        public virtual userproduct userproduct { get; set; }
+        public Nullable<int> SaledUserId { get; set; }
     }
 }

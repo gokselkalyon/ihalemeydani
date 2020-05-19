@@ -134,9 +134,9 @@
                                 <td>@product.CarMakeName</td>
                                 <td>@product.HardwareDetail</td>
                                 <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        @Html.ActionLink("Detay", "ProductDetail", new { id = product.id }, new { @class = "btn btn-secondary" })
-                                    
+                                    <div class="btn-group" role="group" aria-label="Basic example"> 
+                                        @Html.ActionLink("Fatura Görüntüle", "PrintPartialViewToPdf", "Cars", new { id = product.id }, new { @class = "btn btn-danger" })
+                                        @Html.ActionLink("Detay", "ProductDetail", new { id = product.id }, new { @class = "btn btn-secondary" }) 
                                         @Html.ActionLink("Sil", "Delete", "Cars", new { id = product.id }, new { @class = "btn btn-danger" })
                                     </div>
                                 </td>

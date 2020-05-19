@@ -1793,9 +1793,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CarDetail_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> DATE_OF_UPDATEField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1804,6 +1801,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IDField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> SaledUserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> userproductIdField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -1811,19 +1814,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CarDetail_ID {
-            get {
-                return this.CarDetail_IDField;
-            }
-            set {
-                if ((this.CarDetail_IDField.Equals(value) != true)) {
-                    this.CarDetail_IDField = value;
-                    this.RaisePropertyChanged("CarDetail_ID");
-                }
             }
         }
         
@@ -1862,6 +1852,32 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((this.IDField.Equals(value) != true)) {
                     this.IDField = value;
                     this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> SaledUserId {
+            get {
+                return this.SaledUserIdField;
+            }
+            set {
+                if ((this.SaledUserIdField.Equals(value) != true)) {
+                    this.SaledUserIdField = value;
+                    this.RaisePropertyChanged("SaledUserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> userproductId {
+            get {
+                return this.userproductIdField;
+            }
+            set {
+                if ((this.userproductIdField.Equals(value) != true)) {
+                    this.userproductIdField = value;
+                    this.RaisePropertyChanged("userproductId");
                 }
             }
         }
@@ -4143,6 +4159,9 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> cardetail_idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -4153,6 +4172,9 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> isSaledField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<bool> isdeletedField;
@@ -4170,6 +4192,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
             }
         }
         
@@ -4221,6 +4256,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((this.idField.Equals(value) != true)) {
                     this.idField = value;
                     this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> isSaled {
+            get {
+                return this.isSaledField;
+            }
+            set {
+                if ((this.isSaledField.Equals(value) != true)) {
+                    this.isSaledField = value;
+                    this.RaisePropertyChanged("isSaled");
                 }
             }
         }
@@ -4348,6 +4396,9 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int SegmentIdField;
@@ -4677,6 +4728,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
                 }
             }
         }

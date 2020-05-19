@@ -190,6 +190,7 @@
     <Compile Include="Models\EncrypModel.cs" />
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\HandleErrors.cs" />
+    <Compile Include="Models\InvoiceModelView.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Models\LoginModelView.cs" />
     <Compile Include="Models\RolesModelView.cs" />

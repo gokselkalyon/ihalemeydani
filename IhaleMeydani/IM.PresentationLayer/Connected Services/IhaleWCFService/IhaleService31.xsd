@@ -30,6 +30,7 @@
       <xs:element minOccurs="0" name="LicancePlate" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Mileage" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
       <xs:element minOccurs="0" name="SegmentId" type="xs:int" />
       <xs:element minOccurs="0" name="SegmentName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
