@@ -43,6 +43,6 @@ namespace IM.DataLayer.Model
         public string ColorName { get; set; }
         public string ColorValue { get; set; }
         public Nullable<decimal> Price { get; set; }
-
+        public Nullable<bool> isSaled { get; set; }
     }
 }

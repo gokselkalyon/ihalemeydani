@@ -289,25 +289,11 @@
       <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="E_INVOICE_ID" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
-      <xs:element minOccurs="0" name="userproduct" nillable="true" type="tns:userproduct" />
+      <xs:element minOccurs="0" name="SaledUserId" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="userproductId" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SOLD_PRODUCT" nillable="true" type="tns:SOLD_PRODUCT" />
-  <xs:complexType name="userproduct">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="SOLD_PRODUCT" nillable="true" type="tns:ArrayOfSOLD_PRODUCT" />
-      <xs:element minOccurs="0" name="cardetail_id" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="date_of_created" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="date_of_updated" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="isSaled" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="isdeleted" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="published_on" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="userproduct" nillable="true" type="tns:userproduct" />
   <xs:complexType name="ArrayOfsubmit">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="submit" nillable="true" type="tns:submit" />
@@ -634,6 +620,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfuserproduct" nillable="true" type="tns:ArrayOfuserproduct" />
+  <xs:complexType name="userproduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="cardetail_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="date_of_created" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="date_of_updated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="isSaled" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isdeleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="published_on" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="userproduct" nillable="true" type="tns:userproduct" />
   <xs:complexType name="ArrayOfactionuser">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="actionuser" nillable="true" type="tns:actionuser" />
