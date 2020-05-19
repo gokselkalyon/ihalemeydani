@@ -1,4 +1,5 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,14 @@ namespace IM.PresentationLayer.Helper
         /// </summary>
         /// <param name="auctionid"></param>
         /// <returns name="bool"></returns>
-        //public static bool userauctioncontrol(int auctionid)/// şuan basit bir deneme olduğu için singleton falan kullanılmadı
-        //{
+        public static bool userauctioncontrol(int auctionid)
+        {
 
-        //    bool db = Singleton.GetIhaleinstance().Getprivateauctions().Exists(x=> x.auction_id == auctionid && x.USER_ID == 1);
-        //    if(!db)
-        //        return false;
-        //    return true;
-        //}
+            var db = Singleton.GetIhaleinstance().Getprivateauctions().Where(x=>x.auction_id == auctionid && x.USER_ID == SessionManager.CurrentUser.Id ).Count();
+            if (db <= 0)
+                return false;
+            return true;
+        }
 
-        // bunu düzelt
     }
 }

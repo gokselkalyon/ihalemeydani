@@ -473,3 +473,184 @@ Create Table GeneralDesign
 	Footer text
 )
 
+
+
+
+
+
+create table userproduct
+(
+	id	int identity primary key,
+	[user_id] int,
+	cardetail_id int,
+	date_of_created date default getdate(),
+	date_of_updated date default getdate(),
+	published_on bit default 0,
+	isdeleted bit default 0
+)
+
+
+
+
+
+
+
+
+alter view userproductviews
+as
+select
+	up.id,
+	up.[user_id],
+	cd.CarDetailId,
+	ct.CarTechnicalDetailId,
+	ch.CarHardwareDetailsId,
+	cm.CarMakeId,
+	gt.GearTypeId,
+	ft.FuelTypeId,
+	s.SegmentId,
+	cb.CarBrandId,
+	c.ColorId,
+	up.published_on,
+	up.isdeleted,
+	up.isSaled,
+	up.date_of_created,
+	up.date_of_updated,
+	u.UserName,
+	u.Email,
+	u.[Name],
+	u.Surname,
+	ch.HardwareDetail,
+	cm.CarMakeName,
+	cb.CarBrandName,
+	ct.CarVersion,
+	c.ColorName,
+	c.ColorValue,
+	gt.GearTypeName,
+	ft.FuelTypeName,
+	s.SegmentName,
+	ct.EngineDisplacement,
+	ct.HP,
+	ct.LicancePlate,
+	ct.Mileage,
+	ct.registrationDate,
+	ct.VIN
+from  userproduct up
+inner join [User] u on u.Id = up.[user_id]
+inner join CarDetail cd on cd.CarDetailId = up.cardetail_id
+inner join CarTechnicalDetails ct on ct.CarTechnicalDetailId = cd.CarTechnicalId
+inner join CarHardwareDetails ch on ch.CarHardwareDetailsId = cd.CarHardwareId
+inner join CarMake cm on cm.CarMakeId = ct.CarMakeId
+inner join GearType gt on gt.GearTypeId = ct.GearTypeId
+inner join FuelType ft on ft.FuelTypeId = ct.FuelType_Id
+inner join Segment s on s.SegmentId = ct.SegmentId
+inner join CarBrand cb on cb.CarBrandId = cm.CarBrandId
+inner join Color c on c.ColorId = ct.ColorId
+where up.[user_id] = 18
+go
+
+select * from userproductviews -- kullanıcının websitesine eklediği araçlar detaylı
+go
+
+create view actionuserview
+as
+select 
+	au.ID,
+	au.DATE_OF_UPDATE,
+	au.auction_id,
+	au.[USER_ID],
+	au.bid,
+	u.UserName,
+	u.IsDeleted
+from actionuser au
+inner join [User] u on u.Id = au.[USER_ID]
+inner join auction a on a.ID = au.auction_id
+go
+select * from actionuserview  a where a.auction_id = 1 --kullanıcının teklif verdiği açık artırmalar detaylı
+
+
+go
+ -- kullanıcının açtığı açık artırmalar detaylı
+alter view userauctionview    
+as
+select
+	a.ACUTION_DATE,
+	a.ACUTION_SALES_TIME,
+	a.ID,
+	aoi.ID 'AoFID',
+	aoi.DATE_OF_UPDATE,
+	aoi.INCREASE_PRICE,
+	aoi.MAX_PRICE,
+	aoi.MIN_PRICE,
+	aoi.CURRENCY_ID,
+	c.[NAME],
+	up.id 'userproductID',
+	up.isdeleted,
+	up.date_of_created,
+	u.Id 'userid',
+	u.UserName,
+	up.CarBrandId,
+	up.CarDetailId,
+	up.CarMakeId,
+	up.CarTechnicalDetailId,
+	up.ColorId,
+	up.FuelTypeId,
+	up.GearTypeId,
+	up.CarHardwareDetailsId,
+	up.SegmentId,
+	up.HardwareDetail,
+	up.CarMakeName,
+	up.CarBrandName,
+	up.CarVersion,
+	up.ColorName,
+	up.ColorValue,
+	up.GearTypeName,
+	up.FuelTypeName,
+	up.SegmentName,
+	up.EngineDisplacement,
+	up.HP,
+	up.LicancePlate,
+	up.Mileage,
+	up.registrationDate,
+	up.VIN
+from auction a
+inner join [User] u on u.Id = a.[USER_ID]
+inner join AMOUNT_OF_INCREASE aoi on aoi.ID = a.AMOUNT_OF_INCREASE_ID
+inner join userproductviews up on up.id = a.PRODUCT_ID
+inner join CURRENCY c on c.ID = aoi.CURRENCY_ID
+
+
+select * from auction -- açılan açık artırmalar
+
+select * from actionuser -- açık artıma sırasında verilen teklifler 
+
+select * from private_auction -- kullanıcının kayıtlı olduğu açıkartırmalar
+
+select * from AMOUNT_OF_INCREASE -- açılan açık artırmanın özellikleri 
+
+select * from userproductviews -- kullanıcıların websitesine eklediği araçlar
+
+select * from CarHardwareDetails --araçın ek donanımsal özellikleri
+
+select * from SOLD_PRODUCT -- cardetail_id yerine userproduct olacak
+
+select * from CarDetail
+
+select * from userauctionview
+
+select * from userproduct
+
+select * from E_INVOICE -- fatura görseli için
+
+select * from Post --
+
+select * from userproductviews
+
+select * from submit -- posttaki content id bağlı olduğu tablo
+
+select * from postview -- post için gerekli tüm elemanları çekiyor
+
+create view postview
+as
+select * from Post p  --- özelleştir
+inner join submit s on s.submit_id = p.content_id
+inner join media m on m.id = s.media_id

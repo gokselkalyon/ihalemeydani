@@ -1,4 +1,5 @@
-﻿using IM.PresentationLayer.LoginSecurity;
+﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -8,36 +9,48 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class AuctionController : Controller
+    public class AuctionController : BaseController
     {
         AuctionModelView mv = new AuctionModelView();
+        UserAuctionModel uam = new UserAuctionModel();
+
         [HttpGet]
-        [Route("auction/index/{auctionid}")]
+        [ihaleClientFilter("auction.listele")]
+        [Route("auction/index")]
         public ActionResult Dashboard()
         {
-            //mv.
-            return View();
+            mv.auctions = IhaleServiceClient.GetUserAuctionModel().Where(x=>x.userid == SessionManager.CurrentUser.Id).ToList();
+            return View(mv);
         }
 
-        // GET: Auction/Details/5
+        [HttpGet]
+        [ihaleClientFilter("auction.listele")]
+        [Route("auction/detail/{id}")]
         public ActionResult Details(int id)
         {
-            return View();
+            mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
+            uam = mv.auction;
+            return View(uam);
         }
 
-        // GET: Auction/Create
+        [HttpGet]
+        [ihaleClientFilter("auction.ekle")]
+        [Route("auction/create")]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Auction/Create
+        
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ihaleClientFilter("auction.ekle")]
+        [Route("auction/create")]
+        public ActionResult Create(UserAuctionModel uam)
         {
             try
             {
-                // TODO: Add insert logic here
+                uam.userid = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.AddUserAuctionModel(uam);
 
                 return RedirectToAction("Index");
             }
@@ -46,20 +59,26 @@ namespace IM.PresentationLayer.Controllers
                 return View();
             }
         }
-
-        // GET: Auction/Edit/5
+        [HttpGet]
+        [ihaleClientFilter("auction.guncelle")]
+        [Route("auction/Edit/{id}")]
         public ActionResult Edit(int id)
         {
-            return View();
+            mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
+            uam = mv.auction;
+            return View(uam);
         }
 
         // POST: Auction/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ihaleClientFilter("auction.guncelle")]
+        [Route("auction/Edit")]
+        public ActionResult Edit(UserAuctionModel uam)
         {
             try
             {
-                // TODO: Add update logic here
+                uam.userid = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.UpadateUserAuctionModel(uam);
 
                 return RedirectToAction("Index");
             }
@@ -69,26 +88,14 @@ namespace IM.PresentationLayer.Controllers
             }
         }
 
-        // GET: Auction/Delete/5
+        [HttpGet]
+        [Route("auction/delete")]
+        [ihaleClientFilter("auction.sil")]
         public ActionResult Delete(int id)
         {
-            return View();
+            IhaleServiceClient.Updateuserproduct(new userproduct { id = id, isdeleted = true });
+            return RedirectToAction("Index");
         }
 
-        // POST: Auction/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

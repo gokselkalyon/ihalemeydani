@@ -1,6 +1,7 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
+using Rotativa;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +15,39 @@ namespace IM.PresentationLayer.Controllers
     {
 
         AuctionModelView mv = new AuctionModelView();
+        IhaleServiceClient ihaleClient = new IhaleServiceClient();
         [HttpGet]
         [Route("Cars/index/{auctionid}")]
         public ActionResult Index(int auctionid)
         {
-           // if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
-               // return RedirectToRoute("default");
+            if (!Helper.Helper.userauctioncontrol(auctionid))//şuanda deneme amaçlı yapılıyor lakin bunu filter atributu ile kontrol edilecek
+                return RedirectToRoute("default");
 
             mv.productModel = IhaleServiceClient.userProductModels().Where(x => x.id == SessionManager.CurrentUser.Id).FirstOrDefault();
             AuctionModelView.auctionid = auctionid;
             return View(mv);
         }
-
+        public  ActionResult InvoicePfdView()
+        {
+            return View();
+        }
+        public ActionResult PrintPartialViewToPdf(int id)
+        {
+            InvoiceModelView imv = new InvoiceModelView();
+            var user = ihaleClient.userProductModels().FirstOrDefault(x=>x.id == id);
+            var soldProduct = ihaleClient.GetSoldProducts().FirstOrDefault(x => x.userproductId == id);
+            var saledUser = ihaleClient.GetUsers().FirstOrDefault(f => f.Id == soldProduct.SaledUserId);
+            var invoice = ihaleClient.GetE_Invoices().FirstOrDefault(f => f.user_id == user.user_id);
+            var saleUser = ihaleClient.GetUsers().FirstOrDefault(f => f.Id == user.user_id);
+            imv.userProduct = user;
+            imv.saledUser = saledUser;
+            imv.saleUser = saledUser;
+            imv.eInvoice = invoice;
+            imv.saleUser = saleUser;
+            var deneme = Convert.ToInt32(user.Price); 
+            var report = new PartialViewAsPdf("~/Views/Cars/InvoicePfdView.cshtml", imv);
+            return report; 
+        }
         [Route("Cars/list")]
         public ActionResult Carslist()
         {

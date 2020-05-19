@@ -30,9 +30,9 @@ namespace IM.PresentationLayer.Models
         /*
          kullanıcının açtığı açık arttırmaları görebilmek için
              */
-        public auction auction { get; set; }
+        public UserAuctionModel auction { get; set; }
 
-        public List<auction> auctions { get; set; }
+        public List<UserAuctionModel> auctions { get; set; }
         /*
             user list işlemleri için çalışacak property
         */

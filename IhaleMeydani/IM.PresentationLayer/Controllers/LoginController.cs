@@ -65,9 +65,9 @@ namespace IM.PresentationLayer.Controllers
         { 
             ln.Password = EncrypModel.EncryptSHA1(ln.Password);
             var user = ihaleClient.GetUsers().Where(f => f.UserName == ln.Username && f.Password == ln.Password).FirstOrDefault();
-            if (user.IsDeleted != true)
+            if (user != null)
             {
-                if (user != null)
+                if (user.IsDeleted != true)
                 {
                     var p = (from x in ihaleClient.GetUsers()
                              where x.UserName == ln.Username
@@ -92,13 +92,15 @@ namespace IM.PresentationLayer.Controllers
                 }
                 else
                 {
-                    return Json(2, JsonRequestBehavior.AllowGet);
+                    return Json(3, JsonRequestBehavior.AllowGet);
                 }
+              
             }
             else
             {
-                return Json(3, JsonRequestBehavior.AllowGet);
+                return Json(2, JsonRequestBehavior.AllowGet);
             }
+         
         }
     }
 }

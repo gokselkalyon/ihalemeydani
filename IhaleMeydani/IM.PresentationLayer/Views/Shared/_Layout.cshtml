@@ -1,419 +1,211 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
-    <title>@ViewBag.Title</title>
-
-    <!-- Document Meta
-        ============================================= -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--IE Compatibility Meta-->
-    <meta name="author" content="zytheme">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="construction html5 template">
-    <link href="~/Content/Template/autoshop/assets/images/favicon/favicon.ico" rel="icon">
-
-    <!-- Fonts
-        ============================================= -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CRaleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CUbuntu:300,300i,400,400i,500,500i,700,700i" rel='stylesheet' type='text/css'>
-
-    <!-- Stylesheets
-        ============================================= -->
     @Styles.Render("~/bundles/css")
 
-    @RenderSection("css", false)
-
+    @*@RenderSection("css", false)*@
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
+    <link href="~/Content/Template/css/StyleSheet1.css" rel="stylesheet" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="~/Content/Template/css/BlogPage.css" rel="stylesheet" />
+    <script src="~/Content/Template/js/jquery.js"></script>
+    <script src="~/Content/Template/js/boostrap.js"></script>
 </head>
 <body>
+    <div class="top-header">
+        <div class="container-fluid" style="width:100%;height:40px;background-color:ghostwhite;">
+            <div class="row">
+                <div class="col-7">
+                    <ul class="currency-language">
+                        <li class="border-right">
+                            TR
+                            <i class="fas fa-angle-down"></i>
+                            <ul class="selectbox shadow-sm p-3 mb-5 bg-white rounded">
+                                <li>TR</li>
+                                <li>EN</li>
+                                <li>GE</li>
+                            </ul>
+                        </li>
+                        <li>
+                            TRY
+                            <i class="fas fa-angle-down"></i>
+                            <ul class="selectbox shadow-sm p-3 mb-5 bg-white rounded">
+                                <li>TRY</li>
+                                <li>USD</li>
+                                <li>EU</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Call us toll free: +1-541-754-3010</p>
+                        </li>
+                        <li>
+                            <span>Send us an email: contact@example.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="account-urls col-5 text-right">
+                    <a href="#" class="m-3"><i class="fas fa-truck"></i>&nbsp; Order Tracking</a>
+                    <a href="#"><i class="far fa-heart"></i>&nbsp; Wishlist</a>
+                </div>
+            </div>
+            <div class="row bg-light d-flex align-content-center justify-content-center p-0" style="height:168px;">
+                <div class="col-10">
+                    <div class="row">
+                        <div class="navbar-logo col-2">
+                            <img class="img-fluid" src="~/Content/Images/logo.png" />
+                        </div>
+                        <div class="col-6 offset-1 align-self-center" style="height:50px">
+                            <div class="container h-100">
+                                <div class="d-flex justify-content-center h-100">
+                                    <div class="searchbar shadow">
+                                        <input class="search_input" type="text" name="" placeholder="Search...">
+                                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Sign-in col-2 align-self-center offset-1">
+                            <img class="img-fluid img-thumbnail float-right" style="border-radius:100%" width="45%" src="https://source.unsplash.com/user/erondu/300x300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu row">
+                <div class="col-8">
+                    <div class="row d-flex justify-content-center">
+                        <div class="car-navbar col-10">
+                            <ul>
+                                <li><a href="@Url.Action("","Anasayfa")"><span>Anasayfa</span></a></li>
+                                <li><a href="@Url.Action("","hizlisatis")"><span>Hizli Satış</span></a></li>
+                                <li><a href="@Url.Action("list","Cars")"><span>Arabalar</span></a></li>
+                                <li><a href="#"><span>About</span></a></li>
+                                <li><a href="#"><span>Teams</span></a></li>
+                                <li><a href="#"><span>Pages</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-white Sign-in col-2 align-self-center offset-1">
+                    <a href="#" class="text-white"><i class="fas fa-sign-in-alt"></i>&nbsp; Sign In</a>
+                </div>
+            </div>
+            <div class="row">
+                @RenderBody()
+            </div>
 
-    <div id="loading-background">
-        <div id="loading-img">
-            <img width="100" src="~/Content/Images/Loading2.gif" />
+
+            <div class="row p-0 m-0 bg-white"></div>
+
+            <footer class="has-footer-widgets bg-white p-0 m-0">
+                <div class="top-footer row " style="background-color:#ee964b;">
+                    <div class="container">
+                        <div class="row p-4">
+                            <div class="col-md-8 left footertitle align-self-center">Browse through our products library!</div>
+                            <div class="col-md-4">
+                                <div class="searchbar shadow">
+                                    <input class="search_input" style="width:120px;" type="text" name="" placeholder="Search...">
+                                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container footer-top pt-2">
+                    <div class="row 4">
+
+                        <div class="col-md-3 widget widget_text">
+                            <aside id="text-2" class="widget vc_column_vc_container widget_text">
+                                <div class="textwidget">
+                                    <h1 class="logo"><a href="#"><img style="max-width: 200px;" src="~/Content/Images/logo.png" alt="Footer Logo"></a></h1>
+                                    <p>
+                                        <span style="color: #606060;">furkanozbx@gmail.com</span><br>
+                                        <span style="color: #606060;">0537 977 62 18</span>
+                                    </p>
+                                </div>
+                            </aside>
+                            <div class="justify-content-start">
+                                <ul class="footersocial">
+                                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/google"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div><div class="col-md-3 widget widget_text">
+                            <aside id="nav_menu-5" class="widget vc_column_vc_container widget_nav_menu">
+                                <h1 class="widget-title">Useful Links</h1><div class="menu-links-container">
+                                    <ul class="menu-menu">
+                                        <li id="menu-item-4560" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4560">
+                                            <i class="fas fa-angle-double-right"></i><a href="#">Mobile Phone</a>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-angle-double-right"></i>
+                                            <a href="#">Laptop</a>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-angle-double-right"></i><a href="#">Headphones</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div><div class="col-md-3 widget widget_text">
+                            <aside id="nav_menu-6" class="widget vc_column_vc_container widget_nav_menu">
+                                <h1 class="widget-title">Our Policy</h1><div class="menu-menu-container">
+                                    <ul class="menu-menu">
+                                        <li><i class="fas fa-angle-double-right"></i><a href="https://ibid.modeltheme.com/automotive/">Homepage</a></li>
+                                        <li><i class="fas fa-angle-double-right"></i><a href="https://ibid.modeltheme.com/automotive/blog/">Blog</a></li>
+                                        <li><i class="fas fa-angle-double-right"></i><a href="#">Services</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div><div class="col-md-3 widget widget_text">
+                            <aside id="mc4wp_form_widget-2" class="widget vc_column_vc_container widget_mc4wp_form_widget">
+                                <h1 class="widget-title">Gündem abonemiz olun</h1>
+                                <script>
+                                    (function () {
+                                        window.mc4wp = window.mc4wp || {
+                                            listeners: [],
+                                            forms: {
+                                                on: function (evt, cb) {
+                                                    window.mc4wp.listeners.push(
+                                                        {
+                                                            event: evt,
+                                                            callback: cb
+                                                        }
+                                                    );
+                                                }
+                                            }
+                                        }
+                                    })();
+                                </script><!-- Mailchimp for WordPress v4.7.5 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-4260" method="post" data-id="4260" data-name="Newsletter">
+                                    <div class="mc4wp-form-fields">
+                                        <div class="newsletter-footer">
+                                            <input class="email" type="email" name="EMAIL" placeholder="Enter your email" required="">
+                                            <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+                                        </div>
+                                    </div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1588797859"><input type="hidden" name="_mc4wp_form_id" value="4260"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><div class="mc4wp-response"></div>
+                                </form><!-- / Mailchimp for WordPress Plugin -->
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="container-fluid footerdown ">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p class="copyright">İstanbul Ayvansaray Üniversitesi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-
-    <div id="wrapper" class="wrapper clearfix">
-        <header id="navbar-spy" class="header header-1">
-            <div class="top-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-5">
-                            @*  Gösterilmesi gereken iletişim bilgileri gösterillir *@
-                            <ul class="list-inline top-contact">
-                                <li><span>Telefon :</span> + 2 0106 5370701</li>
-                                <li><span>Email :</span> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c0b534e53535a7c0b534e53535a125f5351">[email&nbsp;protected]</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-7">
-                            <ul class="list-inline pull-right top-links">
-                                <li>
-                                    <a href="@Url.Action("","login")">Giriş Yap</a>
-                                    /
-                                    <a href="#">Kayıt Ol</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dilekler</a>
-                                </li>
-                                <li>
-                                    <a href="#">Ödeme</a>
-                                </li>
-                                <li>
-                                    <a href="#">Mağazalar</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Türkçe <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">İngilizce</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Almanca</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- .row end -->
-                </div>
-                <!-- .container end -->
-            </div>
-            <!-- .top-bar end -->
-            <nav id="primary-menu" class="navbar navbar-fixed-top affix-top">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="logo" href="/Anasayfa">
-                            <img src="~/Content/Template/autoshop/assets/images/logo/logo-light.png" alt="Autoshop">
-                        </a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse pull-right" id="header-navbar-collapse-1">
-                        @Html.Action("Menus","Home")
-
-                        <!-- Mod-->
-                        <div class="module module-search pull-left">
-                            <div class="search-icon">
-                                <i class="fa fa-search"></i>
-                                <span class="title">Ara</span>
-                            </div>
-                            <div class="search-box">
-                                <form class="search-form">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Aranacak kelimeleri girin">
-                                        <span class="input-group-btn">
-                                            <button class="btn" type="button"><i class="fa fa-search"></i></button>
-                                        </span>
-                                    </div>
-                                    <!-- /input-group -->
-                                </form>
-                            </div>
-                        </div>
-                        <!-- .module-search-->
-                        <!-- .module-cart -->
-                        <div class="module module-cart pull-left">
-                            <div class="cart-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span class="title">shop cart</span>
-                                <span class="cart-label">2</span>
-                            </div>
-                            <div class="cart-box">
-                                <div class="cart-overview">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <img class="img-responsive" src="~/Content/Template/autoshop/assets/images/shop/thumb/1.jpg" alt="product">
-                                            <div class="product-meta">
-                                                <h5 class="product-title">KEMER ARAÇ MOTORU</h5>
-                                                <p class="product-price">Fiyat: 68.00 TL </p>
-                                                <p class="product-quantity">Miktar: 2</p>
-                                            </div>
-                                            <a class="cancel" href="#">Kapat</a>
-                                        </li>
-                                        <li>
-                                            <img class="img-responsive" src="~/Content/Template/autoshop/assets/images/shop/thumb/2.jpg" alt="product">
-                                            <div class="product-meta">
-                                                <h5 class="product-title">YAĞ FİLTRESİ</h5>
-                                                <p class="product-price">Fiyat: 180.00 TL </p>
-                                                <p class="product-quantity">Miktar: 1</p>
-                                            </div>
-                                            <a class="cancel" href="#">Kapat</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cart-total">
-                                    <div class="total-desc">
-                                        <h5>Sepet Toplam Tutar :</h5>
-                                    </div>
-                                    <div class="total-price">
-                                        <h5>$316.00</h5>
-                                    </div>
-                                </div>
-                                <div class="clearfix">
-                                </div>
-                                <div class="cart-control">
-                                    <a class="btn btn-primary btn-block" href="#">Sepeti Göster</a>
-                                    <a class="btn btn-secondary btn-block" href="#">Ödeme Yapın</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .module-cart end -->
-
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container-fluid -->
-            </nav>
-        </header>
-        @*
-            simdi ben degisiklikleri yapsam baskasındada aynı problem cıkacaktır.
-
-        *@
-        @RenderBody()
-
-        <footer id="footer" class="footer footer-1">
-            <!-- Footer Info
-            ============================================= -->
-            <div class="footer-info">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="panel-info">
-                                <div class="info-icon">
-                                    <i class="icon icon-Truck"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Ücretsiz Kargo</h4>
-                                    <p>Açıklama Gelecek...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="panel-info">
-                                <div class="info-icon">
-                                    <i class="icon icon-Dollars"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>FUAR FİYATLARI</h4>
-                                    <p>Açıklama Gelecek...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="panel-info">
-                                <div class="info-icon">
-                                    <i class="icon icon-Shield"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Güvenli Alışveriş</h4>
-                                    <p>Açıklama Gelecek...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-3">
-                            <div class="panel-info">
-                                <div class="info-icon">
-                                    <i class="icon icon-Headset"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Müşteri Destek</h4>
-                                    <p>Açıklama Gelecek...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .col-md-3 end -->
-                    </div>
-                </div>
-                <!-- .container end -->
-            </div>
-            <!-- .footer-info end -->
-            <!-- Footer Widget
-            ============================================= -->
-            <div class="footer-widget">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-4 footer-widget-about">
-                            <div class="footer-widget-title">
-                                <h5>Hakkımızda</h5>
-                            </div>
-                            <div class="footer-widget-content">
-                                <p>Açıklama Gelecek.</p>
-                                <div class="footer-social">
-                                    <a class="share-facebook" href="#"><i class="fa fa-facebook"></i></a>
-                                    <a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
-                                    <a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a class="share-vimeo" href="#"><i class="fa fa-vimeo"></i></a>
-                                    <a class="share-rss" href="#"><i class="fa fa-rss"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .col-md-4 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-2 footer-widget-link">
-                            <div class="footer-widget-title">
-                                <h5>Hesabım</h5>
-                            </div>
-                            <div class="footer-widget-content">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#">Hesabım</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sipariş Geçmişinm</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">İstek Listesi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bülten</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- .col-md-2 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-2 footer-widget-link">
-                            <div class="footer-widget-title">
-                                <h5>Bilgiler</h5>
-                            </div>
-                            <div class="footer-widget-content">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#">Hakkımızda</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Teslimat Bilgisi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Gizlilik Politikası</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Şartlar &amp; Koşullar</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- .col-md-2 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-2 footer-widget-link">
-                            <div class="footer-widget-title">
-                                <h5>Müşteri Servisi</h5>
-                            </div>
-                            <div class="footer-widget-content">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#">Bize Ulaşın</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">İadeler</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Site Haritası</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- .col-md-2 end -->
-
-                        <div class="col-xs-12 col-sm-6 col-md-2 footer-widget-link">
-                            <div class="footer-widget-title">
-                                <h5>
-                                    Ekstralar
-                                </h5>
-                            </div>
-                            <div class="footer-widget-content">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#">Markalar</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Hediye Çekleri</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bağlı Şirket</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Özek İndirim</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- .col-md-2 end -->
-                    </div>
-                </div>
-                <!-- .container end -->
-            </div>
-            <!-- .footer-widget end -->
-            <!-- Footer Bar
-            ============================================= -->
-            <div class="footer-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="powered">
-                                <p>
-                                    Araba Dükkanı © Tüm haklar ekibe aittir.
-                                </p>
-                                <ul class="list-inline mb-0">
-                                    <li>
-                                        <a href="#">Gizlilik Politikası</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Kullanım Şartları</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mağazalar</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Hakkımızda</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6">
-                            <div class="payment-methods text-right">
-                                <ul class="list-inline mb-0">
-                                    <li><img src="~/Content/Template/autoshop/assets/images/footer/visa.png" alt="payment"></li>
-                                    <li><img src="~/Content/Template/autoshop/assets/images/footer/mastercard.png" alt="payment"></li>
-                                    <li><img src="~/Content/Template/autoshop/assets/images/footer/american-express.png" alt="payment"></li>
-                                    <li><img src="~/Content/Template/autoshop/assets/images/footer/delta.png" alt="payment"></li>
-                                    <li><img src="~/Content/Template/autoshop/assets/images/footer/cirrus.png" alt="payment"></li>
-                                    <li><img src="~/Content/Template/autoshop/assets/images/footer/paypal.png" alt="payment"></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- .container end -->
-            </div>
-            <!-- .footer-copyright end -->
-        </footer>
-
-    </div>
-    <!-- Footer Scripts
-    ============================================= -->
-    <script data-cfasync="false" src="https://demo.zytheme.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-
     @Scripts.Render("~/bundles/js")
 
     @RenderSection("js", false)

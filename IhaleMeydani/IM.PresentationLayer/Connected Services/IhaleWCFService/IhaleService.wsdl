@@ -9,6 +9,18 @@
       <xsd:import schemaLocation="http://localhost:8081/IhaleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIhaleService_GetTagPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagPosts" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetTagPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetTagPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagPost" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_GetTagPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagPostResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_AddTagPost_InputMessage">
     <wsdl:part name="parameters" element="tns:AddTagPost" />
   </wsdl:message>
@@ -176,6 +188,18 @@
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateUserType_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddMedium_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMedium" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddMedium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMediumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveMedium_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMedium" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_RemoveMedium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMediumResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateMedium_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateMedium" />
@@ -675,17 +699,17 @@
   <wsdl:message name="IIhaleService_UpdateTag_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTagResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTagPosts_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetTagPosts" />
+  <wsdl:message name="IIhaleService_AddClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClaim" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTagPosts_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetTagPostsResponse" />
+  <wsdl:message name="IIhaleService_AddClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClaimResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTagPost_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetTagPost" />
+  <wsdl:message name="IIhaleService_RemoveClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveClaim" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_GetTagPost_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetTagPostResponse" />
+  <wsdl:message name="IIhaleService_RemoveClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveClaimResponse" />
   </wsdl:message>
   <wsdl:message name="IIhaleService_UpdateClaim_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateClaim" />
@@ -1185,18 +1209,6 @@
   <wsdl:message name="IIhaleService_GetMedium_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMediumResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddMedium_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddMedium" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddMedium_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddMediumResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveMedium_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveMedium" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveMedium_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveMediumResponse" />
-  </wsdl:message>
   <wsdl:message name="IIhaleService_toplama_InputMessage">
     <wsdl:part name="parameters" element="tns:toplama" />
   </wsdl:message>
@@ -1473,6 +1485,18 @@
   <wsdl:message name="IIhaleService_GetUserAuctionModel_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserAuctionModelResponse" />
   </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUserAuctionModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserAuctionModel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_AddUserAuctionModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserAuctionModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpadateUserAuctionModel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpadateUserAuctionModel" />
+  </wsdl:message>
+  <wsdl:message name="IIhaleService_UpadateUserAuctionModel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpadateUserAuctionModelResponse" />
+  </wsdl:message>
   <wsdl:message name="IIhaleService_GetBanks_InputMessage">
     <wsdl:part name="parameters" element="tns:GetBanks" />
   </wsdl:message>
@@ -1695,19 +1719,15 @@
   <wsdl:message name="IIhaleService_GetClaim_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetClaimResponse" />
   </wsdl:message>
-  <wsdl:message name="IIhaleService_AddClaim_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddClaim" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_AddClaim_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddClaimResponse" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveClaim_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveClaim" />
-  </wsdl:message>
-  <wsdl:message name="IIhaleService_RemoveClaim_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveClaimResponse" />
-  </wsdl:message>
   <wsdl:portType name="IIhaleService">
+    <wsdl:operation name="GetTagPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTagPosts" message="tns:IIhaleService_GetTagPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTagPostsResponse" message="tns:IIhaleService_GetTagPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTagPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTagPost" message="tns:IIhaleService_GetTagPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTagPostResponse" message="tns:IIhaleService_GetTagPost_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddTagPost">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddTagPost" message="tns:IIhaleService_AddTagPost_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddTagPostResponse" message="tns:IIhaleService_AddTagPost_OutputMessage" />
@@ -1819,6 +1839,14 @@
     <wsdl:operation name="UpdateUserType">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserType" message="tns:IIhaleService_UpdateUserType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateUserTypeResponse" message="tns:IIhaleService_UpdateUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMedium">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddMedium" message="tns:IIhaleService_AddMedium_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddMediumResponse" message="tns:IIhaleService_AddMedium_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMedium">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveMedium" message="tns:IIhaleService_RemoveMedium_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveMediumResponse" message="tns:IIhaleService_RemoveMedium_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateMedium">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateMedium" message="tns:IIhaleService_UpdateMedium_InputMessage" />
@@ -2152,13 +2180,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateTag" message="tns:IIhaleService_UpdateTag_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpdateTagResponse" message="tns:IIhaleService_UpdateTag_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTagPosts">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTagPosts" message="tns:IIhaleService_GetTagPosts_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTagPostsResponse" message="tns:IIhaleService_GetTagPosts_OutputMessage" />
+    <wsdl:operation name="AddClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddClaim" message="tns:IIhaleService_AddClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddClaimResponse" message="tns:IIhaleService_AddClaim_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTagPost">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetTagPost" message="tns:IIhaleService_GetTagPost_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetTagPostResponse" message="tns:IIhaleService_GetTagPost_OutputMessage" />
+    <wsdl:operation name="RemoveClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveClaim" message="tns:IIhaleService_RemoveClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveClaimResponse" message="tns:IIhaleService_RemoveClaim_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateClaim">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpdateClaim" message="tns:IIhaleService_UpdateClaim_InputMessage" />
@@ -2492,14 +2520,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetMedium" message="tns:IIhaleService_GetMedium_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetMediumResponse" message="tns:IIhaleService_GetMedium_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddMedium">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddMedium" message="tns:IIhaleService_AddMedium_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddMediumResponse" message="tns:IIhaleService_AddMedium_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveMedium">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveMedium" message="tns:IIhaleService_RemoveMedium_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveMediumResponse" message="tns:IIhaleService_RemoveMedium_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/toplama" message="tns:IIhaleService_toplama_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/toplamaResponse" message="tns:IIhaleService_toplama_OutputMessage" />
@@ -2684,6 +2704,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetUserAuctionModel" message="tns:IIhaleService_GetUserAuctionModel_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetUserAuctionModelResponse" message="tns:IIhaleService_GetUserAuctionModel_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AddUserAuctionModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddUserAuctionModel" message="tns:IIhaleService_AddUserAuctionModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddUserAuctionModelResponse" message="tns:IIhaleService_AddUserAuctionModel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpadateUserAuctionModel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/UpadateUserAuctionModel" message="tns:IIhaleService_UpadateUserAuctionModel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/UpadateUserAuctionModelResponse" message="tns:IIhaleService_UpadateUserAuctionModel_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetBanks">
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetBanks" message="tns:IIhaleService_GetBanks_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetBanksResponse" message="tns:IIhaleService_GetBanks_OutputMessage" />
@@ -2832,17 +2860,27 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/GetClaim" message="tns:IIhaleService_GetClaim_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/GetClaimResponse" message="tns:IIhaleService_GetClaim_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddClaim">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/AddClaim" message="tns:IIhaleService_AddClaim_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/AddClaimResponse" message="tns:IIhaleService_AddClaim_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveClaim">
-      <wsdl:input wsaw:Action="http://tempuri.org/IIhaleService/RemoveClaim" message="tns:IIhaleService_RemoveClaim_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IIhaleService/RemoveClaimResponse" message="tns:IIhaleService_RemoveClaim_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IIhaleService" type="tns:IIhaleService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTagPosts">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTagPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagPost">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTagPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddTagPost">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/AddTagPost" style="document" />
       <wsdl:input>
@@ -3088,6 +3126,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateUserType">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/UpdateUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMedium">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddMedium" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMedium">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveMedium" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3842,8 +3898,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetTagPosts">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTagPosts" style="document" />
+    <wsdl:operation name="AddClaim">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddClaim" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -3851,8 +3907,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetTagPost">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/GetTagPost" style="document" />
+    <wsdl:operation name="RemoveClaim">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveClaim" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -4607,24 +4663,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddMedium">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddMedium" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveMedium">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveMedium" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="toplama">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/toplama" style="document" />
       <wsdl:input>
@@ -5039,6 +5077,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AddUserAuctionModel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddUserAuctionModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpadateUserAuctionModel">
+      <soap:operation soapAction="http://tempuri.org/IIhaleService/UpadateUserAuctionModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetBanks">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetBanks" style="document" />
       <wsdl:input>
@@ -5365,24 +5421,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetClaim">
       <soap:operation soapAction="http://tempuri.org/IIhaleService/GetClaim" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddClaim">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/AddClaim" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveClaim">
-      <soap:operation soapAction="http://tempuri.org/IIhaleService/RemoveClaim" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

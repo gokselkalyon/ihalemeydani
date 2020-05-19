@@ -2,9 +2,10 @@
 
 <html>
 <head>
+
+    @*@RenderSection("css", false)*@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-
     <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
     <link href="~/Content/Template/css/StyleSheet1.css" rel="stylesheet" />
     <link href="~/Content/Template/css/Style.css" rel="stylesheet" />
@@ -16,6 +17,7 @@
     <script src="~/SignalR/Hubs"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+
     <script>
         var myApp = angular.module('spicyApp1', []);
 
@@ -25,6 +27,9 @@
 
             $scope.addauctionuser = function () {
                 loghub.server.addauctionuser($scope.add_auctionuser);
+            }
+            $scope.addautoauctionuser = function () {
+                loghub.server.addautoauctionuser();
             }
 
             loghub.client.OnConnected = function (actionusers) {
@@ -41,8 +46,8 @@
                 });
             }
 
-            loghub.client.addauctionuser = function (actionuser) {
-                $scope.actionusers.push(actionuser);
+            loghub.client.addauctionuser = function (actionusers) {
+                $scope.actionusers = actionusers;
                 $scope.$apply();
 
                 $("#bars li .bar").each(function (key, bar) {
@@ -55,16 +60,31 @@
                 });
 
             }
+
+            loghub.client.addautoauctionuser = function (actionusers) {
+                $scope.actionusers = actionusers;
+                $scope.$apply();
+
+                $("#bars li .bar").each(function (key, bar) {
+                    var percentage = $(this).data('percentage');
+                    var percentage2 = $("#numbers li span").data('percentage');
+                    percentage = percentage / (percentage2 / 100);
+                    $(this).animate({
+                        'height': percentage + '%'
+                    }, 1000);
+                });
+
+            }
+
+
             $.connection.hub.start()
 
         }]);
     </script>
-
 </head>
 <body style="padding:0px;" ng-app="spicyApp1">
-
+    <div class="top-header">
         <div class="container-fluid" ng-controller="SpicyController">
-            <!-- header begin -->
             <div class="row">
                 <div class="col-7">
                     <ul class="currency-language">
@@ -126,9 +146,9 @@
                     <div class="row d-flex justify-content-center">
                         <div class="car-navbar col-10">
                             <ul>
-                                <li><a href="#"><span>Home</span></a></li>
-                                <li><a href="#"><span>Cars</span></a></li>
-                                <li><a href="#"><span>Contact</span></a></li>
+                                <li><a href="@Url.Action("","Anasayfa")"><span>Anasayfa</span></a></li>
+                                <li><a href="@Url.Action("","hizlisatis")"><span>Hizli Satış</span></a></li>
+                                <li><a href="@Url.Action("list","Cars")"><span>Arabalar</span></a></li>
                                 <li><a href="#"><span>About</span></a></li>
                                 <li><a href="#"><span>Teams</span></a></li>
                                 <li><a href="#"><span>Pages</span></a></li>
@@ -140,19 +160,20 @@
                     <a href="#" class="text-white"><i class="fas fa-sign-in-alt"></i>&nbsp; Sign In</a>
                 </div>
             </div>
-            <!-- header end-->
-            @RenderBody()
-            <!-- footer begin-->
+
+                @RenderBody()
+
+
             <div class="row p-0 m-0 bg-white"></div>
 
             <footer class="has-footer-widgets bg-white p-0 m-0">
                 <div class="top-footer row " style="background-color:#ee964b;">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 left">Browse through our products library!</div>
+                        <div class="row p-4">
+                            <div class="col-md-8 left footertitle align-self-center">Browse through our products library!</div>
                             <div class="col-md-4">
                                 <div class="searchbar shadow">
-                                    <input class="search_input" type="text" name="" placeholder="Search...">
+                                    <input class="search_input" style="width:120px;" type="text" name="" placeholder="Search...">
                                     <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                                 </div>
                             </div>
@@ -173,14 +194,14 @@
                                     </p>
                                 </div>
                             </aside>
-                            <aside class="widget vc_column_vc_container widget_ibid_social_icons">
-                                <ul>
+                            <div class="justify-content-start">
+                                <ul class="footersocial">
                                     <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
                                     <li><a href="https://twitter.com/google"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="http://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
                                     <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
-                            </aside>
+                            </div>
                         </div><div class="col-md-3 widget widget_text">
                             <aside id="nav_menu-5" class="widget vc_column_vc_container widget_nav_menu">
                                 <h1 class="widget-title">Useful Links</h1><div class="menu-links-container">
@@ -210,7 +231,7 @@
                             </aside>
                         </div><div class="col-md-3 widget widget_text">
                             <aside id="mc4wp_form_widget-2" class="widget vc_column_vc_container widget_mc4wp_form_widget">
-                                <h1 class="widget-title">Subscribe to our Newsletter</h1>
+                                <h1 class="widget-title">Gündem abonemiz olun</h1>
                                 <script>
                                     (function () {
                                         window.mc4wp = window.mc4wp || {
@@ -231,7 +252,7 @@
                                     <div class="mc4wp-form-fields">
                                         <div class="newsletter-footer">
                                             <input class="email" type="email" name="EMAIL" placeholder="Enter your email" required="">
-                                            <input class="submit" type="submit" value="Submit">
+                                            <input class="btn btn-primary btn-sm" type="submit" value="Submit">
                                         </div>
                                     </div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off"></label><input type="hidden" name="_mc4wp_timestamp" value="1588797859"><input type="hidden" name="_mc4wp_form_id" value="4260"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"><div class="mc4wp-response"></div>
                                 </form><!-- / Mailchimp for WordPress Plugin -->
@@ -241,55 +262,32 @@
                 </div>
 
                 <div class="footer">
-                    <div class="container">
+                    <div class="container-fluid footerdown ">
                         <div class="row">
-                            <div class="col-md-6">
-                                <p class="copyright">Copyright by ModelTheme. All Rights Reserved.</p>
-                            </div>
-                            <div class="col-md-6 payment-methods">
-                                <p class="copyright">Elite Author on ThemeForest.</p>
+                            <div class="col-12 text-center">
+                                <p class="copyright">İstanbul Ayvansaray Üniversitesi</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
-            <!-- footer end-->
         </div>
-                <script>
-                    $(function () {
-                        $("#bars li .bar").each(function (key, bar) {
-                            var percentage = $(this).data('percentage');
-                            var percentage2 = $("#numbers li span").data('percentage');
-                            percentage = percentage / (percentage2 / 100);
-                            $(this).animate({
-                                'height': percentage + '%'
-                            }, 1000);
-                        });
-                    });
-                </script>
-                <script>
+    </div>
 
-
-
-                        //(function (angular) {
-                        //    'use strict';
-                        //    var myApp = angular.module('spicyApp1', []);
-
-                        //    myApp.controller('SpicyController', ['$scope', function ($scope) {
-
-                        //        var loghub = $.connection.signalHub;
-                        //        loghub.client.GetAllLog = function (tags) {
-
-                        //            $scope.tags = tags;
-                        //            $scope.$apply();
-                        //        }
-
-                        //        $.connection.hub.start()
-
-                        //    }]);
-                        //})(window.angular);
-
-                </script>
-
+<script>
+    $(function () {
+        $("#bars li .bar").each(function (key, bar) {
+            var percentage = $(this).data('percentage');
+            var percentage2 = $("#numbers li span").data('percentage');
+            percentage = percentage / (percentage2 / 100);
+            $(this).animate({
+                'height': percentage + '%'
+            }, 1000);
+        });
+    });
+</script>
 </body>
 </html>
+
+
+

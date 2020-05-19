@@ -101,7 +101,8 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         published_on = true,
                         date_of_created = DateTime.Now,
                         date_of_updated = DateTime.Now,
-                        isdeleted =false
+                        isdeleted =false,
+                        Price = t.Price
                     };
                     DB.userproducts.Add(userproduct);
                     DB.SaveChanges();
