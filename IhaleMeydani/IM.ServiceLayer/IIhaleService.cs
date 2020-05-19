@@ -165,7 +165,11 @@ namespace IM.ServiceLayer
         void UpdateAuction(auction entity);
 
         [OperationContract]
-        List<UserAuctionModel> GetUserAuctionModel(UserAuctionModel entity);
+        List<UserAuctionModel> GetUserAuctionModel();
+        [OperationContract]
+        int AddUserAuctionModel(UserAuctionModel entity);
+        [OperationContract]
+        int UpadateUserAuctionModel(UserAuctionModel entity);
         #endregion
 
         #region bank
@@ -690,6 +694,12 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void UpdatePost(Post entity);
+        [OperationContract]
+        List<PostModel> QueryListPostModel();
+        [OperationContract]
+        int AddPostModel(PostModel entity);
+        [OperationContract]
+        int UpdataPostModel(PostModel entity);
         #endregion
 
         #region PRICEBOT

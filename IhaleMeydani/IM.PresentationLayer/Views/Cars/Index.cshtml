@@ -17,52 +17,52 @@
                         <div class="col-6 p-2">
                             <span class="text-white-50">Araç Model</span>
                             <br />
-                            <span class="font-weight-bolder text-white"> @Model.productModel.CarMakeName</span>
+                            <span class="font-weight-bolder text-white"> @Model.auction.CarMakeName</span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Vites tipi</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.GearTypeName </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.GearTypeName </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Yakıt Tipi</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.FuelTypeName </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.FuelTypeName </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Araba Rengi</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.ColorName </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.ColorName </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Araba Segment</span>
                             <br />
-                            <span class="font-weight-bolder text-white text-uppercase">&nbsp; @Model.productModel.SegmentName </span>
+                            <span class="font-weight-bolder text-white text-uppercase">&nbsp; @Model.auction.SegmentName </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Kilometre</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.Mileage </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.Mileage </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Plaka</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.LicancePlate </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.LicancePlate </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Kayıt Tarihi</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.registrationDate </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.registrationDate </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Araba Sürümü</span>
                             <br />
-                            <span class=" font-weight-bolder text-white">&nbsp; @Model.productModel.CarVersion </span>
+                            <span class=" font-weight-bolder text-white">&nbsp; @Model.auction.CarVersion </span>
                         </div>
                         <div class="col-6 p-2">
                             <span class="text-white-50">Şasi No</span>
                             <br />
-                            <span class="font-weight-bolder text-white">&nbsp; @Model.productModel.VIN </span>
+                            <span class="font-weight-bolder text-white">&nbsp; @Model.auction.VIN </span>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
         </div>
     </div>
     <div class="col-lg-3 col-md-12 p-1 text-center">
-        <button class="btn btn-block text-white font-weight-bolder text-uppercase" style="background:#c16266;">Otomatik Teklif Ver</button>
+        <input type="submit" class="btn btn-block text-white font-weight-bolder text-uppercase" ng-click="addautoauctionuser()" style="background:#c16266;"  name="name" value="Oto Teklif Ver" />
     </div>
 </div>
 <!-- teklif verme end-->

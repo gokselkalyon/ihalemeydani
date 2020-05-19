@@ -93,7 +93,7 @@
     <div class="row">
         <div class="col-lg-12">
             <a href="@Url.Action("Create")">
-                <button type="button" class="btn btn-success btn-lg"><i class="fa fa-plus"></i>&nbsp; Araç Ekle</button>
+                <button type="button" class="btn btn-success btn-lg"><i class="fa fa-plus"></i>&nbsp; Açık Artırma Ekle</button>
             </a>
         </div>
     </div>
@@ -115,11 +115,11 @@
                    data-page-size="15">
                 <thead>
                     <tr>
-                        <th data-field="id" data-sortable="true" data-width="10">ID</th>
+                        <th data-field="id" data-sortable="true" data-width="10">Durum</th>
                         <th data-field="aracadi" data-sortable="true">Araç adı</th>
                         <th data-field="plaka" data-sortable="true">Araç plaka</th>
                         <th data-field="fiyat" data-sortable="true">Araç fiyatı</th>
-                        <th data-field="islemler" data-width="20">işlemler</th>
+                        <th data-field="islemler" data-width="150">işlemler</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -128,19 +128,37 @@
                     {
                         if (product.isdeleted == false)
                         {
-                            <tr>
-                                <td>1</td>
-                                <td>@product.CarBrandName</td>
-                                <td>@product.CarMakeName</td>
-                                <td>@product.HardwareDetail</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example"> 
-                                        @Html.ActionLink("Fatura Görüntüle", "PrintPartialViewToPdf", "Cars", new { id = product.id }, new { @class = "btn btn-danger" })
-                                        @Html.ActionLink("Detay", "ProductDetail", new { id = product.id }, new { @class = "btn btn-secondary" }) 
-                                        @Html.ActionLink("Sil", "Delete", "Cars", new { id = product.id }, new { @class = "btn btn-danger" })
-                                    </div>
-                                </td>
-                            </tr>
+                            if (product.isSaled == true)
+                            {
+                                <tr>
+                                    <td><p class="badge badge-pill badge-success text-black" style="font-size:10pt;"> Satıldı </p></td>
+                                    <td>@product.CarBrandName</td>
+                                    <td>@product.CarMakeName</td>
+                                    <td>@product.HardwareDetail</td>
+                                    <td class="d-flex justify-content-center">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            @Html.ActionLink("Detay", "ProductDetail", new { id = product.id }, new { @class = "btn btn-secondary" })
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+
+                                <tr>
+                                    <td><p class="badge badge-pill badge-danger text-black" style="font-size:10pt;"> Satıldı </p></td>
+                                    <td>@product.CarBrandName</td>
+                                    <td>@product.CarMakeName</td>
+                                    <td>@product.HardwareDetail</td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            @Html.ActionLink("Detay", "ProductDetail", new { id = product.id }, new { @class = "btn btn-secondary" })
+
+                                            @Html.ActionLink("Sil", "Delete", "Cars", new { id = product.id }, new { @class = "btn btn-danger" })
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
                         }
                     }
                 </tbody>

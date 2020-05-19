@@ -21,6 +21,16 @@ namespace IM.DataLayer.Model
         public bool isdeleted { get; set; }
         public DateTime? date_of_created { get; set; }
         public string UserName { get; set; }
+        public int userid { get; set; }
+        public int CarBrandId { get; set; }
+        public int CarDetailId { get; set; }
+        public int CarMakeId { get; set; }
+        public int CarTechnicalDetailId { get; set; }
+        public int ColorId { get; set; }
+        public int FuelTypeId { get; set; }
+        public int GearTypeId { get; set; }
+        public int CarHardwareDetailsId { get; set; }
+        public int SegmentId { get; set; }
         public string HardwareDetail { get; set; }
         public string CarMakeName { get; set; }
         public string CarBrandName { get; set; }
