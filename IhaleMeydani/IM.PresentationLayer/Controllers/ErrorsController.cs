@@ -3,23 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using I = IM.PresentationLayer.IhaleWCFService;
 
 namespace IM.PresentationLayer.Controllers
 {
 
-    public class ErrorsController : Controller
+    public class ErrorsController : BaseController
     {
 
         public ActionResult PageError(Exception exception = null)
         {
             if (exception != null)
             {
+
+                IhaleServiceClient.AddLogInfo(new I.LogInfo
+                {
+                    Action = string.Empty,
+                    Controller = string.Empty,
+                    ExceptionMessage = GetInnerexception(exception).Message.ToString(),
+                    Date = DateTime.Now
+                });
+
                 Session["Exception"] = exception;
             }
             return View();
         }
 
-        public ActionResult Page404(string aspxerrorpath)
+        public ActionResult Error404(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -28,11 +38,11 @@ namespace IM.PresentationLayer.Controllers
 
             Session["Title"] = "Sayfa Bulunamadı";
 
-            Session["Url"] = "/Content/template/assets/img/error-404-monochrome.svg";
+            Session["Url"] = "/Content/template/img/error-404-monochrome.svg";
 
             return RedirectToAction("PageError");
         }
-        public ActionResult Page403(string aspxerrorpath)
+        public ActionResult Error403(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -45,7 +55,7 @@ namespace IM.PresentationLayer.Controllers
 
             return View("PageError", null);
         }
-        public ActionResult Page500(string aspxerrorpath)
+        public ActionResult Error500(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -58,7 +68,7 @@ namespace IM.PresentationLayer.Controllers
 
             return View("PageError", null);
         }
-        public ActionResult Page401(string aspxerrorpath)
+        public ActionResult Error401(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -112,7 +122,7 @@ namespace IM.PresentationLayer.Controllers
         {
             return View();
         }
-       
+
         [Route("Errors/Error501")]
         public ActionResult Error501()
         {
@@ -122,6 +132,14 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Error502()
         {
             return View();
+        }
+
+        private Exception GetInnerexception(Exception exception)
+        {
+            if (exception.InnerException != null)
+                return GetInnerexception(exception.InnerException);
+            else
+                return exception;
         }
 
     }

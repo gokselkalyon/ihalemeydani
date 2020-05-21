@@ -2100,7 +2100,7 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private IM.PresentationLayer.IhaleWCFService.userproduct userproductField;
+        private System.Nullable<int> SaledUserIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> userproductIdField;
@@ -2155,14 +2155,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public IM.PresentationLayer.IhaleWCFService.userproduct userproduct {
+        public System.Nullable<int> SaledUserId {
             get {
-                return this.userproductField;
+                return this.SaledUserIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.userproductField, value) != true)) {
-                    this.userproductField = value;
-                    this.RaisePropertyChanged("userproduct");
+                if ((this.SaledUserIdField.Equals(value) != true)) {
+                    this.SaledUserIdField = value;
+                    this.RaisePropertyChanged("SaledUserId");
                 }
             }
         }
@@ -2176,179 +2176,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((this.userproductIdField.Equals(value) != true)) {
                     this.userproductIdField = value;
                     this.RaisePropertyChanged("userproductId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="userproduct", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
-    [System.SerializableAttribute()]
-    public partial class userproduct : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private IM.PresentationLayer.IhaleWCFService.SOLD_PRODUCT[] SOLD_PRODUCTField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> cardetail_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> date_of_createdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> date_of_updatedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> isSaledField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> isdeletedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> published_onField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> user_idField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public IM.PresentationLayer.IhaleWCFService.SOLD_PRODUCT[] SOLD_PRODUCT {
-            get {
-                return this.SOLD_PRODUCTField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SOLD_PRODUCTField, value) != true)) {
-                    this.SOLD_PRODUCTField = value;
-                    this.RaisePropertyChanged("SOLD_PRODUCT");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> cardetail_id {
-            get {
-                return this.cardetail_idField;
-            }
-            set {
-                if ((this.cardetail_idField.Equals(value) != true)) {
-                    this.cardetail_idField = value;
-                    this.RaisePropertyChanged("cardetail_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> date_of_created {
-            get {
-                return this.date_of_createdField;
-            }
-            set {
-                if ((this.date_of_createdField.Equals(value) != true)) {
-                    this.date_of_createdField = value;
-                    this.RaisePropertyChanged("date_of_created");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> date_of_updated {
-            get {
-                return this.date_of_updatedField;
-            }
-            set {
-                if ((this.date_of_updatedField.Equals(value) != true)) {
-                    this.date_of_updatedField = value;
-                    this.RaisePropertyChanged("date_of_updated");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> isSaled {
-            get {
-                return this.isSaledField;
-            }
-            set {
-                if ((this.isSaledField.Equals(value) != true)) {
-                    this.isSaledField = value;
-                    this.RaisePropertyChanged("isSaled");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> isdeleted {
-            get {
-                return this.isdeletedField;
-            }
-            set {
-                if ((this.isdeletedField.Equals(value) != true)) {
-                    this.isdeletedField = value;
-                    this.RaisePropertyChanged("isdeleted");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> published_on {
-            get {
-                return this.published_onField;
-            }
-            set {
-                if ((this.published_onField.Equals(value) != true)) {
-                    this.published_onField = value;
-                    this.RaisePropertyChanged("published_on");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> user_id {
-            get {
-                return this.user_idField;
-            }
-            set {
-                if ((this.user_idField.Equals(value) != true)) {
-                    this.user_idField = value;
-                    this.RaisePropertyChanged("user_id");
                 }
             }
         }
@@ -4545,6 +4372,179 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="userproduct", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
+    [System.SerializableAttribute()]
+    public partial class userproduct : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> cardetail_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> date_of_createdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> date_of_updatedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> isSaledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> isdeletedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> published_onField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> user_idField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> cardetail_id {
+            get {
+                return this.cardetail_idField;
+            }
+            set {
+                if ((this.cardetail_idField.Equals(value) != true)) {
+                    this.cardetail_idField = value;
+                    this.RaisePropertyChanged("cardetail_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date_of_created {
+            get {
+                return this.date_of_createdField;
+            }
+            set {
+                if ((this.date_of_createdField.Equals(value) != true)) {
+                    this.date_of_createdField = value;
+                    this.RaisePropertyChanged("date_of_created");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date_of_updated {
+            get {
+                return this.date_of_updatedField;
+            }
+            set {
+                if ((this.date_of_updatedField.Equals(value) != true)) {
+                    this.date_of_updatedField = value;
+                    this.RaisePropertyChanged("date_of_updated");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> isSaled {
+            get {
+                return this.isSaledField;
+            }
+            set {
+                if ((this.isSaledField.Equals(value) != true)) {
+                    this.isSaledField = value;
+                    this.RaisePropertyChanged("isSaled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> isdeleted {
+            get {
+                return this.isdeletedField;
+            }
+            set {
+                if ((this.isdeletedField.Equals(value) != true)) {
+                    this.isdeletedField = value;
+                    this.RaisePropertyChanged("isdeleted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> published_on {
+            get {
+                return this.published_onField;
+            }
+            set {
+                if ((this.published_onField.Equals(value) != true)) {
+                    this.published_onField = value;
+                    this.RaisePropertyChanged("published_on");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> user_id {
+            get {
+                return this.user_idField;
+            }
+            set {
+                if ((this.user_idField.Equals(value) != true)) {
+                    this.user_idField = value;
+                    this.RaisePropertyChanged("user_id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="UserProductModel", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model")]
     [System.SerializableAttribute()]
     public partial class UserProductModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -4617,6 +4617,9 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int SegmentIdField;
@@ -4949,6 +4952,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
                 }
             }
         }

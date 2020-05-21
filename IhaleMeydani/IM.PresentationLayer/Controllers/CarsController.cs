@@ -43,8 +43,7 @@ namespace IM.PresentationLayer.Controllers
             imv.saledUser = saledUser;
             imv.saleUser = saledUser;
             imv.eInvoice = invoice;
-            imv.saleUser = saleUser;
-            var deneme = Convert.ToInt32(user.Price); 
+            imv.saleUser = saleUser; 
             var report = new PartialViewAsPdf("~/Views/Cars/InvoicePfdView.cshtml", imv);
             return report; 
         }

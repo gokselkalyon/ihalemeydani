@@ -19,11 +19,14 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
-                            <div class="text-center mt-4">
-                                <img class="mb-4 img-error" src="@Session["Url"]" />
-                                <p class="lead"><h2>@Session["Title"]</h2></p>
+                            <div class="text-center mt-4 mb-2">
+                                <img class="mb-4 img-error" width="350" src="@Session["Url"]" />
+                                <p class="lead" style="color:black;"><h2 style="color:black;">@Session["Title"]</h2></p>
                                 <p class="lead">@Session["Source"]</p>
-                                @*<p class="lead">@((Session["Exception"] as Exception).Message) </p>*@
+                                @if (Session["Exception"] != null)
+                                {
+                                    <p class="lead">@((Session["Exception"] as Exception).Message) </p>
+                                }
                                 @if (HttpContext.Current.Request.UrlReferrer == null)
                                 {
                                     <a href="~/Anasayfa">Geri Dön</a>
@@ -37,20 +40,6 @@
                     </div>
                 </div>
             </main>
-        </div>
-        <div id="layoutError_footer">
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
 

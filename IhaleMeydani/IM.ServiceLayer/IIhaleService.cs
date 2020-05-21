@@ -40,24 +40,21 @@ namespace IM.ServiceLayer
         int UpdateuserProductmodel(UserProductModel entity);
         #endregion
 
-        #region auctionuser
+        #region Contact
         [OperationContract]
-        List<actionuser> Getactionusers();
+        List<Contact> GetContacts();
 
         [OperationContract]
-        actionuser Getactionuser(int Id);
+        Contact GetContact(int Id);
 
         [OperationContract]
-        List<ActionUserModel> actionUserModels();
+        void AddContact(Contact entity);
 
         [OperationContract]
-        void Addactionuser(actionuser entity);
+        void RemoveContact(int Id);
 
         [OperationContract]
-        void Removeactionuser(int Id);
-
-        [OperationContract]
-        void Updateactionuser(actionuser entity);
+        void UpdateContact(Contact entity);
         #endregion
 
         #region privateauction
@@ -75,8 +72,10 @@ namespace IM.ServiceLayer
 
         [OperationContract]
         void Updateprivateauction(private_auction entity);
+
         #endregion
 
+      
         #region Log
         [OperationContract]
         List<Log> GetLogs();

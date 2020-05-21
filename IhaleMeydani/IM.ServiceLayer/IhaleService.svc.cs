@@ -14,7 +14,7 @@ namespace IM.ServiceLayer
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "IhaleService" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select IhaleService.svc or IhaleService.svc.cs at the Solution Explorer and start debugging.
-    public class IhaleService :BaseService, IIhaleService
+    public class IhaleService : BaseService, IIhaleService
     {
         StringBuilder sb = new StringBuilder();
         int MainCount = 0;
@@ -2463,20 +2463,49 @@ namespace IM.ServiceLayer
 
         public void AddClaimGroup(ClaimGroup entity)
         {
-             Create<ClaimGroup>().Add(entity);
+            Create<ClaimGroup>().Add(entity);
         }
 
         public void RemoveClaimGroup(int Id)
         {
-             Create<ClaimGroup>().Remove(Id);
+            Create<ClaimGroup>().Remove(Id);
         }
 
         public void UpdateClaimGroup(ClaimGroup entity)
         {
-             Create<ClaimGroup>().Update(entity);
+            Create<ClaimGroup>().Update(entity);
         }
 
-        
+        #endregion
+
+        #region Contact
+
+        public List<Contact> GetContacts()
+        {
+            return Create<Contact>().GetAll();
+        }
+
+        public Contact GetContact(int Id)
+        {
+            return Create<Contact>().GetFilter(x => x.Id == Id).First();
+        }
+
+        public void AddContact(Contact entity)
+        {
+            Create<Contact>().Add(entity);
+        }
+
+        public void RemoveContact(int Id)
+        {
+            Create<Contact>().Remove(Id);
+        }
+
+        public void UpdateContact(Contact entity)
+        {
+            Create<Contact>().Update(entity);
+        }
+
+
 
         #endregion
 
