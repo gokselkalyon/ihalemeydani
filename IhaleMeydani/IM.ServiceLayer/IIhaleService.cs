@@ -75,24 +75,7 @@ namespace IM.ServiceLayer
 
         #endregion
 
-        #region privateauction
-        [OperationContract]
-        List<private_auction> Getprivateauctions();
-
-        [OperationContract]
-        private_auction Getprivateauction(int Id);
-
-        [OperationContract]
-        void Addprivateauction(private_auction entity);
-
-        [OperationContract]
-        void Removeprivateauction(int Id);
-
-        [OperationContract]
-        void Updateprivateauction(private_auction entity);
-
-        #endregion
-
+      
         #region Log
         [OperationContract]
         List<Log> GetLogs();

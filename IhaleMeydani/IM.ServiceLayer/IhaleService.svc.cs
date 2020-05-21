@@ -2476,6 +2476,10 @@ namespace IM.ServiceLayer
             Create<ClaimGroup>().Update(entity);
         }
 
+        #endregion
+
+        #region Contact
+
         public List<Contact> GetContacts()
         {
             return Create<Contact>().GetAll();
