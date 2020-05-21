@@ -38,6 +38,7 @@ namespace IM.PresentationLayer.Controllers
             return PartialView(menus);
         }
 
+        [HttpPost]
         [Route("RemoveMenu")]
         public JsonResult RemoveMenu(int id)
         {

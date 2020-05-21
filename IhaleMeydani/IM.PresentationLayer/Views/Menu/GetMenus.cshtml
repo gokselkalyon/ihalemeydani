@@ -22,7 +22,10 @@
                     <td><i class="fas fa-@menu.IconName"></i></td>
                     <td>@menu.SubMenu</td>
                     <td>
-                        <i class="fas fa-trash mr-2 MenuRemove" style="color:red;" data-id="@menu.Id"></i>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-danger delete-row-menu " data-id="@menu.Id">Sil</button>
+                        </div>
+                        @*<i class="fas fa-trash mr-2 MenuRemove delete-row-role" style="color:red;" data-id="@menu.Id"></i>*@
                         <i class="fas fa-pencil-alt MenuUpdate mr-2" style="color:green;" data-id="@menu.Id"></i>
 
 
