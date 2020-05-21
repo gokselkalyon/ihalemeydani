@@ -19,7 +19,7 @@ namespace IM.PresentationLayer.Controllers
             return View();
         }
 
-        public ActionResult Page404(string aspxerrorpath)
+        public ActionResult Error404(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -28,11 +28,11 @@ namespace IM.PresentationLayer.Controllers
 
             Session["Title"] = "Sayfa Bulunamadı";
 
-            Session["Url"] = "/Content/template/assets/img/error-404-monochrome.svg";
+            Session["Url"] = "/Content/template/img/error-404-monochrome.svg";
 
             return RedirectToAction("PageError");
         }
-        public ActionResult Page403(string aspxerrorpath)
+        public ActionResult Error403(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -45,7 +45,7 @@ namespace IM.PresentationLayer.Controllers
 
             return View("PageError", null);
         }
-        public ActionResult Page500(string aspxerrorpath)
+        public ActionResult Error500(string aspxerrorpath)
         {
             Session["Source"] = null;
 
@@ -58,7 +58,7 @@ namespace IM.PresentationLayer.Controllers
 
             return View("PageError", null);
         }
-        public ActionResult Page401(string aspxerrorpath)
+        public ActionResult Error401(string aspxerrorpath)
         {
             Session["Source"] = null;
 

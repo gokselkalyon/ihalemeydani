@@ -2670,6 +2670,7 @@
     <Content Include="Content\Template\css\StyleSheet1.css" />
     <Content Include="Content\Template\css\sweetalert.css" />
     <Content Include="Content\Template\css\TempDataMessage.css" />
+    <Content Include="Content\Template\img\error-404-monochrome.svg" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
