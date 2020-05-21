@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class ClaimGroupController : Controller
+    public class ClaimGroupController : BaseController
     {
         ClaimGroupModelView cgmv = new ClaimGroupModelView();
         // GET: ClaimGroup
@@ -28,6 +28,21 @@ namespace IM.PresentationLayer.Controllers
             cg.Name = cgmv.ClaimGroupName;
             ihaleClient.AddClaimGroup(cg);
             return RedirectToAction("index");
+        }
+        public JsonResult ClaimGroupDelete(int id)
+        {
+            try
+            {
+                ihaleClient.RemoveClaimGroup(id); 
+            }
+            catch (Exception)
+            {
+                jsonResultModel.Title = "Başarısız";
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Role Ekleme Başarısız";
+                return Json(0, JsonRequestBehavior.AllowGet);
+            }
+            return Json(1, JsonRequestBehavior.AllowGet);
         }
     }
 }

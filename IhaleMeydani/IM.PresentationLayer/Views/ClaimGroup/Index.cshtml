@@ -58,7 +58,7 @@
                 <thead>
                     <tr>
                         <th data-field="id" data-sortable="true" data-width="50%">ID</th>
-                        <th data-field="Name" data-sortable="true">Rol adı</th>
+                        <th data-field="Name" data-sortable="true">Claim Grup adı</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,7 +69,7 @@
                             <td>@item.Name</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-danger delete-row-role" data-id="@item.Id">Sil</button>
+                                    <button type="button" class="btn btn-danger delete-row-claimGroup" data-id="@item.Id">Sil</button>
                                 </div>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="/Roles/UpdateRole/@item.Id" class="btn btn-secondary">Güncelle</a>
