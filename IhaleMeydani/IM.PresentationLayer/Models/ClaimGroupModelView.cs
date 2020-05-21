@@ -9,5 +9,5 @@ namespace IM.PresentationLayer.Models
     {
         public int Id { get; set; } 
         public string ClaimGroupName { get; set; }
-    }
+    } 
 }

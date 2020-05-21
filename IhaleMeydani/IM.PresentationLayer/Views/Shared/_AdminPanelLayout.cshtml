@@ -316,6 +316,18 @@
                         </li>
                         <li class="nav-small-cap"><span class="hide-menu">yöneticiler</span></li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="@Url.Action("index","ClaimGroup")"
+                               aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Claim Group</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="@Url.Action("index","Claim")"
+                               aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Claim</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link sidebar-link" href="@Url.Action("index","Roles")"
                                aria-expanded="false">
                                 <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Roles</span>
@@ -772,6 +784,9 @@
 
     @RenderSection("js", false)
 
+    <script src="~/Scripts/ClaimGruop.js"></script>
+    <script src="~/Scripts/Claim.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 </body>
 <script>
     $(function () {
