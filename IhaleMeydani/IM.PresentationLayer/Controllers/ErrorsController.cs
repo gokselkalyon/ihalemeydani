@@ -10,6 +10,7 @@ namespace IM.PresentationLayer.Controllers
     public class ErrorsController : Controller
     {
 
+        [Route("Hata")]
         public ActionResult PageError(Exception exception = null)
         {
             if (exception != null)
@@ -112,7 +113,7 @@ namespace IM.PresentationLayer.Controllers
         {
             return View();
         }
-       
+
         [Route("Errors/Error501")]
         public ActionResult Error501()
         {

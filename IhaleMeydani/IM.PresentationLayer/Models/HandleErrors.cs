@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using IM.DataAccessLayer.Concrete.EFConcrete;
+using System.Web.Routing;
 
 namespace IM.PresentationLayer.Models
 {
@@ -40,9 +41,9 @@ namespace IM.PresentationLayer.Models
 
             var request = filterContext.HttpContext.Request;
 
-            var exception = filterContext.Exception;
+            var exceptions = filterContext.Exception;
 
-            if (exception != null)
+            if (exceptions != null)
             {
 
                 if (filterContext.HttpContext.User.Identity.IsAuthenticated)
@@ -57,7 +58,7 @@ namespace IM.PresentationLayer.Models
                 log.Action = filterContext.RouteData.Values["action"].ToString();
                 log.Date = DateTime.Now;
                 log.Type = filterContext.Exception.GetType().ToString();
-                log.ExceptionMessage = GetInnerException(filterContext.Exception).Message;
+                log.ExceptionMessage = GetInnerexception(filterContext.Exception).Message;
                 log.LogStatusId = 2;
 
                 l.AddedDate = DateTime.Now;
@@ -85,7 +86,7 @@ namespace IM.PresentationLayer.Models
                 }
                 else
                 {
-                    filterContext.Result = new RedirectResult("~/Hata");
+                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Home", action = "Index",exception=exceptions }));
                 }
             }
             else
@@ -124,11 +125,11 @@ namespace IM.PresentationLayer.Models
 
             //base.OnActionExecuted(filterContext);   //işlem devam etsin
         }
-        private Exception GetInnerException(Exception exception)
+        private Exception GetInnerexception(Exception exception)
         {
             if (exception.InnerException != null)
             {
-                return GetInnerException(exception.InnerException);
+                return GetInnerexception(exception.InnerException);
             }
             else
                 return exception;

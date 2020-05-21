@@ -22,8 +22,11 @@
                             <div class="text-center mt-4 mb-2">
                                 <img class="mb-4 img-error" width="350" src="@Session["Url"]" />
                                 <p class="lead" style="color:black;"><h2 style="color:black;">@Session["Title"]</h2></p>
-                                <p class="lead" >@Session["Source"]</p>
-                                @*<p class="lead">@((Session["Exception"] as Exception).Message) </p>*@
+                                <p class="lead">@Session["Source"]</p>
+                                @if (Session["Exception"] != null)
+                                {
+                                    <p class="lead">@((Session["Exception"] as Exception).Message) </p>
+                                }
                                 @if (HttpContext.Current.Request.UrlReferrer == null)
                                 {
                                     <a href="~/Anasayfa">Geri Dön</a>
