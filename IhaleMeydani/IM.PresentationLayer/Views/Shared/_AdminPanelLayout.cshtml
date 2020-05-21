@@ -766,8 +766,12 @@
     <script src="~/Content/adminpaneltemplate/src/dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script src="~/Scripts/Role.js"></script>
     <script src="~/Scripts/User.js"></script>
-
+    @*<script src="~/Content/Template/js/sweetalert2.js"></script>*@
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+
+
+    @RenderSection("js", false)
+
 </body>
 <script>
     $(function () {

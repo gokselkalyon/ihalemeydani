@@ -2671,6 +2671,7 @@
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Content\Template\js\main.js" />
+    <Content Include="Content\Template\js\menu.js" />
     <Content Include="Content\Template\js\moment.min.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert.min.js" />

@@ -37,5 +37,17 @@ namespace IM.PresentationLayer.Controllers
 
             return PartialView(menus);
         }
+
+        [Route("RemoveMenu")]
+        public JsonResult RemoveMenu(int id)
+        {
+            IhaleServiceClient.RemoveMenu(id);
+
+            jsonResultModel.Title = "Silme İşlemi";
+            jsonResultModel.Description = "Menü Silme İşlemi Başarıyla Gerçekleşti";
+            jsonResultModel.Icon = "success";
+
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        }
     }
 }
