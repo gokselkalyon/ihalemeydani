@@ -1,4 +1,5 @@
 ﻿using IM.DataLayer;
+using I = IM.PresentationLayer.IhaleWCFService;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,19 +9,21 @@ using System.Web.Helpers;
 using System.Web.Mvc;
 using IM.DataAccessLayer.Concrete.EFConcrete;
 using System.Web.Routing;
+using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.Helper;
 
 namespace IM.PresentationLayer.Models
 {
     [AllowAnonymous]
     public class HandleErrors : ActionFilterAttribute
     {
-        private LogInfo log = new LogInfo();
-        private Log l = new Log();
+        private IhaleServiceClient IhaleServiceClient = Singleton.GetIhaleinstance();
+
         private Stopwatch _stopwatch;
         int UserId;
         private UserConcrete userConcrete = new UserConcrete();
-        private LogInfoesConcrete logInfoes = new LogInfoesConcrete();
-        private LogConcrete logConcrete = new LogConcrete();
+        //private LogInfoesConcrete logInfoes = new LogInfoesConcrete();
+        //private LogConcrete logConcrete = new LogConcrete();
 
         public HandleErrors()
         {
@@ -48,28 +51,31 @@ namespace IM.PresentationLayer.Models
 
                 if (filterContext.HttpContext.User.Identity.IsAuthenticated)
                 {
-                    
-                    UserId = userConcrete.GetFilter(x=>x.UserName == filterContext.HttpContext.User.Identity.Name).Single().Id;
-                    log.UserId = UserId;
-                    l.UserId = UserId;
+                    UserId = userConcrete.GetFilter(x => x.UserName == filterContext.HttpContext.User.Identity.Name).Single().Id;
                 }
 
-                log.Controller = filterContext.RouteData.Values["controller"].ToString();
-                log.Action = filterContext.RouteData.Values["action"].ToString();
-                log.Date = DateTime.Now;
-                log.Type = filterContext.Exception.GetType().ToString();
-                log.ExceptionMessage = GetInnerexception(filterContext.Exception).Message;
-                log.LogStatusId = 2;
+                IhaleServiceClient.AddLog(new I.Log
+                {
+                    UserId = UserId,
+                    AddedDate = DateTime.Now,
+                    Data = SerializeRequest(request),
+                    ExecutionMs = _stopwatch.ElapsedMilliseconds,
+                    IPAddress = request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? request.UserHostAddress,
+                    UrlAccessed = request.RawUrl, //erişilen sayfanın ham url'i
+                    LogStatusId = 2
+                });
 
-                l.AddedDate = DateTime.Now;
-                l.Data = SerializeRequest(request); //yukarıda alınan requesti serialize edip, string olarak yazıyorum. 
-                l.ExecutionMs = _stopwatch.ElapsedMilliseconds; //çalışma süresi
-                l.IPAddress = request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? request.UserHostAddress;
-                l.UrlAccessed = request.RawUrl; //erişilen sayfanın ham url'i
-                l.LogStatusId = 2;
+                IhaleServiceClient.AddLogInfo(new I.LogInfo
+                {
+                    UserId = UserId,
+                    Controller = filterContext.RouteData.Values["controller"].ToString(),
+                    Action = filterContext.RouteData.Values["action"].ToString(),
+                    Date = DateTime.Now,
+                    Type = filterContext.Exception.GetType().ToString(),
+                    ExceptionMessage = GetInnerexception(filterContext.Exception).Message,
+                    LogStatusId = 2
+                });
 
-                //logInfoes.Add(log);
-                //logConcrete.Add(l);
 
                 if (filterContext.HttpContext.Request.IsAjaxRequest())
                 {
@@ -86,7 +92,7 @@ namespace IM.PresentationLayer.Models
                 }
                 else
                 {
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Home", action = "Index",exception=exceptions }));
+                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Errors", action = "PageError", exception = exceptions }));
                 }
             }
             else
@@ -95,42 +101,37 @@ namespace IM.PresentationLayer.Models
                 {
 
                     UserId = userConcrete.GetFilter(x => x.UserName == filterContext.HttpContext.User.Identity.Name).Single().Id;
-                    log.UserId = UserId;
-                    l.UserId = UserId;
                 }
 
-                log.Controller = filterContext.RouteData.Values["controller"].ToString();
-                log.Action = filterContext.RouteData.Values["action"].ToString();
-                log.Date = DateTime.Now;
-                log.Type = string.Empty;
-                log.ExceptionMessage = "İşlem Başarıyla Gerçekleşti";
-                log.LogStatusId = 1;
+                IhaleServiceClient.AddLog(new I.Log
+                {
+                    UserId = UserId,
+                    AddedDate = DateTime.Now,
+                    Data = SerializeRequest(request),
+                    ExecutionMs = _stopwatch.ElapsedMilliseconds,
+                    IPAddress = request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? request.UserHostAddress,
+                    UrlAccessed = request.RawUrl, //erişilen sayfanın ham url'i
+                    LogStatusId = 1
+                });
 
-                l.AddedDate = DateTime.Now;
-                l.Data = SerializeRequest(request); //yukarıda alınan requesti serialize edip, string olarak yazıyorum. 
-                l.ExecutionMs = _stopwatch.ElapsedMilliseconds; //çalışma süresi
-                l.IPAddress = request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? request.UserHostAddress;
-                l.UrlAccessed = request.RawUrl; //erişilen sayfanın ham url'i
-                l.LogStatusId = 1;
-
-                //logInfoes.Add(log);
-                //logConcrete.Add(l);
-
+                IhaleServiceClient.AddLogInfo(new I.LogInfo
+                {
+                    UserId = UserId,
+                    Controller = filterContext.RouteData.Values["controller"].ToString(),
+                    Action = filterContext.RouteData.Values["action"].ToString(),
+                    Date = DateTime.Now,
+                    Type = string.Empty,
+                    ExceptionMessage = "İşlem Başarıyla Gerçekleşti",
+                    LogStatusId = 1
+                });
             }
 
             base.OnActionExecuted(filterContext);
-
-            //Log classının alanlarını doldur
-            //Log classını veritabanına kaydet
-
-            //base.OnActionExecuted(filterContext);   //işlem devam etsin
         }
         private Exception GetInnerexception(Exception exception)
         {
             if (exception.InnerException != null)
-            {
                 return GetInnerexception(exception.InnerException);
-            }
             else
                 return exception;
         }

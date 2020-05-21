@@ -3,18 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using I = IM.PresentationLayer.IhaleWCFService;
 
 namespace IM.PresentationLayer.Controllers
 {
 
-    public class ErrorsController : Controller
+    public class ErrorsController : BaseController
     {
 
-        [Route("Hata")]
         public ActionResult PageError(Exception exception = null)
         {
             if (exception != null)
             {
+
+                IhaleServiceClient.AddLogInfo(new I.LogInfo
+                {
+                    Action = string.Empty,
+                    Controller = string.Empty,
+                    ExceptionMessage = GetInnerexception(exception).Message.ToString(),
+                    Date = DateTime.Now
+                });
+
                 Session["Exception"] = exception;
             }
             return View();
@@ -123,6 +132,14 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Error502()
         {
             return View();
+        }
+
+        private Exception GetInnerexception(Exception exception)
+        {
+            if (exception.InnerException != null)
+                return GetInnerexception(exception.InnerException);
+            else
+                return exception;
         }
 
     }
