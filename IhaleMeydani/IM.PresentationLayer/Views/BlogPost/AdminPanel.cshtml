@@ -84,10 +84,10 @@
                     @Html.DisplayFor(modelItem => item.image_title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.submit_article)
+                    @item.submit_article.Substring(0, 10)
                 </td>
                 <td>
-                    <a href="@Url.Action("Update","BlogAdmin"  )/@item.Post_id" class="btn btn-secondary">Edit</a> |
+                    <a href="@Url.Action("Update","BlogAdmin"  )/@item.Post_id" class="btn btn-warning">Edit</a> |
                     @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                 </td>

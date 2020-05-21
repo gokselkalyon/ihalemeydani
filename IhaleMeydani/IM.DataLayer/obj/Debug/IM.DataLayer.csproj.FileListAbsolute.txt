@@ -80,3 +80,15 @@ C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataLayer\obj\Debug\IM.Da
 C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
 C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
 C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.dll.config
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\IM.DataLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csprojAssemblyReference.cache
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.pdb
