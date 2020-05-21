@@ -775,3 +775,4 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\bin\System.Net.Http.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
