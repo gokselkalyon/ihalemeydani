@@ -2752,6 +2752,9 @@
     <Content Include="Views\Home\AdminHomePage.cshtml" />
     <Content Include="Views\Cars\Carslist.cshtml" />
     <Content Include="Views\Cars\InvoicePfdView.cshtml" />
+    <Content Include="Views\BlogPost\AdminPanel.cshtml" />
+    <Content Include="Views\BlogPost\AdminPanelCreate.cshtml" />
+    <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
