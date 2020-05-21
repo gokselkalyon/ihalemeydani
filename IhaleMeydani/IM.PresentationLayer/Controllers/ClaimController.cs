@@ -1,4 +1,5 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,13 @@ namespace IM.PresentationLayer.Controllers
     {
        
         IhaleServiceClient ihaleClient = new IhaleServiceClient();
+        [ihaleClientFilter("Claim.Liste")]
         public ActionResult Index()
         {
             var claimGroup = ihaleClient.GetClaims(); 
             return View(claimGroup);
         }
+        [ihaleClientFilter("Claim.Ekle")]
         public ActionResult AddClaim()
         {
             ClaimModelView cmv = new ClaimModelView();
@@ -24,6 +27,7 @@ namespace IM.PresentationLayer.Controllers
             cmv.claimGroupList = query;
             return View(cmv);
         }
+        [ihaleClientFilter("Claim.Ekle")]
         public ActionResult ClaimAdd(ClaimModelView cmv)
         {
             var claimGroup = ihaleClient.GetClaimGroups().FirstOrDefault(f => f.Name == cmv.claimModel.ClaimGroupName);
@@ -32,7 +36,8 @@ namespace IM.PresentationLayer.Controllers
             c.ClaimGroupId = claimGroup.Id;
             ihaleClient.AddClaim(c);
             return RedirectToAction("index");
-        } 
+        }
+        [ihaleClientFilter("Claim.Sil")]
         public JsonResult ClaimDelete(int id)
         {
             try
@@ -48,6 +53,7 @@ namespace IM.PresentationLayer.Controllers
             }
             return Json(1, JsonRequestBehavior.AllowGet);
         }
+        [ihaleClientFilter("Claim.Güncelle")]
         [Route("Claim/Update/{Id}")]
         public ActionResult UpdateClaim(int id)
         {
@@ -67,6 +73,7 @@ namespace IM.PresentationLayer.Controllers
             cmv.claimModel = query;
             return View(cmv);
         }
+        [ihaleClientFilter("Claim.Güncelle")]
         public ActionResult ClaimUpdate(ClaimModelView cmv)
         {
             var query = ihaleClient.GetClaim(cmv.claimModel.Id);
