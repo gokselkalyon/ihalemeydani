@@ -170,7 +170,9 @@
     <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\ClaimController.cs" />
     <Compile Include="Controllers\ClaimGroupController.cs" />
+    <Compile Include="Models\ClaimModelView.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -2766,6 +2768,8 @@
     <Content Include="Views\ClaimGroup\Index.cshtml" />
     <Content Include="Views\ClaimGroup\AddClaimGroup.cshtml" />
     <Content Include="Views\ClaimGroup\UpdateClaimGroup.cshtml" />
+    <Content Include="Views\Claim\Index.cshtml" />
+    <Content Include="Views\Claim\AddClaim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

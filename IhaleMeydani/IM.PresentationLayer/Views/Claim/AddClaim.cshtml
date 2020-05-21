@@ -1,0 +1,83 @@
+﻿@model IM.PresentationLayer.Models.ClaimModelView
+
+@{
+    ViewBag.Title = "AddClaimGroup";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-7 align-self-center">
+            <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Jason!</h3>
+            <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">auction</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="index.html">YayımlananAraçlar</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-5 align-self-center">
+            <div class="customize-input float-right">
+                <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+                    <option selected>Aug 19</option>
+                    <option value="1">July 19</option>
+                    <option value="2">Jun 19</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            @using (Ajax.BeginForm("ClaimAdd", "Claim", FormMethod.Post, new AjaxOptions()
+            {
+                InsertionMode = InsertionMode.Replace,
+                HttpMethod = "POST",
+                OnSuccess = "returnPostJson(data)",
+                LoadingElementId = "loading-background",
+            },
+                          new
+                          {
+                              @class = "RoleForm",
+                              @id = "frmRoleForm",
+                              @name = "frmRoleForm",
+                          }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="container">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputName" class="control-label mb-10">Claim Adı</label>
+                            <input type="text" class="form-control" name="claimModel.Text" id="RoleName" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Example select</label>
+                            <select name="claimModel.ClaimGroupName" class="form-control" id="exampleFormControlSelect1">
+                                <option>Seçiniz...</option>
+                                @foreach (var item in Model.claimGroupList)
+                                {
+                                    <option>@item.ClaimGroupName</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="float:right; margin-top:20px; margin-right:5%;">
+                    <a type="button" href="/ClaimGroup/index" class="btn btn-danger" style="width:100px;">Vazgeç</a>
+                    <button type="submit" class="btn btn-success btn-anim"><i class="icon-rocket"></i><span class="btn-text">Kaydet</span></button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
