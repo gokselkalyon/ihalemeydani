@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class ClaimController : Controller
+    public class ClaimController : BaseController
     {
        
         IhaleServiceClient ihaleClient = new IhaleServiceClient();
@@ -26,12 +26,28 @@ namespace IM.PresentationLayer.Controllers
         }
         public ActionResult ClaimAdd(ClaimModelView cmv)
         {
-            var claimGroup = ihaleClient.GetClaimGroups().FirstOrDefault(f => f.Name == cmv.claimModel.Text);
+            var claimGroup = ihaleClient.GetClaimGroups().FirstOrDefault(f => f.Name == cmv.claimModel.ClaimGroupName);
             Claim c = new Claim();
             c.Text = cmv.claimModel.Text;
             c.ClaimGroupId = claimGroup.Id;
             ihaleClient.AddClaim(c);
             return RedirectToAction("index");
+        } 
+        public JsonResult ClaimDelete(int id)
+        {
+            try
+            {
+                ihaleClient.RemoveClaim(id);
+            }
+            catch (Exception)
+            {
+                jsonResultModel.Title = "Başarısız";
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Role Ekleme Başarısız";
+                return Json(0, JsonRequestBehavior.AllowGet);
+            }
+            return Json(1, JsonRequestBehavior.AllowGet);
         }
-    }
+
+}
 }
