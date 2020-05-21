@@ -36,7 +36,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            @using (Ajax.BeginForm("ClaimAdd", "Claim", FormMethod.Post, new AjaxOptions()
+            @using (Ajax.BeginForm("ClaimUpdate", "Claim", FormMethod.Post, new AjaxOptions()
             {
                 InsertionMode = InsertionMode.Replace,
                 HttpMethod = "POST",
@@ -51,26 +51,30 @@
                           }))
             {
                 @Html.AntiForgeryToken()
-                <div class="container">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="inputName" class="control-label mb-10">Claim Adı</label>
-                            <input type="text" class="form-control" name="claimModel.Text" id="RoleName" required="">
-                        </div>
+            <div class="container">
+                <input hidden type="text" class="form-control" name="claimModel.Id" value="@Model.claimModel.Id" id="RoleName" required="">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName" class="control-label mb-10">Claim Adı</label>
+                        <input type="text" class="form-control" name="claimModel.Text" value="@Model.claimModel.Text" id="RoleName" required="">
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select name="claimModel.ClaimGroupName" class="form-control" id="exampleFormControlSelect1">
-                                <option>Seçiniz...</option>
-                                @foreach (var item in Model.claimGroupList)
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Example select</label>
+                        <select name="claimModel.ClaimGroupName" class="form-control" id="exampleFormControlSelect1">
+                            <option>@Model.claimModel.ClaimGroupName</option>
+                            @foreach (var item in Model.claimGroupList)
+                            {
+                                if (item.ClaimGroupName != Model.claimModel.ClaimGroupName)
                                 {
                                     <option>@item.ClaimGroupName</option>
                                 }
-                            </select>
-                        </div>
+                            }
+                        </select>
                     </div>
                 </div>
+            </div>
 
                 <div class="form-group" style="float:right; margin-top:20px; margin-right:5%;">
                     <a type="button" href="/Claim/index" class="btn btn-danger" style="width:100px;">Vazgeç</a>

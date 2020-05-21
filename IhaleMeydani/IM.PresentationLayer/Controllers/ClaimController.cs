@@ -48,6 +48,33 @@ namespace IM.PresentationLayer.Controllers
             }
             return Json(1, JsonRequestBehavior.AllowGet);
         }
-
-}
+        [Route("Claim/Update/{Id}")]
+        public ActionResult UpdateClaim(int id)
+        {
+            ClaimModelView cmv = new ClaimModelView();
+            var claimGroupList = ihaleClient.GetClaimGroups().Select(f => new ClaimModel { ClaimGroupName = f.Name }).ToList();
+    
+            var query = (from r in ihaleClient.GetClaims()
+                         join claimGroup in ihaleClient.GetClaimGroups() on r.ClaimGroupId equals claimGroup.Id
+                         where r.Id == id
+                         select new ClaimModel
+                         {
+                             Id = r.Id, 
+                             Text = r.Text,
+                             ClaimGroupName = claimGroup.Name
+                         }).FirstOrDefault();
+            cmv.claimGroupList = claimGroupList;
+            cmv.claimModel = query;
+            return View(cmv);
+        }
+        public ActionResult ClaimUpdate(ClaimModelView cmv)
+        {
+            var query = ihaleClient.GetClaim(cmv.claimModel.Id);
+            var claimGroup = ihaleClient.GetClaimGroups().FirstOrDefault(f => f.Name == cmv.claimModel.ClaimGroupName);
+            query.Text = cmv.claimModel.Text;
+            query.ClaimGroupId = claimGroup.Id;
+            ihaleClient.UpdateClaim(query);
+            return RedirectToAction("index");
+        }
+    }
 }

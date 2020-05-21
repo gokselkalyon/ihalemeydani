@@ -2771,6 +2771,7 @@
     <Content Include="Views\ClaimGroup\UpdateClaimGroup.cshtml" />
     <Content Include="Views\Claim\Index.cshtml" />
     <Content Include="Views\Claim\AddClaim.cshtml" />
+    <Content Include="Views\Claim\UpdateClaim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
