@@ -173,6 +173,7 @@
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\QuickSellController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Models\InvoiceModelView.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Models\LoginModelView.cs" />
+    <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Models\RolesModelView.cs" />
     <Compile Include="Models\UserModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2655,6 +2657,7 @@
     <Content Include="Content\Template\css\ErrorStyle.css" />
     <Content Include="Content\Template\css\Login.css" />
     <Content Include="Content\Template\css\Main.css" />
+    <Content Include="Content\Template\css\Menu.css" />
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\snackBar.css" />
     <Content Include="Content\Template\css\Style.css" />
@@ -2755,6 +2758,8 @@
     <Content Include="Views\BlogPost\AdminPanel.cshtml" />
     <Content Include="Views\BlogPost\AdminPanelCreate.cshtml" />
     <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\GetMenus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
