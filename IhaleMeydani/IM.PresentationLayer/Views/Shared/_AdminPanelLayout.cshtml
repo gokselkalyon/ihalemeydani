@@ -18,11 +18,20 @@
     <link href="~/Content/Template/css/sweetalert.css" rel="stylesheet" />
     <link href="~/Content/Template/css/TempDataMessage.css" rel="stylesheet" />
     <link href="~/Content/Template/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/Template/css/Layout.css" rel="stylesheet" />
+
 
     @RenderSection("css", false)
 
 </head>
 <body>
+
+    <div id="loading-background">
+        <div id="loading-img">
+            <img width="100" src="../Content/Images/Loading2.gif" />
+        </div>
+    </div>
+
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -327,7 +336,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link sidebar-link" href="/Menüler"
                                aria-expanded="false">
-                                <i  class="fas fa-bars mr-2"></i><span class="hide-menu">Menüler</span>
+                                <i class="fas fa-bars mr-2"></i><span class="hide-menu">Menüler</span>
                             </a>
                         </li>
                         @*<li class="list-divider"></li>

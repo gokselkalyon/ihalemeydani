@@ -2650,6 +2650,7 @@
     <Content Include="Content\Template\autoshop\soon.html" />
     <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\Template\css\invoice.css" />
+    <Content Include="Content\Template\css\Layout.css" />
     <Content Include="Content\Template\css\Loginn.css" />
     <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\BlogPage.css" />

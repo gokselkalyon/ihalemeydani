@@ -30,8 +30,8 @@ namespace IM.PresentationLayer.Controllers
                     Name = menu.Name,
                     Description = menu.Description,
                     Url = menu.Url,
-                    IconName = IhaleServiceClient.IconName(menu.IconId),
-                    SubMenu = IhaleServiceClient.GetMenu(menu.MenuId.Value).Name
+                    IconName = (menu.IconId.Value == 0) ? "İcon Yok" : IhaleServiceClient.IconName(menu.IconId),
+                    SubMenu = (menu.MenuId.Value == 0) ? "Üst Menü Yok" : IhaleServiceClient.GetMenu(menu.MenuId.Value).Name
                 });
             }
 
