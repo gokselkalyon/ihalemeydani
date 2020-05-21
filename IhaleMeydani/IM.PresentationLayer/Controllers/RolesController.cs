@@ -44,16 +44,24 @@ namespace IM.PresentationLayer.Controllers
          [ihaleClientFilter("Role.Güncelle")] 
         public ActionResult UpdateRole(int Id)
         {
+            var groupList = (from r in ihaleClient.GetClaimGroups().AsQueryable()
+                             select new ClaimGroupModelView()
+                             {
+                                 Id = r.Id,
+                                 ClaimGroupName = r.Name
+                             }).ToList();
             var roleName = ihaleClient.GetRole(Id).Name;
             var query = (from r in ihaleClient.GetClaims()
                          select new RoleModel()
                          {
                              Checked = false,
                              ClaimId = r.Id,
-                             Text = r.Text
+                             Text = r.Text,
+                             ClaimGroupId = r.ClaimGroupId
                          }).ToList();
             rm.roleList = query;
             rm.Id = Id;
+            rm.claimGroupList = groupList;
             rm.RoleName = roleName;
             var roleClaim = ihaleClient.GetRoleClaims().Where(f => f.RoleId == Id).ToList();
             for (int i = 0; i < roleClaim.Count; i++)
