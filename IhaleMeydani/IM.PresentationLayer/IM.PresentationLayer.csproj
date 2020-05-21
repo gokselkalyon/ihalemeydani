@@ -2763,6 +2763,7 @@
     <Content Include="Views\Cars\Carslist.cshtml" />
     <Content Include="Views\Cars\InvoicePfdView.cshtml" />
     <Content Include="Views\ClaimGroup\Index.cshtml" />
+    <Content Include="Views\ClaimGroup\AddClaimGroup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
