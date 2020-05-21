@@ -199,3 +199,24 @@ C:\Users\s\source\repos\i-hale-meydan2\IhaleMeydani\IM.BusinessLayer.Tests\obj\D
 C:\Users\s\source\repos\i-hale-meydan2\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.csproj.CopyComplete
 C:\Users\s\source\repos\i-hale-meydan2\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.dll
 C:\Users\s\source\repos\i-hale-meydan2\IhaleMeydani\IM.BusinessLayer.Tests\obj\Debug\IM.BusinessLayer.Tests.pdb
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.BusinessLayer.Tests.dll.config
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.BusinessLayer.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.DataAccessLayer.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.DataLayer.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\AutoMapper.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Firebase.Storage.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Ninject.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.BusinessLayer.pdb
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.BusinessLayer.dll.config
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.DataAccessLayer.pdb
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.DataAccessLayer.dll.config
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.DataLayer.pdb
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\IM.DataLayer.dll.config
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\AutoMapper.xml
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Ninject.xml
+C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.BusinessLayer.Tests\bin\Debug\Newtonsoft.Json.xml
