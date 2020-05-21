@@ -2765,6 +2765,7 @@
     <Content Include="Views\Cars\InvoicePfdView.cshtml" />
     <Content Include="Views\ClaimGroup\Index.cshtml" />
     <Content Include="Views\ClaimGroup\AddClaimGroup.cshtml" />
+    <Content Include="Views\ClaimGroup\UpdateClaimGroup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

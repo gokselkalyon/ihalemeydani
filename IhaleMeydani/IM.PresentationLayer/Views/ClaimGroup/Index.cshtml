@@ -3,8 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
 }
-
-<h2>Index</h2>
+ 
 
 <div class="page-breadcrumb">
     <div class="row">
@@ -72,7 +71,7 @@
                                     <button type="button" class="btn btn-danger delete-row-claimGroup" data-id="@item.Id">Sil</button>
                                 </div>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/Roles/UpdateRole/@item.Id" class="btn btn-secondary">Güncelle</a>
+                                    <a href="/ClaimGroup/Update/@item.Id" class="btn btn-secondary">Güncelle</a>
                                 </div>
                             </td>
                         </tr>
