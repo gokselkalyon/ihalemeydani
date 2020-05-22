@@ -59,16 +59,23 @@
             </div>
         </div>
         <div style="margin-top:20px;">
-            @for (int i = 0; i < Model.roleList.Count; i++)
+            @foreach (var item in Model.claimGroupList)
             {
-                <div class="col-md-3">
-                    @Html.HiddenFor(m => m.roleList[i].ClaimId)
-                    <div style="height:60px; width:300px; margin-top:00px;">
-                        <div class="input-group" style="color:black;">
-                            @Html.CheckBoxFor(m => m.roleList[i].Checked) @Model.roleList[i].Text
+                <h2>@item.ClaimGroupName</h2>
+                for (int i = 0; i < Model.roleList.Count; i++)
+                {
+                    if (item.Id == Model.roleList[i].ClaimGroupId)
+                    {
+                        <div class="col-md-3">
+                            @Html.HiddenFor(m => m.roleList[i].ClaimId)
+                            <div style="height:60px; width:300px; margin-top:00px;">
+                                <div class="input-group" style="color:black;">
+                                    @Html.CheckBoxFor(m => m.roleList[i].Checked) @Model.roleList[i].Text
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    }
+                }
             }
             <div class="form-group">
                 <a type="button" href="/Roles/index" style="width:100px; float:right; margin-top:20px;" class="btn btn-danger">Vazgeç</a>

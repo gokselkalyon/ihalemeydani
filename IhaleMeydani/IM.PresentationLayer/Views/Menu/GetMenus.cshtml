@@ -1,0 +1,39 @@
+﻿@model List<IM.PresentationLayer.Models.MenuModel>
+
+<div class="table table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Adı</th>
+                <th scope="col">Açıklama</th>
+                <th scope="col">Url</th>
+                <th scope="col">İcon</th>
+                <th scope="col">Üst Menü</th>
+                <th scope="col">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var menu in Model)
+            {
+                <tr>
+                    <th>@menu.Name</th>
+                    <td id="MenuDescription">@(menu.Description ?? "Açıklama Bulunmamaktadır")</td>
+                    <td>@menu.Url</td>
+                    <td><i class="fas fa-@menu.IconName"></i></td>
+                    <td>@menu.SubMenu</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-danger delete-row-menu " data-id="@menu.Id">Sil</button>
+                        </div>
+                        @*<i class="fas fa-trash mr-2 MenuRemove delete-row-role" style="color:red;" data-id="@menu.Id"></i>*@
+                        <i class="fas fa-pencil-alt MenuUpdate mr-2" style="color:green;" data-id="@menu.Id"></i>
+
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

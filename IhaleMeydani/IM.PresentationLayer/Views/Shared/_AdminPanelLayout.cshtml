@@ -18,8 +18,20 @@
     <link href="~/Content/Template/css/sweetalert.css" rel="stylesheet" />
     <link href="~/Content/Template/css/TempDataMessage.css" rel="stylesheet" />
     <link href="~/Content/Template/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/Template/css/Layout.css" rel="stylesheet" />
+
+
+    @RenderSection("css", false)
+
 </head>
 <body>
+
+    <div id="loading-background">
+        <div id="loading-img">
+            <img width="100" src="../Content/Images/Loading2.gif" />
+        </div>
+    </div>
+
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -304,6 +316,18 @@
                         </li>
                         <li class="nav-small-cap"><span class="hide-menu">yöneticiler</span></li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="@Url.Action("index","ClaimGroup")"
+                               aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Claim Group</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="@Url.Action("index","Claim")"
+                               aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Claim</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link sidebar-link" href="@Url.Action("index","Roles")"
                                aria-expanded="false">
                                 <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Roles</span>
@@ -324,7 +348,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link sidebar-link" href="/Menüler"
                                aria-expanded="false">
-                                <i  class="fas fa-bars mr-2"></i><span class="hide-menu">Menüler</span>
+                                <i class="fas fa-bars mr-2"></i><span class="hide-menu">Menüler</span>
                             </a>
                         </li>
                         @*<li class="list-divider"></li>
@@ -754,7 +778,14 @@
     <script src="~/Content/adminpaneltemplate/src/dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script src="~/Scripts/Role.js"></script>
     <script src="~/Scripts/User.js"></script>
+    @*<script src="~/Content/Template/js/sweetalert2.js"></script>*@
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 
+
+    @RenderSection("js", false)
+
+    <script src="~/Scripts/ClaimGruop.js"></script>
+    <script src="~/Scripts/Claim.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 </body>
 <script>

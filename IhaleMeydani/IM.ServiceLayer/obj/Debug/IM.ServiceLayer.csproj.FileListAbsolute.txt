@@ -241,3 +241,38 @@ C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM
 C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csproj.CopyComplete
 C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.dll
 C:\Users\s\Source\Repos\i-hale-meydan2\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.ServiceLayer.dll.config
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.ServiceLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.ServiceLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.SqlServer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.BusinessLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataAccessLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Extensions.Wcf.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Web.Common.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\AutoMapper.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Firebase.Storage.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\System.Net.Http.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.BusinessLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.BusinessLayer.dll.config
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataAccessLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataAccessLayer.dll.config
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\IM.DataLayer.dll.config
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\EntityFramework.SqlServer.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Extensions.Wcf.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Ninject.Web.Common.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\AutoMapper.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\Newtonsoft.Json.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csprojAssemblyReference.cache
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csproj.CoreCompileInputs.cache
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.csproj.CopyComplete
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.ServiceLayer\obj\Debug\IM.ServiceLayer.pdb

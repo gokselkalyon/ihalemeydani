@@ -170,9 +170,13 @@
     <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\ClaimController.cs" />
+    <Compile Include="Controllers\ClaimGroupController.cs" />
+    <Compile Include="Models\ClaimModelView.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\QuickSellController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -193,6 +197,7 @@
     <Compile Include="Models\InvoiceModelView.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Models\LoginModelView.cs" />
+    <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Models\RolesModelView.cs" />
     <Compile Include="Models\UserModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2648,6 +2653,7 @@
     <Content Include="Content\Template\autoshop\soon.html" />
     <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\Template\css\invoice.css" />
+    <Content Include="Content\Template\css\Layout.css" />
     <Content Include="Content\Template\css\Loginn.css" />
     <Content Include="Content\Template\css\Blog.css" />
     <Content Include="Content\Template\css\BlogPage.css" />
@@ -2655,6 +2661,7 @@
     <Content Include="Content\Template\css\ErrorStyle.css" />
     <Content Include="Content\Template\css\Login.css" />
     <Content Include="Content\Template\css\Main.css" />
+    <Content Include="Content\Template\css\Menu.css" />
     <Content Include="Content\Template\css\QuickSellStyle.css" />
     <Content Include="Content\Template\css\snackBar.css" />
     <Content Include="Content\Template\css\Style.css" />
@@ -2667,6 +2674,7 @@
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Content\Template\js\main.js" />
+    <Content Include="Content\Template\js\menu.js" />
     <Content Include="Content\Template\js\moment.min.js" />
     <Content Include="Content\Template\js\popper.js" />
     <Content Include="Content\Template\js\sweetalert.min.js" />
@@ -2701,6 +2709,8 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\Claim.js" />
+    <Content Include="Scripts\ClaimGruop.js" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Scripts\Role.js" />
     <Content Include="Scripts\User.js" />
@@ -2752,9 +2762,17 @@
     <Content Include="Views\Home\AdminHomePage.cshtml" />
     <Content Include="Views\Cars\Carslist.cshtml" />
     <Content Include="Views\Cars\InvoicePfdView.cshtml" />
+    <Content Include="Views\ClaimGroup\Index.cshtml" />
+    <Content Include="Views\ClaimGroup\AddClaimGroup.cshtml" />
+    <Content Include="Views\ClaimGroup\UpdateClaimGroup.cshtml" />
+    <Content Include="Views\Claim\Index.cshtml" />
+    <Content Include="Views\Claim\AddClaim.cshtml" />
+    <Content Include="Views\Claim\UpdateClaim.cshtml" />
     <Content Include="Views\BlogPost\AdminPanel.cshtml" />
     <Content Include="Views\BlogPost\AdminPanelCreate.cshtml" />
     <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\GetMenus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
