@@ -33,6 +33,10 @@
 });
 
 
+$("#btnMenuAdd").on("click", function () {
+    $("#MenuAddModal").modal("show");
+});
+
 function GeneralSweet(Title, Description, Icon) {
     swal(Title, Description, Icon);
 }

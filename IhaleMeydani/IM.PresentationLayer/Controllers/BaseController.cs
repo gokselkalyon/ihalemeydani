@@ -12,8 +12,9 @@ namespace IM.PresentationLayer.Controllers
 {
     public class BaseController : Controller
     {
-        public FirebaseStorageHelper firebaseStorageHelper = Singleton.GetfirebaseStorageHelperinstance();
-        public JsonResultModel jsonResultModel = Singleton.GetjsonResultModelinstance();
-        public IhaleServiceClient IhaleServiceClient = Singleton.GetIhaleinstance();
+        protected List<SelectListItem> SelectListItems = new List<SelectListItem>();
+        protected FirebaseStorageHelper firebaseStorageHelper = Singleton.GetfirebaseStorageHelperinstance();
+        protected JsonResultModel jsonResultModel = Singleton.GetjsonResultModelinstance();
+        protected IhaleServiceClient IhaleServiceClient = Singleton.GetIhaleinstance();
     }
 }

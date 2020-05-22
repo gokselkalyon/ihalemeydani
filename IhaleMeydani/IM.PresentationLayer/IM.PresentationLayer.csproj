@@ -2774,6 +2774,7 @@
     <Content Include="Views\BlogPost\AdminPanelUpdate.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Menu\GetMenus.cshtml" />
+    <Content Include="Views\Menu\MenuAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

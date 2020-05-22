@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using I = IM.PresentationLayer.IhaleWCFService;
 
 namespace IM.PresentationLayer.Controllers
 {
     //[RoutePrefix("Menü")]
     public class MenuController : BaseController
     {
+        List<SelectListItem> _Icons = new List<SelectListItem>();
+
         List<MenuModel> menus = new List<MenuModel>();
+
+
         // GET: Menu
         [Route("Menüler")]
         public ActionResult Index()
@@ -49,6 +54,40 @@ namespace IM.PresentationLayer.Controllers
             jsonResultModel.Icon = "success";
 
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        }
+        public PartialViewResult MenuAdd()
+        {
+            SelectListItems.Clear();
+            _Icons.Clear();
+
+            var _menus = IhaleServiceClient.GetMenus().Select(x => new { x.Id, x.Name }).ToList();
+
+            foreach (var item in _menus)
+            {
+                SelectListItems.Add(new SelectListItem
+                {
+                    Value = item.Id.ToString(),
+                    Text = item.Name
+                });
+            }
+
+            var Icons = IhaleServiceClient.GetIcons().Select(x => new { x.Id, x.Name }).ToList();
+
+            foreach (var item in Icons)
+            {
+                _Icons.Add(new SelectListItem
+                {
+                    Value = item.Id.ToString(),
+                    Text = item.Name
+                });
+            }
+
+
+            TempData["Icons"] = _Icons;
+
+            TempData["Menus"] = SelectListItems;
+
+            return PartialView(new I.Menu());
         }
     }
 }
