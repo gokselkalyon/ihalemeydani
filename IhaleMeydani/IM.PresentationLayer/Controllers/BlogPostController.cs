@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -64,36 +65,25 @@ namespace IM.PresentationLayer.Controllers
             int değer = IhaleServiceClient.UpdataPostModel(postModel);
             return RedirectToAction("", "BlogAdmin");
         }
-        //[HttpPost]
-        //public ActionResult Yeni(PostModel PostModel)
-        //{
-        //    //eğer dosya gelmişse işlemleri yap
-        //    if (Request.Files.Count > 0)
-        //    {
-        //        //Guid nesnesini benzersiz dosya adı oluşturmak için tanımladık ve Replace ile aradaki “-” işaretini atıp yan yana yazma işlemi yaptık.
-        //        string DosyaAdi = Guid.NewGuid().ToString().Replace(“-“, “”);
-        //        //Kaydetceğimiz resmin uzantısını aldık.
-        //        string uzanti = System.IO.Path.GetExtension(Request.Files[0].FileName);
-        //        string TamYolYeri = “~/IM.PresentationLayer\Content\Images\BlogImages\” +DosyaAdi + uzanti;
-        //        //Eklediğimiz Resni Server.MapPath methodu ile Dosya Adıyla birlikte kaydettik.
-        //        Request.Files[0].SaveAs(Server.MapPath(TamYolYeri));
-        //        //Ve veritabanına kayıt için dosya adımızı değişkene aktarıyoruz.
-        //        PostModel.image_path = DosyaAdi + uzanti;
-        //    }
-        //    mv.Post.Add(PostModel);
-        //    mv.SaveChanges();
-        //    return View();
-        //}
-        [HttpPost]
-        public ActionResult ImageUpload(HttpPostedFileBase uploadfile)
-        {
-            if (uploadfile.ContentLength > 0)
-            {
-                string filePath = Path.Combine(Server.MapPath("~/Content/images"), Guid.NewGuid().ToString() + "_" + System.IO.Path.GetFileName(uploadfile.FileName));
-                uploadfile.SaveAs(filePath);
-            }
 
-            return View();
+        [HttpPost]
+        public async Task BlogImage(HttpPostedFileBase file2,PostModel postModel)
+        {
+            if (file2 != null && file2.ContentLength > 0)
+            {
+                var _stream = file2.InputStream;
+                var _name = Guid.NewGuid() + file2.FileName;
+                IhaleServiceClient.AddSubmitAsync(new submit { submit_article = postModel.submit_article });
+                IhaleServiceClient.AddMediumAsync(new medium { image_name = postModel.image_name, image_path = _name, image_subtitle = postModel.image_subtitle, image_title = postModel.image_title });
+                await firebaseStorageHelper.UploadFile(_stream, _name);
+            }
+        }
+        [HttpPost]
+        public async Task<JsonResult> GetFile()
+        {
+            var _value = (string)Session["Image"];
+
+            return Json(await firebaseStorageHelper.GetFile(_value), JsonRequestBehavior.AllowGet);
         }
     }
 }
