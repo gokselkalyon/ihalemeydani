@@ -1,0 +1,73 @@
+﻿@model IM.PresentationLayer.IhaleWCFService.Menu
+
+<div class="modal inmodal" id="MenuUpdateModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-box-open mr-2"></i>Ürün Güncelle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Ajax.BeginForm("MenuUpdateOperation", "Home", FormMethod.Post, new AjaxOptions()
+                {
+                    InsertionMode = InsertionMode.Replace,
+                    HttpMethod = "POST",
+                    OnSuccess = "returnPostJson(data)",
+                    LoadingElementId = "loading-background",
+                    OnComplete = "MenuList()"
+                },
+                new
+                {
+                    @class = "MenuUpdate",
+                    @id = "frmMenuUpdate",
+                    @name = "frmMenuUpdate",
+                    @enctype = "multipart/form-data"
+                }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" value="@Model.Id" name="Id" />
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name)
+                        @Html.EditorFor(model => model.Name, "", new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger error-validate" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description)
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control text-editor", @spellcheck = "false" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger error-validate" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Url)
+                        @Html.EditorFor(model => model.Url, "", new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Url, "", new { @class = "text-danger error-validate" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MenuId)
+                        @Html.DropDownListFor(model => model.MenuId, TempData["Menus"] as List<SelectListItem>, "Menü Seçiniz", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MenuId, "", new { @class = "text-danger error-validate" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IconId)
+                        @Html.DropDownListFor(model => model.IconId, TempData["Icons"] as List<SelectListItem>, "İcon Seçiniz", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.IconId, "", new { @class = "text-danger error-validate" })
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="FormClear('frmMenuUpdate')" id="MenuUpdateClear">
+                    <i class="fa fa-trash mr-1"></i>
+                    Temizle
+                </button>
+                <button type="button" class="btn btn-primary" onclick="FormPost('frmMenuUpdate')" id="MenuUpdateSave">
+                    <i class="fa fa-save mr-1"></i>
+                    Kaydet
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

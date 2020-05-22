@@ -90,6 +90,73 @@ namespace IM.PresentationLayer.Controllers
             return PartialView(new I.Menu());
         }
 
+        [HttpPost]
+        [Route("MenuUpdate/{MenuId}")]
+        public PartialViewResult MenuUpdate(int MenuId)
+        {
+            var _UpdateMenu = IhaleServiceClient.GetMenu(MenuId);
+
+            SelectListItems.Clear();
+            _Icons.Clear();
+
+            var _menus = IhaleServiceClient.GetMenus().Select(x => new { x.Id, x.Name }).ToList();
+
+            foreach (var item in _menus)
+            {
+                if (_UpdateMenu.MenuId == item.Id)
+                {
+                    SelectListItems.Add(new SelectListItem
+                    {
+                        Value = item.Id.ToString(),
+                        Text = item.Name,
+                        Selected = true
+                    });
+                }
+
+                else
+                {
+                    SelectListItems.Add(new SelectListItem
+                    {
+                        Value = item.Id.ToString(),
+                        Text = item.Name
+                    });
+
+                }
+            }
+
+            var Icons = IhaleServiceClient.GetIcons().Select(x => new { x.Id, x.Name }).ToList();
+
+            foreach (var item in Icons)
+            {
+                if (item.Id == _UpdateMenu.IconId)
+                {
+                    _Icons.Add(new SelectListItem
+                    {
+                        Value = item.Id.ToString(),
+                        Text = item.Name,
+                        Selected = true
+                    });
+                }
+                else
+                {
+                    _Icons.Add(new SelectListItem
+                    {
+                        Value = item.Id.ToString(),
+                        Text = item.Name
+                    });
+                }
+            }
+
+
+            TempData["Icons"] = _Icons;
+
+            TempData["Menus"] = SelectListItems;
+
+            return PartialView(_UpdateMenu);
+        }
+
+
+        [HttpPost]
         public JsonResult MenuAddOperation(I.Menu menu)
         {
             jsonResultModel.Title = "Ekleme İşlemi";
@@ -109,7 +176,27 @@ namespace IM.PresentationLayer.Controllers
                 jsonResultModel.Description = "Lütfen eksiksiz doldurun";
             }
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public JsonResult MenuUpdateOperation(I.Menu menu)
+        {
+            jsonResultModel.Title = "Güncelleme İşlemi";
+            jsonResultModel.Modal = "MenuUpdateModal";
 
+            if (ModelState.IsValid)
+            {
+                IhaleServiceClient.UpdateMenu(menu);
+
+                jsonResultModel.Icon = "success";
+                jsonResultModel.Description = "Menü Başarıyla Güncellendi";
+
+            }
+            else
+            {
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Lütfen eksiksiz doldurun";
+            }
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
     }
 }

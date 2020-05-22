@@ -37,6 +37,14 @@ $("#btnMenuAdd").on("click", function () {
     $("#MenuAddModal").modal("show");
 });
 
+$(document).on("click", ".MenuUpdate", function () {
+    var _id = $(this).data("id");
+    $.post("/MenuUpdate", { MenuId: _id }, function (data) {
+        $(".menu-update").html(data);
+        $(".MenuUpdateModal").modal("show");
+    });
+});
+
 function GeneralSweet(Title, Description, Icon) {
     swal(Title, Description, Icon);
 }
