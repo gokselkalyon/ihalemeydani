@@ -20,7 +20,9 @@
             </div>
         </div>
 
-        @Html.Action("GetMenus", "Menu")
+        <div class="menu-list">
+            @Html.Action("GetMenus", "Menu")
+        </div>
 
         <div class="menu-add">
             @Html.Action("MenuAdd", "Menu")

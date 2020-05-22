@@ -89,5 +89,27 @@ namespace IM.PresentationLayer.Controllers
 
             return PartialView(new I.Menu());
         }
+
+        public JsonResult MenuAddOperation(I.Menu menu)
+        {
+            jsonResultModel.Title = "Ekleme İşlemi";
+            jsonResultModel.Modal = "MenuAddModal";
+
+            if (ModelState.IsValid)
+            {
+                IhaleServiceClient.AddMenu(menu);
+
+                jsonResultModel.Icon = "success";
+                jsonResultModel.Description = "Menü Başarıyla Eklendi";
+
+            }
+            else
+            {
+                jsonResultModel.Icon = "error";
+                jsonResultModel.Description = "Lütfen eksiksiz doldurun";
+            }
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+
+        }
     }
 }

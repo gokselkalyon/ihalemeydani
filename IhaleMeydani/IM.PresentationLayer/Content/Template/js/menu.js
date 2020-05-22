@@ -6,7 +6,7 @@
 
     swal({
         title: "Emin misiniz?",
-        text: _menuname + "<strong> Adlı Menü  Silinecek!</strong>",
+        text: _menuname + "<strong> Adlı Menü Silinsin mi ? </strong>",
         type: "warning",
         html: true,
         showCancelButton: true,
@@ -39,4 +39,29 @@ $("#btnMenuAdd").on("click", function () {
 
 function GeneralSweet(Title, Description, Icon) {
     swal(Title, Description, Icon);
+}
+
+
+
+function MenuList() {
+    $.post("/Menu/GetMenus", null, function (data) {
+        $(".menu-list").html(data);
+    });
+}
+
+function FormPost(FormId) {
+    $(document).find("#" + FormId).submit();
+}
+
+function FormClear(FormId) {
+    $(document).find("#" + FormId).trigger("reset");
+}
+
+function returnPostJson(data) {
+
+    if (data.Modal != null) {
+        $("#" + data.Modal).modal("hide");
+    }
+
+    GeneralSweet(data.Title, data.Description, data.Icon);
 }

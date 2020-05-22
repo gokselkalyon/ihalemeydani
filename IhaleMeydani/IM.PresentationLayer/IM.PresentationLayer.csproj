@@ -2712,6 +2712,8 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\Claim.js" />
     <Content Include="Scripts\ClaimGruop.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Scripts\Role.js" />
     <Content Include="Scripts\User.js" />
