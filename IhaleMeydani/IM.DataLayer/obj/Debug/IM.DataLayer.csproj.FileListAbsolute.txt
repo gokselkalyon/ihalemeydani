@@ -87,7 +87,6 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\E
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csprojAssemblyReference.cache
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CoreCompileInputs.cache
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
