@@ -43,7 +43,7 @@ namespace IM.PresentationLayer.Controllers
             var _value = (string)Session["Image"];
 
             return Json(await firebaseStorageHelper.GetFile(_value), JsonRequestBehavior.AllowGet);
-        }
+        } 
         [ihaleClientFilter("AdminPanel.Görüntüle")]
         [Route("Admin")]
         public ActionResult AdminHomePage()

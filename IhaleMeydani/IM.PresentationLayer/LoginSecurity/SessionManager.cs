@@ -1,4 +1,5 @@
 ﻿using IM.DataLayer;
+using IM.PresentationLayer.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -21,17 +22,17 @@ namespace IM.PresentationLayer.LoginSecurity
             }
         }
 
-        public static User CurrentUser
+        public static UserModel CurrentUser
         {
             get
             {
-                if (SessionManager.Current.Get<User>(SessionKey.CurrentUser) == null)
+                if (SessionManager.Current.Get<UserModel>(SessionKey.CurrentUser) == null)
                 {
-                    return new User() { Id = 0};
+                    return new UserModel() { Id = 0};
                 }
                 else
                 {
-                    return SessionManager.Current.Get<User>(SessionKey.CurrentUser);
+                    return SessionManager.Current.Get<UserModel>(SessionKey.CurrentUser);
                 }
             }
         }

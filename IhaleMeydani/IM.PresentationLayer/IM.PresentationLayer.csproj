@@ -200,6 +200,7 @@
     <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Models\RolesModelView.cs" />
     <Compile Include="Models\UserModelView.cs" />
+    <Compile Include="Models\UserRoleModelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signalr\SignalHub.cs" />
     <Compile Include="signalr\Startup.cs" />

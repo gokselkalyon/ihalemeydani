@@ -2,6 +2,8 @@
 using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -69,18 +71,29 @@ namespace IM.PresentationLayer.Controllers
             {
                 if (user.IsDeleted != true)
                 {
+                    List<string> claimText = new List<string>();
+                    var userRole = ihaleClient.GetUserRoles().Where(f => f.User_Id == user.Id).ToList();
+                    var claim = ihaleClient.GetClaims().ToList();
+                    foreach (var item in userRole)
+                    {
+                        var role = ihaleClient.GetRoleClaims().Where(f => f.RoleId == item.Role_Id).ToList();
+                        foreach (var item2 in role)
+                        {
+                            var result =  claim.FirstOrDefault(f => f.Id == item2.ClaimId);
+                            claimText.Add(result.Text);
+                        }
+                    }
                     var p = (from x in ihaleClient.GetUsers()
-                             where x.UserName == ln.Username
                              select new UserModel()
                              {
                                  Name = x.Name,
                                  Username = x.UserName,
-                                 Id = x.Id
+                                 Id = x.Id,
+                                 claimText = claimText, 
                              }).FirstOrDefault();
                     SessionManager.Current.Set(SessionKey.CurrentUser, p);
-                    FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
-                    var query = ihaleClient.GetUserRoles().Where(f => f.User_Id == p.Id).ToList();
-                    foreach (var item in query)
+                    FormsAuthentication.SetAuthCookie(user.Id.ToString(), false); 
+                    foreach (var item in userRole)
                     {
                         var FindRoleName = ihaleClient.GetRoles().Where(f => f.Id == item.Role_Id).FirstOrDefault();
                         if (FindRoleName.Name == "Admin")

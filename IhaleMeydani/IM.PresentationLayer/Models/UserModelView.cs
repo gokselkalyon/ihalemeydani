@@ -1,5 +1,6 @@
 ﻿using IM.DataLayer;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,5 +28,6 @@ namespace IM.PresentationLayer.Models
 		public bool? IsDeleted { get; set; }
 		public string CityName { get; set; }
 		public string Username { get; set; }
+		public List<string> claimText { get; set; }
 	}
 }

@@ -18,16 +18,12 @@ namespace IM.PresentationLayer.LoginSecurity
 
         }
         public void OnAuthentication(AuthenticationContext filterContext)
-        {
-            IhaleServiceClient ihaleClient = new IhaleServiceClient();
+        { 
             var Id = SessionManager.CurrentUser.Id;
-            if (Id != 0  )
-            { 
-                var user = (from ur in ihaleClient.GetUserRoles()
-                            join rc in ihaleClient.GetRoleClaims() on ur.Role_Id equals rc.RoleId
-                            join c in ihaleClient.GetClaims() on rc.ClaimId equals c.Id
-                            where c.Text == _claimText && ur.User_Id == Id
-                            select new { Id = ur.User_Id }).Any();
+            var claim = SessionManager.CurrentUser.claimText;
+            if (Id != 0)
+            {
+                var user = claim.Contains(_claimText);
 
                 if (!user)
                     filterContext.Result = new RedirectResult("/Login");
