@@ -40,36 +40,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
             {
                 try
                 {
-                    CURRENCY cURRENCY = new CURRENCY { NAME = t.NAME };
-                    DB.CURRENCies.Add(cURRENCY);
-                    UserProductModel upm = new UserProductModel
-                    {
-                        isdeleted = false,
-                        date_of_created = DateTime.Now,
-                        UserName = t.UserName,
-                        HardwareDetail = t.HardwareDetail,
-                        CarMakeName = t.CarMakeName,
-                        CarBrandName = t.CarBrandName,
-                        CarVersion = t.CarVersion,
-                        ColorName = t.ColorName,
-                        ColorValue = t.ColorValue,
-                        GearTypeName = t.GearTypeName,
-                        FuelTypeName = t.FuelTypeName,
-                        SegmentName = t.SegmentName,
-                        EngineDisplacement = t.EngineDisplacement,
-                        HP = t.HP,
-                        LicancePlate = t.LicancePlate,
-                        Mileage = t.Mileage,
-                        registrationDate = t.registrationDate,
-                        VIN = t.VIN,
-                        user_id = t.userid,
-                        date_of_updated = DateTime.Now,
-                        published_on = true,
-                        Name = t.NAME,
-                        
-                    };
-                    int upmid = new UserProductConcrete().MultiAdded(upm);
-                    DB.SaveChanges();
+                    
                     AMOUNT_OF_INCREASE aoi = new AMOUNT_OF_INCREASE
                     {
                         ID = t.AoFID,
@@ -77,7 +48,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         INCREASE_PRICE = t.INCREASE_PRICE,
                         MAX_PRICE = t.MAX_PRICE,
                         MIN_PRICE = t.MIN_PRICE,
-                        CURRENCY_ID = cURRENCY.ID,
+                        CURRENCY_ID = t.CURRENCY_ID,
                     };
                     DB.AMOUNT_OF_INCREASE.Add(aoi);
                     DB.SaveChanges();
@@ -87,7 +58,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         ACUTION_SALES_TIME = t.ACUTION_SALES_TIME,
                         AMOUNT_OF_INCREASE_ID = aoi.ID,
                         DATE_OF_UPDATE = DateTime.Now,
-                        PRODUCT_ID = upmid,
+                        PRODUCT_ID = t.userproductID,
                         USER_ID = t.userid,
                     };
                     DB.auctions.Add(auction);
@@ -110,45 +81,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
             {
                 try
                 {
-                    CURRENCY cURRENCY = new CURRENCY { NAME = t.NAME ,ID = t.ID};
-                    DB.CURRENCies.Attach(cURRENCY);
-                    DB.Entry(cURRENCY).State = System.Data.Entity.EntityState.Modified;
-                    UserProductModel upm = new UserProductModel
-                    {
-                        isdeleted = false,
-                        date_of_created = DateTime.Now,
-                        UserName = t.UserName,
-                        HardwareDetail = t.HardwareDetail,
-                        CarMakeName = t.CarMakeName,
-                        CarBrandName = t.CarBrandName,
-                        CarVersion = t.CarVersion,
-                        ColorName = t.ColorName,
-                        ColorValue = t.ColorValue,
-                        GearTypeName = t.GearTypeName,
-                        FuelTypeName = t.FuelTypeName,
-                        SegmentName = t.SegmentName,
-                        EngineDisplacement = t.EngineDisplacement,
-                        HP = t.HP,
-                        LicancePlate = t.LicancePlate,
-                        Mileage = t.Mileage,
-                        registrationDate = t.registrationDate,
-                        VIN = t.VIN,
-                        user_id = t.userid,
-                        date_of_updated = DateTime.Now,
-                        published_on = true,
-                        CarDetailId =t.CarDetailId,
-                        CarHardwareDetailsId = t.CarHardwareDetailsId,
-                        CarBrandId=t.CarBrandId,
-                        CarMakeId=t.CarMakeId,
-                        CarTechnicalDetailId = t.CarTechnicalDetailId,
-                        ColorId = t.ColorId,
-                        FuelTypeId = t.FuelTypeId ,
-                        GearTypeId= t.GearTypeId,
-                        SegmentId = t.SegmentId,
-                        id = t.userproductID
-                    };
-                    int upmid = new UserProductConcrete().Multiupdate(upm);
-                    DB.SaveChanges();
+                   
                     AMOUNT_OF_INCREASE aoi = new AMOUNT_OF_INCREASE
                     {
                         ID = t.AoFID,
@@ -156,7 +89,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         INCREASE_PRICE = t.INCREASE_PRICE,
                         MAX_PRICE = t.MAX_PRICE,
                         MIN_PRICE = t.MIN_PRICE,
-                        CURRENCY_ID = cURRENCY.ID,
+                        CURRENCY_ID = t.CURRENCY_ID,
                         UPDATED_PERSON_ID = t.userproductID
                     };
                     DB.AMOUNT_OF_INCREASE.Attach(aoi);
@@ -168,7 +101,7 @@ namespace IM.DataAccessLayer.Concrete.EFConcrete
                         ACUTION_SALES_TIME = t.ACUTION_SALES_TIME,
                         AMOUNT_OF_INCREASE_ID = aoi.ID,
                         DATE_OF_UPDATE = DateTime.Now,
-                        PRODUCT_ID = upmid,
+                        PRODUCT_ID = t.userproductID,
                         USER_ID = t.userid,
                     };
                     DB.auctions.Attach(auction);
