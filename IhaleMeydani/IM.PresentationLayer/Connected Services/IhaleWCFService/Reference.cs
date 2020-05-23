@@ -5150,27 +5150,30 @@ namespace IM.PresentationLayer.IhaleWCFService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="actionuser", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Contact", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer")]
     [System.SerializableAttribute()]
-    public partial class actionuser : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Contact : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> DATE_OF_UPDATEField;
+        private string AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
+        private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> USER_IDField;
+        private System.Nullable<int> FaksField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> auction_idField;
+        private string GoogleMapUrlField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<decimal> bidField;
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelefonField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -5183,207 +5186,79 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> DATE_OF_UPDATE {
+        public string Address {
             get {
-                return this.DATE_OF_UPDATEField;
+                return this.AddressField;
             }
             set {
-                if ((this.DATE_OF_UPDATEField.Equals(value) != true)) {
-                    this.DATE_OF_UPDATEField = value;
-                    this.RaisePropertyChanged("DATE_OF_UPDATE");
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
+        public string Email {
             get {
-                return this.IDField;
+                return this.EmailField;
             }
             set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> USER_ID {
+        public System.Nullable<int> Faks {
             get {
-                return this.USER_IDField;
+                return this.FaksField;
             }
             set {
-                if ((this.USER_IDField.Equals(value) != true)) {
-                    this.USER_IDField = value;
-                    this.RaisePropertyChanged("USER_ID");
+                if ((this.FaksField.Equals(value) != true)) {
+                    this.FaksField = value;
+                    this.RaisePropertyChanged("Faks");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> auction_id {
+        public string GoogleMapUrl {
             get {
-                return this.auction_idField;
+                return this.GoogleMapUrlField;
             }
             set {
-                if ((this.auction_idField.Equals(value) != true)) {
-                    this.auction_idField = value;
-                    this.RaisePropertyChanged("auction_id");
+                if ((object.ReferenceEquals(this.GoogleMapUrlField, value) != true)) {
+                    this.GoogleMapUrlField = value;
+                    this.RaisePropertyChanged("GoogleMapUrl");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> bid {
+        public int Id {
             get {
-                return this.bidField;
+                return this.IdField;
             }
             set {
-                if ((this.bidField.Equals(value) != true)) {
-                    this.bidField = value;
-                    this.RaisePropertyChanged("bid");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ActionUserModel", Namespace="http://schemas.datacontract.org/2004/07/IM.DataLayer.Model")]
-    [System.SerializableAttribute()]
-    public partial class ActionUserModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> DATE_OF_UPDATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsDeletedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> USER_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> auction_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal bidField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> DATE_OF_UPDATE {
-            get {
-                return this.DATE_OF_UPDATEField;
-            }
-            set {
-                if ((this.DATE_OF_UPDATEField.Equals(value) != true)) {
-                    this.DATE_OF_UPDATEField = value;
-                    this.RaisePropertyChanged("DATE_OF_UPDATE");
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
+        public string Telefon {
             get {
-                return this.IDField;
+                return this.TelefonField;
             }
             set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsDeleted {
-            get {
-                return this.IsDeletedField;
-            }
-            set {
-                if ((this.IsDeletedField.Equals(value) != true)) {
-                    this.IsDeletedField = value;
-                    this.RaisePropertyChanged("IsDeleted");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> USER_ID {
-            get {
-                return this.USER_IDField;
-            }
-            set {
-                if ((this.USER_IDField.Equals(value) != true)) {
-                    this.USER_IDField = value;
-                    this.RaisePropertyChanged("USER_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> auction_id {
-            get {
-                return this.auction_idField;
-            }
-            set {
-                if ((this.auction_idField.Equals(value) != true)) {
-                    this.auction_idField = value;
-                    this.RaisePropertyChanged("auction_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal bid {
-            get {
-                return this.bidField;
-            }
-            set {
-                if ((this.bidField.Equals(value) != true)) {
-                    this.bidField = value;
-                    this.RaisePropertyChanged("bid");
+                if ((object.ReferenceEquals(this.TelefonField, value) != true)) {
+                    this.TelefonField = value;
+                    this.RaisePropertyChanged("Telefon");
                 }
             }
         }
@@ -7700,12 +7575,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateUserType", ReplyAction="http://tempuri.org/IIhaleService/UpdateUserTypeResponse")]
         System.Threading.Tasks.Task UpdateUserTypeAsync(IM.PresentationLayer.IhaleWCFService.UserType entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddMedium", ReplyAction="http://tempuri.org/IIhaleService/AddMediumResponse")]
-        void AddMedium(IM.PresentationLayer.IhaleWCFService.medium entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddMedium", ReplyAction="http://tempuri.org/IIhaleService/AddMediumResponse")]
-        System.Threading.Tasks.Task AddMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveMedium", ReplyAction="http://tempuri.org/IIhaleService/RemoveMediumResponse")]
         void RemoveMedium(int Id);
         
@@ -7723,6 +7592,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetMenus", ReplyAction="http://tempuri.org/IIhaleService/GetMenusResponse")]
         System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Menu[]> GetMenusAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/OperationMenu", ReplyAction="http://tempuri.org/IIhaleService/OperationMenuResponse")]
+        IM.PresentationLayer.IhaleWCFService.Menu[] OperationMenu(int MenuId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/OperationMenu", ReplyAction="http://tempuri.org/IIhaleService/OperationMenuResponse")]
+        System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Menu[]> OperationMenuAsync(int MenuId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/SubMenu", ReplyAction="http://tempuri.org/IIhaleService/SubMenuResponse")]
         IM.PresentationLayer.IhaleWCFService.Menu[] SubMenu(int id);
@@ -8209,12 +8084,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateTag", ReplyAction="http://tempuri.org/IIhaleService/UpdateTagResponse")]
         System.Threading.Tasks.Task UpdateTagAsync(IM.PresentationLayer.IhaleWCFService.tag entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddClaim", ReplyAction="http://tempuri.org/IIhaleService/AddClaimResponse")]
-        void AddClaim(IM.PresentationLayer.IhaleWCFService.Claim entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddClaim", ReplyAction="http://tempuri.org/IIhaleService/AddClaimResponse")]
-        System.Threading.Tasks.Task AddClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveClaim", ReplyAction="http://tempuri.org/IIhaleService/RemoveClaimResponse")]
         void RemoveClaim(int Id);
@@ -8720,6 +8589,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetMedium", ReplyAction="http://tempuri.org/IIhaleService/GetMediumResponse")]
         System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.medium> GetMediumAsync(int Id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddMedium", ReplyAction="http://tempuri.org/IIhaleService/AddMediumResponse")]
+        void AddMedium(IM.PresentationLayer.IhaleWCFService.medium entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddMedium", ReplyAction="http://tempuri.org/IIhaleService/AddMediumResponse")]
+        System.Threading.Tasks.Task AddMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/toplama", ReplyAction="http://tempuri.org/IIhaleService/toplamaResponse")]
         string toplama(int x, int y);
         
@@ -8774,41 +8649,35 @@ namespace IM.PresentationLayer.IhaleWCFService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateuserProductmodel", ReplyAction="http://tempuri.org/IIhaleService/UpdateuserProductmodelResponse")]
         System.Threading.Tasks.Task<int> UpdateuserProductmodelAsync(IM.PresentationLayer.IhaleWCFService.UserProductModel entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Getactionusers", ReplyAction="http://tempuri.org/IIhaleService/GetactionusersResponse")]
-        IM.PresentationLayer.IhaleWCFService.actionuser[] Getactionusers();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetContacts", ReplyAction="http://tempuri.org/IIhaleService/GetContactsResponse")]
+        IM.PresentationLayer.IhaleWCFService.Contact[] GetContacts();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Getactionusers", ReplyAction="http://tempuri.org/IIhaleService/GetactionusersResponse")]
-        System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.actionuser[]> GetactionusersAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetContacts", ReplyAction="http://tempuri.org/IIhaleService/GetContactsResponse")]
+        System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Contact[]> GetContactsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Getactionuser", ReplyAction="http://tempuri.org/IIhaleService/GetactionuserResponse")]
-        IM.PresentationLayer.IhaleWCFService.actionuser Getactionuser(int Id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetContact", ReplyAction="http://tempuri.org/IIhaleService/GetContactResponse")]
+        IM.PresentationLayer.IhaleWCFService.Contact GetContact(int Id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Getactionuser", ReplyAction="http://tempuri.org/IIhaleService/GetactionuserResponse")]
-        System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.actionuser> GetactionuserAsync(int Id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetContact", ReplyAction="http://tempuri.org/IIhaleService/GetContactResponse")]
+        System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Contact> GetContactAsync(int Id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/actionUserModels", ReplyAction="http://tempuri.org/IIhaleService/actionUserModelsResponse")]
-        IM.PresentationLayer.IhaleWCFService.ActionUserModel[] actionUserModels();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddContact", ReplyAction="http://tempuri.org/IIhaleService/AddContactResponse")]
+        void AddContact(IM.PresentationLayer.IhaleWCFService.Contact entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/actionUserModels", ReplyAction="http://tempuri.org/IIhaleService/actionUserModelsResponse")]
-        System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.ActionUserModel[]> actionUserModelsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddContact", ReplyAction="http://tempuri.org/IIhaleService/AddContactResponse")]
+        System.Threading.Tasks.Task AddContactAsync(IM.PresentationLayer.IhaleWCFService.Contact entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Addactionuser", ReplyAction="http://tempuri.org/IIhaleService/AddactionuserResponse")]
-        void Addactionuser(IM.PresentationLayer.IhaleWCFService.actionuser entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveContact", ReplyAction="http://tempuri.org/IIhaleService/RemoveContactResponse")]
+        void RemoveContact(int Id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Addactionuser", ReplyAction="http://tempuri.org/IIhaleService/AddactionuserResponse")]
-        System.Threading.Tasks.Task AddactionuserAsync(IM.PresentationLayer.IhaleWCFService.actionuser entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/RemoveContact", ReplyAction="http://tempuri.org/IIhaleService/RemoveContactResponse")]
+        System.Threading.Tasks.Task RemoveContactAsync(int Id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Removeactionuser", ReplyAction="http://tempuri.org/IIhaleService/RemoveactionuserResponse")]
-        void Removeactionuser(int Id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateContact", ReplyAction="http://tempuri.org/IIhaleService/UpdateContactResponse")]
+        void UpdateContact(IM.PresentationLayer.IhaleWCFService.Contact entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Removeactionuser", ReplyAction="http://tempuri.org/IIhaleService/RemoveactionuserResponse")]
-        System.Threading.Tasks.Task RemoveactionuserAsync(int Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Updateactionuser", ReplyAction="http://tempuri.org/IIhaleService/UpdateactionuserResponse")]
-        void Updateactionuser(IM.PresentationLayer.IhaleWCFService.actionuser entity);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Updateactionuser", ReplyAction="http://tempuri.org/IIhaleService/UpdateactionuserResponse")]
-        System.Threading.Tasks.Task UpdateactionuserAsync(IM.PresentationLayer.IhaleWCFService.actionuser entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/UpdateContact", ReplyAction="http://tempuri.org/IIhaleService/UpdateContactResponse")]
+        System.Threading.Tasks.Task UpdateContactAsync(IM.PresentationLayer.IhaleWCFService.Contact entity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/Getprivateauctions", ReplyAction="http://tempuri.org/IIhaleService/GetprivateauctionsResponse")]
         IM.PresentationLayer.IhaleWCFService.private_auction[] Getprivateauctions();
@@ -9229,6 +9098,12 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/GetClaim", ReplyAction="http://tempuri.org/IIhaleService/GetClaimResponse")]
         System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Claim> GetClaimAsync(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddClaim", ReplyAction="http://tempuri.org/IIhaleService/AddClaimResponse")]
+        void AddClaim(IM.PresentationLayer.IhaleWCFService.Claim entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IIhaleService/AddClaim", ReplyAction="http://tempuri.org/IIhaleService/AddClaimResponse")]
+        System.Threading.Tasks.Task AddClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -9498,14 +9373,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.UpdateUserTypeAsync(entity);
         }
         
-        public void AddMedium(IM.PresentationLayer.IhaleWCFService.medium entity) {
-            base.Channel.AddMedium(entity);
-        }
-        
-        public System.Threading.Tasks.Task AddMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity) {
-            return base.Channel.AddMediumAsync(entity);
-        }
-        
         public void RemoveMedium(int Id) {
             base.Channel.RemoveMedium(Id);
         }
@@ -9528,6 +9395,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Menu[]> GetMenusAsync() {
             return base.Channel.GetMenusAsync();
+        }
+        
+        public IM.PresentationLayer.IhaleWCFService.Menu[] OperationMenu(int MenuId) {
+            return base.Channel.OperationMenu(MenuId);
+        }
+        
+        public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Menu[]> OperationMenuAsync(int MenuId) {
+            return base.Channel.OperationMenuAsync(MenuId);
         }
         
         public IM.PresentationLayer.IhaleWCFService.Menu[] SubMenu(int id) {
@@ -10176,14 +10051,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task UpdateTagAsync(IM.PresentationLayer.IhaleWCFService.tag entity) {
             return base.Channel.UpdateTagAsync(entity);
-        }
-        
-        public void AddClaim(IM.PresentationLayer.IhaleWCFService.Claim entity) {
-            base.Channel.AddClaim(entity);
-        }
-        
-        public System.Threading.Tasks.Task AddClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity) {
-            return base.Channel.AddClaimAsync(entity);
         }
         
         public void RemoveClaim(int Id) {
@@ -10858,6 +10725,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.GetMediumAsync(Id);
         }
         
+        public void AddMedium(IM.PresentationLayer.IhaleWCFService.medium entity) {
+            base.Channel.AddMedium(entity);
+        }
+        
+        public System.Threading.Tasks.Task AddMediumAsync(IM.PresentationLayer.IhaleWCFService.medium entity) {
+            return base.Channel.AddMediumAsync(entity);
+        }
+        
         public string toplama(int x, int y) {
             return base.Channel.toplama(x, y);
         }
@@ -10930,52 +10805,44 @@ namespace IM.PresentationLayer.IhaleWCFService {
             return base.Channel.UpdateuserProductmodelAsync(entity);
         }
         
-        public IM.PresentationLayer.IhaleWCFService.actionuser[] Getactionusers() {
-            return base.Channel.Getactionusers();
+        public IM.PresentationLayer.IhaleWCFService.Contact[] GetContacts() {
+            return base.Channel.GetContacts();
         }
         
-        public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.actionuser[]> GetactionusersAsync() {
-            return base.Channel.GetactionusersAsync();
+        public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Contact[]> GetContactsAsync() {
+            return base.Channel.GetContactsAsync();
         }
         
-        public IM.PresentationLayer.IhaleWCFService.actionuser Getactionuser(int Id) {
-            return base.Channel.Getactionuser(Id);
+        public IM.PresentationLayer.IhaleWCFService.Contact GetContact(int Id) {
+            return base.Channel.GetContact(Id);
         }
         
-        public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.actionuser> GetactionuserAsync(int Id) {
-            return base.Channel.GetactionuserAsync(Id);
+        public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Contact> GetContactAsync(int Id) {
+            return base.Channel.GetContactAsync(Id);
         }
         
-        public IM.PresentationLayer.IhaleWCFService.ActionUserModel[] actionUserModels() {
-            return base.Channel.actionUserModels();
+        public void AddContact(IM.PresentationLayer.IhaleWCFService.Contact entity) {
+            base.Channel.AddContact(entity);
         }
         
-        public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.ActionUserModel[]> actionUserModelsAsync() {
-            return base.Channel.actionUserModelsAsync();
+        public System.Threading.Tasks.Task AddContactAsync(IM.PresentationLayer.IhaleWCFService.Contact entity) {
+            return base.Channel.AddContactAsync(entity);
         }
         
-        public void Addactionuser(IM.PresentationLayer.IhaleWCFService.actionuser entity) {
-            base.Channel.Addactionuser(entity);
+        public void RemoveContact(int Id) {
+            base.Channel.RemoveContact(Id);
         }
         
-        public System.Threading.Tasks.Task AddactionuserAsync(IM.PresentationLayer.IhaleWCFService.actionuser entity) {
-            return base.Channel.AddactionuserAsync(entity);
+        public System.Threading.Tasks.Task RemoveContactAsync(int Id) {
+            return base.Channel.RemoveContactAsync(Id);
         }
         
-        public void Removeactionuser(int Id) {
-            base.Channel.Removeactionuser(Id);
+        public void UpdateContact(IM.PresentationLayer.IhaleWCFService.Contact entity) {
+            base.Channel.UpdateContact(entity);
         }
         
-        public System.Threading.Tasks.Task RemoveactionuserAsync(int Id) {
-            return base.Channel.RemoveactionuserAsync(Id);
-        }
-        
-        public void Updateactionuser(IM.PresentationLayer.IhaleWCFService.actionuser entity) {
-            base.Channel.Updateactionuser(entity);
-        }
-        
-        public System.Threading.Tasks.Task UpdateactionuserAsync(IM.PresentationLayer.IhaleWCFService.actionuser entity) {
-            return base.Channel.UpdateactionuserAsync(entity);
+        public System.Threading.Tasks.Task UpdateContactAsync(IM.PresentationLayer.IhaleWCFService.Contact entity) {
+            return base.Channel.UpdateContactAsync(entity);
         }
         
         public IM.PresentationLayer.IhaleWCFService.private_auction[] Getprivateauctions() {
@@ -11536,6 +11403,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         
         public System.Threading.Tasks.Task<IM.PresentationLayer.IhaleWCFService.Claim> GetClaimAsync(int Id) {
             return base.Channel.GetClaimAsync(Id);
+        }
+        
+        public void AddClaim(IM.PresentationLayer.IhaleWCFService.Claim entity) {
+            base.Channel.AddClaim(entity);
+        }
+        
+        public System.Threading.Tasks.Task AddClaimAsync(IM.PresentationLayer.IhaleWCFService.Claim entity) {
+            return base.Channel.AddClaimAsync(entity);
         }
     }
 }

@@ -210,13 +210,13 @@
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\IhaleService1.wsdl" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\IhaleWCFService\IhaleService31.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\IhaleWCFService\IhaleService1.disco" />
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.AMOUNT_OF_INCREASE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -382,9 +382,6 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService34.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ActionUserModel.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -395,6 +392,15 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserAuctionModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\IhaleWCFService\IhaleService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Contact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PostModel2.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">

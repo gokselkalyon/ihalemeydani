@@ -14,7 +14,7 @@ namespace IM.ServiceLayer
     public interface IIhaleService
     {
         [OperationContract]
-        string toplama(int x ,int y);
+        string toplama(int x, int y);
 
         #region userproduct
         [OperationContract]
@@ -75,7 +75,7 @@ namespace IM.ServiceLayer
 
         #endregion
 
-      
+
         #region Log
         [OperationContract]
         List<Log> GetLogs();
@@ -601,6 +601,9 @@ namespace IM.ServiceLayer
         #region Menu
         [OperationContract]
         List<Menu> GetMenus();
+
+        [OperationContract]
+        List<IM.DataLayer.Menu> OperationMenu(int MenuId);
 
         [OperationContract]
         List<Menu> SubMenu(int id);

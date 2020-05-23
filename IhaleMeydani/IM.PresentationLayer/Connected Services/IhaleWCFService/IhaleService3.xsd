@@ -634,22 +634,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="userproduct" nillable="true" type="tns:userproduct" />
-  <xs:complexType name="ArrayOfactionuser">
+  <xs:complexType name="ArrayOfContact">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="actionuser" nillable="true" type="tns:actionuser" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="tns:Contact" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfactionuser" nillable="true" type="tns:ArrayOfactionuser" />
-  <xs:complexType name="actionuser">
+  <xs:element name="ArrayOfContact" nillable="true" type="tns:ArrayOfContact" />
+  <xs:complexType name="Contact">
     <xs:sequence>
-      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="ID" type="xs:int" />
-      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="auction_id" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="bid" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Faks" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GoogleMapUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefon" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="actionuser" nillable="true" type="tns:actionuser" />
+  <xs:element name="Contact" nillable="true" type="tns:Contact" />
   <xs:complexType name="ArrayOfprivate_auction">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="private_auction" nillable="true" type="tns:private_auction" />

@@ -91,4 +91,3 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\I
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.pdb
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.DataLayer\obj\Debug\IM.DataLayer.csprojAssemblyReference.cache

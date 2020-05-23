@@ -2505,6 +2505,11 @@ namespace IM.ServiceLayer
             Create<Contact>().Update(entity);
         }
 
+        public List<Menu> OperationMenu(int MenuId)
+        {
+            return Create<Menu>().GetFilter(x => x.Id != MenuId).ToList();
+        }
+
 
 
         #endregion

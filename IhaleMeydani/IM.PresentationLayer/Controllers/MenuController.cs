@@ -87,7 +87,7 @@ namespace IM.PresentationLayer.Controllers
 
             TempData["Menus"] = SelectListItems;
 
-            return PartialView(new I.Menu());
+            return PartialView(new MenuModel());
         }
 
         [HttpPost]
@@ -99,7 +99,7 @@ namespace IM.PresentationLayer.Controllers
             SelectListItems.Clear();
             _Icons.Clear();
 
-            var _menus = IhaleServiceClient.GetMenus().Select(x => new { x.Id, x.Name }).ToList();
+            var _menus = IhaleServiceClient.OperationMenu(MenuId).Select(x => new { x.Id, x.Name }).ToList();
 
             foreach (var item in _menus)
             {
@@ -157,14 +157,21 @@ namespace IM.PresentationLayer.Controllers
 
 
         [HttpPost]
-        public JsonResult MenuAddOperation(I.Menu menu)
+        public JsonResult MenuAddOperation(MenuModel menuModel)
         {
             jsonResultModel.Title = "Ekleme İşlemi";
             jsonResultModel.Modal = "MenuAddModal";
 
             if (ModelState.IsValid)
             {
-                IhaleServiceClient.AddMenu(menu);
+                IhaleServiceClient.AddMenu(new I.Menu
+                {
+                    Name = menuModel.Name,
+                    IconId = int.Parse(menuModel.IconName),
+                    Url = menuModel.Url,
+                    MenuId = int.Parse(menuModel.SubMenu),
+                    Description = menuModel.Description
+                });
 
                 jsonResultModel.Icon = "success";
                 jsonResultModel.Description = "Menü Başarıyla Eklendi";
