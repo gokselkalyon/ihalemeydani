@@ -73,8 +73,8 @@ namespace IM.ServiceLayer
         [OperationContract]
         void Updateprivateauction(private_auction entity);
 
-        #endregion
 
+        #endregion
 
         #region Log
         [OperationContract]
@@ -130,6 +130,28 @@ namespace IM.ServiceLayer
         #endregion
 
 
+        #region auctionuser
+        [OperationContract]
+        List<actionuser> Getactionusers();
+
+        [OperationContract]
+        actionuser Getactionuser(int Id);
+
+        [OperationContract]
+        List<ActionUserModel> actionUserModels();
+
+        [OperationContract]
+        void Addactionuser(actionuser entity);
+
+        [OperationContract]
+        void Removeactionuser(int Id);
+
+        [OperationContract]
+        void Updateactionuser(actionuser entity);
+        #endregion
+
+
+
         #region AMOUNT_OF_INCREASE
         [OperationContract]
         List<AMOUNT_OF_INCREASE> GetsAmountofIncrease();
@@ -157,6 +179,7 @@ namespace IM.ServiceLayer
         [OperationContract]
         void AddAuction(auction entity);
 
+
         [OperationContract]
         void RemoveAuction(int Id);
 
@@ -169,6 +192,8 @@ namespace IM.ServiceLayer
         int AddUserAuctionModel(UserAuctionModel entity);
         [OperationContract]
         int UpadateUserAuctionModel(UserAuctionModel entity);
+
+
         #endregion
 
         #region bank

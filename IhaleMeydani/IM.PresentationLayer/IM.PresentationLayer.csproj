@@ -209,14 +209,12 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService.disco" />
     <None Include="Connected Services\IhaleWCFService\configuration91.svcinfo" />
     <None Include="Connected Services\IhaleWCFService\configuration.svcinfo" />
-    <None Include="Connected Services\IhaleWCFService\IhaleService1.wsdl" />
-    <None Include="Connected Services\IhaleWCFService\IhaleService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IhaleWCFService\IhaleService31.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IhaleWCFService\IhaleService1.disco" />
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.actionuser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ActionUserModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.AMOUNT_OF_INCREASE.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -247,6 +245,9 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Claim.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Color.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -254,6 +255,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.company_type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Contact.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.country.datasource">
@@ -295,10 +299,10 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Log.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.LogInfo1.datasource">
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.LogInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.LogStatus1.datasource">
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.LogStatus.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.medium.datasource">
@@ -317,6 +321,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Post.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PostModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PRICEBOT.datasource">
@@ -364,43 +371,19 @@
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.userproduct1.datasource">
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserAuctionModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserProductModel1.datasource">
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.userproduct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserProductModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserRole.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\IhaleWCFService\IhaleService32.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IhaleWCFService\IhaleService34.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.ClaimGroup.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\IhaleWCFService\IhaleService35.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IhaleWCFService\IhaleService36.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.UserAuctionModel1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\IhaleWCFService\IhaleService4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.Contact.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\IhaleWCFService\IM.PresentationLayer.IhaleWCFService.PostModel2.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\IhaleWCFService\Reference.svcmap">
@@ -2692,16 +2675,6 @@
     <Content Include="Content\Template\webfonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Connected Services\IhaleWCFService\IhaleService.wsdl" />
-    <None Include="Connected Services\IhaleWCFService\IhaleService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IhaleWCFService\IhaleService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IhaleWCFService\IhaleService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont-1.eot" />
     <Content Include="Content\Template\autoshop\assets\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\Template\js\jquery.signalR-2.4.1.js" />
@@ -3028,6 +3001,22 @@
     <Content Include="Content\Template\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\Template\webfonts\fa-solid-900.woff" />
     <Content Include="Content\Template\webfonts\fa-solid-900.woff2" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService.wsdl" />
+    <None Include="Connected Services\IhaleWCFService\IhaleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IhaleWCFService\IhaleService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

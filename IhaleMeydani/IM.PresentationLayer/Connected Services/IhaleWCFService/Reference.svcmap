@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="156ced95-29f1-4824-a322-86cc47f5efb2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6451c3b7-97d5-47eb-968c-ecee06ae7cbd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,13 +22,13 @@
     <MetadataSource Address="http://localhost:8081/IhaleService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="IhaleService.wsdl" MetadataType="Wsdl" ID="45819b88-48ea-44a9-a8f2-c70dffdfdbb4" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?wsdl" />
-    <MetadataFile FileName="IhaleService.xsd" MetadataType="Schema" ID="d1daf591-2686-4094-b322-d9dcdfd0526a" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd4" />
-    <MetadataFile FileName="IhaleService.disco" MetadataType="Disco" ID="bc1baeb1-1ad5-4f94-bb20-51f67cb0918b" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?disco" />
-    <MetadataFile FileName="IhaleService1.xsd" MetadataType="Schema" ID="dd03276b-50d6-409d-a14c-a9cf17dd3353" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd0" />
-    <MetadataFile FileName="IhaleService2.xsd" MetadataType="Schema" ID="ec6434bc-bdc3-4959-a8dd-b2c889e0adaa" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd1" />
-    <MetadataFile FileName="IhaleService3.xsd" MetadataType="Schema" ID="c6af4458-e15d-43ff-8a03-cd8cd2c68c7a" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd2" />
-    <MetadataFile FileName="IhaleService4.xsd" MetadataType="Schema" ID="45874aa9-7e60-4bce-a134-c56d82bcc5df" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="IhaleService.wsdl" MetadataType="Wsdl" ID="105542d4-a90d-4bdc-af31-ff783614885e" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?wsdl" />
+    <MetadataFile FileName="IhaleService.xsd" MetadataType="Schema" ID="718155b6-1801-4052-bb05-4e7c1aec5356" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd4" />
+    <MetadataFile FileName="IhaleService.disco" MetadataType="Disco" ID="75948a6a-860d-4c08-b7cd-c49195d8505a" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?disco" />
+    <MetadataFile FileName="IhaleService1.xsd" MetadataType="Schema" ID="321b4d61-e15c-4189-a92b-3ac0efce213e" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="IhaleService2.xsd" MetadataType="Schema" ID="444838c7-b394-413b-bf61-dabc468593c0" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IhaleService3.xsd" MetadataType="Schema" ID="7243e8fc-c594-40e8-aeef-f22beb2278c2" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="IhaleService4.xsd" MetadataType="Schema" ID="0723459f-0521-4009-a5d5-f35e5fa54334" SourceId="1" SourceUrl="http://localhost:8081/IhaleService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

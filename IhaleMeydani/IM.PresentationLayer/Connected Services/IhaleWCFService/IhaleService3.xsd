@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IM.DataLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IM.DataLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="sysdiagram">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="definition" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="diagram_id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="principal_id" type="xs:int" />
+      <xs:element minOccurs="0" name="version" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sysdiagram" nillable="true" type="tns:sysdiagram" />
+  <xs:complexType name="ArrayOftag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tag" nillable="true" type="tns:tag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftag" nillable="true" type="tns:ArrayOftag" />
+  <xs:complexType name="tag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tag_id" type="xs:int" />
+      <xs:element minOccurs="0" name="tag_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tag" nillable="true" type="tns:tag" />
   <xs:complexType name="ArrayOftag_post">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="tag_post" nillable="true" type="tns:tag_post" />
@@ -96,6 +119,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UserType" nillable="true" type="tns:UserType" />
+  <xs:complexType name="Image">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="İmage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="İmagesId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Image" nillable="true" type="tns:Image" />
+  <xs:complexType name="ArrayOfmedium">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="medium" nillable="true" type="tns:medium" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmedium" nillable="true" type="tns:ArrayOfmedium" />
   <xs:complexType name="medium">
     <xs:sequence>
       <xs:element minOccurs="0" name="id" type="xs:int" />
@@ -314,29 +351,21 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfsysdiagram" nillable="true" type="tns:ArrayOfsysdiagram" />
-  <xs:complexType name="sysdiagram">
+  <xs:complexType name="city">
     <xs:sequence>
-      <xs:element minOccurs="0" name="definition" nillable="true" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="diagram_id" type="xs:int" />
-      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="principal_id" type="xs:int" />
-      <xs:element minOccurs="0" name="version" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="city_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="plate_code" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="sysdiagram" nillable="true" type="tns:sysdiagram" />
-  <xs:complexType name="ArrayOftag">
+  <xs:element name="city" nillable="true" type="tns:city" />
+  <xs:complexType name="ArrayOfClaim">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="tag" nillable="true" type="tns:tag" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Claim" nillable="true" type="tns:Claim" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOftag" nillable="true" type="tns:ArrayOftag" />
-  <xs:complexType name="tag">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="tag_id" type="xs:int" />
-      <xs:element minOccurs="0" name="tag_name" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="tag" nillable="true" type="tns:tag" />
+  <xs:element name="ArrayOfClaim" nillable="true" type="tns:ArrayOfClaim" />
   <xs:complexType name="Claim">
     <xs:sequence>
       <xs:element minOccurs="0" name="ClaimGroupId" nillable="true" type="xs:int" />
@@ -600,20 +629,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfImage" nillable="true" type="tns:ArrayOfImage" />
-  <xs:complexType name="Image">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CarId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="İmage" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="İmagesId" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Image" nillable="true" type="tns:Image" />
-  <xs:complexType name="ArrayOfmedium">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="medium" nillable="true" type="tns:medium" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfmedium" nillable="true" type="tns:ArrayOfmedium" />
   <xs:complexType name="ArrayOfuserproduct">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="userproduct" nillable="true" type="tns:userproduct" />
@@ -717,6 +732,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LogStatus" nillable="true" type="tns:LogStatus" />
+  <xs:complexType name="ArrayOfactionuser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="actionuser" nillable="true" type="tns:actionuser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfactionuser" nillable="true" type="tns:ArrayOfactionuser" />
+  <xs:complexType name="actionuser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="auction_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="bid" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="actionuser" nillable="true" type="tns:actionuser" />
   <xs:complexType name="ArrayOfAMOUNT_OF_INCREASE">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="AMOUNT_OF_INCREASE" nillable="true" type="tns:AMOUNT_OF_INCREASE" />
@@ -854,19 +885,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfcity" nillable="true" type="tns:ArrayOfcity" />
-  <xs:complexType name="city">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="city_name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="country_id" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="plate_code" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="city" nillable="true" type="tns:city" />
-  <xs:complexType name="ArrayOfClaim">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Claim" nillable="true" type="tns:Claim" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfClaim" nillable="true" type="tns:ArrayOfClaim" />
 </xs:schema>
