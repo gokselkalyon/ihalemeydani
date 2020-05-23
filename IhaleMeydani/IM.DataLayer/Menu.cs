@@ -11,14 +11,31 @@ namespace IM.DataLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Menu
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Required(ErrorMessage ="Menü ismi gereklidir.")]
+        [MinLength(5,ErrorMessage ="Menü ismi en az 5 karakterden oluþmalýdýr")]
+        [MaxLength(15,ErrorMessage ="Menü ismi en fazla 15 karakterden oluþmalýdýr")]
+        [Display(Name ="Menü Adý")]
         public string Name { get; set; }
+        [Display(Name = "Ýcon")]
+        [ForeignKey("IconId")]
         public Nullable<int> IconId { get; set; }
+        [Display(Name = "Menü Açýklamasý")]
         public string Description { get; set; }
+        [Display(Name = "Üst Menü")]
+        [ForeignKey("MenuId")]
         public Nullable<int> MenuId { get; set; }
+        [Required(ErrorMessage = "Menü Url gereklidir.")]
+        [MinLength(5, ErrorMessage = "Menü url'i en az 5 karakterden oluþmalýdýr")]
+        [MaxLength(15, ErrorMessage = "Menü url'i en fazla 15 karakterden oluþmalýdýr")]
+        [Display(Name = "Menü Url")]
         public string Url { get; set; }
     }
 }

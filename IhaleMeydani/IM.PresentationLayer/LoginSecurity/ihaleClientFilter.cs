@@ -21,7 +21,7 @@ namespace IM.PresentationLayer.LoginSecurity
         {
             IhaleServiceClient ihaleClient = new IhaleServiceClient();
             var Id = SessionManager.CurrentUser.Id;
-            if (Id != 0)
+            if (Id != 0  )
             { 
                 var user = (from ur in ihaleClient.GetUserRoles()
                             join rc in ihaleClient.GetRoleClaims() on ur.Role_Id equals rc.RoleId

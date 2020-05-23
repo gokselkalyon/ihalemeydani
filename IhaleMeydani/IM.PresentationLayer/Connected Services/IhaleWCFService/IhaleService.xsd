@@ -99,39 +99,21 @@
       <xs:element minOccurs="0" name="ACUTION_DATE" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ACUTION_SALES_TIME" type="xs:int" />
       <xs:element minOccurs="0" name="AoFID" type="xs:int" />
-      <xs:element minOccurs="0" name="CarBrandId" type="xs:int" />
+      <xs:element minOccurs="0" name="CURRENCY_ID" type="xs:int" />
       <xs:element minOccurs="0" name="CarBrandName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CarDetailId" type="xs:int" />
-      <xs:element minOccurs="0" name="CarHardwareDetailsId" type="xs:int" />
-      <xs:element minOccurs="0" name="CarMakeId" type="xs:int" />
-      <xs:element minOccurs="0" name="CarMakeName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="CarTechnicalDetailId" type="xs:int" />
-      <xs:element minOccurs="0" name="CarVersion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ColorId" type="xs:int" />
-      <xs:element minOccurs="0" name="ColorName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ColorValue" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="DATE_OF_UPDATE" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="EngineDisplacement" type="xs:int" />
-      <xs:element minOccurs="0" name="FuelTypeId" type="xs:int" />
-      <xs:element minOccurs="0" name="FuelTypeName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="GearTypeId" type="xs:int" />
-      <xs:element minOccurs="0" name="GearTypeName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="HP" type="xs:int" />
-      <xs:element minOccurs="0" name="HardwareDetail" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="INCREASE_PRICE" type="xs:decimal" />
       <xs:element minOccurs="0" name="LicancePlate" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MAX_PRICE" type="xs:decimal" />
       <xs:element minOccurs="0" name="MIN_PRICE" type="xs:decimal" />
-      <xs:element minOccurs="0" name="Mileage" type="xs:int" />
       <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SegmentId" type="xs:int" />
-      <xs:element minOccurs="0" name="SegmentName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="date_of_created" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="isSaled" type="xs:boolean" />
       <xs:element minOccurs="0" name="isdeleted" type="xs:boolean" />
-      <xs:element minOccurs="0" name="registrationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="published_on" type="xs:boolean" />
       <xs:element minOccurs="0" name="userid" type="xs:int" />
       <xs:element minOccurs="0" name="userproductID" type="xs:int" />
     </xs:sequence>

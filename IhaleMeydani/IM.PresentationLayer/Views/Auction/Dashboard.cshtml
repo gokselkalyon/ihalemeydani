@@ -56,9 +56,9 @@
                         <th data-field="maxprice" data-sortable="true">max price</th>
                         <th data-field="minprice" data-sortable="true">min price</th>
                         <th data-field="auctionsalestime" data-sortable="true" data-width="20">auction sales time</th>
-                        <th data-field="carbrand" data-sortable="true" data-width="20">car brand</th>
-                        <th data-field="increaseprice" data-sortable="true" data-width="20">increase price</th>
-                        <th data-field="carlicanceplate" data-sortable="true" data-width="20">car licance plate</th>
+                        <th data-field="Brand" data-sortable="true" >Car Brand name</th>
+                        <th data-field="carlicanceplate" data-sortable="true" >Car licanceplate</th>
+                        <th data-field="INCREASE_PRICE" data-sortable="true" data-width="20">INCREASE_PRICE</th>
                         <th data-field="islemler" data-width="20">işlemler</th>
                     </tr>
                 </thead>
@@ -75,8 +75,8 @@
                                 <td>@auction.MIN_PRICE</td>
                                 <td>@auction.ACUTION_SALES_TIME</td>
                                 <td>@auction.CarBrandName</td>
-                                <td>@auction.INCREASE_PRICE</td>
                                 <td>@auction.LicancePlate</td>
+                                <td>@auction.INCREASE_PRICE</td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <a href="@Url.Action("detail", "auction")/@auction.ID" class="btn btn-secondary">Detay</a>

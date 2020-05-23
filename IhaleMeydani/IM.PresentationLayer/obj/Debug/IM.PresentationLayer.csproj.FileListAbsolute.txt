@@ -883,9 +883,10 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Ninject.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\EntityFramework.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csprojAssemblyReference.cache
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CoreCompileInputs.cache
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csprojAssemblyReference.cache
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
