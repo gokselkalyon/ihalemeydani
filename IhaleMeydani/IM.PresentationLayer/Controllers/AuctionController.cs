@@ -29,8 +29,7 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Details(int id)
         {
             mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
-            uam = mv.auction;
-            return View(uam);
+            return View(mv);
         }
 
         [HttpGet]
