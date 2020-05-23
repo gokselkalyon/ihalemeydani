@@ -91,10 +91,20 @@ namespace IM.PresentationLayer.Controllers
         }
 
         [HttpPost]
-        [Route("MenuUpdate/{MenuId}")]
+        [Route("MenuUpdate")]
         public PartialViewResult MenuUpdate(int MenuId)
         {
             var _UpdateMenu = IhaleServiceClient.GetMenu(MenuId);
+
+            var _MenuModel = new MenuModel
+            {
+                Description = _UpdateMenu.Description,
+                Name = _UpdateMenu.Name,
+                IconId = _UpdateMenu.IconId.Value,
+                SubMenuId = _UpdateMenu.MenuId.Value,
+                Url = _UpdateMenu.Url,
+                Id = _UpdateMenu.Id
+            };
 
             SelectListItems.Clear();
             _Icons.Clear();
@@ -152,7 +162,7 @@ namespace IM.PresentationLayer.Controllers
 
             TempData["Menus"] = SelectListItems;
 
-            return PartialView(_UpdateMenu);
+            return PartialView(_MenuModel);
         }
 
 
@@ -185,14 +195,22 @@ namespace IM.PresentationLayer.Controllers
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
         [HttpPost]
-        public JsonResult MenuUpdateOperation(I.Menu menu)
+        public JsonResult MenuUpdateOperation(MenuModel _menuModel)
         {
             jsonResultModel.Title = "Güncelleme İşlemi";
             jsonResultModel.Modal = "MenuUpdateModal";
 
             if (ModelState.IsValid)
             {
-                IhaleServiceClient.UpdateMenu(menu);
+                IhaleServiceClient.UpdateMenu(new I.Menu
+                {
+                    Description = _menuModel.Description,
+                    Id = _menuModel.Id,
+                    IconId = _menuModel.IconId,
+                    Name = _menuModel.Name,
+                    MenuId = _menuModel.SubMenuId,
+                    Url = _menuModel.Url
+                });
 
                 jsonResultModel.Icon = "success";
                 jsonResultModel.Description = "Menü Başarıyla Güncellendi";

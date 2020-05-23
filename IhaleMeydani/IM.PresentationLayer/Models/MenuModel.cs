@@ -28,5 +28,11 @@ namespace IM.PresentationLayer.Models
         public string SubMenu { get; set; }
         [Display(Name = "İcon")]
         public string IconName { get; set; }
+        [Display(Name = "Üst Menü")]
+        public int SubMenuId { get; set; }
+        [Display(Name = "İcon")]
+        public int IconId{ get; set; }
+
+
     }
 }
