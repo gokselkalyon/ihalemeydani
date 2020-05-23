@@ -889,3 +889,4 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csprojAssemblyReference.cache
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
