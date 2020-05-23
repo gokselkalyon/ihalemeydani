@@ -41,7 +41,7 @@ $(document).on("click", ".MenuUpdate", function () {
     var _id = $(this).data("id");
     $.post("/MenuUpdate", { MenuId: _id }, function (data) {
         $(".menu-update").html(data);
-        $(".MenuUpdateModal").modal("show");
+        $(document).find("#MenuUpdateModal").modal("show");
     });
 });
 
@@ -53,6 +53,7 @@ function GeneralSweet(Title, Description, Icon) {
 
 function MenuList() {
     $.post("/Menu/GetMenus", null, function (data) {
+        $(".menu-list").html("");
         $(".menu-list").html(data);
     });
 }
