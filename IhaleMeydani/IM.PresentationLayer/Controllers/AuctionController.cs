@@ -38,19 +38,22 @@ namespace IM.PresentationLayer.Controllers
         [Route("auction/create")]
         public ActionResult Create()
         {
-            return View();
+            int id = SessionManager.CurrentUser.Id;
+            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x => x.user_id == SessionManager.CurrentUser.Id && x.published_on == true && x.isdeleted == false && x.isSaled == false).ToList();
+            mv.currencies = IhaleServiceClient.GetCurrencies().ToList();
+            return View(mv);
         }
 
         
         [HttpPost]
         [ihaleClientFilter("auction.ekle")]
         [Route("auction/create")]
-        public ActionResult Create(UserAuctionModel uam)
+        public ActionResult Create(AuctionModelView uam)
         {
             try
             {
-                uam.userid = SessionManager.CurrentUser.Id;
-                int deger = IhaleServiceClient.AddUserAuctionModel(uam);
+                uam.auction.userid = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.AddUserAuctionModel(uam.auction);
 
                 return RedirectToAction("Index");
             }
@@ -65,20 +68,22 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Edit(int id)
         {
             mv.auction = IhaleServiceClient.GetUserAuctionModel().Where(x => x.userid == SessionManager.CurrentUser.Id && x.ID == id).FirstOrDefault();
-            uam = mv.auction;
-            return View(uam);
+            
+            mv.userProductModels = IhaleServiceClient.userProductModels().Where(x => x.user_id == SessionManager.CurrentUser.Id && x.published_on == true && x.isdeleted == false && x.isSaled == false).ToList();
+            mv.currencies = IhaleServiceClient.GetCurrencies().ToList();
+            return View(mv);
         }
 
         // POST: Auction/Edit/5
         [HttpPost]
         [ihaleClientFilter("auction.guncelle")]
         [Route("auction/Edit")]
-        public ActionResult Edit(UserAuctionModel uam)
+        public ActionResult Edit(AuctionModelView uam)
         {
             try
             {
-                uam.userid = SessionManager.CurrentUser.Id;
-                int deger = IhaleServiceClient.UpadateUserAuctionModel(uam);
+                uam.auction.userid = SessionManager.CurrentUser.Id;
+                int deger = IhaleServiceClient.UpadateUserAuctionModel(uam.auction);
 
                 return RedirectToAction("Index");
             }

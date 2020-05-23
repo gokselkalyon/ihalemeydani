@@ -43,6 +43,7 @@ namespace IM.PresentationLayer.Models
         public List<E_INVOICE> einvoices { get; set; }
 
         public List<UserProductModel> userProductModels { get; set; }
+        public List<CURRENCY> currencies { get; set; }
 
         public int carpublished { get; set; }
         public int carauctioncount { get; set; }
