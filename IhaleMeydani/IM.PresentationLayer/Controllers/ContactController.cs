@@ -35,5 +35,16 @@ namespace IM.PresentationLayer.Controllers
 
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
+        [HttpPost]
+        [Route("RemoveContact")]
+        public JsonResult ContactRemove(int id)
+        {
+            IhaleServiceClient.RemoveContact(id);
+            jsonResultModel.Icon = "success";
+            jsonResultModel.Title = "Silme İşlemi";
+            jsonResultModel.Description = "İletişim Başarıyla Silindi";
+
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        }
     }
 }
