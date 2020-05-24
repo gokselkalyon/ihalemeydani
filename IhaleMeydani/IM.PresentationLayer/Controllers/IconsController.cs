@@ -6,13 +6,18 @@ using System.Web.Mvc;
 
 namespace IM.PresentationLayer.Controllers
 {
-    public class IconsController : Controller
+    public class IconsController : BaseController
     {
         // GET: Icons
         [Route("Icons")]
         public ActionResult Index()
         {
             return View();
+        }
+
+        public PartialViewResult List()
+        {
+            return PartialView(IhaleServiceClient.GetIcons().ToList());
         }
     }
 }
