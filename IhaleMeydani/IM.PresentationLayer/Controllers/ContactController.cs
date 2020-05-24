@@ -1,4 +1,5 @@
-﻿using IM.PresentationLayer.Models;
+﻿using IM.PresentationLayer.IhaleWCFService;
+using IM.PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,16 @@ namespace IM.PresentationLayer.Controllers
         {
             return PartialView(new ContactModelView());
         }
+        [HttpPost]
+        public JsonResult ContactAddOperation(Contact contact)
+        {
+            IhaleServiceClient.AddContact(contact);
+            jsonResultModel.Icon = "success";
+            jsonResultModel.Title = "Ekleme İşlemi";
+            jsonResultModel.Modal = "ContactAddModal";
+            jsonResultModel.Description = "İletişim Başarıyla Eklendi";
 
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        }
     }
 }

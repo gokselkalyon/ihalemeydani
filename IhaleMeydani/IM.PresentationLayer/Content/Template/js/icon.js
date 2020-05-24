@@ -63,15 +63,6 @@ function GeneralSweet(Title, Description, Icon) {
 }
 
 
-function FormPost(FormId) {
-    $(document).find("#" + FormId).submit();
-}
-
-function FormClear(FormId) {
-    $(document).find("#" + FormId).trigger("reset");
-    $("#" + FormId).find('label.error').remove();
-}
-
 function returnPostJson(data) {
 
     if (data.Modal != null) {
@@ -79,4 +70,13 @@ function returnPostJson(data) {
     }
 
     GeneralSweet(data.Title, data.Description, data.Icon);
+}
+
+function FormPost(FormId) {
+    $(document).find("#" + FormId).submit();
+}
+
+function FormClear(FormId) {
+    $(document).find("#" + FormId).trigger("reset");
+    $("#" + FormId).find('label.error').remove();
 }
