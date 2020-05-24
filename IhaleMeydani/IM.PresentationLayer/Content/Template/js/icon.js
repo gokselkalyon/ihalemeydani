@@ -4,6 +4,15 @@
     });
 }
 
+$(document).on("click", ".IconUpdate", function () {
+    var _id = $(this).data("id");
+    $.post("/UpdateIcon", { id:_id }, function (result) {
+        $(".icon-update").html("");
+        $(".icon-update").html(result);
+        $(document).find("#IconUpdateModal").modal("show");
+    });
+});
+
 
 $(document).on("click", ".IconRemove", function () {
     var id = $(this).data("id");

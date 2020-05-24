@@ -2645,6 +2645,7 @@
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
     <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\Template\css\icon.css" />
     <Content Include="Content\Template\css\invoice.css" />
     <Content Include="Content\Template\css\Layout.css" />
     <Content Include="Content\Template\css\Loginn.css" />
@@ -2769,6 +2770,7 @@
     <Content Include="Views\Auction\Details.cshtml" />
     <Content Include="Views\Auction\Edit.cshtml" />
     <Content Include="Views\Icons\Add.cshtml" />
+    <Content Include="Views\Icons\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
