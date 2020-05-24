@@ -24,6 +24,23 @@ namespace IM.PresentationLayer.Controllers
         {
             return PartialView(new ContactModelView());
         }
+
+        public PartialViewResult ContactUpdate(int id)
+        {
+            var _contact = IhaleServiceClient.GetContact(id);
+
+
+            return PartialView(new ContactModelView
+            {
+                Id = id,
+                Address = _contact.Address,
+                Email = _contact.Email,
+                Faks = _contact.Faks,
+                GoogleMapUrl = _contact.GoogleMapUrl,
+                Telefon = _contact.Telefon
+            });
+        }
+
         [HttpPost]
         public JsonResult ContactAddOperation(Contact contact)
         {
@@ -35,6 +52,21 @@ namespace IM.PresentationLayer.Controllers
 
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpPost]
+        public JsonResult ContactUpdateOperation(Contact contact)
+        {
+            IhaleServiceClient.UpdateContact(contact);
+            jsonResultModel.Icon = "success";
+            jsonResultModel.Title = "Güncelleme İşlemi";
+            jsonResultModel.Modal = "ContactUpdateModal";
+            jsonResultModel.Description = "İletişim Başarıyla Güncellendi";
+
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+        }
+
+
+
         [HttpPost]
         [Route("RemoveContact")]
         public JsonResult ContactRemove(int id)

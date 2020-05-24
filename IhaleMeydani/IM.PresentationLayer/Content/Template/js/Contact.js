@@ -25,6 +25,11 @@ function returnPostJson(data) {
     GeneralSweet(data.Title, data.Description, data.Icon);
 }
 
+$(document).on("click", ".ContactUpdate", function (result) {
+    $(".contact-update").html(result);
+    $(document).find(".ContactUpdateModal").modal("show");
+});
+
 function ContactList() {
     $.post("/Contact/ContactList", null, function (result) {
         $(".contact-list").html(result);
