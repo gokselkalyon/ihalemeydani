@@ -28,17 +28,44 @@ namespace IM.PresentationLayer.Controllers
         [HttpPost]
         public JsonResult IconAddOperation(IconModelView icon)
         {
-            IhaleServiceClient.AddIcon(new I.Icon
+            if (ModelState.IsValid)
             {
-                Name = icon.Name
-            });
+                IhaleServiceClient.AddIcon(new I.Icon
+                {
+                    Name = icon.Name
+                });
 
-            jsonResultModel.Title = "Ekleme İşlemi";
-            jsonResultModel.Icon = "success";
-            jsonResultModel.Modal = "IconAddModal";
-            jsonResultModel.Description = "İcon Başarıyla Eklendi";
+                jsonResultModel.Title = "Ekleme İşlemi";
+                jsonResultModel.Icon = "success";
+                jsonResultModel.Modal = "IconAddModal";
+                jsonResultModel.Description = "İcon Başarıyla Eklendi";
+            }
+            else
+            {
+                jsonResultModel.Title = "Ekleme İşlemi";
+                jsonResultModel.Icon = "warning";
+                jsonResultModel.Modal = "IconAddModal";
+                jsonResultModel.Description = "İcon Ekleme Başarısız";
+            }
+           
 
             return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpPost]
+        [Route("RemoveIcon")]
+        public JsonResult IconRemoveOperation(int id)
+        {
+            IhaleServiceClient.RemoveIcon(id);
+
+            jsonResultModel.Title = "Silme İşlemi";
+            jsonResultModel.Icon = "success";
+            jsonResultModel.Description = "İcon Başarıyla Silindi";
+
+
+            return Json(jsonResultModel, JsonRequestBehavior.AllowGet);
+
+        }
+
     }
 }
