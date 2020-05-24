@@ -17,6 +17,10 @@ namespace IM.PresentationLayer.Controllers
         {
             return PartialView(IhaleServiceClient.GetContacts());
         }
+        public PartialViewResult ContactAdd()
+        {
+            return PartialView() 
+        }
 
     }
 }

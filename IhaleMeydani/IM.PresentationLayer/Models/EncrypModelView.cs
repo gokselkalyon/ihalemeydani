@@ -7,7 +7,7 @@ using System.Web;
 
 namespace IM.PresentationLayer.Models
 {
-    public class EncrypModel
+    public class EncrypModelView
     {
         public static string GetMD5Hash(string input)
         {

@@ -195,7 +195,8 @@
     <Compile Include="Models\AuctionModelView.cs" />
     <Compile Include="Models\BlogModelView.cs" />
     <Compile Include="Models\ClaimGroupModelView.cs" />
-    <Compile Include="Models\EncrypModel.cs" />
+    <Compile Include="Models\ContactModelView.cs" />
+    <Compile Include="Models\EncrypModelView.cs" />
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\HandleErrors.cs" />
     <Compile Include="Models\IconModelView.cs" />
