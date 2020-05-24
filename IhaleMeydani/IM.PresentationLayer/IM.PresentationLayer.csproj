@@ -197,6 +197,7 @@
     <Compile Include="Models\EncrypModel.cs" />
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\HandleErrors.cs" />
+    <Compile Include="Models\IconModelView.cs" />
     <Compile Include="Models\InvoiceModelView.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Models\LoginModelView.cs" />
@@ -2663,6 +2664,7 @@
     <Content Include="Content\Template\js\adminmain.js" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\Template\js\icon.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
@@ -2766,6 +2768,7 @@
     <Content Include="Views\Auction\Dashboard.cshtml" />
     <Content Include="Views\Auction\Details.cshtml" />
     <Content Include="Views\Auction\Edit.cshtml" />
+    <Content Include="Views\Icons\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

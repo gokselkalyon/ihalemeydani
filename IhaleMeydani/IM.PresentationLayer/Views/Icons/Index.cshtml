@@ -5,26 +5,32 @@
 }
 
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
-        <div class="d-flex bd-highlight mb-3">
-            <div class="p-2 bd-highlight">
-                <h2 class="ml-3 mt-3">İkonlar</h2>
-            </div>
-            <div class="ml-auto mt-3 p-2 bd-highlight">
-                <button class="btn btn-primary" id="btnIconAdd">
-                    <i class="fas fa-plus mr-2">
-                    </i>
-                    İkon Ekle
-                </button>
-            </div>
+    <div class="d-flex bd-highlight mb-3">
+        <div class="p-2 bd-highlight">
+            <h2 class="ml-3 mt-3">İkonlar</h2>
         </div>
-
-        <div class="menu-list">
-            @Html.Action("List", "Icons")
+        <div class="ml-auto mt-3 p-2 bd-highlight">
+            <button class="btn btn-primary" id="btnIconAdd">
+                <i class="fas fa-plus mr-2">
+                </i>
+                İkon Ekle
+            </button>
         </div>
-
-
     </div>
+
+    <div class="icon-list">
+        @Html.Action("List", "Icons")
+    </div>
+
+    <div class="icon-add">
+        @Html.Action("Add", "Icons")
+    </div>
+
+    @section js {
+        <script src="~/Content/Template/js/icon.js"></script>
+    }
+</div>
 
 

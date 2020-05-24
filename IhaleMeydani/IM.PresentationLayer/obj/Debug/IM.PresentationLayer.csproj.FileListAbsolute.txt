@@ -834,8 +834,6 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Newtonsoft.Json.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Owin.dll
@@ -865,8 +863,6 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.xml
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Helpers.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Mvc.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Optimization.xml
@@ -885,3 +881,4 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
+C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csprojAssemblyReference.cache
