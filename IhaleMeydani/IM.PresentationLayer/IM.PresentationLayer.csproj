@@ -2647,6 +2647,7 @@
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
     <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\Template\css\Contact.css" />
     <Content Include="Content\Template\css\icon.css" />
     <Content Include="Content\Template\css\invoice.css" />
     <Content Include="Content\Template\css\Layout.css" />
@@ -2667,6 +2668,7 @@
     <Content Include="Content\Template\js\adminmain.js" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\Template\js\Contact.js" />
     <Content Include="Content\Template\js\icon.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
@@ -2774,6 +2776,8 @@
     <Content Include="Views\Icons\Add.cshtml" />
     <Content Include="Views\Icons\Update.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\ContactList.cshtml" />
+    <Content Include="Views\Contact\ContactAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

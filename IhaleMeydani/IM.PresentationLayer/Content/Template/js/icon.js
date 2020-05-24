@@ -69,6 +69,7 @@ function FormPost(FormId) {
 
 function FormClear(FormId) {
     $(document).find("#" + FormId).trigger("reset");
+    $("#" + FormId).find('label.error').remove();
 }
 
 function returnPostJson(data) {

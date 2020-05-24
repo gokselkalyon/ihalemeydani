@@ -26,6 +26,7 @@ namespace IM.PresentationLayer.Models
         [Display(Name = "Telefon")]
         [Required(ErrorMessage = "Telefon Bilgisi Giriniz.")]
         [StringLength(11, ErrorMessage = "Telefon 11 haneli olmaldırır.")]
+        [Phone(ErrorMessage ="Telefon Bilgisi Geçersiz")]
         public string Telefon { get; set; }
         [Required(ErrorMessage = "Harita Bilgisi Giriniz.")]
         [Display(Name = "Harita")]
