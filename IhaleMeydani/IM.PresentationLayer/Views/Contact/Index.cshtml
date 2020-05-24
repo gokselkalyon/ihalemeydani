@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "İletişim";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div class="d-flex bd-highlight mb-3">
+        <div class="p-2 bd-highlight">
+            <h2 class="ml-3 mt-3">İletişim</h2>
+        </div>
+        <div class="ml-auto p-2 mt-3 bd-highlight">
+            <button class="btn btn-primary" id="btnContactAdd">
+                <i class="fas fa-plus mr-2">
+                </i>
+                İletişim Ekle
+            </button>
+        </div>
+    </div>
+
+    <div class="contact-list">
+        @Html.Action("ContactList", "Contact")
+    </div>
+
+    <div class="contact-add">
+        @*@Html.Action("MenuAdd", "Menu")*@
+    </div>
+
+    <div class="contact-update">
+
+    </div>
+
+    @section css{
+        <link href="~/Content/Template/css/Menu.css" rel="stylesheet" />
+    }
+
+    @section js {
+        <script src="~/Content/Template/js/menu.js"></script>
+    }
+
+</div>
