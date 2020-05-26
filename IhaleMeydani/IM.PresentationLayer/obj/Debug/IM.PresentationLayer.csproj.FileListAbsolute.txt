@@ -401,8 +401,6 @@ C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
-C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Owin.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Firebase.Storage.dll
