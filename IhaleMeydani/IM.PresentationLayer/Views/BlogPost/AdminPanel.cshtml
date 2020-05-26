@@ -1,8 +1,9 @@
 ﻿@model IM.PresentationLayer.Models.BlogModelView
+@using IM.BusinessLayer.Firebase
 
 @{
     ViewBag.Title = "AdminPanel";
-    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
 }
 
 
@@ -76,6 +77,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.image_path)
+
+                    @*firebaseStorageHelper.GetFile(item.image_path)*@
+
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.image_subtitle)
@@ -84,7 +88,7 @@
                     @Html.DisplayFor(modelItem => item.image_title)
                 </td>
                 <td>
-                    @item.submit_article.Substring(0, 10)
+                    @item.submit_article.Substring(0, 1)
                 </td>
                 <td>
                     <a href="@Url.Action("Update","BlogAdmin"  )/@item.Post_id" class="btn btn-warning">Edit</a> |
