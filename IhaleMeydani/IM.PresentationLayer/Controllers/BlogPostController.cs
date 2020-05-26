@@ -1,10 +1,12 @@
 ﻿using IM.PresentationLayer.IhaleWCFService;
 using IM.PresentationLayer.LoginSecurity;
 using IM.PresentationLayer.Models;
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -19,6 +21,7 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult Index()
         {
             mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
+
             return View(mv);
         }
         [Route("Blog/Content/{id}")]
@@ -33,6 +36,7 @@ namespace IM.PresentationLayer.Controllers
         public ActionResult AdminPanel()
         {
             mv.Posts = IhaleServiceClient.QueryListPostModel().ToList();
+            mv.Post = IhaleServiceClient.QueryListPostModel().FirstOrDefault(x => x.id == 10);
             return View(mv);
         }
         [Route("BlogAdmin/Create")]
@@ -42,9 +46,20 @@ namespace IM.PresentationLayer.Controllers
         }
         [HttpPost]
         [Route("BlogAdmin/Create")]
-        public ActionResult AdminPanelCreate(PostModel postModel)
+        public ActionResult AdminPanelCreate(HttpPostedFileBase file2,PostModel postModel)
         {
+            string _name = string.Empty;
+            if (file2 != null && file2.ContentLength > 0)
+            {
+                var _stream = file2.InputStream;
+                _name = Guid.NewGuid() + file2.FileName;
+                IhaleServiceClient.AddSubmitAsync(new submit { submit_article = postModel.submit_article });
+                IhaleServiceClient.AddMediumAsync(new medium { image_name = postModel.image_name, image_path = _name, image_subtitle = postModel.image_subtitle, image_title = postModel.image_title });
+                firebaseStorageHelper.UploadFile(_stream, _name);
+            }
+
             postModel.users_id = SessionManager.CurrentUser.Id;
+            postModel.image_path = _name;
             int değer = IhaleServiceClient.AddPostModel(postModel);
             return RedirectToAction("", "BlogAdmin");
         }
@@ -66,24 +81,24 @@ namespace IM.PresentationLayer.Controllers
             return RedirectToAction("", "BlogAdmin");
         }
 
-        [HttpPost]
-        public async Task BlogImage(HttpPostedFileBase file2,PostModel postModel)
-        {
-            if (file2 != null && file2.ContentLength > 0)
-            {
-                var _stream = file2.InputStream;
-                var _name = Guid.NewGuid() + file2.FileName;
-                IhaleServiceClient.AddSubmitAsync(new submit { submit_article = postModel.submit_article });
-                IhaleServiceClient.AddMediumAsync(new medium { image_name = postModel.image_name, image_path = _name, image_subtitle = postModel.image_subtitle, image_title = postModel.image_title });
-                await firebaseStorageHelper.UploadFile(_stream, _name);
-            }
-        }
-        [HttpPost]
-        public async Task<JsonResult> GetFile()
-        {
-            var _value = (string)Session["Image"];
+        //[HttpPost]
+        //public async Task BlogImage(HttpPostedFileBase file2, PostModel postModel)
+        //{
+        //    if (file2 != null && file2.ContentLength > 0)
+        //    {
+        //        var _stream = file2.InputStream;
+        //        var _name = Guid.NewGuid() + file2.FileName;
+        //        IhaleServiceClient.AddSubmitAsync(new submit { submit_article = postModel.submit_article });
+        //        IhaleServiceClient.AddMediumAsync(new medium { image_name = postModel.image_name, image_path = _name, image_subtitle = postModel.image_subtitle, image_title = postModel.image_title });
+        //        await firebaseStorageHelper.UploadFile(_stream, _name);
+        //    }
+        //}
+        //[HttpPost]
+        //public async Task<JsonResult> GetFile()
+        //{
+        //    var _value = (string)Session["Image"];
 
-            return Json(await firebaseStorageHelper.GetFile(_value), JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(await firebaseStorageHelper.GetFile(_value), JsonRequestBehavior.AllowGet);
+        //}
     }
 }
