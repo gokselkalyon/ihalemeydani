@@ -879,3 +879,7 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
