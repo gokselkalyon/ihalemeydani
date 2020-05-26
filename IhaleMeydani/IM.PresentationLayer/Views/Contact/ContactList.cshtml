@@ -1,0 +1,33 @@
+﻿@model List<IM.PresentationLayer.IhaleWCFService.Contact>
+
+<div class="table table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Adres</th>
+                <th scope="col">Email</th>
+                <th scope="col">Faks</th>
+                <th scope="col">Telefon</th>
+                <th scope="col">GoogleMapUrl</th>
+                <th scope="col">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var menu in Model)
+            {
+                <tr>
+                    <td>@menu.Address</td>
+                    <td>@menu.Email</td>
+                    <td>@menu.Faks</td>
+                    <td>@menu.Telefon</td>
+                    <td>@menu.GoogleMapUrl</td>
+                    <td>
+                        <i class="fas fa-trash mr-2 ContactRemove" style="color:red;" data-id="@menu.Id"></i>
+                        <i class="fas fa-pencil-alt ContactUpdate mr-2" style="color:green;" data-id="@menu.Id"></i>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

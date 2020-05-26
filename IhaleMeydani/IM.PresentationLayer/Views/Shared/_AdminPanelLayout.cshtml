@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="icon" type="image/png" sizes="16x16" href="~/Content/adminpaneltemplate/src/assets/images/favicon.png">
-    <title>Adminmart Template - The Ultimate Multipurpose admin template</title>
     <!-- Custom CSS -->
     <link href="~/Content/adminpaneltemplate/src/assets/extra-libs/c3/c3.min.css" rel="stylesheet" />
     <link href="~/Content/adminpaneltemplate/src/assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -19,7 +18,7 @@
     <link href="~/Content/Template/css/TempDataMessage.css" rel="stylesheet" />
     <link href="~/Content/Template/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="~/Content/Template/css/Layout.css" rel="stylesheet" />
-
+    <link href="~/Content/Template/css/all.css" rel="stylesheet" />
 
     @RenderSection("css", false)
 
@@ -349,6 +348,16 @@
                             <a class="sidebar-link sidebar-link" href="/Menüler"
                                aria-expanded="false">
                                 <i class="fas fa-bars mr-2"></i><span class="hide-menu">Menüler</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="/Icons" aria-expanded="false">
+                                <i class="fas fa-wrench mr-2"></i><span class="hide-menu">İkonlar</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="/Contact" aria-expanded="false">
+                                <i class="fas fa-map-marker-alt mr-2"></i><span class="hide-menu">İletişim</span>
                             </a>
                         </li>
                         @*<li class="list-divider"></li>

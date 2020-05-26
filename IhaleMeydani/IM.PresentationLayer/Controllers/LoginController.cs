@@ -33,7 +33,7 @@ namespace IM.PresentationLayer.Controllers
                     if (ln.Password == ln.Password2)
                     {
                         ur.Email = ln.Email;
-                        ur.Password = EncrypModel.EncryptSHA1(ln.Password);
+                        ur.Password = EncrypModelView.EncryptSHA1(ln.Password);
                         var result = ur.Password.Length;
                         ur.UserName = ln.Username;
                         ihaleClient.AddUser(ur);
@@ -63,7 +63,7 @@ namespace IM.PresentationLayer.Controllers
         [AllowAnonymous]
         public JsonResult UserLogin(LoginModelView ln)
         { 
-            ln.Password = EncrypModel.EncryptSHA1(ln.Password);
+            ln.Password = EncrypModelView.EncryptSHA1(ln.Password);
             var user = ihaleClient.GetUsers().Where(f => f.UserName == ln.Username && f.Password == ln.Password).FirstOrDefault();
             if (user != null)
             {

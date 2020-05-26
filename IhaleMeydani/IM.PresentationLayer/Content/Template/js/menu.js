@@ -45,9 +45,6 @@ $(document).on("click", ".MenuUpdate", function () {
     });
 });
 
-function GeneralSweet(Title, Description, Icon) {
-    swal(Title, Description, Icon);
-}
 
 
 
@@ -57,6 +54,11 @@ function MenuList() {
         $(".menu-list").html(data);
     });
 }
+
+function GeneralSweet(Title, Description, Icon) {
+    swal(Title, Description, Icon);
+}
+
 
 function FormPost(FormId) {
     $(document).find("#" + FormId).submit();
