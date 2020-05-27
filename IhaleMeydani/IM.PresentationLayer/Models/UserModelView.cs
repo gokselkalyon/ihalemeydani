@@ -29,5 +29,8 @@ namespace IM.PresentationLayer.Models
 		public string CityName { get; set; }
 		public string Username { get; set; }
 		public List<string> claimText { get; set; }
+		public string Password { get; set; }
+		public string Password2 { get; set; }
+		public string Password3 { get; set; }
 	}
 }

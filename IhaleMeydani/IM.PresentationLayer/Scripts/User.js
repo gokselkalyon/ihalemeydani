@@ -83,9 +83,43 @@
         }
         
     });
-});
+}); 
+$("#registrationForm").submit(function (e) {
+    $("#snackbar").empty();
+    debugger;
+    e.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+        url: "/User/UserProfileUpdate",
+        type: "POST",
+        data: formData,
+        mimeType: "multipart/form-data",
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data, textStatus, jqXHR) {
+            if (data == 1) {
+                $("#snackbar").append('Güncelleme Başarılı.');
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
-$(function () {
-    $('#datetimepicker1').datetimepicker({ 
-    })
+            } else if (data == 2) {
+                $("#snackbar").append('Eski Şifreniz Yanlış.');
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+            } else if (data == 3) {
+                $("#snackbar").append('Şifreler Birbirine Uymuyor');
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+            } else if (data == 4) {
+                $("#snackbar").append('Yeni Şifre Giriniz.');
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+            }
+        }
+    });
 });

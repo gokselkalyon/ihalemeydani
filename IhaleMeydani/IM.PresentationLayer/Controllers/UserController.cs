@@ -39,8 +39,48 @@ namespace IM.PresentationLayer.Controllers
             return View(user);
         }
 
-
-
+        [Route("User/UserProfileUpdate")]
+        [ihaleClientFilter("Kullanıcı.ProfilGüncelle")]
+        public JsonResult UserProfileUpdate(UserModel userModel)
+        { 
+            var User = ihaleClient.GetUser(userModel.Id); 
+            User.Name = userModel.Name;
+            User.Surname = userModel.Surname;
+            User.Phone = userModel.Phone;
+            User.IdentityNo = userModel.IdentityNo;
+            User.Email = userModel.Email;
+            User.Dateofbird = userModel.DateOfBirt; 
+            if (userModel.Password != null)
+            {
+                userModel.Password = EncrypModelView.EncryptSHA1(userModel.Password);
+                if (User.Password == userModel.Password)
+                {
+                    if (userModel.Password2 != null && userModel.Password3 != null)
+                    {
+                        if (userModel.Password3 == userModel.Password2)
+                        {
+                            userModel.Password2 = EncrypModelView.EncryptSHA1(userModel.Password2);
+                            User.Password = userModel.Password2;
+                        }
+                        else
+                        {
+                            return Json(3, JsonRequestBehavior.AllowGet);
+                        }
+                    }
+                    else
+                    {
+                        return Json(4, JsonRequestBehavior.AllowGet);
+                    }
+                 
+                }
+                else
+                {
+                    return Json(2, JsonRequestBehavior.AllowGet);
+                } 
+            }
+            ihaleClient.UpdateUser(User);
+            return Json(1, JsonRequestBehavior.AllowGet);
+        }
         [HttpGet] 
         [Route("User/View")]
         [ihaleClientFilter("Kullanıcı.Listele")]
