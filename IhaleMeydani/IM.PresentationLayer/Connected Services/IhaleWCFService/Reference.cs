@@ -6401,7 +6401,7 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private int AoFIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CarBrandIdField;
+        private int CURRENCY_IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CarBrandNameField;
@@ -6410,52 +6410,7 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private int CarDetailIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CarHardwareDetailsIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CarMakeIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CarMakeNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CarTechnicalDetailIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CarVersionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ColorIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ColorNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ColorValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> DATE_OF_UPDATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EngineDisplacementField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int FuelTypeIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FuelTypeNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int GearTypeIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GearTypeNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int HPField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HardwareDetailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IDField;
@@ -6473,31 +6428,22 @@ namespace IM.PresentationLayer.IhaleWCFService {
         private decimal MIN_PRICEField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int MileageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NAMEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SegmentIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SegmentNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UserNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string VINField;
+        private System.Nullable<System.DateTime> date_of_createdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> date_of_createdField;
+        private bool isSaledField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool isdeletedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> registrationDateField;
+        private bool published_onField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int useridField;
@@ -6555,14 +6501,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CarBrandId {
+        public int CURRENCY_ID {
             get {
-                return this.CarBrandIdField;
+                return this.CURRENCY_IDField;
             }
             set {
-                if ((this.CarBrandIdField.Equals(value) != true)) {
-                    this.CarBrandIdField = value;
-                    this.RaisePropertyChanged("CarBrandId");
+                if ((this.CURRENCY_IDField.Equals(value) != true)) {
+                    this.CURRENCY_IDField = value;
+                    this.RaisePropertyChanged("CURRENCY_ID");
                 }
             }
         }
@@ -6594,110 +6540,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CarHardwareDetailsId {
-            get {
-                return this.CarHardwareDetailsIdField;
-            }
-            set {
-                if ((this.CarHardwareDetailsIdField.Equals(value) != true)) {
-                    this.CarHardwareDetailsIdField = value;
-                    this.RaisePropertyChanged("CarHardwareDetailsId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CarMakeId {
-            get {
-                return this.CarMakeIdField;
-            }
-            set {
-                if ((this.CarMakeIdField.Equals(value) != true)) {
-                    this.CarMakeIdField = value;
-                    this.RaisePropertyChanged("CarMakeId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CarMakeName {
-            get {
-                return this.CarMakeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarMakeNameField, value) != true)) {
-                    this.CarMakeNameField = value;
-                    this.RaisePropertyChanged("CarMakeName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CarTechnicalDetailId {
-            get {
-                return this.CarTechnicalDetailIdField;
-            }
-            set {
-                if ((this.CarTechnicalDetailIdField.Equals(value) != true)) {
-                    this.CarTechnicalDetailIdField = value;
-                    this.RaisePropertyChanged("CarTechnicalDetailId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CarVersion {
-            get {
-                return this.CarVersionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarVersionField, value) != true)) {
-                    this.CarVersionField = value;
-                    this.RaisePropertyChanged("CarVersion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ColorId {
-            get {
-                return this.ColorIdField;
-            }
-            set {
-                if ((this.ColorIdField.Equals(value) != true)) {
-                    this.ColorIdField = value;
-                    this.RaisePropertyChanged("ColorId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ColorName {
-            get {
-                return this.ColorNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ColorNameField, value) != true)) {
-                    this.ColorNameField = value;
-                    this.RaisePropertyChanged("ColorName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ColorValue {
-            get {
-                return this.ColorValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ColorValueField, value) != true)) {
-                    this.ColorValueField = value;
-                    this.RaisePropertyChanged("ColorValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> DATE_OF_UPDATE {
             get {
                 return this.DATE_OF_UPDATEField;
@@ -6706,97 +6548,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((this.DATE_OF_UPDATEField.Equals(value) != true)) {
                     this.DATE_OF_UPDATEField = value;
                     this.RaisePropertyChanged("DATE_OF_UPDATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EngineDisplacement {
-            get {
-                return this.EngineDisplacementField;
-            }
-            set {
-                if ((this.EngineDisplacementField.Equals(value) != true)) {
-                    this.EngineDisplacementField = value;
-                    this.RaisePropertyChanged("EngineDisplacement");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int FuelTypeId {
-            get {
-                return this.FuelTypeIdField;
-            }
-            set {
-                if ((this.FuelTypeIdField.Equals(value) != true)) {
-                    this.FuelTypeIdField = value;
-                    this.RaisePropertyChanged("FuelTypeId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FuelTypeName {
-            get {
-                return this.FuelTypeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FuelTypeNameField, value) != true)) {
-                    this.FuelTypeNameField = value;
-                    this.RaisePropertyChanged("FuelTypeName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int GearTypeId {
-            get {
-                return this.GearTypeIdField;
-            }
-            set {
-                if ((this.GearTypeIdField.Equals(value) != true)) {
-                    this.GearTypeIdField = value;
-                    this.RaisePropertyChanged("GearTypeId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string GearTypeName {
-            get {
-                return this.GearTypeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GearTypeNameField, value) != true)) {
-                    this.GearTypeNameField = value;
-                    this.RaisePropertyChanged("GearTypeName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int HP {
-            get {
-                return this.HPField;
-            }
-            set {
-                if ((this.HPField.Equals(value) != true)) {
-                    this.HPField = value;
-                    this.RaisePropertyChanged("HP");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HardwareDetail {
-            get {
-                return this.HardwareDetailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HardwareDetailField, value) != true)) {
-                    this.HardwareDetailField = value;
-                    this.RaisePropertyChanged("HardwareDetail");
                 }
             }
         }
@@ -6867,19 +6618,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Mileage {
-            get {
-                return this.MileageField;
-            }
-            set {
-                if ((this.MileageField.Equals(value) != true)) {
-                    this.MileageField = value;
-                    this.RaisePropertyChanged("Mileage");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string NAME {
             get {
                 return this.NAMEField;
@@ -6888,32 +6626,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((object.ReferenceEquals(this.NAMEField, value) != true)) {
                     this.NAMEField = value;
                     this.RaisePropertyChanged("NAME");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SegmentId {
-            get {
-                return this.SegmentIdField;
-            }
-            set {
-                if ((this.SegmentIdField.Equals(value) != true)) {
-                    this.SegmentIdField = value;
-                    this.RaisePropertyChanged("SegmentId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SegmentName {
-            get {
-                return this.SegmentNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SegmentNameField, value) != true)) {
-                    this.SegmentNameField = value;
-                    this.RaisePropertyChanged("SegmentName");
                 }
             }
         }
@@ -6932,19 +6644,6 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string VIN {
-            get {
-                return this.VINField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.VINField, value) != true)) {
-                    this.VINField = value;
-                    this.RaisePropertyChanged("VIN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> date_of_created {
             get {
                 return this.date_of_createdField;
@@ -6953,6 +6652,19 @@ namespace IM.PresentationLayer.IhaleWCFService {
                 if ((this.date_of_createdField.Equals(value) != true)) {
                     this.date_of_createdField = value;
                     this.RaisePropertyChanged("date_of_created");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isSaled {
+            get {
+                return this.isSaledField;
+            }
+            set {
+                if ((this.isSaledField.Equals(value) != true)) {
+                    this.isSaledField = value;
+                    this.RaisePropertyChanged("isSaled");
                 }
             }
         }
@@ -6971,14 +6683,14 @@ namespace IM.PresentationLayer.IhaleWCFService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> registrationDate {
+        public bool published_on {
             get {
-                return this.registrationDateField;
+                return this.published_onField;
             }
             set {
-                if ((this.registrationDateField.Equals(value) != true)) {
-                    this.registrationDateField = value;
-                    this.RaisePropertyChanged("registrationDate");
+                if ((this.published_onField.Equals(value) != true)) {
+                    this.published_onField = value;
+                    this.RaisePropertyChanged("published_on");
                 }
             }
         }

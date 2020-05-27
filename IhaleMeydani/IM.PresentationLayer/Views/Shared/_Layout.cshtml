@@ -3,14 +3,14 @@
 <html>
 <head>
     @Styles.Render("~/bundles/css")
-
-    @*@RenderSection("css", false)*@
+    
+    @RenderSection("css", false)
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Content/Template/css/boostrap.css" rel="stylesheet" />
     <link href="~/Content/Template/css/StyleSheet1.css" rel="stylesheet" />
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link href="~/Content/Template/css/BlogPage.css" rel="stylesheet" />
+    @*<link href="~/Content/Template/css/BlogPage.css" rel="stylesheet" />*@
     <script src="~/Content/Template/js/jquery.js"></script>
     <script src="~/Content/Template/js/boostrap.js"></script>
 </head>
@@ -81,9 +81,9 @@
                                 <li><a href="@Url.Action("","Anasayfa")"><span>Anasayfa</span></a></li>
                                 <li><a href="@Url.Action("","hizlisatis")"><span>Hizli Satış</span></a></li>
                                 <li><a href="@Url.Action("list","Cars")"><span>Arabalar</span></a></li>
-                                <li><a href="#"><span>About</span></a></li>
-                                <li><a href="#"><span>Teams</span></a></li>
-                                <li><a href="#"><span>Pages</span></a></li>
+                                <li><a href="@Url.Action("About","Home")"><span>Hakkımızda</span></a></li>
+                                <li><a href="@Url.Action("Contact","Home")"><span>İletişim</span></a></li>
+                                <li><a href="@Url.Action("Index","BlogPost")"><span>Blog</span></a></li>
                             </ul>
                         </div>
                     </div>

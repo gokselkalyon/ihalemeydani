@@ -237,16 +237,12 @@ C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\obj\
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Owin.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.pdb
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.xml
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.BusinessLayer.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.dll
@@ -267,8 +263,6 @@ C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\IM.Busine
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Owin.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.dll
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.dll
@@ -283,8 +277,6 @@ C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.xml
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.pdb
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\IM.DataLayer.dll.config
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.xml
@@ -405,8 +397,6 @@ C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.Core.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
-C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Owin.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\AutoMapper.dll
 C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Firebase.Storage.dll
@@ -776,6 +766,8 @@ C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Mesut Solak\source\repos\IHaleMeydan\IhaleMeydani\IM.PresentationLayer\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Taha\Source\Repos\iHALE\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\IM.PresentationLayer.dll.config
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\IM.PresentationLayer.pdb
@@ -836,8 +828,6 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.dll
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Newtonsoft.Json.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Owin.dll
@@ -867,8 +857,6 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.xml
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Helpers.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Mvc.xml
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\bin\System.Web.Optimization.xml
@@ -887,6 +875,9 @@ C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csproj.CopyComplete
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.dll
 C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.pdb
-C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
-C:\Users\Mesut Solak\source\repos\Webproje\IhaleMeydani\IM.PresentationLayer\obj\Debug\IM.PresentationLayer.csprojAssemblyReference.cache
-C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Rotativa.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll

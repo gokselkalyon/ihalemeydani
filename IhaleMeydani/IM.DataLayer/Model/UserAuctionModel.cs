@@ -22,29 +22,13 @@ namespace IM.DataLayer.Model
         public DateTime? date_of_created { get; set; }
         public string UserName { get; set; }
         public int userid { get; set; }
-        public int CarBrandId { get; set; }
         public int CarDetailId { get; set; }
-        public int CarMakeId { get; set; }
-        public int CarTechnicalDetailId { get; set; }
-        public int ColorId { get; set; }
-        public int FuelTypeId { get; set; }
-        public int GearTypeId { get; set; }
-        public int CarHardwareDetailsId { get; set; }
-        public int SegmentId { get; set; }
-        public string HardwareDetail { get; set; }
-        public string CarMakeName { get; set; }
         public string CarBrandName { get; set; }
-        public string CarVersion { get; set; }
-        public string ColorName { get; set; }
-        public string ColorValue { get; set; }
-        public string GearTypeName { get; set; }
-        public string FuelTypeName { get; set; }
-        public string SegmentName { get; set; }
-        public int EngineDisplacement { get; set; }
-        public int HP { get; set; }
+        public int CURRENCY_ID { get; set; }
         public string LicancePlate { get; set; }
-        public int Mileage { get; set; }
-        public DateTime? registrationDate { get; set; }
-        public string VIN { get; set; }
+        public bool published_on { get; set; }
+        public bool isSaled { get; set; }
+
+
     }
 }

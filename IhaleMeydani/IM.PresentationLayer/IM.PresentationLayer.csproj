@@ -63,14 +63,14 @@
       <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -172,6 +172,8 @@
     <Compile Include="Controllers\BlogPostController.cs" />
     <Compile Include="Controllers\ClaimController.cs" />
     <Compile Include="Controllers\ClaimGroupController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\IconsController.cs" />
     <Compile Include="Models\ClaimModelView.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -191,9 +193,11 @@
     <Compile Include="Models\AuctionModelView.cs" />
     <Compile Include="Models\BlogModelView.cs" />
     <Compile Include="Models\ClaimGroupModelView.cs" />
-    <Compile Include="Models\EncrypModel.cs" />
+    <Compile Include="Models\ContactModelView.cs" />
+    <Compile Include="Models\EncrypModelView.cs" />
     <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\HandleErrors.cs" />
+    <Compile Include="Models\IconModelView.cs" />
     <Compile Include="Models\InvoiceModelView.cs" />
     <Compile Include="Models\JsonResultModel.cs" />
     <Compile Include="Models\LoginModelView.cs" />
@@ -935,7 +939,12 @@
     <Content Include="Content\adminpaneltemplate\src\html\ui-toasts.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-tooltip-popover.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-typography.html" />
-    <Content Include="Content\Template\css\all.min.css" />
+    <Content Include="Content\Images\HomeImages\93.jpg" />
+    <Content Include="Content\Images\HomeImages\images.jpg" />
+    <Content Include="Content\Images\HomeImages\p1.jpg" />
+    <Content Include="Content\Images\HomeImages\p2.jpg" />
+    <Content Include="Content\Images\HomeImages\section-border.png" />
+    <Content Include="Content\Template\css\all.css" />
     <Content Include="Content\Images\Loading2.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\QuickSellContent\css\bootstrap.min.css" />
@@ -2642,6 +2651,8 @@
     <Content Include="Content\Template\autoshop\shop-single-right-sidebar.html" />
     <Content Include="Content\Template\autoshop\soon.html" />
     <Content Include="Content\Template\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\Template\css\Contact.css" />
+    <Content Include="Content\Template\css\icon.css" />
     <Content Include="Content\Template\css\invoice.css" />
     <Content Include="Content\Template\css\Layout.css" />
     <Content Include="Content\Template\css\Loginn.css" />
@@ -2661,6 +2672,8 @@
     <Content Include="Content\Template\js\adminmain.js" />
     <Content Include="Content\Template\js\boostrap.js" />
     <Content Include="Content\Template\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\Template\js\Contact.js" />
+    <Content Include="Content\Template\js\icon.js" />
     <Content Include="Content\Template\js\jquery-cookie.js" />
     <Content Include="Content\Template\js\jquery.js" />
     <Content Include="Content\Template\js\jquery.unobtrusive-ajax.js" />
@@ -2692,6 +2705,8 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\Claim.js" />
     <Content Include="Scripts\ClaimGruop.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\Login.js" />
@@ -2758,6 +2773,20 @@
     <Content Include="Views\Menu\GetMenus.cshtml" />
     <Content Include="Views\Menu\MenuAdd.cshtml" />
     <Content Include="Views\Menu\MenuUpdate.cshtml" />
+    <Content Include="Views\Icons\Index.cshtml" />
+    <Content Include="Views\Icons\List.cshtml" />
+    <Content Include="Views\Auction\Create.cshtml" />
+    <Content Include="Views\Auction\Dashboard.cshtml" />
+    <Content Include="Views\Auction\Details.cshtml" />
+    <Content Include="Views\Auction\Edit.cshtml" />
+    <Content Include="Views\Icons\Add.cshtml" />
+    <Content Include="Views\Icons\Update.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\ContactList.cshtml" />
+    <Content Include="Views\Contact\ContactAdd.cshtml" />
+    <Content Include="Views\Contact\ContactUpdate.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3018,6 +3047,10 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService4.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Content\Template\Fonts\FontBold_g.woff2" />
+    <Content Include="Content\Template\Fonts\FontInce.woff2" />
+    <Content Include="Content\Template\Fonts\FontNormal.woff2" />
+    <Content Include="Content\Template\Fonts\Playfaird.woff2" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

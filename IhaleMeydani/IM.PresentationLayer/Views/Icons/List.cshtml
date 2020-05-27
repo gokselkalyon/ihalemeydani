@@ -1,0 +1,25 @@
+﻿@model List<IM.PresentationLayer.IhaleWCFService.Icon>
+
+<div class="table table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Adı</th>
+                <th scope="col">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var menu in Model)
+            {
+                <tr>
+                    <td>@menu.Name</td>
+                    <td>
+                        <i class="fas fa-trash mr-2 IconRemove" style="color:red;" data-id="@menu.Id"></i>
+                        <i class="fas fa-pencil-alt IconUpdate mr-2" style="color:green;" data-id="@menu.Id"></i>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
