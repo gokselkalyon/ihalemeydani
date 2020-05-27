@@ -112,8 +112,20 @@ namespace IM.PresentationLayer.Controllers
             else
             {
                 return Json(2, JsonRequestBehavior.AllowGet);
-            }
-         
+            } 
+        }
+        public ActionResult Logoff()
+        {
+            var x = Request.IsAuthenticated;
+            var y = User.Identity.IsAuthenticated;
+
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+
+            var a = Request.IsAuthenticated;
+            var b = User.Identity.IsAuthenticated;
+
+            return RedirectToAction("Index", "Login");
         }
     }
 }
