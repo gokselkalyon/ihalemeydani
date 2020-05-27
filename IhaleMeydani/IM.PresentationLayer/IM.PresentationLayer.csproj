@@ -2779,6 +2779,7 @@
     <Content Include="Views\Contact\ContactList.cshtml" />
     <Content Include="Views\Contact\ContactAdd.cshtml" />
     <Content Include="Views\Contact\ContactUpdate.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,6 +17,18 @@ namespace IM.PresentationLayer.Controllers
             return View();
         }
 
+        [Route("About")]
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        [Route("Contact")]
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
         public PartialViewResult Menus()
         {
             TempData["Menus"] = IhaleServiceClient.MainMenu();
