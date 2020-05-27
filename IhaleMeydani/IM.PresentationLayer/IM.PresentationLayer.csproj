@@ -938,6 +938,11 @@
     <Content Include="Content\adminpaneltemplate\src\html\ui-toasts.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-tooltip-popover.html" />
     <Content Include="Content\adminpaneltemplate\src\html\ui-typography.html" />
+    <Content Include="Content\Images\HomeImages\93.jpg" />
+    <Content Include="Content\Images\HomeImages\images.jpg" />
+    <Content Include="Content\Images\HomeImages\p1.jpg" />
+    <Content Include="Content\Images\HomeImages\p2.jpg" />
+    <Content Include="Content\Images\HomeImages\section-border.png" />
     <Content Include="Content\Template\css\all.css" />
     <Content Include="Content\Images\Loading2.gif" />
     <Content Include="Content\Images\logo.png" />
@@ -3041,6 +3046,10 @@
     <None Include="Connected Services\IhaleWCFService\IhaleService4.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Content\Template\Fonts\FontBold_g.woff2" />
+    <Content Include="Content\Template\Fonts\FontInce.woff2" />
+    <Content Include="Content\Template\Fonts\FontNormal.woff2" />
+    <Content Include="Content\Template\Fonts\Playfaird.woff2" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
