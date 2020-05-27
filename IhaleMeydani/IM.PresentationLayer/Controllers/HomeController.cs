@@ -17,13 +17,13 @@ namespace IM.PresentationLayer.Controllers
             return View();
         }
 
-        [Route("About")]
+        [Route("hakkimizda")]
         public ActionResult About()
         {
             return View();
         }
 
-        [Route("Contact")]
+        [Route("iletisim")]
         public ActionResult Contact()
         {
             return View();
