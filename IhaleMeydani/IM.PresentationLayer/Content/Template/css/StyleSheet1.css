@@ -1,4 +1,20 @@
-﻿/*Furkan yeni layout css kodları başlangıç*/
+﻿@font-face {
+    font-family: 'FontBold_g';
+    src: url('../Fonts/FontBold_g.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'FontInce';
+    src: url('../Fonts/FontInce.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'FontNormal';
+    src: url('../Fonts/FontNormal.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Playfaird';
+    src: url('../Fonts/Playfaird.woff2') format('woff2');
+}
+/*Furkan yeni layout css kodları başlangıç*/
 .top-header {
     border-style: solid;
     border-width: 1px 0px;
@@ -363,6 +379,12 @@ header {
 section {
     padding: 150px 0;
 }
+
+.ContactTitle {
+    font-family: FontBold_g;
+    font-size: 37px;
+}
+
 
 /*about css*/
 
