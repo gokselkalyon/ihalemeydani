@@ -944,6 +944,7 @@
     <Content Include="Content\Images\HomeImages\p1.jpg" />
     <Content Include="Content\Images\HomeImages\p2.jpg" />
     <Content Include="Content\Images\HomeImages\section-border.png" />
+    <Content Include="Content\Images\logowhite.png" />
     <Content Include="Content\Template\css\all.css" />
     <Content Include="Content\Images\Loading2.gif" />
     <Content Include="Content\Images\logo.png" />
