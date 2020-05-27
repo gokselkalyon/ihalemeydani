@@ -879,3 +879,5 @@ C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\gokse\source\repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.xml
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\furka\Source\Repos\i-hale-meydan\IhaleMeydani\IM.PresentationLayer\bin\Microsoft.Owin.Security.dll
