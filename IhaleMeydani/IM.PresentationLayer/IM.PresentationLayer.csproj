@@ -3052,6 +3052,10 @@
     <Content Include="Content\Template\Fonts\FontInce.woff2" />
     <Content Include="Content\Template\Fonts\FontNormal.woff2" />
     <Content Include="Content\Template\Fonts\Playfaird.woff2" />
+    <None Include="Content\Template\Fonts\CAMBRIA.TTF" />
+    <Content Include="Content\Template\Fonts\CAMBRIAB.TTF" />
+    <Content Include="Content\Template\Fonts\CAMBRIAI.TTF" />
+    <Content Include="Content\Template\Fonts\CAMBRIAZ.TTF" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

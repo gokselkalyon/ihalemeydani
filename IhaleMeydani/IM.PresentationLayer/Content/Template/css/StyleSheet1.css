@@ -14,6 +14,24 @@
     font-family: 'Playfaird';
     src: url('../Fonts/Playfaird.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: 'CambriaBold';
+    src: url('../Fonts/CAMBRIAB.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'Cambriaitalic';
+    src: url('../Fonts/CAMBRIAI.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'CambriaBoldItalic';
+    src: url('../Fonts/CAMBRIAZ.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'CAMBRIA';
+    src: url('../Fonts/CAMBRIA.TTF') format('truetype');
+}
+
 /*Furkan yeni layout css kodları başlangıç*/
 .top-header {
     border-style: solid;
@@ -389,5 +407,19 @@ section {
 /*about css*/
 
 .aboutheader {
-    background: url(img/93.jpg) no-repeat center center;
+    background: url(../../Images/HomeImages/93.jpg) no-repeat center center;
+}
+    .aboutheader p {
+        font-family: CambriaBold;
+    }
+
+.aboutdiv {
+    font-family:Cambria;
+    font-size:18px;
+}
+
+.aboutdivtitle {
+    font-family: CambriaBold;
+    color:black;
+    font-size:36px;
 }
